@@ -3,7 +3,7 @@
 /**
  * Page alter.
  */
-function datagovau_bootstrap_page_alter($page) {
+function govcmstheme_bootstrap_page_alter($page) {
   $mobileoptimized = array(
     '#type' => 'html_tag',
     '#tag' => 'meta',
@@ -38,7 +38,7 @@ function datagovau_bootstrap_page_alter($page) {
  * Implement hook_node_view_alter
  * Set node title to the title string in the title field rather than the unique name
  */
-function datagovau_bootstrap_node_view_alter(&$build) {
+function govcmstheme_bootstrap_node_view_alter(&$build) {
   if (isset($build) && !empty($build) && isset($build['#node']) && !empty($build['#node']) && isset($build['#node']->field_title) && !empty($build['#node']->field_title)) {
     drupal_set_title($build['#node']->field_title['und'][0]['value']);
   }
@@ -47,7 +47,7 @@ function datagovau_bootstrap_node_view_alter(&$build) {
 /**
  * Override or insert variables into the html template.
  */
-function datagovau_bootstrap_process_html(&$vars) {
+function govcmstheme_bootstrap_process_html(&$vars) {
   // Hook into color.module
   if (module_exists('color')) {
     _color_html_alter($vars);
@@ -57,7 +57,7 @@ function datagovau_bootstrap_process_html(&$vars) {
 /**
  * Override or insert variables into the page template.
  */
-function datagovau_bootstrap_process_page(&$variables) {
+function govcmstheme_bootstrap_process_page(&$variables) {
   // Hook into color.module.
   if (module_exists('color')) {
     _color_page_alter($variables);
@@ -71,14 +71,14 @@ function datagovau_bootstrap_process_page(&$variables) {
 /**
  * Preprocess variables for block.tpl.php
  */
-function datagovau_bootstrap_preprocess_block(&$variables) {
+function govcmstheme_bootstrap_preprocess_block(&$variables) {
   $variables['classes_array'][] = 'clearfix';
 }
 
 /**
  * Preprocess Views exposed form
  */
-function datagovau_bootstrap_preprocess_views_exposed_form(&$vars, $hook) {
+function govcmstheme_bootstrap_preprocess_views_exposed_form(&$vars, $hook) {
 
   if (strrpos($vars['form']['#id'], 'views-exposed-form', -strlen($vars['form']['#id'])) !== FALSE) {
     $vars['form']['submit']['#attributes']['class'] = array('btn btn-info');
@@ -96,7 +96,7 @@ function datagovau_bootstrap_preprocess_views_exposed_form(&$vars, $hook) {
  *
  * Print breadcrumbs as a list, with separators.
  */
-function datagovau_bootstrap_breadcrumb($variables) {
+function govcmstheme_bootstrap_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
 
   if (!empty($breadcrumb)) {
@@ -168,7 +168,7 @@ function datagovau_bootstrap_breadcrumb($variables) {
 /**
  * Search block form alter.
  */
-function datagovau_bootstrap_form_alter(&$form, &$form_state, $form_id) {
+function govcmstheme_bootstrap_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'search_block_form') {
     // Update form id.
     $form['#id'] = 'siteSearchForm';
@@ -266,7 +266,7 @@ function _insert_metatags_in_head($node_with_metadata, $schema_array) {
 }
 
 // FacetAPI Bonus hooks to alter the display of facet links
-function datagovau_bootstrap_facet_items_alter(&$build, &$settings) {
+function govcmstheme_bootstrap_facet_items_alter(&$build, &$settings) {
   if ($settings->facet == "sm_field_portfolio") {
     foreach ($build as $key => $item) {
       if (isset($build[$key]['#indexed_value']) && !empty($build[$key]['#indexed_value'])) {
@@ -306,7 +306,7 @@ function datagovau_bootstrap_facet_items_alter(&$build, &$settings) {
   }
 }
 
-function datagovau_bootstrap_js_alter(&$javascript) {
+function govcmstheme_bootstrap_js_alter(&$javascript) {
   $node_admin_paths = array(
     'node/*/edit',
     'node/add',
@@ -325,11 +325,11 @@ function datagovau_bootstrap_js_alter(&$javascript) {
   }
   // Swap out jQuery to use an updated version of the library.
   if ($replace_jquery) {
-    $javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'datagovau_bootstrap') . '/js/jquery.min.js';
+    $javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'govcmstheme_bootstrap') . '/js/jquery.min.js';
   }
 }
 
-function datagovau_bootstrap_html_tag($vars) {
+function govcmstheme_bootstrap_html_tag($vars) {
   if ($vars['element']['#tag'] == 'script') {
     unset($vars['element']['#value_prefix']);
     unset($vars['element']['#value_suffix']);

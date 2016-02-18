@@ -72,7 +72,7 @@
       <div class="col-md-4 text-center">
         <ul class="list-inline social">
           <li>
-            <a href="https://twitter.com/datagovau"><i class="icon-twitter"></i><span class="sr-only">Twitter</span></a>
+            <a href="https://twitter.com/govcmstheme"><i class="icon-twitter"></i><span class="sr-only">Twitter</span></a>
           </li>
           <li>
             <a href="/feed"><i class="icon-rss-square"></i><span class="sr-only">RSS</span></a>

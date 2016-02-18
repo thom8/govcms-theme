@@ -79,7 +79,7 @@
   <!--[if lt IE 9]>
   <script src="<?php print '/' .  path_to_theme(); ?>/javascripts/vendor/html5shiv.min.js"></script>
   <![endif]-->
-  <?php if (theme_get_setting('responsive_respond', 'datagovau_bootstrap')): ?>
+  <?php if (theme_get_setting('responsive_respond', 'govcmstheme_bootstrap')): ?>
     <script src="<?php print '/' .  path_to_theme(); ?>/javascripts/vendor/rem.min.js"></script>
     <script src="<?php print '/' .  path_to_theme(); ?>/javascripts/vendor/modernizr-n-respond.min.js"></script>
   <?php endif; ?>

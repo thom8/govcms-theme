@@ -27,3 +27,7 @@ Temporary Items
 
 # Sass Cache folder
 .sass-cache
+
+# IDEs
+.idea
+
