@@ -102,7 +102,7 @@
                 </div>
               </div>
             </div>
-            <img width="74" height="74" alt="govCMS" class="logo" src="<?php print base_path() . path_to_theme() .'/img/govcms.svg' ?>" />
+            <img width="74" height="74" alt="govCMS" class="logo" src="<?php print '/' . path_to_theme(); ?>/img/govcms.svg" />
           </a>
         </div>
         <div class="col-md-8">
