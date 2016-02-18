@@ -52,38 +52,8 @@
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
 
-
-
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="<?php print '/' . path_to_theme(); ?>favicons/favicon-144.png">
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php print '/' . path_to_theme(); ?>favicons/favicon-152.png"/>
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php print '/' . path_to_theme(); ?>favicons/favicon-144.png"/>
-  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?php print '/' . path_to_theme(); ?>favicons/favicon-120.png"/>
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php print '/' . path_to_theme(); ?>favicons/favicon-114.png"/>
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php print '/' . path_to_theme(); ?>favicons/favicon-72.png"/>
-  <link rel="apple-touch-icon-precomposed" href="<?php print '/' . path_to_theme(); ?>favicons/favicon-57.png"/>
-
-
-  <meta name="theme-color" content="#ffffff">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,300,700' rel='stylesheet' type='text/css'>
-
-  <meta property="og:title" content="<?php print $head_title; ?>" />
-
   <?php print $styles; ?>
   <?php print $scripts; ?>
-  <!--[if lt IE 9]>
-  <script src="<?php print '/' .  path_to_theme(); ?>/javascripts/vendor/html5shiv.min.js"></script>
-  <![endif]-->
-  <?php if (theme_get_setting('responsive_respond', 'govcmstheme_bootstrap')): ?>
-    <script src="<?php print '/' .  path_to_theme(); ?>/javascripts/vendor/rem.min.js"></script>
-    <script src="<?php print '/' .  path_to_theme(); ?>/javascripts/vendor/modernizr-n-respond.min.js"></script>
-  <?php endif; ?>
-
 </head>
 <body class="<?php print $classes; ?> homepage" <?php print $attributes;?>>
 <div id="top-and-first-wrapper">
@@ -107,12 +77,12 @@
         </div>
         <div class="col-md-8">
           <ul class="nav nav-pills pull-right">
-            <li class="active"><a href="./index.html">Home</a></li>
-            <li><a href="./is.html">How it works</a></li>
-            <li><a href="./pricing.html">Pricing</a></li>
-            <li><a href="./news.html">News</a></li>
-            <li><a href="./support.html">Support</a></li>
-            <li><a class="btn btn-default btn-light" href="./signup.html">Sign up</a></li>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">How it works</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a class="btn btn-default btn-light" href="#">Sign up</a></li>
           </ul>
         </div>
       </div>

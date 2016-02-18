@@ -5,6 +5,12 @@
 # Icon must end with two \r
 Icon
 
+# node stuff
+node_modules
+
+# DESIGN
+DESIGN
+
 
 # Thumbnails
 ._*
