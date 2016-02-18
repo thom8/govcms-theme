@@ -1,0 +1,602 @@
+// * Based off Start Bootstrap - Stylish Portfolio Bootstrap Theme
+
+
+// Global Styles
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  @include body-font();
+}
+
+.text-vertical-center {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+  }
+}
+
+
+// General Overrides
+a {
+  color: $secondary;
+  transition: 0.3s;
+}
+.text-primary {
+  color: $secondaryDark;
+}
+.bg-primary {
+  background-color: $secondaryDark;
+  color: #fff;
+  h4 {
+    color: #fff;
+  }
+  hr.small {
+    border-color: $highlight;
+  }
+  [class^="icon-"], [class*=" icon-"] {
+    &.text-primary {
+      color: #fff;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+// Custom Button Styles
+.btn-primary {
+  transition: 0.3s;
+  color: #fff;
+  background-color: $highlightDark;
+  border-color: darken($highlightDark, 5%);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: darken($highlightDark, 5%);
+  border-color: darken($highlightDark, 10%);
+}
+
+.btn-default {
+  color: $highlightDark;
+  border-color: $highlightDark;
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    color: darken($highlightDark, 10%);
+    border-color: darken($highlightDark, 10%);
+    background-color: lighten($highlight, 38%);
+  }
+}
+.btn-dark {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  &:hover, &:focus, &:active {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.btn.btn-light {
+  color: #333;
+  background-color: rgba(#fff, 0.8);
+  &:hover,
+  &:focus,
+  &:active {
+    color: #333;
+    background-color: #fff;
+  }
+  &.btn-primary {
+    color: $secondaryDark;
+    background-color: #fff;
+    &:hover, &:focus, &:active {
+      color: #fff;
+      background-color: $highlightDark;
+    }
+  }
+}
+.light-bg .btn.btn-light {
+  &:hover,
+  &:focus,
+  &:active {
+    color: $highlightDark;
+    background-color: rgba($secondary, 0.03);
+  }
+}
+
+
+
+// Forms
+form {
+  fieldset {
+    margin-top: 2em;
+    legend {
+      margin-bottom: 15px;
+      color: $secondaryDark;
+      .mandatory {
+        font-size: 0.65em;
+      }
+    }
+  }
+  label {
+    margin-top: 1em;
+    color: $secondary;
+    font-weight: 400;
+    width: 100%;
+  }
+  .checkbox label {
+    margin-top: 0;
+  }
+  small {
+    color: $textGreyLight;
+  }
+}
+.mandatory {
+  color: $highlightDark;
+  float: right;
+}
+
+
+
+
+// Custom Horizontal Rule
+hr.small {
+  max-width: 100px;
+  border-color: $borderGrey;
+}
+
+
+
+
+
+// header
+.logos {
+  margin-top: 21px;
+  .coa-stacked,
+  img {
+    background: radial-gradient( rgba(#fff,0.1), transparent 50% );
+  }
+  .coa-titles-stacked {
+    text-shadow: 1px 1px 30px rgba(#fff, 0.4);
+  }
+  .logo {
+    margin-left: 30px;
+  }
+}
+
+
+
+
+
+
+
+// Call to Action
+.call-to-action {
+  @include background-gradient( darken($secondary,10%), lighten($secondary,10%) );
+  padding: 50px 0;
+  .btn {
+    margin: 10px;
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 24px; // like a h3 visually
+  }
+}
+
+
+// Nav Pill, active/selected item
+.nav-pills > li {
+  &.active > a {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: transparent;
+      color: $secondary;
+      font-weight: bold;
+      border-bottom: 1px solid $secondaryDark;
+    }
+  }
+  & > a {
+    border-radius: 0;
+    &:focus,
+    &:active,
+    &:hover {
+      text-decoration: none;
+      background-color: transparent;
+      border-bottom: 1px solid $highlightDark;
+    }
+  }
+}
+
+
+header {
+  .nav-pills {
+    margin-top: 35px;
+    font-size: 115%;
+  }
+  .btn.btn-light {
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+    padding: 8px 15px;
+    margin: 2px auto;
+    border-radius: $radius;
+    font-size: 96%;
+    &:focus,
+    &:active,
+    &:hover {
+      background-color: rgba(#fff, 0.95);
+      @include body-font();
+      border-color: $highlightDark;
+      color: $highlightDark;
+    }
+    &.active {
+      border-color: $secondaryDark;
+      box-shadow: none;
+    }
+  }
+}
+
+
+
+// Header section on all pages
+#top-and-first-wrapper {
+  @include background-gradient( darken($highlight, 5%), lighten($secondary, 10%)); // this passes AA for large text everywhere on homepage
+  p,
+  a:not(.btn) {
+    color: #fff;
+    text-shadow: 1px 1px 55px rgba($secondary, 0.2);
+    & .coa-titles {
+      color: $secondaryDark;
+    }
+  }
+
+
+  #about {
+    background: transparent;
+    h1,
+    h2 {
+      color: $secondaryDark;
+      font-size: 380%;
+      font-weight: 300;
+      padding: 0 5%;
+      text-shadow: 1px 1px 45px rgba(#fff, 0.5);
+    }
+    .btn {
+      float: right;
+    }
+    .lead {
+      color: #fff;
+      text-shadow: 1px 1px 35px rgba($secondaryDark, 0.25);
+      margin-top: -5px;
+    }
+    small {
+      color: #fff;
+      text-shadow: 1px 1px 35px rgba($secondaryDark, 0.25);
+      font-size: 90%;
+      margin-top: -2px;
+      margin-bottom: 1.1em;
+    }
+    &.news-item-header {
+      h1,
+      h2 {
+        margin-bottom: 1em;
+      }
+      .news-meta {
+        color: #fff;
+        .divider {
+          opacity: .4;
+        }
+      }
+    }
+  }
+}
+
+
+
+// About ID
+#about {
+  background: #f5f7f9;
+  padding: 25px 0;
+  margin: 25px 0;
+  h1,
+  h2 {
+    color: $secondary;
+    margin-bottom: 1.5em;
+  }
+  .btn-lg {
+    float: left;
+  }
+}
+body.front {
+  #about {
+    small {
+      display: block;
+      float: left;
+      width: 50%;
+      margin-left: 25px;
+    }
+  }
+}
+
+.about, .services {
+  padding: 50px 0;
+}
+
+
+
+
+
+// bgs
+.icons-grid,
+.alternating {
+  padding: 25px 0;
+  &.bg-primary {
+    color: #fff;
+    @include background-gradient($highlightDark, lighten($secondary,5%));
+    a:not(.btn) {
+      &:hover,
+      &:active,
+      &:focus {
+        color: #fff;
+        [class^="icon-"],
+        [class*=" icon-"] {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+
+
+// used on "Why use govCMS?" and support homepage
+.icons-grid {
+  padding: 25px 0;
+  h2 {
+    margin-bottom: 2em;
+  }
+  span.int,
+  [class^="icon-"],
+  [class*=" icon-"] {
+    transition: all .2s;
+    border: 2px solid;
+    border-radius: 100%;
+    position: relative;
+    line-height: 2em;
+    vertical-align: middle;
+    display: inline-block;
+    min-width: 104px;
+    br {
+      border-color: #fff;
+      margin: 1em;
+    }
+  }
+  span.int {
+    font-size: 3em;
+    line-height: 2.35em;
+    min-width: 2.45em;
+    font-weight: 300;
+  }
+  h3,
+  h4 {
+    margin-top: 1em;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .grid-item {
+    margin-bottom: 3em;
+    display: block;
+  }
+  a {
+    transition: all .2s;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      color: $highlightDark;
+      h4 {
+        text-decoration: underline;
+      }
+      [class^="icon-"],
+      [class*=" icon-"] {
+        color: $highlightDark;
+      }
+    }
+    [class^="icon-"],
+    [class*=" icon-"] {
+      color: $secondary;
+    }
+  }
+  .btn {
+    margin: 0.3em 0 1em 0;
+  }
+  &.light {
+    background: #fff;
+    color: $textGrey;
+    h3, h4, p, span {
+      color: $secondary !important;
+    }
+  }
+}
+
+
+
+
+
+
+// Split section
+.split {
+  background: linear-gradient(90deg, #fff 50%, #f5f7f9 50%);
+  .container {
+    .section-one,
+    .section-two {
+      padding: 50px 0;
+      h2 {
+        color: $secondary;
+      }
+    }
+  }
+  .section-one {
+    .btn {
+      margin: 1.75em 0 1em 0;
+    }
+    p > a {
+      text-decoration: underline;
+    }
+  }
+  .section-two {
+    label {
+      margin-top: 0.5em;
+      font-weight: 300;
+      color: $secondaryDark;
+    }
+    .btn {
+      margin-top: 1em;
+    }
+    input {
+      text-align: right;
+      padding: 6px 2px;
+    }
+  }
+  .arrow:after {
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid #fff;
+    content: " ";
+    float: right;
+    position: absolute;
+    display: inherit;
+    right: -60px;
+    top: 33%;
+    top: calc(50% - 51px);
+    z-index: 1;
+  }
+  &.testimonial {
+    .section-two {
+      img {
+        margin-left: 100px;
+        margin-right: 30px;
+        height: auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    blockquote {
+      border-left: 0;
+      margin: 1em;
+      margin-right: 3em;
+      quotes: "\201C" "\201D" "\2018" "\2019";
+      &:before,
+      &:after {
+        color: $highlight;
+        font-size: 5em;
+      }
+      &:before {
+        content: open-quote;
+        line-height: 0;
+        margin-right: 0.05em;
+        vertical-align: -0.32em;
+        margin-left: -0.45em;
+      }
+      &:after {
+        content: close-quote;
+        line-height: 0.15em;
+        float: right;
+        margin-top: 0.48em;
+        margin-right: -0.41em;
+        opacity: 0.4;
+      }
+    }
+    cite {
+      font-style: normal;
+      span {
+        display: block;
+      }
+      .cite-name {
+        color: $highlightDark;
+      }
+      .cite-pos {
+        color: $textGreyLight;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+// Footer
+footer {
+  padding: 50px 0;
+  ul.social {
+    margin-bottom: 0;
+    a {
+      color: $secondary;
+      opacity: 0.9;
+      &:hover,
+      &:active,
+      &:focus {
+        opacity: 1;
+        text-decoration: none;
+        color: $highlightDark;
+      }
+    }
+  }
+  .small-links {
+    padding-top: 10px;
+    li {
+      margin-right: 10px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+.pager {
+  li {
+    &>a,
+    &>span {
+      border-radius: 6px;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  &.back {
+    a {
+      background-color: transparent;
+      &:hover {
+        background-color: $highlightDark;
+      }
+    }
+  }
+}
