@@ -86,17 +86,39 @@
 
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
-<div id="skip-link">
-    <a href="#main" tabindex="1" class="screen-reader-text"><?php print t('Skip to main content'); ?></a>
+<div id="top-and-first-wrapper">
+  <header id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 logos">
+          <a href="/">
+            <div class="coa-stacked">
+              <div class="coa-coa">
+                <span class="crest"></span>
+              </div>
+              <div class="coa-titles-stacked">
+                <div class="coa-titles">
+                  <span class="coa-line-one coa-lines-1">Australian Government</span>
+                </div>
+              </div>
+            </div>
+            <img width="74" height="74" alt="govCMS" class="logo" src="<?= drupal_get_path('theme',$GLOBALS['theme']) ?>/img/govcms.svg">
+          </a>
+        </div>
+        <div class="col-md-8">
+          <ul class="nav nav-pills pull-right">
+            <li class="active"><a href="./index.html">Home</a></li>
+            <li><a href="./is.html">How it works</a></li>
+            <li><a href="./pricing.html">Pricing</a></li>
+            <li><a href="./news.html">News</a></li>
+            <li><a href="./support.html">Support</a></li>
+            <li><a class="btn btn-default btn-light" href="./signup.html">Sign up</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
 </div>
-<!-- JS compatibility message -->
-  <noscript>&lt;a id="msgNojs" href="http://enable-javascript.com/" target="_blank"&gt;This site requires JavaScript. Click here for instructions on enabling it in your browser&lt;/a&gt;</noscript>
-<!-- IE compatibility message -->
-<!--[if lte IE 8]>
-  <div id="msg-legacy-browser" class="alert alert-warning" role="alert">
-    Parts of this site may not work properly because you are using an outdated browser.
-  </div>
-<![endif]-->
 
 <div id="main-body">
   <?php print $page_top; ?>
