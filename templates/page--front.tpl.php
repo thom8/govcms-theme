@@ -1,15 +1,6 @@
 <div id="top-and-first-wrapper">
   <?php include "includes/header.tpl.php"; ?>
 </div>
-<main>
-  <!-- #page -->
-  <div id="page" class="clearfix">
-
-
-    <!-- #main-content -->
-    <div id="main">
-
-
 
       <!-- #messages-console -->
       <?php if ($messages): ?>
@@ -23,12 +14,6 @@
       <?php endif; ?>
       <!-- EOF: #messages-console -->
 
-
-
-      <section id="posts">
-
-
-        <h2 class="sr-only">Latest posts</h2>
         <!-- #tabs -->
         <?php if ($tabs): ?>
           <div class="tabs">
@@ -46,19 +31,7 @@
         <!-- EOF: #action links -->
 
         <?php if ($page['content']): ?>
-          <section id="region-content" class="container">
             <?php print render($page['content']); ?>
-          </section>
         <?php endif; ?>
-
-
-      </section>
-
-    </div>
-    <!-- EOF:#main-content -->
-
-  </div>
-  <!-- EOF:#page -->
-</main>
 
 <?php include "includes/footer.tpl.php"; ?>
