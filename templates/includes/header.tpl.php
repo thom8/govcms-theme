@@ -18,14 +18,6 @@
       </div>
       <div class="col-md-8">
         <?php print render($page['header_menu']); ?>
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">How it works</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Support</a></li>
-          <li><a class="btn btn-default btn-light" href="#">Sign up</a></li>
-        </ul>
       </div>
     </div>
   </div>

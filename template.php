@@ -102,3 +102,21 @@ function govcmstheme_bootstrap_menu_tree__main_menu($variables) {
   return '<ul class="nav nav-pills pull-right">' . $variables['tree'] . '</ul>';
 }
 
+function govcmstheme_bootstrap_menu_link__main_menu($variables) {
+  //unset all the classes
+  unset($variables['element']['#attributes']['class']);
+
+  $element = $variables['element'];
+
+  if($variables['element']['#attributes'])
+
+    $sub_menu = '';
+
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
