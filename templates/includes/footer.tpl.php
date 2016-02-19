@@ -17,6 +17,7 @@
           </li>
         </ul>
         <hr class="small">
+        <?php print render($page['footer_menu']); ?>
         <ul class="list-inline small-links">
           <li>
             <a href="#">About</a>

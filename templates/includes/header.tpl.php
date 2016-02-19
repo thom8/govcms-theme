@@ -17,6 +17,7 @@
         </a>
       </div>
       <div class="col-md-8">
+        <?php print render($page['header_menu']); ?>
         <ul class="nav nav-pills pull-right">
           <li class="active"><a href="#">Home</a></li>
           <li><a href="#">How it works</a></li>

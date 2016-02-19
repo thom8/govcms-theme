@@ -18,6 +18,7 @@ scripts[] = js/govcms.js
 
 stylesheets[all][] = css/styles.css
 
+regions[header_menu] = Header Menu
 regions[header] = Header
 regions[content] = Content
 regions[sidebar_first] = Sidebar First
@@ -25,3 +26,4 @@ regions[sidebar_second] = Sidebar Second
 regions[footer] = Footer
 regions[page_top] = Page top
 regions[page_bottom] = Page bottom
+regions[footer_menu] = Footer Menu
