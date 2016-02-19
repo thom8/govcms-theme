@@ -113,16 +113,15 @@ function govcmstheme_bootstrap_menu_link__main_menu($variables) {
   }
 
   $element = $variables['element'];
-
+/*
   if($variables['element']['#attributes'])
-
     $sub_menu = '';
 
 
   if ($element['#below']) {
     $sub_menu = drupal_render($element['#below']);
-  }
+  }*/
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . "</li>\n";
 }
 
