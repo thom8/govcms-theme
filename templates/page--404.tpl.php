@@ -1,39 +1,4 @@
-<header id="top">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-5 logos">
-        <a href="/">
-          <div class="coa-stacked">
-            <div class="coa-coa">
-              <span class="crest"></span>
-            </div>
-            <!--[if lte IE 7]>
-            <style>.coa-titles { display: block; }</style>
-            <![endif]-->
-            <div class="coa-titles-stacked">
-              <div class="coa-titles">
-                <span class="coa-line-one coa-lines-1">Australian Government</span>
-              </div>
-            </div>
-          </div>
-          <img src="<?php print '/' . path_to_theme(); ?>/img/data.svg" class="logo" alt="blog.data.gov.au" height="75">
-        </a>
-      </div>
-      <div class="col-md-7">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="/">Blog</a></li>
-          <li><a href="http://data.gov.au/">back to data.gov.au</a></li>
-          <li>
-            <div class="form-group">
-              <div class="sr-only">Search blog</div>
-              <?php print $search_box; ?>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</header>
+<?php include "includes/header.tpl.php"; ?>
 
 
 <main>
@@ -64,33 +29,5 @@
   <!-- EOF:#page -->
 </main>
 
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <ul class="small-links">
-          <li>
-            <a href="https://data.gov.au/about">About data.gov.au</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-4 text-center">
-        <ul class="list-inline social">
-          <li>
-            <a href="https://twitter.com/govcmstheme"><i class="icon-twitter"></i><span class="sr-only">Twitter</span></a>
-          </li>
-          <li>
-            <a href="/feed"><i class="icon-rss-square"></i><span class="sr-only">RSS</span></a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <a href="https://govcms.gov.au/" class="powered pull-right text-center">
-          <span>Powered by</span>
-          <img alt="govcms" src="<?php print '/' . path_to_theme(); ?>/img/govcms.svg" width="45" height="45">
-        </a>
-      </div>
-    </div>
-  </div>
-</footer>
+<?php include "includes/footer.tpl.php"; ?>
 <!-- EOF:#footer -->

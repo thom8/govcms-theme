@@ -1,5 +1,3 @@
-<?php include 'includes/header.tpl.php'; ?>
-
 <main>
   <!-- #page -->
   <div id="page" class="clearfix">
@@ -59,33 +57,5 @@
   <!-- EOF:#page -->
 </main>
 
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <ul class="small-links">
-          <li>
-            <a href="https://data.gov.au/about">About data.gov.au</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-4 text-center">
-        <ul class="list-inline social">
-          <li>
-            <a href="https://twitter.com/govcmstheme"><i class="icon-twitter"></i><span class="sr-only">Twitter</span></a>
-          </li>
-          <li>
-            <a href="/feed"><i class="icon-rss-square"></i><span class="sr-only">RSS</span></a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <a href="https://govcms.gov.au/" class="powered pull-right text-center">
-          <span>Powered by</span>
-          <img alt="govcms" src="<?php print '/' . path_to_theme(); ?>/img/govcms.svg" width="45" height="45">
-        </a>
-      </div>
-    </div>
-  </div>
-</footer>
+<?php include "includes/footer.tpl.php"; ?>
 <!-- EOF:#footer -->

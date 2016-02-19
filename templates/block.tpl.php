@@ -44,37 +44,14 @@
  * @ingroup themeable
  */
 ?>
-<?php if (trim(strip_tags($content))): ?>
-  <?php if ($block->region == 'sidebar_first'): ?>
-    <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-      <?php print render($title_prefix); ?>
-      <?php if ($block->subject): ?>
-        <div class="panel-heading">
-          <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
-          <button class="btn btn-primary btn-collapse" type="button" data-toggle="collapse" data-target="#s1b-<?php print $block->delta; ?>" aria-expanded="false" aria-controls="collapseExample">
-            <?php print $block->subject ?>
-          </button>
-        </div>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
-      <div class="content panel-collapse collapse"<?php print $content_attributes; ?> id="s1b-<?php print $block->delta; ?>">
-        <div class="panel-body">
-          <?php print $content ?>
-        </div>
-      </div>
-    </div>
-  <?php else: ?>
-    <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-      <?php print render($title_prefix); ?>
-      <?php if ($block->subject): ?>
-        <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
+<div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+  <?php if ($block->subject): ?>
+    <?php print render($title_prefix); ?>
+      <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
+    <?php print render($title_suffix); ?>
+  <?php endif;?>
 
-      <div class="content"<?php print $content_attributes; ?>>
-        <?php print $content ?>
-      </div>
-    </div>
-  <?php endif; ?>
-<?php endif; ?>
-
+  <div class="content"<?php print $content_attributes; ?>>
+    <?php print $content ?>
+  </div>
+</div>
