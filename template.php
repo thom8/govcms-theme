@@ -97,3 +97,8 @@ function govcmstheme_bootstrap_html_tag($vars) {
   }
   return theme_html_tag($vars);
 }
+
+function govcmstheme_bootstrap_menu_tree(array $variables) {
+  return '<ul class="nav nav-pills pull-right">' . $variables['tree'] . '</ul>';
+}
+
