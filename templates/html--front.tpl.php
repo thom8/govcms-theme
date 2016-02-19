@@ -51,7 +51,7 @@
   <meta charset="utf-8">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
-
+  <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
@@ -64,5 +64,6 @@
   <div id="is_tablet"></div>
   <div id="is_mobile"></div>
 </div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js">
 </body>
 </html>
