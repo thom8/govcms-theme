@@ -56,10 +56,6 @@
   <?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
-<div id="top-and-first-wrapper">
-  <?php include "includes/header.tpl.php"; ?>
-</div>
-
 <div id="main-body">
   <?php print $page_top; ?>
   <?php print $page; ?>

@@ -1,3 +1,6 @@
+<div id="top-and-first-wrapper">
+  <?php include "includes/header.tpl.php"; ?>
+</div>
 <main>
   <!-- #page -->
   <div id="page" class="clearfix">

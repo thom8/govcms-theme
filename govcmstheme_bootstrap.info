@@ -15,7 +15,6 @@ settings[sub_menu_columns] = 4;
 settings[num_carousel_items] = 8;
 
 scripts[] = js/bootstrap.min.js
-scripts[] = js/jquery.js
 scripts[] = js/govcms.js
 
 stylesheets[all][] = css/styles.css

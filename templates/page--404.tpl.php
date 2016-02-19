@@ -1,6 +1,5 @@
 <?php include "includes/header.tpl.php"; ?>
 
-
 <main>
   <!-- #page -->
   <div id="page" class="clearfix">
