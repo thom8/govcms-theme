@@ -104,7 +104,13 @@ function govcmstheme_bootstrap_menu_tree__main_menu($variables) {
 
 function govcmstheme_bootstrap_menu_link__main_menu($variables) {
   //unset all the classes
-  unset($variables['element']['#attributes']['class']);
+  if (!empty($element['#attributes']['class'])) {
+    foreach ($element['#attributes']['class'] as $key => $class) {
+      if ($class != 'active') {
+        unset($element['#attributes']['class'][$key]);
+      }
+    }
+  }
 
   $element = $variables['element'];
 
