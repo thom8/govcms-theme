@@ -16,8 +16,14 @@ $plugin = array(
   'theme' => 'panels_onecol_stacked',
   'admin css' => 'onecol_stacked.admin.css',
   'regions' => array(
-    'top' => t('Top'),
-    'middle' => t('Middle'),
-    'bottom' => t('Bottom'),
+    'intro' => t('Introduction'),
+    'clients' => t('Clients / Trusted By'),
+    'testimonial' => t('Testimonial'),
+    'fourth' => t('Fourth'),
+    'fifth' => t('Fifth'),
+    'sixth' => t('Sixth'),
+    'seventh' => t('Seventh'),
+    'eighth' => t('Eighth'),
+    'ninth' => t('Ninth'),
   ),
 );

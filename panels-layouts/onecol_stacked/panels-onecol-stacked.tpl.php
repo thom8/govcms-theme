@@ -12,14 +12,51 @@
  *   $content['middle']: The only panel in the layout.
  */
 ?>
-<div class="panel-display panel-1col-stacked clearfix" <?php if (!empty($css_id)): print "id=\"$css_id\""; endif; ?>>
-  <?php if ($content['top']): ?>
-    <div class="panel-panel panel-col-top"><?php print $content['top']; ?></div>
+
+  <?php if ($content['intro']): ?>
+    <section class="about" id="about">
+      <div class="container">
+          <?php print $content['intro']; ?>
+      </div>
+    </section>
   <?php endif; ?>
-  <?php if ($content['middle']): ?>
-    <div class="panel-panel panel-col-middle"><?php print $content['middle']; ?></div>
+  <?php if ($content['clients']): ?>
+    <section class="clients light-bg" id="clients">
+      <div class="container">
+        <?php print $content['clients']; ?>
+      </div>
+    </section>
   <?php endif; ?>
-  <?php if ($content['bottom']): ?>
-    <div class="panel-panel panel-col-bottom"><?php print $content['bottom']; ?></div>
+  <?php if ($content['testimonial']): ?>
+    <section class="split testimonial">
+      <div class="container">
+        <?php print $content['testimonial']; ?>
+      </div>
+    </section>
   <?php endif; ?>
-</div>
+  <?php if ($content['fourth']): ?>
+    <section class="icons-grid bg-primary" id="services">
+      <div class="container">
+        <?php print $content['fourth']; ?>
+      </div>
+    </section>
+  <?php endif; ?>
+  <?php if ($content['fifth']): ?>
+    <section class="split">
+      <div class="container">
+        <?php print $content['fifth']; ?>
+      </div>
+    </section>
+  <?php endif; ?>
+  <?php if ($content['sixth']): ?>
+    <section class=""><?php print $content['sixth']; ?></section>
+  <?php endif; ?>
+  <?php if ($content['seventh']): ?>
+    <section class=""><?php print $content['seventh']; ?></section>
+  <?php endif; ?>
+  <?php if ($content['eighth']): ?>
+    <section class=""><?php print $content['eighth']; ?></section>
+  <?php endif; ?>
+  <?php if ($content['ninth']): ?>
+    <section class=""><?php print $content['ninth']; ?></section>
+  <?php endif; ?>
