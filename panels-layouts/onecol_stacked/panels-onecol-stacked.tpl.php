@@ -20,6 +20,8 @@
       </div>
     </section>
   <?php endif; ?>
+
+
   <?php if ($content['clients']): ?>
     <section class="clients light-bg" id="clients">
       <div class="container">
@@ -27,13 +29,17 @@
       </div>
     </section>
   <?php endif; ?>
-  <?php if ($content['testimonial']): ?>
+
+
+  <?php if ($content['testimonial_split']): ?>
     <section class="split testimonial">
       <div class="container">
-        <?php print $content['testimonial']; ?>
+        <?php print $content['testimonial_split']; ?>
       </div>
     </section>
   <?php endif; ?>
+
+
   <?php if ($content['fourth']): ?>
     <section class="icons-grid bg-primary" id="services">
       <div class="container">
@@ -41,6 +47,8 @@
       </div>
     </section>
   <?php endif; ?>
+
+
   <?php if ($content['fifth']): ?>
     <section class="split">
       <div class="container">
@@ -48,15 +56,39 @@
       </div>
     </section>
   <?php endif; ?>
+
+
   <?php if ($content['sixth']): ?>
-    <section class=""><?php print $content['sixth']; ?></section>
+    <section class="">
+      <div class="container">
+        <?php print $content['sixth']; ?>
+      </div>
+    </section>
   <?php endif; ?>
+
+
   <?php if ($content['seventh']): ?>
-    <section class=""><?php print $content['seventh']; ?></section>
+    <section class="">
+      <div class="container">
+        <?php print $content['seventh']; ?>
+      </div>
+    </section>
   <?php endif; ?>
+
+
   <?php if ($content['eighth']): ?>
-    <section class=""><?php print $content['eighth']; ?></section>
+    <section class="">
+      <div class="container">
+        <?php print $content['eighth']; ?>
+      </div>
+    </section>
   <?php endif; ?>
+
+
   <?php if ($content['ninth']): ?>
-    <section class=""><?php print $content['ninth']; ?></section>
+    <section class="">
+      <div class="container">
+        <?php print $content['ninth']; ?>
+      </div>
+    </section>
   <?php endif; ?>

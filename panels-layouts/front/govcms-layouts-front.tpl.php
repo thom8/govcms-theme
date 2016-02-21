@@ -1,37 +1,64 @@
 <?php
 /**
  * @file
+ * Template for a 3 column panel layout.
  *
- * The original foundation for the govCMS distribution is aGov; the Drupal distribution created by PreviousNext to provide a core set of elements, functionality and features that can be used to develop government websites
+ * This template provides a very simple "one column" panel display layout.
  *
- * @copyright Copyright(c) 2015 Commonwealth of Australia as represented by Department of Finance
- * @license GPL v2 http://www.fsf.org/licensing/licenses/gpl.html
- * @author Department of Finance
- *
- * Available variables
- * -------------------
- * $content array of panels.
+ * Variables:
+ * - $id: An optional CSS id to use for the layout.
+ * - $content: An array of content, each item in the array is keyed to one
+ *   panel of the layout. This layout supports the following sections:
+ *   $content['middle']: The only panel in the layout.
  */
-
 ?>
 
-
-<div class="gov-front-layout clearfix" <?php if (!empty($css_id)) : print "id=\"$css_id\""; endif; ?>>
-  
-  <?php if (!empty($content['main'])) : ?>
-    <?php print $content['main'];?>
-  <?php endif; ?>
-
-  <?php if (!empty($content['left'])) : ?>
-    <div class="alpha grid-4 gov-front-left gov-front-col">
-      <?php print $content['left'];?>
+<?php if ($content['intro']): ?>
+  <section class="about" id="about">
+    <div class="container">
+      <?php print $content['intro']; ?>
     </div>
-  <?php endif; ?>
+  </section>
+<?php endif; ?>
 
-  <?php if (!empty($content['right'])) : ?>
-    <div class="omega grid-4 gov-front-right gov-front-col">
-      <?php print $content['right'];?>
+
+<?php if ($content['clients']): ?>
+  <section class="clients light-bg" id="clients">
+    <div class="container">
+      <?php print $content['clients']; ?>
     </div>
-  <?php endif; ?>
+  </section>
+<?php endif; ?>
 
-</div>
+
+<?php if ($content['testimonial_split']): ?>
+  <section class="split testimonial">
+    <div class="container">
+      <div class="row">
+        <?php print $content['testimonial_split']; ?>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
+
+
+<?php if ($content['why_use']): ?>
+  <section class="icons-grid bg-primary" id="services">
+    <div class="container">
+      <div class="row text-center">
+        <?php print $content['why_use']; ?>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
+
+
+<?php if ($content['more_information_split']): ?>
+  <section class="split">
+    <div class="container">
+      <div class="row">
+        <?php print $content['more_information_split']; ?>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
