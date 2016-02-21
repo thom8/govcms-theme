@@ -10,7 +10,7 @@
  */
 // Plugin definition.
 $plugin = array(
-  'title' => t('Single column stacked'),
+  'title' => t('govCMS Front Page'),
   'category' => t('Columns: 1'),
   'icon' => 'front.png',
   'theme' => 'govcms-layouts-front',
