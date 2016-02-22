@@ -14,7 +14,7 @@
 ?>
 
 <?php if ($content['intro']): ?>
-  <section class="about" id="about">
+  <section class="about move-to-top" id="about">
     <div class="container">
       <?php print $content['intro']; ?>
     </div>
