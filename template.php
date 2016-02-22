@@ -121,18 +121,3 @@ function govcmstheme_bootstrap_menu_tree__menu_footer_sub_menu($variables) {
   return '<ul class="list-inline small-links">' . $variables['tree'] . '</ul>';
 }
 
-function govcmstheme_bootstrap_menu_link__menu_footer_sub_menu($variables) {
-  //unset all the classes
-  if (!empty($element['#attributes']['class'])) {
-    foreach ($element['#attributes']['class'] as $key => $class) {
-      if ($class != 'active') {
-        unset($element['#attributes']['class'][$key]);
-      }
-    }
-  }
-
-  $element = $variables['element'];
-  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . "</li>\n";
-}
-
