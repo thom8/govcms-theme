@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+    $("#about").appendTo("#top-and-first-wrapper");
   // Conditional form logic
     // Set initial state, hide it...
     $('.drupal-version-list').toggleClass('sr-only');
