@@ -44,11 +44,38 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            <article>
-              <p class="news-content">
+            <article class="news-content">
                 <?php print $content['bottom']; ?>
-              </p>
             </article>
+            <div class="social-btns text-center">
+              <h2>Share this</h2>
+              <ul class="list-inline">
+                <li>
+                  <a href="http://www.facebook.com/sharer.php?u=<?php print $_SERVER['REQUEST_URI'] ?>" class="btn-sm btn-facebook">
+                    <i class="icon-facebook"></i>
+                    <span class="sr-only">Facebook</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://twitter.com/share?url=<?php print $_SERVER['REQUEST_URI'] ?>" class="btn-sm btn-twitter">
+                    <i class="icon-twitter"></i>
+                    <span class="sr-only">Twitter</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php print $_SERVER['REQUEST_URI'] ?>" class="btn-sm btn-linkedin">
+                    <i class="icon-linkedin"></i>
+                    <span class="sr-only">LinkedIn</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:?subject=<?php print $content['top']; ?>&body=<?php print $_SERVER['REQUEST_URI'] ?>" class="btn-sm btn-email">
+                    <i class="icon-mail"></i>
+                    <span class="sr-only">Email</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
