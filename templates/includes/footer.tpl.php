@@ -18,23 +18,6 @@
         </ul>
         <hr class="small">
         <?php print render($page['footer_menu']); ?>
-        <ul class="list-inline small-links">
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Copyright</a>
-          </li>
-          <li>
-            <a href="#">Privacy</a>
-          </li>
-          <li>
-            <a href="#">Site Map</a>
-          </li>
-          <li>
-            <a href="#">Terms of Use</a>
-          </li>
-        </ul>
       </div>
     </div>
   </div>

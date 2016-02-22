@@ -117,11 +117,11 @@ function govcmstheme_bootstrap_menu_link__main_menu($variables) {
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . "</li>\n";
 }
 
-function govcmstheme_bootstrap_menu_tree__footer_sub_menu($variables) {
+function govcmstheme_bootstrap_menu_tree__menu_footer_sub_menu($variables) {
   return '<ul class="list-inline small-links">' . $variables['tree'] . '</ul>';
 }
 
-function govcmstheme_bootstrap_menu_link__footer_sub_menu($variables) {
+function govcmstheme_bootstrap_menu_link__menu_footer_sub_menu($variables) {
   //unset all the classes
   if (!empty($element['#attributes']['class'])) {
     foreach ($element['#attributes']['class'] as $key => $class) {
