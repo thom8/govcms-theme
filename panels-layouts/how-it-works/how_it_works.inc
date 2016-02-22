@@ -12,7 +12,7 @@
 $plugin = array(
   'title' => t('govCMS How it works Page'),
   'category' => t('Columns: 1'),
-  'icon' => 'front.png',
+  'icon' => 'how_it_works.png',
   'theme' => 'govcms-layouts-how-it-works',
   'regions' => array(
     'intro' => t('Introduction'),

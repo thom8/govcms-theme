@@ -14,11 +14,9 @@
 ?>
 
 <?php if ($content['intro']): ?>
-  <section class="about move-to-top" id="about">
-    <div class="container">
+    <div class="col-md-10 col-md-offset-1 move-into-top">
       <?php print $content['intro']; ?>
     </div>
-  </section>
 <?php endif; ?>
 
 <?php if ($content['text_content_alternate']): ?>

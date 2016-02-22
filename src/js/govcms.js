@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
     $(".move-to-top").appendTo("#top-and-first-wrapper");
+    $(".move-into-top").appendTo("section#about > div.container > div.row");
   // Conditional form logic
     // Set initial state, hide it...
     $('.drupal-version-list').toggleClass('sr-only');
