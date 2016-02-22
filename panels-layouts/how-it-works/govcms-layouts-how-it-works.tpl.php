@@ -48,7 +48,14 @@
 <?php if ($content['whos_using']): ?>
   <section class="icons-grid bg-primary">
     <div class="container">
-        <?php print $content['whos_using']; ?>
+      <div class="row text-center">
+        <div class="col-md-10 col-md-offset-1">
+          <h2>Who is using govCMS?</h2>
+          <div class="row">
+            <?php print $content['whos_using']; ?>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 <?php endif; ?>
