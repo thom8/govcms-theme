@@ -1,10 +1,11 @@
 <div class="move-into-top">
   <?php
-
-  print render(field_view_field('node', $node, 'field_summary', array(
+  $default_view_modes = array(
     'label'=>'hidden',
     'type' => 'default',
-  )));
+  );
+
+  print render(field_view_field('node', $node, 'field_summary', $default_view_modes));
 
   ?>
 </div>
@@ -27,10 +28,7 @@
               hide($content['comments']);
               hide($content['links']);
               hide($content['field_tags']);
-              print render(field_view_field('node', $node, 'body', array(
-                'label'=>'hidden',
-                'type' => 'default',
-              )));
+              print render(field_view_field('node', $node, 'body', $default_view_modes));
               ?>
             </div>
 
