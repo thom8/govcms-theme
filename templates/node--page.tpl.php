@@ -1,3 +1,7 @@
+<div class="move-into-top">
+  <?php var_dump($content); ?>
+</div>
+
 <div class="container">
 
   <div class="row">
