@@ -1,5 +1,11 @@
 <div class="move-into-top">
-  <?php print $node->body[$node->language][0]['safe_summary']; ?>
+  <?php
+
+  print render(field_view_field('node', $node, 'body', array(
+    'type' => 'text_summary_or_trimmed',
+  )));
+
+  ?>
 </div>
 
 <div class="container">
@@ -20,7 +26,9 @@
               hide($content['comments']);
               hide($content['links']);
               hide($content['field_tags']);
-              render($content['body']);
+              print render(field_view_field('node', $node, 'body', array(
+                'type' => 'default',
+              )));
               ?>
             </div>
 
