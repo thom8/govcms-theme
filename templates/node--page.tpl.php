@@ -1,6 +1,5 @@
 <div class="move-into-top">
-  <?php var_dump($content); ?>
-  <?php echo var_dump($content); ?>
+  <?php render($content['field_summary']); ?>
 </div>
 
 <div class="container">
@@ -21,7 +20,7 @@
               hide($content['comments']);
               hide($content['links']);
               hide($content['field_tags']);
-              print render($content);
+              render($content['body']);
               ?>
             </div>
 
