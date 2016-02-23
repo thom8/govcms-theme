@@ -1,5 +1,5 @@
 <div class="move-into-top">
-  <?php render($content['field_summary']); ?>
+  <?php print $node->body[$node->language][0]['safe_summary']; ?>
 </div>
 
 <div class="container">
