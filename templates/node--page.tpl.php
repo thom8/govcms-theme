@@ -1,5 +1,5 @@
 <div class="move-into-top">
-  <?php var_dump($content); ?>
+  <?php render($content['body']); ?>
 </div>
 
 <div class="container">
