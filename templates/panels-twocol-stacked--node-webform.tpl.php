@@ -18,15 +18,9 @@
 ?>
 
   <?php if ($content['top']): ?>
-    <section class="news-item-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-10 col-md-offset-1 text-center">
-            <?php print $content['top']; ?>
-          </div>
-        </div>
+      <div class="move-into-top col-md-10 col-md-offset-1 text-center">
+        <?php print $content['top']; ?>
       </div>
-    </section>
   <?php endif; ?>
 
   <?php if ($content['left'] && $content['right']): ?>
