@@ -1,8 +1,9 @@
 <div class="move-into-top">
   <?php
 
-  print render(field_view_field('node', $node, 'body', array(
-    'type' => 'text_summary_or_trimmed',
+  print render(field_view_field('node', $node, 'field_summary', array(
+    'label'=>'hidden',
+    'type' => 'default',
   )));
 
   ?>
@@ -27,6 +28,7 @@
               hide($content['links']);
               hide($content['field_tags']);
               print render(field_view_field('node', $node, 'body', array(
+                'label'=>'hidden',
                 'type' => 'default',
               )));
               ?>
