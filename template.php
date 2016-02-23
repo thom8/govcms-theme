@@ -125,7 +125,7 @@ function govcmstheme_bootstrap_menu_tree__menu_footer_sub_menu($variables) {
 function govcmstheme_bootstrap_form_alter(&$form, &$form_state, $form_id) {
   if (!empty($form['actions']) && $form['actions']['submit']) {
     $form['actions']['submit']['#attributes'] = array('class' => array('btn', 'btn-primary'));
-    if(isset($form_id) && $form_id == 'webform_client_form_126') {
+    if(isset($form_id) && ($form_id == 'webform_client_form_126' || $form_id == 'webform_client_form_131')) {
       $form['actions']['submit']['#suffix'] = '<br /><small>Once we\'ve review your applicaiton and be in contact with you shortly.</small>';
     }
   }
