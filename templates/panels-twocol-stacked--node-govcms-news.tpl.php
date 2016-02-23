@@ -69,7 +69,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:?subject=<?php print $content['top']; ?>&body=<?php print $_SERVER['REQUEST_URI'] ?>" class="btn-sm btn-email">
+                  <a href="mailto:?subject=govCMS News&body=<?php print $_SERVER['REQUEST_URI'] ?>" class="btn-sm btn-email">
                     <i class="icon-mail"></i>
                     <span class="sr-only">Email</span>
                   </a>
