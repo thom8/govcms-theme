@@ -1,5 +1,6 @@
 <div class="move-into-top">
-  <?php render($content['body']); ?>
+  <?php var_dump($content); ?>
+  <?php echo var_dump($content); ?>
 </div>
 
 <div class="container">
@@ -37,13 +38,3 @@
     </div>
   </div>
 </div>
-
-<section class="comments">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <?php print render($content['comments']); ?>
-      </div>
-    </div>
-  </div>
-</section>
