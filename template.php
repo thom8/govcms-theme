@@ -121,3 +121,10 @@ function govcmstheme_bootstrap_menu_tree__menu_footer_sub_menu($variables) {
   return '<ul class="list-inline small-links">' . $variables['tree'] . '</ul>';
 }
 
+
+function govcmstheme_bootstrap_form_alter(&$form, &$form_state, $form_id) {
+  if (!empty($form['actions']) && $form['actions']['submit']) {
+    $form['actions']['submit']['#attributes'] = array('class' => array('btn', 'btn-primary'));
+  }
+}
+
