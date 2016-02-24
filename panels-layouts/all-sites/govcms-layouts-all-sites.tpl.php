@@ -13,33 +13,25 @@
  */
 ?>
 
-<?php if ($content['intro']): ?>
-    <div class="col-md-10 col-md-offset-1 move-into-top">
-      <?php print $content['intro']; ?>
-    </div>
-<?php endif; ?>
+<?php if ($content['url']) { ?>
+    <a href="<?php print $content['url']; ?>" class="card">
+<?php } else { ?>
+    <a href="#" class="card">
+<?php } ?>
+      <?php if ($content['image']): ?>
+        <?php print $content['image']; ?>
+      <?php endif; ?>
 
-<?php if ($content['whos_using']): ?>
-  <section class="icons-grid light bg-primary">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-md-10 col-md-offset-1">
-          <h2>Who is using govCMS?</h2>
-          <div class="row">
-            <?php print $content['whos_using']; ?>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-<?php endif; ?>
+      <?php if ($content['title']): ?>
+        <?php print $content['title']; ?>
+      <?php endif; ?>
 
-<?php if ($content['sites']): ?>
-  <section class="clients light-bg" id="clients">
-    <div class="container">
-      <div class="row">
-        <?php print $content['sites']; ?>
-      </div>
-    </div>
-  </section>
-<?php endif; ?>
+      <?php if ($content['description']): ?>
+        <?php print $content['description']; ?>
+      <?php endif; ?>
+
+      <?php if ($content['url']): ?>
+        <p class="fake-link">Visit website</p>
+        <i class="icon-external-link"></i>
+      <?php endif; ?>
+</a>
