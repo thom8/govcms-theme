@@ -22,6 +22,6 @@
     <span class="cite-pos"><?php print $content['position']; ?></span>
   </cite>
 </div>
-<div class="col-md-6 col-sm-12 section-two text-center" style="background: transparent url(<?php print $content['background']; ?>) repeat scroll 0% 0% / cover ; height: 345px;">
+<div class="col-md-6 col-sm-12 section-two text-center" style="background: transparent url(<?php print $content['background']; ?>) repeat scroll 0% 0% / cover;">
   <img src="<?php print $content['logo']; ?>" height="200">
 </div>
