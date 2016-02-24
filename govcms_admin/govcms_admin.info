@@ -17,3 +17,6 @@ regions[page_bottom] = Page bottom
 regions[sidebar_first] = First sidebar
 regions[footer] = Footer
 regions_hidden[] = sidebar_first
+
+
+stylesheets[all][] = css/styles.css
