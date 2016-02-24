@@ -13,25 +13,50 @@
  */
 ?>
 
-<?php if ($content['url']) { ?>
-    <a href="<?php print $content['url']; ?>" class="card">
-<?php } else { ?>
-    <a href="#" class="card">
-<?php } ?>
-      <?php if ($content['image']): ?>
-        <?php print $content['image']; ?>
-      <?php endif; ?>
+<?php if ($content['intro']): ?>
+  <div class="col-md-10 col-md-offset-1 move-into-top">
+    <?php print $content['intro']; ?>
+  </div>
+<?php endif; ?>
 
-      <?php if ($content['title']): ?>
-        <?php print $content['title']; ?>
-      <?php endif; ?>
+<?php if ($content['pricing_table']): ?>
+  <section class="pricingTable">
+    <div class="container">
+      <div class="row text-center">
+        <?php print $content['pricing_table']; ?>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
 
-      <?php if ($content['description']): ?>
-        <?php print $content['description']; ?>
-      <?php endif; ?>
+<?php if ($content['whats_included']): ?>
+  <section class="icons-grid bg-primary">
+    <div class="container">
+      <div class="row text-center">
+        <?php print $content['whats_included']; ?>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
 
-      <?php if ($content['url']): ?>
-        <p class="fake-link">Visit website</p>
-        <i class="icon-external-link"></i>
-      <?php endif; ?>
-</a>
+
+<?php if ($content['additional_services']): ?>
+  <section id="support-cats" class="icons-grid">
+    <div class="container">
+      <div class="row text-center">
+        <?php print $content['additional_services']; ?>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
+
+
+<?php if ($content['split']): ?>
+  <section class="split">
+    <div class="container">
+      <div class="row">
+        <?php print $content['split']; ?>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
