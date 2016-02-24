@@ -1,38 +1,38 @@
-$(document).ready(function() {
+jQuery(document).ready(function() {
 
-    $(".move-to-top").appendTo("#top-and-first-wrapper");
-    $(".move-into-top").appendTo("section#about > div.container > div.row");
+    jQuery(".move-to-top").appendTo("#top-and-first-wrapper");
+    jQuery(".move-into-top").appendTo("section#about > div.container > div.row");
   // Conditional form logic
     // Set initial state, hide it...
-    $('.drupal-version-list').toggleClass('sr-only');
-    $('.drupal-version-checkbox').change(function() {
+    jQuery('.drupal-version-list').toggleClass('sr-only');
+    jQuery('.drupal-version-checkbox').change(function() {
         // toggle on change
-        $('.drupal-version-list').toggleClass('sr-only');
+        jQuery('.drupal-version-list').toggleClass('sr-only');
     });
 
   // Add extra sites btn functionality
-    $('.site-info-add').click(function() {
+    jQuery('.site-info-add').click(function() {
         // duplicate .site-info form element
-        var htmlToInsert = $('.site-info')[0].outerHTML;
+        var htmlToInsert = jQuery('.site-info')[0].outerHTML;
         // increment the id number
-        var numItems = $('.site-info').length;
+        var numItems = jQuery('.site-info').length;
         var numItemsNext = numItems + 1;
         htmlToInsert = htmlToInsert.replace(/1\"/g, numItemsNext+'"');
         // append
-        $('.site-info').last().after( htmlToInsert );
+        jQuery('.site-info').last().after( htmlToInsert );
         return false;
     });
 
   // Make left and right split same height, noting the either may be shorter
-    $( ".split" ).each(function() {
-      height1 = $('.section-one', this).height();
-      height2 = $('.section-two', this).height();
+    jQuery( ".split" ).each(function() {
+      height1 = jQuery('.section-one', this).height();
+      height2 = jQuery('.section-two', this).height();
       if (height1 > height2) {
-        rightHeight = $('.section-one', this).height();
-        $('.section-two', this).height(rightHeight);
+        rightHeight = jQuery('.section-one', this).height();
+        jQuery('.section-two', this).height(rightHeight);
       } else {
-        rightHeight = $('.section-two', this).height();
-        $('.section-one', this).height(rightHeight);
+        rightHeight = jQuery('.section-two', this).height();
+        jQuery('.section-one', this).height(rightHeight);
       }
     });
 
@@ -42,21 +42,21 @@ $(document).ready(function() {
 
 function priceCalc() {
   // Setup vars
-  pageViews = $('#page-views').val();
-  siteCount = $('#number-of-sites').val();
+  pageViews = jQuery('#page-views').val();
+  siteCount = jQuery('#number-of-sites').val();
 
   // Calculate it:
   totalAnnualCost = 199; // for now.....
   totalSetupCost = 88;  // for now.....
 
   // Display it
-  $('#calcForm').addClass('fade-out');
-  $('#calcResults #totalAnnualCost').text(totalAnnualCost);
-  $('#calcResults #totalSetupCost').text(totalSetupCost);
-  $('#calcResults #calcHeading').text('Your estimated total costs are');
-  $('#calcResults').removeClass('sr-only');
-  $('#calcResults').removeClass('fade-out');
-  $('#calcResults').addClass('fade-in');
+  jQuery('#calcForm').addClass('fade-out');
+  jQuery('#calcResults #totalAnnualCost').text(totalAnnualCost);
+  jQuery('#calcResults #totalSetupCost').text(totalSetupCost);
+  jQuery('#calcResults #calcHeading').text('Your estimated total costs are');
+  jQuery('#calcResults').removeClass('sr-only');
+  jQuery('#calcResults').removeClass('fade-out');
+  jQuery('#calcResults').addClass('fade-in');
 
   // Stop form submission
   return false;
@@ -65,12 +65,12 @@ function priceCalc() {
 
 function priceReCalc() {
   // Display it
-  $('#calcForm').removeClass('fade-out');
-  $('#calcResults').removeClass('fade-in');
-  $('#calcResults').addClass('fade-out');
-  $('#calcResults #calcHeading').text('Calculate your costs');
-  $('#calcForm').addClass('fade-in');
-  $('#calcResults').addClass('sr-only');
+  jQuery('#calcForm').removeClass('fade-out');
+  jQuery('#calcResults').removeClass('fade-in');
+  jQuery('#calcResults').addClass('fade-out');
+  jQuery('#calcResults #calcHeading').text('Calculate your costs');
+  jQuery('#calcForm').addClass('fade-in');
+  jQuery('#calcResults').addClass('sr-only');
 
   // Stop anchor link loading
   return false;
