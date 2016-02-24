@@ -19,43 +19,26 @@
   </div>
 <?php endif; ?>
 
-<?php if ($content['pricing_table']): ?>
-  <section class="pricingTable">
+<?php if ($content['whos_using']): ?>
+  <section class="icons-grid light bg-primary">
     <div class="container">
       <div class="row text-center">
-        <?php print $content['pricing_table']; ?>
+        <div class="col-md-10 col-md-offset-1">
+          <h2>Who is using govCMS?</h2>
+          <div class="row">
+            <?php print $content['whos_using']; ?>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 <?php endif; ?>
 
-<?php if ($content['whats_included']): ?>
-  <section class="icons-grid bg-primary">
-    <div class="container">
-      <div class="row text-center">
-        <?php print $content['whats_included']; ?>
-      </div>
-    </div>
-  </section>
-<?php endif; ?>
-
-
-<?php if ($content['additional_services']): ?>
-  <section id="support-cats" class="icons-grid">
-    <div class="container">
-      <div class="row text-center">
-        <?php print $content['additional_services']; ?>
-      </div>
-    </div>
-  </section>
-<?php endif; ?>
-
-
-<?php if ($content['split']): ?>
-  <section class="split">
+<?php if ($content['sites']): ?>
+  <section class="clients light-bg" id="clients">
     <div class="container">
       <div class="row">
-        <?php print $content['split']; ?>
+        <?php print $content['sites']; ?>
       </div>
     </div>
   </section>
