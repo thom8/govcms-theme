@@ -25,15 +25,17 @@ jQuery(document).ready(function() {
 
   // Make left and right split same height, noting the either may be shorter
     jQuery( ".split" ).each(function() {
-      height1 = jQuery('.section-one', this).height();
-      height2 = jQuery('.section-two', this).height();
-      if (height1 > height2) {
-        rightHeight = jQuery('.section-one', this).height();
-        jQuery('.section-two', this).height(rightHeight);
-      } else {
-        rightHeight = jQuery('.section-two', this).height();
-        jQuery('.section-one', this).height(rightHeight);
-      }
+        if(jQuery(window).width > 993) {
+            height1 = jQuery('.section-one', this).height();
+            height2 = jQuery('.section-two', this).height();
+            if (height1 > height2) {
+                rightHeight = jQuery('.section-one', this).height();
+                jQuery('.section-two', this).height(rightHeight);
+            } else {
+                rightHeight = jQuery('.section-two', this).height();
+                jQuery('.section-one', this).height(rightHeight);
+            }
+        }
     });
 
 });
