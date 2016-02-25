@@ -23,5 +23,5 @@
   </cite>
 </div>
 <div class="col-md-6 col-sm-12 section-two text-center" style="background: transparent url(<?php print $content['background']; ?>) repeat scroll 0% 0% / cover;">
-  <img src="<?php print $content['logo']; ?>" height="200">
+  <img src="<?php print $content['logo']; ?>" alt="<?php print $content['title']; ?>" height="200">
 </div>

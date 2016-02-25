@@ -15,6 +15,7 @@ $plugin = array(
   'icon' => 'testimonial.png',
   'theme' => 'govcms-layouts-testimonial',
   'regions' => array(
+    'title' => t('Title'),
     'quote' => t('Quote'),
     'name' => t('Name'),
     'position' => t('Position'),
