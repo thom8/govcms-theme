@@ -135,12 +135,10 @@ function govcmstheme_bootstrap_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
 
   if (!empty($breadcrumb)) {
-    $crumbs = '<a href="">Back to ';
-
+    $crumbs = '';
     foreach($breadcrumb as $value) {
       $crumbs .= $value;
     }
-    $crumbs .= ' page</a>';
   }
   return $crumbs;
 }
