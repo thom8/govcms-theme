@@ -138,7 +138,7 @@ function govcmstheme_bootstrap_breadcrumb($variables) {
     foreach($breadcrumb as $value) {
       $temp = substr($value, 0, strpos($value, '>') + 1);
       $temp .= "← Back to ";
-      $temp .= substr($value, strpos($value, '>') + 1, strpos($value, '<', 2));
+      $temp .= substr($value, strpos($value, '>') + 1, strpos($value, '</'));
       $temp .= " page</a>";
       $crumbs .= $temp;
     }
