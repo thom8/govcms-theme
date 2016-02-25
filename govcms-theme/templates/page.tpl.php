@@ -4,6 +4,15 @@
     <section class="about" id="about">
       <div class="container">
         <div class="row">
+          <?php if ($breadcrumb && theme_get_setting('breadcrumb_display')): ?>
+            <div class="col-md-10 col-md-offset-1">
+              <ul class="pager back">
+                <li class="previous">
+                  Back to <?php print $breadcrumb; ?> page
+                </li>
+              </ul>
+            </div>
+          <?php endif; ?>
           <div class="col-md-12 text-center">
             <h1 class="title" id="page-title"><?php print $title; ?></h1>
           </div>
@@ -32,14 +41,6 @@
             </div>
           <?php endif; ?>
           <!-- EOF: #messages-console -->
-          <?php if ($breadcrumb && theme_get_setting('breadcrumb_display')): ?>
-            <div id="breadcrumb" class="clearfix">
-              <div id="breadcrumb-inside" class="clearfix">
-                <?php print $breadcrumb; ?>
-              </div>
-            </div>
-          <?php endif; ?>
-
           <!-- #tabs -->
           <?php if ($tabs): ?>
             <div class="tabs">
