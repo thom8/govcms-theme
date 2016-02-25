@@ -136,16 +136,24 @@ function govcmstheme_bootstrap_breadcrumb($variables) {
   if (!empty($breadcrumb)) {
     $crumbs = '';
     foreach($breadcrumb as $value) {
-      var_dump($value);
-      var_dump(strpos($value, '</'));
-      var_dump(substr($value, strpos($value, '>') + 1, strpos($value, '</')));
       $temp = substr($value, 0, strpos($value, '>') + 1);
       $temp .= "← Back to ";
-      $temp .= substr($value, strpos($value, '>') + 1, strpos($value, '</'));
+      $temp .= get_between('>', '</', $value);
       $temp .= " page</a>";
       $crumbs .= $temp;
     }
   }
   return $crumbs;
+}
+
+function get_between($var1="",$var2="",$pool){
+  $temp1 = strpos($pool,$var1)+strlen($var1);
+  $result = substr($pool,$temp1,strlen($pool));
+  $dd=strpos($result,$var2);
+  if($dd == 0){
+    $dd = strlen($result);
+  }
+
+  return substr($result,0,$dd);
 }
 
