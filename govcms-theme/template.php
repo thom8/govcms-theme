@@ -133,11 +133,14 @@ function govcmstheme_bootstrap_form_alter(&$form, &$form_state, $form_id) {
 
 function govcmstheme_bootstrap_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
-
   if (!empty($breadcrumb)) {
     $crumbs = '';
     foreach($breadcrumb as $value) {
-      $crumbs .= $value;
+      $temp = substr($value, 0, strpos($value, '>'));
+      $temp .= "← Back to ";
+      $temp .= substr($value, strpos($value, '>'), strpos($value, '<', 2));
+      $temp .= " page</a>";
+      $crumbs .= $temp;
     }
   }
   return $crumbs;
