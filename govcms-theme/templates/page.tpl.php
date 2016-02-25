@@ -8,7 +8,7 @@
             <div class="col-md-10 col-md-offset-1">
               <ul class="pager back">
                 <li class="previous">
-                  Back to <?php print $breadcrumb; ?> page
+                  <?php print $breadcrumb; ?>
                 </li>
               </ul>
             </div>
