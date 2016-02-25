@@ -25,7 +25,7 @@ jQuery(document).ready(function() {
 
   // Make left and right split same height, noting the either may be shorter
     jQuery( ".split" ).each(function() {
-        if(jQuery(window).width > 993) {
+        if(jQuery(window).width() > 993) {
             height1 = jQuery('.section-one', this).height();
             height2 = jQuery('.section-two', this).height();
             if (height1 > height2) {
