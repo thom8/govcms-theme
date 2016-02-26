@@ -54,7 +54,10 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <?php print $rows; ?>
+          <?php foreach ($rows as $id => $row): ?>
+            <?php print $row; ?>
+            <hr />
+          <?php endforeach; ?>
         </div>
       </div>
     </div>
