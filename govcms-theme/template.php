@@ -157,3 +157,34 @@ function get_between($var1="",$var2="",$pool){
   return substr($result,0,$dd);
 }
 
+/**
+ * Returns HTML for a date element formatted as an interval.
+ */
+function govcmstheme_bootstrap_display_interval($variables) {
+  $entity = $variables['entity'];
+  $options = $variables['display']['settings'];
+  $dates = $variables['dates'];
+  $attributes = $variables['attributes'];
+
+  // Get the formatter settings, either the default settings for this node type
+  // or the View settings stored in $entity->date_info.
+  if (!empty($entity->date_info) && !empty($entity->date_info->formatter_settings)) {
+    $options = $entity->date_info->formatter_settings;
+  }
+
+  $time_ago_vars = array(
+    'start_date' => $dates['value']['local']['object'],
+    'end_date' => $dates['value2']['local']['object'],
+    'interval' => $options['interval'],
+    'interval_display' => $options['interval_display'],
+  );
+
+  if ($return = theme('date_time_ago', $time_ago_vars)) {
+    $return = get_between(">", "</", $return);
+    return '<p class="post-meta"' . drupal_attributes($attributes) . ">$return</p>";
+  }
+  else {
+    return '';
+  }
+}
+
