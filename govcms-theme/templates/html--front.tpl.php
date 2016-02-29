@@ -49,6 +49,11 @@
 <!--[if gt IE 9]><!--> <html class="no-js" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <link rel="preload" href="<?php print '/' . path_to_theme(); ?>/img/crest.svg" as="image">
+  <link rel="preload" href="<?php print '/' . path_to_theme(); ?>/img/govcms.svg" as="image">
+  <link rel="preload" href=<?php print '/' . path_to_theme(); ?>/css/styles.css" as="style">
+  <link rel="preconnect"  href="https://fonts.googleapis.com/" crossorigin>
+  <link rel="preconnect"  href="https://cdnjs.cloudflare.com/" crossorigin>
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
