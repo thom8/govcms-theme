@@ -189,3 +189,14 @@ function govcmstheme_bootstrap_display_interval($variables) {
   }
 }
 
+/**
+ * Implements hook_form_alter().
+ */
+function govcmstheme_bootstrap_form_search_api_page_search_form_default_search_alter(&$form, &$form_state, $form_id) {
+  if (isset($form['id']['#value']) && isset($form['keys_' . $form['id']['#value']])) {
+    $form['keys_' . $form['id']['#value']]['#attributes']['placeholder'] = t('Search website...');
+  }
+  var_dump($form);
+}
+
+

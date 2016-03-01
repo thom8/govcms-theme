@@ -70,5 +70,4 @@
     <h2 class="post-title"><?php print $title; ?></h2>
   </a>
   <p class="post-subtitle"><?php print $snippet; ?></p>
-  <p class="post-meta"><?php print $info; ?></p>
 </div>
