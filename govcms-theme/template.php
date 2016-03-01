@@ -194,12 +194,24 @@ function govcmstheme_bootstrap_display_interval($variables) {
  */
 function govcmstheme_bootstrap_form_search_api_page_search_form_alter(&$form, &$form_state, $form_id) {
   // Update search keys filed attributes.
+  /*
+  <form class="navbar-form">
+    <div style="display:inline;" class="form-group">
+      <div class="input-group">
+        <input type="text" value="govCMS" placeholder="Search for a topic or question here…" class="form-control input-lg">
+        <button class="input-group-addon btn-lg" type="submit">
+          <i class="icon-search"></i>
+        </button>
+      </div>
+    </div>
+  </form>
+   */
   var_dump($form);
-  $form['search_block_form']['#attributes']['title'] = 'Search';
-  $form['search_block_form']['#attributes']['placeholder'] = t('Search for a topic or question here...');
-  $form['search_block_form']['#attributes']['autocomplete'] = 'off';
-  // Update submit button style.
-  $form['actions']['submit']['#value'] = decode_entities('') . ' Search';
+  $form['#attributes']['class'][] = 'move-into-top navbar-form';
+  $form['form']['keys_1']['#title'] = 'Search';
+  $form['form']['keys_1']['placeholder'] = t('Search for a topic or question here...');
+
+  $form['form']['submit_1']['#value'] = '<i class="icon-search"></i>';
 
   $form['actions']['submit']['#attributes'] = array(
     'class' => array(
