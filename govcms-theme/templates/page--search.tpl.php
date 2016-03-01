@@ -14,7 +14,6 @@
             </div>
           <?php endif; ?>
           <div class="col-md-12 text-center">
-            Paul was here3
             <h1 class="title" id="page-title"><?php print $title; ?></h1>
           </div>
         </div>
