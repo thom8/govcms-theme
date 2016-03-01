@@ -195,10 +195,6 @@ function govcmstheme_bootstrap_display_interval($variables) {
 function govcmstheme_bootstrap_form_search_api_page_search_form_alter(&$form, &$form_state, $form_id) {
   // Update search keys filed attributes.
   var_dump($form);
-  $form['#attributes']['class'] = array('move-into-top', 'navbar-form', 'search-form');
-  $form['form']['keys_1']['#title'] = 'Search';
-  $form['form']['keys_1']['placeholder'] = t('Search for a topic or question here...');
-
 
 }
 
