@@ -67,14 +67,8 @@
 
 <div class="post-preview">
   <a href="<?php print $url; ?>">
-    <h2 class="post-title">
-      <?php print $title; ?>
-    </h2>
-    <p class="post-subtitle">
-      <?php print $snippet; ?>
-    </p>
+    <h2 class="post-title"><?php print $title; ?></h2>
   </a>
-  <p class="post-meta">
-    <?php print $info; ?>
-  </p>
+  <p class="post-subtitle"><?php print $snippet; ?></p>
+  <p class="post-meta"><?php print $info; ?></p>
 </div>
