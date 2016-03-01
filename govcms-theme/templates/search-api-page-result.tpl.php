@@ -66,8 +66,7 @@
 ?>
 
 <div class="post-preview">
-  <?php var_dump($url); ?>
-  <a href="<?php print $url; ?>">
+  <a href="/<?php print $url['path']; ?>">
     <h2 class="post-title"><?php print $title; ?></h2>
   </a>
   <p class="post-subtitle"><?php print $snippet; ?></p>

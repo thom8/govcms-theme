@@ -41,8 +41,8 @@
             </div>
           <?php endif; ?>
           <!-- EOF: #messages-console -->
-          <?php print render($page['content']); ?>
         </div>
+        <?php print render($page['content']); ?>
       </div>
     </div>
     <!-- EOF:#main-content -->
