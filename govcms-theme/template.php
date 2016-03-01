@@ -218,8 +218,9 @@ function govcmstheme_bootstrap_form_search_api_page_search_form_alter(&$form, &$
     $form['#attributes']['class'][] = 'move-into-top';
   }
 
-  $form['form']['keys_1']['#title'] = 'Search';
-  $form['form']['keys_1']['#attributes']['class'][] = 'sr-only';
+  $form['form']['keys_1']['#title'] = '<span class="sr-only">Search</span>';
+  $form['form']['keys_1']['#attributes']['class'][] = 'form-control';
+  $form['form']['keys_1']['#attributes']['class'][] = 'input-lg';
 
 
 
