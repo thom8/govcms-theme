@@ -207,11 +207,11 @@ function govcmstheme_bootstrap_form_search_api_page_search_form_alter(&$form, &$
   </form>
    */
   var_dump($form);
-  $form['#attributes']['class'][] = 'move-into-top navbar-form';
+  $form['#attributes']['class'] = array('move-into-top', 'navbar-form', 'search-form');
   $form['form']['keys_1']['#title'] = 'Search';
   $form['form']['keys_1']['placeholder'] = t('Search for a topic or question here...');
 
-  $form['form']['submit_1']['#value'] = '<i class="icon-search"></i>';
+  //$form['form']['submit_1']['#value'] = '<i class="icon-search"></i>';
 
   $form['actions']['submit']['#attributes'] = array(
     'class' => array(
