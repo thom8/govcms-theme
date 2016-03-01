@@ -43,6 +43,17 @@ function govcmstheme_bootstrap_process_html(&$vars) {
   }
 }
 
+function govcmstheme_bootstrap_preprocess_html(&$vars) {
+  $path = drupal_get_path_alias();
+  $aliases = explode('/', $path);
+
+  foreach($aliases as $alias) {
+    if($alias == 'search') {
+      $vars['classes_array'][] = drupal_clean_css_identifier($alias);
+    }
+  }
+}
+
 
 /**
  * Preprocess variables for block.tpl.php
@@ -196,11 +207,13 @@ function govcmstheme_bootstrap_form_search_api_page_search_form_alter(&$form, &$
   // Update search keys filed attributes.
   var_dump($form);
   if (!isset($form['#attributes']['class'])) {
-    $form['#attributes'] = array('class' => array('form-inline', 'navbar-form'));
+    $form['#attributes'] = array('class' => array('form-inline', 'navbar-form', 'search-form', 'move-into-top'));
   }
   else {
     $form['#attributes']['class'][] = 'form-inline';
     $form['#attributes']['class'][] = 'navbar-form';
+    $form['#attributes']['class'][] = 'search-form';
+    $form['#attributes']['class'][] = 'move-into-top';
   }
 }
 
