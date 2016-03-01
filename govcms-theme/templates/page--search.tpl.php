@@ -41,27 +41,9 @@
             </div>
           <?php endif; ?>
           <!-- EOF: #messages-console -->
-          <!-- #tabs -->
-          <?php if ($tabs): ?>
-            <div class="tabs">
-              <?php print render($tabs); ?>
-            </div>
-          <?php endif; ?>
-          <!-- EOF: #tabs -->
-
-          <!-- #action links -->
-          <?php if ($action_links): ?>
-            <ul class="action-links">
-              <?php print render($action_links); ?>
-            </ul>
-          <?php endif; ?>
-          <!-- EOF: #action links -->
+          <?php print render($page['content']); ?>
         </div>
       </div>
-
-      <!-- Main page content if not homepage -->
-      <?php print render($page['content']); ?>
-
     </div>
     <!-- EOF:#main-content -->
 
