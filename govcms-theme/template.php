@@ -218,11 +218,18 @@ function govcmstheme_bootstrap_form_search_api_page_search_form_alter(&$form, &$
     $form['#attributes']['class'][] = 'move-into-top';
   }
 
+  //Hide label.. can't add classes directly to label so add span inside label... hackery
   $form['form']['keys_1']['#title'] = '<span class="sr-only">Search</span>';
+
+  //Add classes to input field
   $form['form']['keys_1']['#attributes']['class'][] = 'form-control';
   $form['form']['keys_1']['#attributes']['class'][] = 'input-lg';
 
-
+  $form['form']['submit_1'] = array(
+    '#type' => 'item',
+    '#markup' => '<button type="submit" id="edit-submit-btn" name="op" class="input-group-addon btn-lg"><i class="icon-search"></i><span class="sr-only">Search</span></button>',
+    '#weight' => 1000,
+  );
 
 }
 
