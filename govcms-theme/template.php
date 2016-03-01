@@ -195,7 +195,13 @@ function govcmstheme_bootstrap_display_interval($variables) {
 function govcmstheme_bootstrap_form_search_api_page_search_form_alter(&$form, &$form_state, $form_id) {
   // Update search keys filed attributes.
   var_dump($form);
-
+  if (!isset($form['#attributes']['class'])) {
+    $form['#attributes'] = array('class' => array('form-inline', 'navbar-form'));
+  }
+  else {
+    $form['#attributes']['class'][] = 'form-inline';
+    $form['#attributes']['class'][] = 'navbar-form';
+  }
 }
 
 
