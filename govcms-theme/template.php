@@ -213,12 +213,12 @@ function govcmstheme_bootstrap_form_search_api_page_search_form_alter(&$form, &$
 
   //$form['form']['submit_1']['#value'] = '<i class="icon-search"></i>';
 
-  $form['actions']['submit']['#attributes'] = array(
+  /*$form['actions']['submit']['#attributes'] = array(
     'class' => array(
       'input-group-addon',
       'btn-lg'
     )
-  );
+  );*/
 
 }
 
