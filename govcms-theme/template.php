@@ -49,7 +49,7 @@ function govcmstheme_bootstrap_preprocess_html(&$vars) {
 
   foreach($aliases as $alias) {
     if($alias == 'search') {
-      $vars['classes_array'][] = drupal_clean_css_identifier($alias);
+      $vars['classes_array'][] = 'search-results';
     }
   }
 }
@@ -206,6 +206,8 @@ function govcmstheme_bootstrap_display_interval($variables) {
 function govcmstheme_bootstrap_form_search_api_page_search_form_alter(&$form, &$form_state, $form_id) {
   // Update search keys filed attributes.
   var_dump($form);
+
+  //Add CSS to form tag
   if (!isset($form['#attributes']['class'])) {
     $form['#attributes'] = array('class' => array('form-inline', 'navbar-form', 'search-form', 'move-into-top'));
   }
@@ -215,6 +217,12 @@ function govcmstheme_bootstrap_form_search_api_page_search_form_alter(&$form, &$
     $form['#attributes']['class'][] = 'search-form';
     $form['#attributes']['class'][] = 'move-into-top';
   }
+
+  $form['form']['keys_1']['#title'] = 'Search';
+  $form['form']['keys_1']['#attributes']['class'][] = 'sr-only';
+
+
+
 }
 
 
