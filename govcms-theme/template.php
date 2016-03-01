@@ -43,6 +43,13 @@ function govcmstheme_bootstrap_process_html(&$vars) {
   }
 }
 
+function govcmstheme_bootstrap_preprocess_page(&$vars) {
+  $header = drupal_get_http_header("status");
+  if($header == "404 Not Found") {
+    $vars['theme_hook_suggestions'][] = 'page__404';
+  }
+}
+
 /**
  * Preprocess variables for block.tpl.php
  */

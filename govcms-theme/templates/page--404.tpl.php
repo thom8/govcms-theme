@@ -1,32 +1,37 @@
-<?php include "includes/header.tpl.php"; ?>
-
-<main>
-  <!-- #page -->
-  <div id="page" class="clearfix">
-    <!-- <div class="decoration"></div> -->
-
-    <!-- #main-content -->
-    <div id="main-content">
-      <div class="container content">
-        <section class="col-md-8 col-md-offset-2" id="top">
-        <div id="page-404">
-          <h1 class="text-center">404 <span>Page not found</span></h1>
-          <h2>Get back on track:</h2>
-          <ul>
-            <li>The address may have changed since you last accessed the page. We recommend you go back to our <a href="/">homepage</a> or try searching our website to find what you're looking for.</li>
-            <li>If you typed the address, make sure the spelling is correct.</li>
-            <li>You can also go to the <a href="/site-map">site map</a> for an overview of our website.</li>
-            <li>If you received this error after clicking on a link from within our website, or if the problem persists, please report the error via our <a href="/contact-us">contact us</a> form.</li>
-          </ul>
-          <p>&nbsp;</p>
+<div id="top-and-first-wrapper">
+  <?php include "includes/header.tpl.php"; ?>
+  <?php if ($title): ?>
+    <section class="about" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="move-into-top col-md-8 col-md-offset-2">
+            <h1 class="sr-only">Page not found</h1>
+            <h2 class="text-center">Page not found</h2>
+          </div>
         </div>
-        </section>
+      </div>
+    </section>
+  <?php endif; ?>
+</div>
+
+
+
+<section class="text-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h3>So what now?</h3>
+        <p>
+          You may have a typo in your URL. If not, the page may have moved.
+          <br>
+          You might be able to find what you're looking for from <a href="/">our homepage</a>.
+        </p>
+        <p>
+          If you're looking for a site that runs on govCMS, you can find it in our <a href="/all-sites">list of live sites</a>.
+        </p>
       </div>
     </div>
-    <!-- <div class="decoration"></div> -->
   </div>
-  <!-- EOF:#page -->
-</main>
-
+</section>
 <?php include "includes/footer.tpl.php"; ?>
 <!-- EOF:#footer -->
