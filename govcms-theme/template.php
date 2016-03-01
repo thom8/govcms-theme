@@ -188,3 +188,26 @@ function govcmstheme_bootstrap_display_interval($variables) {
     return '';
   }
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function govcmstheme_bootstrap_form_search_api_page_search_form_alter(&$form, &$form_state, $form_id) {
+  // Update search keys filed attributes.
+  var_dump($form);
+  $form['search_block_form']['#attributes']['title'] = 'Search';
+  $form['search_block_form']['#attributes']['placeholder'] = t('Search for a topic or question here...');
+  $form['search_block_form']['#attributes']['autocomplete'] = 'off';
+  // Update submit button style.
+  $form['actions']['submit']['#value'] = decode_entities('') . ' Search';
+
+  $form['actions']['submit']['#attributes'] = array(
+    'class' => array(
+      'input-group-addon',
+      'btn-lg'
+    )
+  );
+
+}
+
+
