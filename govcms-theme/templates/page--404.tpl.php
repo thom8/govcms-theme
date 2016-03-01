@@ -33,5 +33,15 @@
     </div>
   </div>
 </section>
+<aside class="call-to-action bg-primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Still can't find what you were after?</h2>
+        <a class="btn btn-lg btn-primary" href="/contact-us">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</aside>
 <?php include "includes/footer.tpl.php"; ?>
 <!-- EOF:#footer -->
