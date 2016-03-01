@@ -28,37 +28,38 @@
     <!-- #main-content -->
     <div id="main-content">
 
-      <div class="container">
-        <div class="col-md-8 col-md-offset-2">
-          <!-- #messages-console -->
-          <?php if ($messages): ?>
-            <div id="messages-console" class="clearfix">
-              <div class="row">
-                <div class="col-md-12">
-                  <?php print $messages; ?>
+      <?php if ($messages || $tabs || $action_links): ?>
+        <div class="container">
+          <div class="col-md-8 col-md-offset-2">
+            <!-- #messages-console -->
+            <?php if ($messages): ?>
+              <div id="messages-console" class="clearfix">
+                <div class="row">
+                  <div class="col-md-12">
+                    <?php print $messages; ?>
+                  </div>
                 </div>
               </div>
-            </div>
-          <?php endif; ?>
-          <!-- EOF: #messages-console -->
-          <!-- #tabs -->
-          <?php if ($tabs): ?>
-            <div class="tabs">
-              <?php print render($tabs); ?>
-            </div>
-          <?php endif; ?>
-          <!-- EOF: #tabs -->
+            <?php endif; ?>
+            <!-- EOF: #messages-console -->
+            <!-- #tabs -->
+            <?php if ($tabs): ?>
+              <div class="tabs">
+                <?php print render($tabs); ?>
+              </div>
+            <?php endif; ?>
+            <!-- EOF: #tabs -->
 
-          <!-- #action links -->
-          <?php if ($action_links): ?>
-            <ul class="action-links">
-              <?php print render($action_links); ?>
-            </ul>
-          <?php endif; ?>
-          <!-- EOF: #action links -->
+            <!-- #action links -->
+            <?php if ($action_links): ?>
+              <ul class="action-links">
+                <?php print render($action_links); ?>
+              </ul>
+            <?php endif; ?>
+            <!-- EOF: #action links -->
+          </div>
         </div>
-      </div>
-
+      <?php endif; ?>
       <!-- Main page content if not homepage -->
       <?php print render($page['content']); ?>
 

@@ -18,11 +18,9 @@
   <div id="page" class="clearfix">
     <!-- #main-content -->
     <div id="main-content">
-
-      <div class="container">
-        <div class="col-md-8 col-md-offset-2">
-          <!-- #messages-console -->
-          <?php if ($messages): ?>
+      <?php if ($messages): ?>
+        <div class="container">
+          <div class="col-md-8 col-md-offset-2">
             <div id="messages-console" class="clearfix">
               <div class="row">
                 <div class="col-md-12">
@@ -30,10 +28,9 @@
                 </div>
               </div>
             </div>
-          <?php endif; ?>
-          <!-- EOF: #messages-console -->
+          </div>
         </div>
-      </div>
+      <?php endif; ?>
       <?php print render($page['content']); ?>
     </div>
     <!-- EOF:#main-content -->
