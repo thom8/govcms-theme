@@ -35,20 +35,26 @@
  */
 
 ?>
-<div class="<?php print $classes;?>">
-  Paul was here etoo
-  <?php if ($result_count): ?>
-    <?php print render($search_performance); ?>
-  <?php endif; ?>
-  <?php print render($spellcheck); ?>
-  <?php if ($result_count): ?>
-    <h2><?php print t('Search results');?></h2>
-    <ol class="search-results">
-      <?php print render($search_results); ?>
-    </ol>
-    <?php print render($pager); ?>
-  <?php else : ?>
-    <h2><?php print t('Your search yielded no results.');?></h2>
-    <?php print $no_results_help; ?>
-  <?php endif; ?>
-</div>
+
+<section class="news-list">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+        <?php if ($result_count): ?>
+          <?php print render($search_performance); ?>
+        <?php endif; ?>
+        <?php print render($spellcheck); ?>
+        <?php if ($result_count): ?>
+          <h2><?php print t('Search results');?></h2>
+          <?php print render($search_results); ?>
+          <?php print render($pager); ?>
+        <?php else : ?>
+          <h2><?php print t('Your search yielded no results.');?></h2>
+          <?php print $no_results_help; ?>
+        <?php endif; ?>
+      </div>
+    </div>
+  </div>
+</section>
