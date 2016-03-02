@@ -204,9 +204,6 @@ function govcmstheme_bootstrap_display_interval($variables) {
  * Implements hook_form_alter().
  */
 function govcmstheme_bootstrap_form_search_api_page_search_form_alter(&$form, &$form_state, $form_id) {
-  // Update search keys filed attributes.
-  var_dump($form);
-
   //Add CSS to form tag
   if (!isset($form['#attributes']['class'])) {
     $form['#attributes'] = array('class' => array('form-inline', 'navbar-form', 'search-form', 'move-into-top'));
