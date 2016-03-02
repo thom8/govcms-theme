@@ -233,6 +233,9 @@ function govcmstheme_bootstrap_form_search_api_page_search_form_alter(&$form, &$
   );
   $form['form']['submit_1']['#theme_wrappers'] = array();
 
+  $form['#prefix'] = '<div class="col-md-10 col-md-offset-1 text-center">';
+  $form['#suffix'] = '</div>';
+
 }
 
 
