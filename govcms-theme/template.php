@@ -231,8 +231,9 @@ function govcmstheme_bootstrap_form_search_api_page_search_form_alter(&$form, &$
 
   $form['form']['submit_2'] = array(
     '#type' => 'item',
-    '#markup' => '<button type="submit" id="edit-submit-1" name="op" value="Search" class="form-submit input-group-addon btn-lg"><i class="icon-search"></i><span class="sr-only">Search</span></button>',
+    '#markup' => '<button type="submit" id="edit-submit-2" name="op" value="Search" class="form-submit input-group-addon btn-lg"><i class="icon-search"></i><span class="sr-only">Search</span></button>',
     '#weight' => 1000,
+    '#theme_wrappers' => array(),
   );
   $form['form']['submit_1']['#theme_wrappers'] = array();
 
