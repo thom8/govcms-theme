@@ -47,7 +47,7 @@
         <?php endif; ?>
         <?php print render($spellcheck); ?>
         <?php if ($result_count): ?>
-          <h2><?php print t('Search results');?></h2>
+          <h2><?php print t('Search results for ').arg(1).arg(2); ?></h2>
           <?php print render($search_results); ?>
           <?php print render($pager); ?>
         <?php else : ?>

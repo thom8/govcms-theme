@@ -206,13 +206,15 @@ function govcmstheme_bootstrap_display_interval($variables) {
 function govcmstheme_bootstrap_form_search_api_page_search_form_alter(&$form, &$form_state, $form_id) {
   //Add CSS to form tag
   if (!isset($form['#attributes']['class'])) {
-    $form['#attributes'] = array('class' => array('form-inline', 'navbar-form', 'search-form', 'move-into-top'));
+    $form['#attributes'] = array('class' => array('form-inline', 'navbar-form', 'search-form', 'move-into-top', 'col-md-10', 'col-md-offset-2'));
   }
   else {
     $form['#attributes']['class'][] = 'form-inline';
     $form['#attributes']['class'][] = 'navbar-form';
     $form['#attributes']['class'][] = 'search-form';
     $form['#attributes']['class'][] = 'move-into-top';
+    $form['#attributes']['class'][] = 'col-md-10';
+    $form['#attributes']['class'][] = 'col-md-offset-2';
   }
 
   //Hide label.. can't add classes directly to label so add span inside label... hackery
