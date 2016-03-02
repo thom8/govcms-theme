@@ -221,6 +221,7 @@ function govcmstheme_bootstrap_form_search_api_page_search_form_alter(&$form, &$
   //Hide label.. can't add classes directly to label so add span inside label... hackery
   $form['form']['keys_1']['#title'] = '<span class="sr-only">Search</span>';
   $form['form']['keys_1']['#theme_wrappers'] = array();
+  unset($form['form']['keys_1']['#size']);
 
   //Add classes to input field
   $form['form']['keys_1']['#attributes']['class'][] = 'form-control';
@@ -228,13 +229,13 @@ function govcmstheme_bootstrap_form_search_api_page_search_form_alter(&$form, &$
 
   $form['form']['submit_1'] = array(
     '#type' => 'item',
-    '#markup' => '<button type="submit" id="form-submit" name="op" value="Search" class="input-group-addon btn-lg"><i class="icon-search"></i><span class="sr-only">Search</span></button>',
+    '#markup' => '<button type="submit" id="edit-submit-1" name="op" value="Search" class="form-submit input-group-addon btn-lg"><i class="icon-search"></i><span class="sr-only">Search</span></button>',
     '#weight' => 1000,
   );
   $form['form']['submit_1']['#theme_wrappers'] = array();
 
-  $form['#prefix'] = '<div class="col-md-10 col-md-offset-1 text-center">';
-  $form['#suffix'] = '</div>';
+  $form['form']['#prefix'] = '<div class="col-md-10 col-md-offset-1 text-center">';
+  $form['form']['#suffix'] = '</div>';
 
 }
 
