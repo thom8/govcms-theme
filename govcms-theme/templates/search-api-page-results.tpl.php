@@ -47,7 +47,12 @@
         <?php endif; ?>
         <?php print render($spellcheck); ?>
         <?php if ($result_count): ?>
-          <h2><?php print t('Search results for "').filter_input(INPUT_POST | INPUT_GET, 'keys_1', FILTER_SANITIZE_SPECIAL_CHARS).'"'; ?></h2>
+          <?php
+            $search_term = arg(1);
+            $search_term = str_replace('<', '', $search_term);
+            $search_term = str_replace('>', '', $search_term);
+          ?>
+          <h2><?php print t('Search results for "').$search_term.'"'; ?></h2>
           <?php print render($search_results); ?>
           <?php print render($pager); ?>
         <?php else : ?>
