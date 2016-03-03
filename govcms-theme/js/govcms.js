@@ -1,8 +1,9 @@
 jQuery(document).ready(function() {
 
-    jQuery("#search-api-page-search-form").wrap("<div class='col-md-10 col-md-offset-1'></div>");
     jQuery(".move-to-top").appendTo("#top-and-first-wrapper");
     jQuery(".move-into-top").appendTo("section#about > div.container > div.row");
+
+    jQuery("#search-api-page-search-form").wrap("<div class='col-md-10 col-md-offset-1'></div>");
     // Conditional form logic
     // Set initial state, hide it...
     jQuery('.drupal-version-list').toggleClass('sr-only');
