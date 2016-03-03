@@ -239,6 +239,8 @@ function govcmstheme_bootstrap_form_search_api_page_search_form_alter(&$form, &$
   $form['form']['#prefix'] = '<div class="input-group">';
   $form['form']['#suffix'] = '</div>';
 
+  $form['#prefix'] = '<div class="col-md-10 col-md-offset-1">';
+  $form['#suffix'] = '</div>';
 }
 
 
