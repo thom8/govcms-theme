@@ -1,5 +1,6 @@
 jQuery(document).ready(function() {
 
+    jQuery("#search-api-page-search-form").wrap("<div class='col-md-10 col-md-offset-1'></div>");
     jQuery(".move-to-top").appendTo("#top-and-first-wrapper");
     jQuery(".move-into-top").appendTo("section#about > div.container > div.row");
     // Conditional form logic
