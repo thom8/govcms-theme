@@ -56,7 +56,7 @@
           <?php print render($search_results); ?>
           <?php print render($pager); ?>
         <?php else : ?>
-          <h2><?php print t('Your search yielded no results.');?></h2>
+          <h2><?php print t('No results found.');?></h2>
           <?php print $no_results_help; ?>
         <?php endif; ?>
       </div>
