@@ -7,7 +7,7 @@ var Drupal = Drupal || {};
 
 (function($, Drupal){
     jQuery(document).ready(function($) {
-        if(CKEDITOR != null) {
+        if(typeof CKEDITOR != 'undefined') {
             CKEDITOR.dtd.a.h2 = 1;
             CKEDITOR.dtd.a.div = 1;
             CKEDITOR.dtd.$removeEmpty.i = 0;
