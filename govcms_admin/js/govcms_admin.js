@@ -13,7 +13,7 @@ var Drupal = Drupal || {};
             CKEDITOR.dtd.$removeEmpty.i = 0;
         }
 
-        $("body.page-admin div#branding div.breadcrumb").prepend("<a href="/">Home</a><span></span>");
+        $("body.page-admin div#branding div.breadcrumb").prepend("<a href='/'>Home</a><span></span>");
 
     });
 
