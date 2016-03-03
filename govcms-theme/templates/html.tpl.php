@@ -56,6 +56,7 @@
   <link rel="preconnect"  href="https://cdnjs.cloudflare.com/" crossorigin>
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
+  <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,400italic">
   <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
   <?php print $styles; ?>
   <?php print $scripts; ?>
