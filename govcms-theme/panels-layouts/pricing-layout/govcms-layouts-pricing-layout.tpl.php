@@ -13,7 +13,7 @@
  */
 ?>
 
-<?php if($title == 'Custom'): ?>
+<?php if(trim($content['page_views_per_month']) == '0'): ?>
   <div class="panel panel-dashed">
     <div class="panel-heading">
       <h3 class="text-center"><strong>Custom</strong><br>&nbsp;</h3>
