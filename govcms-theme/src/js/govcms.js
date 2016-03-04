@@ -4,6 +4,8 @@ jQuery(document).ready(function() {
     jQuery(".move-into-top").appendTo("section#about > div.container > div.row");
 
     jQuery("#search-api-page-search-form").wrap("<div class='col-md-10 col-md-offset-1'></div>");
+    jQuery("#block-workbench-block").addClass("container");
+    jQuery("ul.tabs.primary").addClass("nav nav-tabs").removeClass("tabs").removeClass("primary");
   // Conditional form logic
     // Set initial state, hide it...
     jQuery('.drupal-version-list').toggleClass('sr-only');
