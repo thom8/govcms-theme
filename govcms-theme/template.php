@@ -63,6 +63,16 @@ function govcmstheme_bootstrap_preprocess_block(&$variables) {
 }
 
 /**
+ * Implements hook_block_view_alter().
+ */
+function govcmstheme_bootstrap_block_view_alter(&$data, $block) {
+  if ($block->module == 'block') {
+    $pattern = "/<p[^>]*><\\/p[^>]*>/";
+    $data['content'] = preg_replace($pattern, '', $data['content']);
+  }
+}
+
+/**
  * Preprocess Views exposed form
  */
 function govcmstheme_bootstrap_preprocess_views_exposed_form(&$vars, $hook) {
