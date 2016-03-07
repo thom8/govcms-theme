@@ -52,6 +52,7 @@
   <?php endif;?>
 
   <div class="content"<?php print $content_attributes; ?>>
+    <pre><?php var_dump($content); ?></pre>
     <?php print $content ?>
   </div>
 </div>
