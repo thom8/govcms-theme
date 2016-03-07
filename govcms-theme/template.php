@@ -67,7 +67,7 @@ function govcmstheme_bootstrap_preprocess_block(&$variables) {
  */
 function govcmstheme_bootstrap_block_view_alter(&$data, $block) {
   if ($block->module == 'block') {
-    $pattern = "/<p[^>]*><\\/p[^>]*>/";
+    $pattern = "#<p[^>]*>(\s|&nbsp;|</?\s?br\s?/?>)*</?p>#";
     $data['content'] = preg_replace($pattern, '', $data['content']);
   }
 }
