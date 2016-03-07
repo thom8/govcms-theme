@@ -18,6 +18,7 @@ $plugin = array(
   'regions' => array(
     'intro' => t('Introduction'),
     'clients' => t('Clients / Trusted By'),
+    'whos_using' => t('Who is using govCMS?'),
     'testimonial_split' => t('Testimonial Split'),
     'why_use' => t('Why use govCMS?'),
     'more_information_split' => t('More Information / Calculate Costs'),
