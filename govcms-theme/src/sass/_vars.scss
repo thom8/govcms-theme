@@ -1,10 +1,16 @@
+// Variables file
 
-$highlight:         #71C39E;
-$highlightDark:     #54A283;  // accessible on white bg
+$highlight:         #71C39E;  // from the govCMS logo
+$highlightBright:   #6ad5ac;  // accessible as bg for $secondaryDark
+$highlightDark:     #54A283;  // accessible on white bg - IF larger than 24px
+$highlightDarker:   #407a63;  // accessible on white bg
 
 
-$secondary:         #2C5D7E;
-$secondaryDark:     #37424A;
+$aqua:              #51bfbb;  // Not just a Eurodance group - a mix btwn $highlight and $secondary, but in a brighter hue.
+
+
+$secondary:         #2C5D7E;  // light version of $secondaryDark
+$secondaryDark:     #37424A;  // from the govCMS logo
 
 
 $greyLight:         #F5F5F5;

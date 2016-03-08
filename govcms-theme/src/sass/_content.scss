@@ -13,8 +13,8 @@
       font-size: 150%;
       font-weight: 300;
     }
-    .optional {  // '(optional)'
-      color: $highlightDark;
+    .optional {  // '(optional)' labels on form elements
+      color: $highlightDarker;
       font-weight: 300;
     }
   }
@@ -44,6 +44,29 @@
   }
   .list-group-item {
     padding: 35px 15px;
+  }
+}
+.panel-dashed {
+  border-style: dashed;
+  border-width: 2px;
+  .panel-heading {
+    border-style: none;
+    background: #f5f5f5;
+    h3 strong {
+      color: $highlightDarker;
+    }
+    .lead {
+      strong {
+        opacity: 0.85;
+      }
+    }
+  }
+  // only on desktops
+  // .panel-body {
+  //   min-height: 31em;
+  // }
+  .vertical-center > div {
+    width: 100%;
   }
 }
 
@@ -91,6 +114,9 @@
     width: 1em;
   }
 }
+div > .plus-separator::after {
+  padding-left: 0.21em;
+}
 
 
 small {
@@ -110,7 +136,7 @@ small {
       text-decoration: none;
       .post-title {
         text-decoration: underline;
-        color: $highlightDark
+        color: $highlightDark;
       }
     }
     .post-subtitle {
@@ -119,6 +145,13 @@ small {
   }
   .post-meta {
     color: $textGreyLight;
+    a {
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -161,7 +194,7 @@ small {
   p {
     font-size: 125%;
   }
-  .row {
+  .row:not(.vertical-center) {
     margin: 5.7em 0;
   }
   &.bg-primary .icon-huge {
@@ -182,7 +215,7 @@ small {
   &.text-content .icon-hugest {
     color: #fff !important;
     background: $highlight;
-    @include background-gradient( adjust-hue( lighten($secondary,15%), -10% ), adjust-hue( $highlight, 10% ) );
+    @include background-gradient( adjust-hue( lighten($secondary,15%), -10% ), $secondary, $highlight );
     border-radius: 50%;
     display: inline-block;
     font-size: 21em;

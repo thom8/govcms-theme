@@ -12,6 +12,8 @@
 // # [sudo] npm link gulp gulp-jshint gulp-imagemin gulp-notify gulp-autoprefixer gulp-minify-css gulp-compass gulp-uncss gulp-concat gulp-uglify casperjs phantomjs-prebuilt jshint
 //
 // Then just run 'gulp' to watch directory for changes :)
+//
+// May encounter this on old Ubuntu: http://stackoverflow.com/questions/32490328/gulp-autoprefixer-throwing-referenceerror-promise-is-not-defined
 // *************************
 
 
