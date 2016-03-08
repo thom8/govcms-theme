@@ -1,4 +1,4 @@
-<div class="move-into-top col-md-10 col-md-offset-1">
+<div class="move-into-top col-md-10 col-md-offset-1 text-center">
   <?php
   $default_view_modes = array(
     'label'=>'hidden',
