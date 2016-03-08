@@ -41,12 +41,11 @@
       <?php print $content['title']; ?>
     <?php endif; ?>
 
-    <?php if ($content['description']): ?>
-      <?php print $content['description']; ?>
-    <?php endif; ?>
+    <?php // if ($content['description']): ?>
+      <?php // print $content['description']; ?>
+    <?php // endif; ?>
 
     <?php if ($content['url']): ?>
-      <p class="fake-link">Visit website</p>
       <i class="icon-external-link"></i>
     <?php endif; ?>
   </a>
