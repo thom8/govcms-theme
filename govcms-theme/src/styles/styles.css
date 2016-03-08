@@ -480,7 +480,7 @@ header .btn.btn-light.active {
 #about h1,
 #about h2 {
   color: #2C5D7E;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.1em;
 }
 #about .btn-lg {
   float: left;
@@ -965,10 +965,6 @@ a.coa-link {
 }
 .white .coa-titles {
   color: #fff !important;
-}
-
-.homepage #about h1 {
-  margin-bottom: 1em;
 }
 
 .portfolio {
