@@ -42,6 +42,18 @@ jQuery(document).ready(function() {
         }
     });
 
+    jQuery('.fancyCounter').each(function () {
+        jQuery(this).prop('Counter',0).animate({
+            Counter: jQuery(this).text()
+        }, {
+            duration: 2000,
+            easing: 'swing',
+            step: function (now) {
+                jQuery(this).text(Math.ceil(now));
+            }
+        });
+    });
+
 });
 
 
