@@ -49,7 +49,7 @@ jQuery(document).ready(function() {
         }
     });
 
-    jQuery('div.region-content [class^="icon-"]').each(function () {
+    jQuery('div.region-content [class^="icon-"], div.region-content .fancyCounter').each(function () {
         jQuery(this).addClass("fade")
         var isInView = isElementVisible(jQuery(this));
         if(isInView && !jQuery(this).hasClass('faded')){
@@ -66,7 +66,7 @@ jQuery(document).ready(function() {
             }
         });
 
-        jQuery('div.region-content [class^="icon-"]').each(function () {
+        jQuery('div.region-content [class^="icon-"], div.region-content .fancyCounter').each(function () {
             var isInView = isElementVisible(jQuery(this));
             if (isInView && !jQuery(this).hasClass('faded')) {
                 jQuery(this).addClass('faded');
