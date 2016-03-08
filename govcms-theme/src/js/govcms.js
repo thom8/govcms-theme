@@ -41,20 +41,36 @@ jQuery(document).ready(function() {
             }
         }
     });
-
-    jQuery('.fancyCounter').each(function () {
-        jQuery(this).prop('Counter',0).animate({
-            Counter: jQuery(this).text()
-        }, {
-            duration: 2000,
-            easing: 'swing',
-            step: function (now) {
-                jQuery(this).text(Math.ceil(now));
+    jQuery(window).scroll(function () {
+        jQuery('.fancyCounter').each(function () {
+            var isInView = isElementVisible(this);
+            if(isInView && !this.hasClass('counting')){
+                this.addClass('counting');
+                startCounter(this);
             }
         });
     });
-
 });
+
+function startCounter(theObject) {
+    theObject.prop('Counter',0).animate({
+        Counter: theObject.text()
+    }, {
+        duration: 2000,
+        easing: 'swing',
+        step: function (now) {
+            theObject.text(Math.ceil(now));
+        }
+    });
+}
+
+function isElementVisible(theElement) {
+    var TopView = jQuery(window).scrollTop();
+    var BotView = TopView + jQuery(window).height();
+    var TopElement = theElement.offset().top;
+    var BotElement = TopElement + theElement.height();
+    return ((BotElement <= BotView) && (TopElement >= TopView));
+}
 
 
 
