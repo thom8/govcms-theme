@@ -238,4 +238,11 @@ function govcmstheme_bootstrap_form_search_api_page_search_form_alter(&$form, &$
   $form['form']['#suffix'] = '</div>';
 }
 
+// Remove Height and Width Inline Styles from Drupal Images
+function govcmstheme_bootstrap_preprocess_image(&$variables) {
+  foreach (array('width', 'height') as $key) {
+    unset($variables[$key]);
+  }
+}
+
 
