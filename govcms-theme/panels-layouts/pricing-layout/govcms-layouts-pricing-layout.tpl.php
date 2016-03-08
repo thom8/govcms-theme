@@ -40,7 +40,7 @@
     </div>
     <div class="panel-body text-center">
       <p class="lead">
-        $<strong><?php print $content['total_cost']; ?></strong> <br>/ year
+        $<strong><?php print trim($content['total_cost']); ?></strong> <br>/ year
       </p>
     </div>
     <div class="plus-separator"></div>
@@ -48,13 +48,13 @@
       <li class="list-group-item">
         <span class="optional">(Optional)</span><br>
         <span class="heading-style">Additional sites</span><br>
-        $<strong><?php print $content['additional_sites']; ?></strong> / year, per site<br>
-        <small>capped at $<?php print $content['additional_sites_capped']; ?></small>
+        $<strong><?php print trim($content['additional_sites']); ?></strong> / year, per site<br>
+        <small>capped at $<?php print trim($content['additional_sites_capped']); ?></small>
       </li>
       <div class="plus-separator"></div>
       <li class="list-group-item">
         <span class="heading-style">Setup fee</span><br>
-        $<strong><?php print $content['setup_fee']; ?></strong> per site
+        $<strong><?php print trim($content['setup_fee']); ?></strong> per site
       </li>
     </ul>
     <div class="panel-footer">

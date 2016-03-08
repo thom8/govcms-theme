@@ -246,3 +246,7 @@ function govcmstheme_bootstrap_preprocess_image(&$variables) {
 }
 
 
+// Stop Drupal's meddling CSS loading
+function govcmstheme_bootstrap_css_alter(&$css) {
+  unset($css[drupal_get_path('module','system').'/system.theme.css']);
+}
