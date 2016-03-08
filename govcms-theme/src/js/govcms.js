@@ -43,9 +43,9 @@ jQuery(document).ready(function() {
     });
     jQuery(window).scroll(function () {
         jQuery('.fancyCounter').each(function () {
-            var isInView = isElementVisible(this);
-            if(isInView && !this.hasClass('counting')){
-                this.addClass('counting');
+            var isInView = isElementVisible(jQuery(this));
+            if(isInView && !jQuery(this).hasClass('counting')){
+                jQuery(this).addClass('counting');
                 startCounter(this);
             }
         });
@@ -53,13 +53,13 @@ jQuery(document).ready(function() {
 });
 
 function startCounter(theObject) {
-    theObject.prop('Counter',0).animate({
-        Counter: theObject.text()
+    jQuery(theObject).prop('Counter',0).animate({
+        Counter: jQuery(theObject).text()
     }, {
         duration: 2000,
         easing: 'swing',
         step: function (now) {
-            theObject.text(Math.ceil(now));
+            jQuery(theObject).text(Math.ceil(now));
         }
     });
 }
@@ -67,8 +67,8 @@ function startCounter(theObject) {
 function isElementVisible(theElement) {
     var TopView = jQuery(window).scrollTop();
     var BotView = TopView + jQuery(window).height();
-    var TopElement = theElement.offset().top;
-    var BotElement = TopElement + theElement.height();
+    var TopElement = jQuery(theElement).offset().top;
+    var BotElement = TopElement + jQuery(theElement).height();
     return ((BotElement <= BotView) && (TopElement >= TopView));
 }
 
