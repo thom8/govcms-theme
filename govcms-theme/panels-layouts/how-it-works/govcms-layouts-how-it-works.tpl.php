@@ -14,7 +14,7 @@
 ?>
 
 <?php if ($content['intro']): ?>
-    <div class="col-md-10 col-md-offset-1 move-into-top">
+    <div class="col-md-10 col-md-offset-1 move-into-top text-center">
       <?php print $content['intro']; ?>
     </div>
 <?php endif; ?>

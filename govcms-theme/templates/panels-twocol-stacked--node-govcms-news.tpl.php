@@ -18,7 +18,7 @@
 ?>
 
   <?php if ($content['top']): ?>
-    <section class="news-item-header move-to-top">
+    <section class="news-item-header move-to-top text-center">
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-offset-1 text-center">

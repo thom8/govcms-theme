@@ -18,7 +18,7 @@
 ?>
 
   <?php if ($content['top']): ?>
-      <div class="move-into-top col-md-10 col-md-offset-1">
+      <div class="move-into-top col-md-10 col-md-offset-1 text-center">
         <?php print $content['top']; ?>
       </div>
   <?php endif; ?>
