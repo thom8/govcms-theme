@@ -758,6 +758,7 @@ footer .small-links li:last-of-type {
   min-height: 155px;
   background: #fff;
   margin-bottom: 10px !important;
+  width: 100%;
 }
 .sortableList .card h2,
 .sortableList .card h3 {
