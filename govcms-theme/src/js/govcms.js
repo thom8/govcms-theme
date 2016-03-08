@@ -49,16 +49,33 @@ jQuery(document).ready(function() {
         }
     });
 
+    jQuery('div.region-content [class^="icon-"]').each(function () {
+        jQuery(this).addClass("fade")
+        var isInView = isElementVisible(jQuery(this));
+        if(isInView && !jQuery(this).hasClass('faded')){
+            jQuery(this).addClass('faded');
+        }
+    });
+
     jQuery(window).scroll(function () {
         jQuery('.fancyCounter').each(function () {
             var isInView = isElementVisible(jQuery(this));
-            if(isInView && !jQuery(this).hasClass('counted') && !jQuery(this).hasClass('counting')){
+            if (isInView && !jQuery(this).hasClass('counted') && !jQuery(this).hasClass('counting')) {
                 jQuery(this).addClass('counting');
                 startCounter(this);
             }
         });
+
+        jQuery('div.region-content [class^="icon-"]').each(function () {
+            var isInView = isElementVisible(jQuery(this));
+            if (isInView && !jQuery(this).hasClass('faded')) {
+                jQuery(this).addClass('faded');
+            }
+        });
+
     });
 });
+
 
 function startCounter(theObject) {
     jQuery(theObject).prop('Counter',0).animate({
