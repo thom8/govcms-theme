@@ -41,10 +41,18 @@ jQuery(document).ready(function() {
             }
         }
     });
+    jQuery('.fancyCounter').each(function () {
+        var isInView = isElementVisible(jQuery(this));
+        if(isInView && !jQuery(this).hasClass('counted') && !jQuery(this).hasClass('counting')){
+            jQuery(this).addClass('counting');
+            startCounter(this);
+        }
+    });
+
     jQuery(window).scroll(function () {
         jQuery('.fancyCounter').each(function () {
             var isInView = isElementVisible(jQuery(this));
-            if(isInView && !jQuery(this).hasClass('counting')){
+            if(isInView && !jQuery(this).hasClass('counted') && !jQuery(this).hasClass('counting')){
                 jQuery(this).addClass('counting');
                 startCounter(this);
             }
@@ -60,6 +68,10 @@ function startCounter(theObject) {
         easing: 'swing',
         step: function (now) {
             jQuery(theObject).text(Math.ceil(now));
+        },
+        complete: function () {
+            jQuery(theObject).addClass("counted");
+            jQuery(theObject).removeClass("counting");
         }
     });
 }
