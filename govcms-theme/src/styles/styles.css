@@ -504,8 +504,8 @@ body.front #about small {
 .icons-grid.bg-primary,
 .alternating.bg-primary {
   color: #fff;
-  background-color: #63af98;
-  background: linear-gradient(11deg, #63af98, #3a7184, #2C5D7E);
+  background-color: #63ae97;
+  background: linear-gradient(11deg, #63ae97, #397184, #2C5D7E);
   background-size: 400% 400%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -1286,6 +1286,19 @@ small a {
 .social-btns h2 {
   font-size: 24px;
   margin: 1.5em 0 1em;
+}
+
+.region-content .do-fade:before {
+  transition: opacity 1s ease-out 0s;
+  opacity: 0;
+}
+.region-content .fancyCounter {
+  transition: opacity 3s ease-out 0s !important;
+  opacity: 0;
+}
+.region-content .faded:before,
+.region-content .faded {
+  opacity: 1;
 }
 
 @media (min-width: 994px) {
