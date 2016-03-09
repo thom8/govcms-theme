@@ -81,7 +81,7 @@ function startCounter(theObject) {
     jQuery(theObject).prop('Counter',0).animate({
         Counter: jQuery(theObject).text()
     }, {
-        duration: 2000,
+        duration: 1300,
         easing: 'swing',
         step: function (now) {
             jQuery(theObject).text(Math.ceil(now));

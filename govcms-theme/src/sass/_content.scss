@@ -277,19 +277,27 @@ small {
   }
 }
 
-.region-content {
-  .do-fade:before {
-    transition: opacity 1s ease-out 0s;
-    opacity: 0;
-  }
+// only if JS is enabled
+html.js {
+  .region-content {
 
-  .fancyCounter {
-    transition: opacity 2.5s ease-out 0s !important;
-    opacity: 0;
-  }
+    .do-fade:before {
+      transition: opacity 1s ease-out 0s;
+      opacity: 0;
+    }
+    .fancyCounter {
+      transition: opacity 2s ease-out 0s !important;
+      transition: color 2.2s ease-out 0s !important;
+      opacity: 0;
+      &:not(.faded) {
+        color: $highlightBright !important;
+      }
+    }
+    .faded:before,
+    .fancyCounter.faded,
+    .faded {
+      opacity: 1;
+    }
 
-  .faded:before,
-  .faded {
-    opacity: 1;
   }
 }
