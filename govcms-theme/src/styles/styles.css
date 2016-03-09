@@ -1293,7 +1293,7 @@ small a {
   opacity: 0;
 }
 .region-content .fancyCounter {
-  transition: opacity 3s ease-out 0s !important;
+  transition: opacity 2.5s ease-out 0s !important;
   opacity: 0;
 }
 .region-content .faded:before,
