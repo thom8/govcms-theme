@@ -272,15 +272,15 @@ small {
     background-color: #55acee;
   }
   h2 {
-    font-size: 24px; // like a h3 visually
+    font-size: 24px; // made to look like a h3 visually
     margin: 1.5em 0 1em;
   }
 }
 
+
 // only if JS is enabled
 html.js {
   .region-content {
-
     .do-fade:before {
       transition: opacity 1s ease-out 0s;
       opacity: 0;
@@ -298,6 +298,5 @@ html.js {
     .faded {
       opacity: 1;
     }
-
   }
 }
