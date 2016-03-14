@@ -2,10 +2,15 @@
 @media all and (-ms-high-contrast:none) {
   // *::-ms-backdrop {     // IE11 only
 
-  .split.testimonial .section-two {
-    img {
-      transform: translateY(-25%);
-      margin-left: 60px;
+  .split.testimonial {
+    .arrow:after {
+      border: 0;  // hide the arrow
+    }
+    .section-two {
+      img {
+        transform: translateY(-25%);
+        margin-left: 60px;
+      }
     }
   }
 
