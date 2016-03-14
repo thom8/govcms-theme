@@ -18,10 +18,21 @@
       min-height: 31em;
     }
   }
+  .logos {
+    .coa-stacked {
+      background: radial-gradient( rgba($aqua,0.6), transparent 50% );
+    }
+  }
 }
 
 @media (max-width: 993px) {
   #top-and-first-wrapper {
+    #about {
+      h1,
+      h2 {
+        font-size: 300%;
+      }
+    }
     .logos {
       margin: 2em auto 0;
       width: 22em;
@@ -146,5 +157,11 @@
   }
   footer .small-links li {
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width:285px) {
+  .coa-stacked {
+    display: none;
   }
 }

@@ -208,14 +208,11 @@ hr.small {
 // header
 .logos {
   margin-top: 21px;
-  .coa-stacked {
-    background: radial-gradient( rgba($aqua,0.6), transparent 50% );
-  }
-  //img {
-    //background: radial-gradient( rgba($secondary,0.8), transparent 50% );
-  //}
   .logo {
     margin-left: 30px;
+    // these might fix weird Android issue with wrapping.
+    clear: both;
+    float: none;
   }
 }
 
