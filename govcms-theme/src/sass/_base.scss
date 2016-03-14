@@ -208,10 +208,12 @@ hr.small {
 // header
 .logos {
   margin-top: 21px;
-  .coa-stacked,
-  img {
-    background: radial-gradient( rgba(#fff,0.1), transparent 50% );
+  .coa-stacked {
+    background: radial-gradient( rgba($aqua,0.6), transparent 50% );
   }
+  //img {
+    //background: radial-gradient( rgba($secondary,0.8), transparent 50% );
+  //}
   .logo {
     margin-left: 30px;
   }
@@ -319,10 +321,14 @@ header {
     background: transparent;
     h1,
     h2 {
-      color: $secondaryDark;
-      font-size: 380%;
+      //color: $secondaryDark;
+      font-size: 390%;
       font-weight: 300;
       padding: 0 5%;
+      // these lines if going with a white header: (also, revert $aqua to previous colour, see _vars.scss)
+      color: #fff;
+      text-shadow: 1px 1px 55px darken($secondaryDark, 3%);
+      background: radial-gradient(rgba($secondaryDark,.1),rgba(0,0,0,0) 65%);
     }
     .btn {
       float: right;
