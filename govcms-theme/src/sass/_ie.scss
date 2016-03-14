@@ -4,7 +4,8 @@
 
   .split.testimonial {
     .arrow:after {
-      border: 0;  // hide the arrow
+      border: 0 !important;  // hide the arrow
+      content: "" !important;  // hide the arrow
     }
     .section-two {
       padding: 0;

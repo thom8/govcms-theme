@@ -1449,7 +1449,8 @@ html.js .region-content .faded {
 }
 @media all and (-ms-high-contrast: none) {
   .split.testimonial .arrow:after {
-    border: 0;
+    border: 0 !important;
+    content: "" !important;
   }
   .split.testimonial .section-two {
     padding: 0;
