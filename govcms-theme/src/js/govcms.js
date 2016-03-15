@@ -93,13 +93,17 @@ function startCounter(theObject) {
     });
 }
 
+
+
 function isElementVisible(theElement) {
     var TopView = jQuery(window).scrollTop();
     var BotView = TopView + jQuery(window).height();
     var TopElement = jQuery(theElement).offset().top;
     var BotElement = TopElement + jQuery(theElement).height();
-    return ((BotElement <= BotView) && (TopElement >= TopView));
+    // return ((BotElement <= BotView) && (TopElement >= TopView));
+    return ((BotElement <= BotView) && (TopElement >= TopView) && !(BotElement <= TopView) && !(TopElement >= BotView));
 }
+
 
 
 
