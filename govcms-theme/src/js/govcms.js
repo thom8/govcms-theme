@@ -101,7 +101,7 @@ function isElementVisible(theElement) {
     var TopElement = jQuery(theElement).offset().top;
     var BotElement = TopElement + jQuery(theElement).height();
     // return ((BotElement <= BotView) && (TopElement >= TopView));
-    return ((BotElement <= BotView) && (TopElement >= TopView) && !(BotElement <= TopView) && !(TopElement >= BotView));
+    return (((BotElement <= BotView) && (TopElement >= TopView)) || (!(BotElement <= TopView) && !(TopElement >= BotView)));
 }
 
 
