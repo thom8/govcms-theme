@@ -415,7 +415,7 @@ header .btn.btn-light.active {
 
 #top-and-first-wrapper {
   background-color: #6ad5ac;
-  background: linear-gradient(11deg, #6ad5ac, #3db0ac, #2b5a7a);
+  background: linear-gradient(11deg, #6ad5ac, #51bfbb, #2b5a7a);
   background-size: 400% 400%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -444,9 +444,7 @@ header .btn.btn-light.active {
   font-size: 390%;
   font-weight: 300;
   padding: 0 5%;
-  color: #fff;
-  text-shadow: 1px 1px 55px #303a41;
-  background: radial-gradient(rgba(55, 66, 74, 0.1), rgba(0, 0, 0, 0) 65%);
+  color: #37424A;
 }
 #top-and-first-wrapper #about .btn {
   float: right;
@@ -1318,7 +1316,7 @@ html.js .region-content .faded {
   }
 
   .logos .coa-stacked {
-    background: radial-gradient(rgba(61, 176, 172, 0.6), rgba(0, 0, 0, 0) 50%);
+    background: radial-gradient(rgba(81, 191, 187, 0.6), rgba(0, 0, 0, 0) 50%);
   }
 }
 @media (max-width: 993px) {
