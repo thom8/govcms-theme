@@ -9,11 +9,23 @@
     }
     .section-two {
       padding: 0;
+      background-image: none;
       img {
         transform: translateY(-50%);
-        margin-left: 60px;
+        margin: 0;
+        padding: 40px 0 0 50px;
       }
     }
   }
 
+}
+
+
+
+
+// Andriod only, see http://browserhacks.com/ for logic details
+@media screen and (min-width:0\0) {
+  .coa-stacked:not(*:root) {
+    display: none;
+  }
 }

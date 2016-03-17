@@ -27,5 +27,5 @@
 // Print
 @import "print";
 
-// and last but definitely least, IE 
-@import "ie";
+// and last but definitely least, IE specific rules, etc.
+@import "browserhacks";
