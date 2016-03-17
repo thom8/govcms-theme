@@ -722,12 +722,15 @@ footer ul.social a:hover, footer ul.social a:active, footer ul.social a:focus {
   text-decoration: none;
   color: #54A283;
 }
+footer .region-footer-menu,
 footer .small-links {
   padding-top: 10px;
 }
+footer .region-footer-menu li,
 footer .small-links li {
   margin-right: 10px;
 }
+footer .region-footer-menu li:last-of-type,
 footer .small-links li:last-of-type {
   margin-right: 0;
 }
