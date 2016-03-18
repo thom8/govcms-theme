@@ -504,6 +504,13 @@ body.front {
     }
   }
 }
+.icon-int.icon-huge {
+  @include body-font();
+  font-size: 11em;
+  width: 1.2em;
+  height: 1.2em;
+  line-height: 1.05em;
+}
 
 
 

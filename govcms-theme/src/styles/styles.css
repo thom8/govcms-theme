@@ -621,6 +621,14 @@ body.front #about small {
   color: #2C5D7E !important;
 }
 
+.icon-int.icon-huge {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 11em;
+  width: 1.2em;
+  height: 1.2em;
+  line-height: 1.05em;
+}
+
 .split {
   background: linear-gradient(90deg, #fff 50%, #f5f7f9 50%);
 }
