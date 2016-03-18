@@ -153,6 +153,17 @@ small {
       }
     }
   }
+  .date-display-interval {
+    color: $textGreyLight;
+    em {
+      font-style: normal;
+    }
+  }
+  &:last-of-type {
+    hr {
+      display: none;
+    }
+  }
 }
 
 

@@ -182,6 +182,7 @@ form {
   }
   .checkbox label {
     margin-top: 0;
+    min-height: 25px;
   }
   small {
     color: $textGreyLight;
@@ -258,7 +259,7 @@ hr.small {
       background-color: transparent;
       color: $secondary;
       font-weight: bold;
-      border-bottom: 1px solid $secondaryDark;
+      border-bottom: 1px solid $highlightBright;
     }
   }
   & > a {
@@ -268,7 +269,7 @@ hr.small {
     &:hover {
       text-decoration: none;
       background-color: transparent;
-      border-bottom: 1px solid $highlightDark;
+      border-bottom: 1px solid #fff;
     }
   }
 }
@@ -292,13 +293,18 @@ header {
     &:hover {
       background-color: rgba(#fff, 0.95);
       @include body-font();
-      border-color: $highlightDarker;
-      color: $highlightDarker;
+      border-color: $highlightBright;
+      color: $highlightDarker !important;
     }
     &.active {
-      border-color: $secondaryDark;
+      border-color: $highlightBright;
       box-shadow: none;
       color: #fff;
+      &:focus,
+      &:active,
+      &:hover {
+        color: $highlightBright !important;
+      }
     }
   }
 }
