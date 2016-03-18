@@ -9,7 +9,7 @@
     }
     .section-two {
       padding: 0;
-      background-image: none;
+      background-image: none !important;
       img {
         transform: translateY(-50%);
         margin: 0;
@@ -26,6 +26,6 @@
 // Andriod only, see http://browserhacks.com/ for logic details
 @media screen and (min-width:0\0) {
   .coa-stacked:not(*:root) {
-    display: none;
+    display: none !important;
   }
 }

@@ -724,11 +724,11 @@ footer ul.social a:hover, footer ul.social a:active, footer ul.social a:focus {
 }
 footer .region-footer-menu,
 footer .small-links {
-  padding-top: 10px;
+  padding-top: 8px;
 }
 footer .region-footer-menu li,
 footer .small-links li {
-  margin-right: 10px;
+  margin-right: 14px;
 }
 footer .region-footer-menu li:last-of-type,
 footer .small-links li:last-of-type {
@@ -1468,7 +1468,7 @@ html.js .region-content .faded {
   }
   .split.testimonial .section-two {
     padding: 0;
-    background-image: none;
+    background-image: none !important;
   }
   .split.testimonial .section-two img {
     transform: translateY(-50%);
@@ -1478,6 +1478,6 @@ html.js .region-content .faded {
 }
 @media screen and (min-width: 0\0) {
   .coa-stacked:not(*:root) {
-    display: none;
+    display: none !important;
   }
 }
