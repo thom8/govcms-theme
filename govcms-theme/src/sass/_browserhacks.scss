@@ -24,8 +24,9 @@
 
 
 // Andriod only, see http://browserhacks.com/ for logic details
-@media screen and (min-width:0\0) {
-  .coa-stacked:not(*:root) {
-    display: none !important;
-  }
-}
+//@media screen and (min-width:0\0) {
+//  .coa-stacked:not(*:root) {
+//    display: none !important;
+//  }
+//}
+//doesn't work

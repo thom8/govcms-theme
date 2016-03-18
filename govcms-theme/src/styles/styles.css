@@ -1476,8 +1476,3 @@ html.js .region-content .faded {
     padding: 40px 0 0 50px;
   }
 }
-@media screen and (min-width: 0\0) {
-  .coa-stacked:not(*:root) {
-    display: none !important;
-  }
-}
