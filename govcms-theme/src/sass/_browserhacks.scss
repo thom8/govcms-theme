@@ -23,13 +23,13 @@
 
 // Microsoft Edge Browser 12+ (All) - @supports method
 @supports (-ms-accelerator:true) {
-  .split.testimonial {
-    .section-two {
-      img {
-        transform: translateY(0%);
-      }
-    }
-  }
+  //.split.testimonial {
+  //  .section-two {
+  //    img {
+  //      transform: translateY(-145px);
+  //    }
+  //  }
+  //}
 }
 
 
