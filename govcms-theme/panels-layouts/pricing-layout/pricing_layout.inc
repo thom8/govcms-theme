@@ -15,6 +15,7 @@ $plugin = array(
   'icon' => 'pricing.png',
   'theme' => 'govcms-layouts-pricing-layout',
   'regions' => array(
+    'title' => t('Plan Title'),
     'page_views_per_month' => t('Page Views Per Month'),
     'total_cost' => t('Total Cost'),
     'additional_sites' => t('Additional Sites'),
