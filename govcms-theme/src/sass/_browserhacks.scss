@@ -21,6 +21,17 @@
 }
 
 
+// Microsoft Edge Browser 12+ (All) - @supports method
+@supports (-ms-accelerator:true) {
+  .split.testimonial {
+    .section-two {
+      img {
+        transform: translateY(0%);
+      }
+    }
+  }
+}
+
 
 
 // Andriod only, see http://browserhacks.com/ for logic details
