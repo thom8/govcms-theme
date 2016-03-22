@@ -21,12 +21,12 @@
 }
 
 
-// Microsoft Edge Browser 12+ (All) - @supports method
+// Microsoft Edge Browser 12+
 @supports (-ms-accelerator:true) {
   .split.testimonial {
     .section-two {
       img {
-        transform: translateY(-50%);
+        transform: translateY(0%);
       }
     }
   }
