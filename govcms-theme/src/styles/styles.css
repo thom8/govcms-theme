@@ -1499,6 +1499,6 @@ html.js .region-content .faded {
 }
 @supports (-ms-accelerator: true) {
   .split.testimonial .section-two img {
-    transform: translateY(0);
+    transform: translateY(-50%);
   }
 }
