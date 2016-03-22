@@ -38,10 +38,8 @@
     <div class="panel-heading">
       <h3 class="text-center"><strong><?php print $content['page_views_per_month']; ?></strong> <br>page views / month</h3>
     </div>
-    <div class="panel-body text-center">
-      <p class="lead">
-        <strong><?php print $content['title']; ?></strong>
-      </p>
+    <div class="panel-body text-center panel-footer lead">
+      <?php print $content['plan_title']; ?>
     </div>
     <div class="panel-body text-center">
       <p class="lead">
