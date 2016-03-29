@@ -1175,10 +1175,6 @@ body.search-results .about .navbar-form button:focus i {
   width: 1em;
 }
 
-div > .plus-separator::after {
-  padding-left: 0.21em;
-}
-
 small a {
   text-decoration: underline;
 }
