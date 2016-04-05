@@ -24,7 +24,7 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-md-10 col-md-offset-1">
-          <h2>Who is using govCMS?</h2>
+          <h2>Statistics</h2>
           <div class="row">
             <?php print $content['whos_using']; ?>
           </div>

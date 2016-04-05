@@ -16,7 +16,7 @@ $plugin = array(
   'theme' => 'govcms-layouts-all-sites',
   'regions' => array(
     'intro' => t('Introduction'),
-    'whos_using' => t('Who is using govCMS?'),
+    'whos_using' => t('Statistics'),
     'sites' => t('List of Sites'),
   ),
 );
