@@ -19,8 +19,8 @@ $plugin = array(
     'text_content_alternate' => t('Image and Text Split White'),
     'text_content_alternate_primary' => t('Image and Text Split Primary'),
     'text_content_alternate_2' => t('Image and Text Split White 2'),
-    'whos_using' => t('Who is using govCMS?'),
-    'clients' => t('Clients / Trusted By'),
+    'whos_using' => t('Usage stats'),
+    'clients' => t('Clients / Trusted by'),
     'testimonial_split' => t('Testimonial Split'),
   ),
 );

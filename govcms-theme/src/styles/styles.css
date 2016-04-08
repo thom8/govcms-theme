@@ -186,6 +186,22 @@
   content: '\e03a';
 }
 
+.icon-timer:before {
+  content: '\e03a';
+}
+
+.icon-document-doc:before {
+  content: '\e03b';
+}
+
+.icon-document-ppt:before {
+  content: '\e03d';
+}
+
+.icon-document-pdf:before {
+  content: '\e03e';
+}
+
 html {
   width: 100%;
   height: 100%;

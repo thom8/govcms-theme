@@ -61,7 +61,7 @@
       </li>
     </ul>
     <div class="panel-footer">
-      <a class="btn btn-lg btn-block btn-primary" href="/apply-site">Sign up</a>
+      <a class="btn btn-lg btn-block btn-primary" href="/apply-site">Apply now</a>
     </div>
   </div>
 <?php endif; ?>
