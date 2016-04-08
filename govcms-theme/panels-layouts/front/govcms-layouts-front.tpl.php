@@ -22,29 +22,24 @@
 <?php endif; ?>
 
 
-<?php if ($content['clients']): ?>
-  <section class="clients light-bg" id="clients">
-    <div class="container">
-      <?php print $content['clients']; ?>
-    </div>
-  </section>
-<?php endif; ?>
-
-<?php if ($content['whos_using']): ?>
-  <section class="icons-grid bg-primary">
+<?php if ($content['why_use']): ?>
+  <section class="icons-grid light" id="services">
     <div class="container">
       <div class="row text-center">
-        <div class="col-md-10 col-md-offset-1">
-          <h2>Who is using govCMS?</h2>
-          <div class="row">
-            <?php print $content['whos_using']; ?>
-          </div>
-        </div>
+        <?php print $content['why_use']; ?>
       </div>
     </div>
   </section>
 <?php endif; ?>
 
+
+<?php if ($content['clients']): ?>
+  <section class="clients icons-grid bg-primary" id="clients">
+    <div class="container">
+      <?php print $content['clients']; ?>
+    </div>
+  </section>
+<?php endif; ?>
 
 <?php if ($content['testimonial_split']): ?>
   <section class="split testimonial">
@@ -57,16 +52,20 @@
 <?php endif; ?>
 
 
-<?php if ($content['why_use']): ?>
-  <section class="icons-grid bg-primary" id="services">
+<?php if ($content['whos_using']): ?>
+  <section class="icons-grid bg-primary">
     <div class="container">
       <div class="row text-center">
-        <?php print $content['why_use']; ?>
+        <div class="col-md-10 col-md-offset-1">
+          <h2>Usage statistics</h2>
+          <div class="row">
+            <?php print $content['whos_using']; ?>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 <?php endif; ?>
-
 
 <?php if ($content['more_information_split']): ?>
   <section class="split">
