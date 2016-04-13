@@ -76,7 +76,7 @@
                         postData.website_purpose = websitePurpose;
                     }
                     var apiCallURL = bakerURL + '/order/submit';
-                    alert(postData);
+                    console.log(JSON.stringify(postData));
                     $.ajax({
                         url: apiCallURL,
                         type: 'POST',
