@@ -7,7 +7,7 @@
     // To understand behaviors, see https://drupal.org/node/756722#behaviors
     Drupal.behaviors.validateEasyBakeOrderForm = {
         attach: function(context, settings) {
-            var $easyBakeOrderForm,
+            var easyBakeOrderForm,
                 bakerURL,
                 confirmPageURL,
                 errorPageURL;
@@ -65,8 +65,8 @@
             function submitForm($form, event) {
                 if (bakerURL) {
                     var postData = {
-                        contact_name: $form.find("input[name='name']").val(),
-                        contact_email: $form.find("input[name='email']").val(),
+                        contact_name: $form.find("input[name='contact_name']").val(),
+                        contact_email: $form.find("input[name='contact_email']").val(),
                         contact_phone: $form.find("input[name='phone_number']").val(),
                         site_name: $form.find("input[name='site_name']").val(),
                         agency_name: $form.find("input[name='agency_name']").val()
@@ -76,7 +76,6 @@
                         postData.website_purpose = websitePurpose;
                     }
                     var apiCallURL = bakerURL + '/order/submit';
-                    console.log(JSON.stringify(postData));
                     $.ajax({
                         url: apiCallURL,
                         type: 'POST',
@@ -110,19 +109,19 @@
             }
 
             // Find if the EasyBake order form is present
-            $easyBakeOrderForm = $('form[name="easybake-order-form"]');
-            if ($easyBakeOrderForm && $easyBakeOrderForm.length > 0) {
+            easyBakeOrderForm = $('form[name="easybake-order-form"]');
+            if (easyBakeOrderForm && easyBakeOrderForm.length > 0) {
                 // validate the form
                 var validator = new FormValidator('easybake-order-form', [
                         {
-                            name: "name",
+                            name: "contact_name",
                             display: "name",
                             rules: 'required'
                         },
                         {
-                            name: "email",
+                            name: "contact_email",
                             display: "email",
-                            rules: 'required|valid_email|callback_govEmail'
+                            rules: 'required|valid_email|callback_gov_email'
                         },
                         {
                             name: "phone_number",
@@ -140,26 +139,26 @@
                             rules: 'required'
                         }],
                     function(errors, event) {
-                        /*if (errors.length > 0) {
+                        if (errors.length > 0) {
                             // Show the errors
                             displayValidationErrors(errors);
                         }
-                        else {*/
+                        else {
                             var messageWrapper = document.getElementsByClassName("messages validate");
                             if (messageWrapper.length > 0) {
                                 messageWrapper[0].parentNode.removeChild(messageWrapper[0]);
                             }
                             var target = event.target || event.srcElement;
                             submitForm($(target), event);
-                       // }
+                        }
                     }
                 );
 
-                validator.registerCallback('govEmail', function(value) {
+                validator.registerCallback('gov_email', function(value) {
                     // check for the ending of the email address
                     // only accept emails ending in gov.au
                     return /gov\.au$/.test(value);
-                }).setMessage('govEmail', "We're sorry, the govCMS service is only available to Australian government entities so we require you to have a valid .gov.au email address. If you are part of a government entity that doesn't use .gov.au email addresses, please get in touch and we can help you.");
+                }).setMessage('gov_email', "We're sorry, the govCMS service is only available to Australian government entities so we require you to have a valid .gov.au email address. If you are part of a government entity that doesn't use .gov.au email addresses, please get in touch and we can help you.");
             }
 
         }
