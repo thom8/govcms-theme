@@ -137,9 +137,7 @@ function govcmstheme_bootstrap_menu_tree__menu_footer_sub_menu($variables) {
 function govcmstheme_bootstrap_form_alter(&$form, &$form_state, $form_id) {
   if (!empty($form['actions']) && $form['actions']['submit']) {
     $form['actions']['submit']['#attributes'] = array('class' => array('btn', 'btn-primary'));
-    if(isset($form_id) && $form_id == 'webform_client_form_126') {
-      $form['actions']['submit']['#suffix'] = '<br /><small>Once we\'ve reviewed your application, we will be in contact with you shortly.</small>';
-    } elseif($form_id == 'webform_client_form_131') {
+    if(isset($form_id) && ($form_id == 'webform_client_form_126' || $form_id == 'webform_client_form_131')) {
       $form['actions']['submit']['#suffix'] = '<br /><small>Please do not include any unnecessary personal, financial, or sensitive information.  Information will only be used for purposes for which you provide it. Please see our <a href="/privacy">Privacy Policy</a> for further information.</small>';
     }
   }
