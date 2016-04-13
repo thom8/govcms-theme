@@ -141,6 +141,49 @@ function govcmstheme_bootstrap_form_alter(&$form, &$form_state, $form_id) {
       $form['actions']['submit']['#suffix'] = '<br /><small>Please do not include any unnecessary personal, financial, or sensitive information.  Information will only be used for purposes for which you provide it. Please see our <a href="/privacy">Privacy Policy</a> for further information.</small>';
     }
   }
+
+  //URLS:
+  // Email Confirmed (): /easybake-email-confirmed
+  // Baker Url (ezbake_baker_url): https://baker.govcms.gov.au
+  // Verification Required (ezbake_confirm_url): /easybake-verification-required
+  // Verification Error (ezbake_error_url): /easybake-verification-error
+  // Check if we are dealing with Easy Bake webform
+  $is_node = array_key_exists('#node', $form);
+  $is_webform = $is_node && $form['#node']->type == "webform";
+  $is_easybake_form = $is_webform && $form['#node']->machine_name == "EasyBake";
+  if ($is_easybake_form) {
+    // In case of AJAX call we need to add values Drupal.settings
+    _push_ezbake_settings_to_js($form);
+    // displays a drupal error if there is a GET param for error
+    // and fill in form with values
+    // @see https://govcms.atlassian.net/wiki/display/EZB/Baker+API for response types
+    $query_params = drupal_get_query_parameters();
+    if (!empty($query_params['error'])) {
+      $error_msg = "Error: " . $query_params['error'];
+      // read details (input as dot notation, e.g, details.message
+      // but . is replaced by _ in PHP)
+      if (!empty($query_params['details_message'])) {
+        $error_msg .= "<br>Details: " . $query_params['details_message'];
+      }
+      // fill in the form fields
+      $fields = array('name', 'email', 'phone_number', 'site_name', 'agency_name', 'website_purpose');
+      foreach ($fields as $field) {
+        $query_field_name = "details_form_values_" . $field;
+        if (!empty($query_params[$query_field_name])) {
+          $form['submitted'][$field]['#default_value'] = $query_params[$query_field_name];
+        }
+      }
+      if (!empty($query_params['details_field'])) {
+        form_set_error($query_params['details_field'], $error_msg);
+      }
+      else {
+        drupal_set_message($error_msg, 'error');
+      }
+    }
+    $form['#attributes']['name'] = 'easybake-order-form';
+    $form['submitted']['#tree'] = False;
+    $form['#action'] = variable_get('ezbake_baker_url') . '/order/submit?redirect=true';
+  }
 }
 
 function govcmstheme_bootstrap_breadcrumb($variables) {
@@ -251,50 +294,6 @@ function govcmstheme_bootstrap_css_alter(&$css) {
   unset($css[drupal_get_path('module','system').'/system.theme.css']);
 }
 
-/**
- * EASYBAKE STUFF
- * Roman (Acquia) Paul (OSB)
- */
-
-function govcms_site_theme_form_alter(&$form, &$form_state, $form_id) {
-  // Check if we are dealing with Easy Bake webform
-  $is_node = array_key_exists('#node', $form);
-  $is_webform = $is_node && $form['#node']->type == "webform";
-  $is_easybake_form = $is_webform && $form['#node']->machine_name == "EasyBake";
-  if ($is_easybake_form) {
-    // In case of AJAX call we need to add values Drupal.settings
-    _push_ezbake_settings_to_js($form);
-    // displays a drupal error if there is a GET param for error
-    // and fill in form with values
-    // @see https://govcms.atlassian.net/wiki/display/EZB/Baker+API for response types
-    $query_params = drupal_get_query_parameters();
-    if (!empty($query_params['error'])) {
-      $error_msg = "Error: " . $query_params['error'];
-      // read details (input as dot notation, e.g, details.message
-      // but . is replaced by _ in PHP)
-      if (!empty($query_params['details_message'])) {
-        $error_msg .= "<br>Details: " . $query_params['details_message'];
-      }
-      // fill in the form fields
-      $fields = array('name', 'email', 'phone_number', 'site_name', 'agency_name', 'website_purpose');
-      foreach ($fields as $field) {
-        $query_field_name = "details_form_values_" . $field;
-        if (!empty($query_params[$query_field_name])) {
-          $form['submitted'][$field]['#default_value'] = $query_params[$query_field_name];
-        }
-      }
-      if (!empty($query_params['details_field'])) {
-        form_set_error($query_params['details_field'], $error_msg);
-      }
-      else {
-        drupal_set_message($error_msg, 'error');
-      }
-    }
-    $form['#attributes']['name'] = 'easybake-order-form';
-    $form['submitted']['#tree'] = False;
-    $form['#action'] = variable_get('ezbake_baker_url') . '/order/submit?redirect=true';
-  }
-}
 /*
  * Helper function to construct settings array to be passed to Drupal.settings
  * in order to execute and AJAX call

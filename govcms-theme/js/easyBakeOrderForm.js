@@ -76,10 +76,12 @@
                         postData.website_purpose = websitePurpose;
                     }
                     var apiCallURL = bakerURL + '/order/submit';
+                    console.log(JSON.stringify(postData));
                     $.ajax({
                         url: apiCallURL,
                         type: 'POST',
                         data: postData,
+                        async: false,
                         success: function(data) {
                             if (confirmPageURL) {
                                 window.location.replace(confirmPageURL);
@@ -138,17 +140,18 @@
                             rules: 'required'
                         }],
                     function(errors, event) {
-                        if (errors.length > 0) {
+                        /*if (errors.length > 0) {
                             // Show the errors
                             displayValidationErrors(errors);
                         }
-                        else {
+                        else {*/
                             var messageWrapper = document.getElementsByClassName("messages validate");
                             if (messageWrapper.length > 0) {
                                 messageWrapper[0].parentNode.removeChild(messageWrapper[0]);
                             }
-                            submitForm($(event.srcElement), event);
-                        }
+                            var target = event.target || event.srcElement;
+                            submitForm($(target), event);
+                       // }
                     }
                 );
 
