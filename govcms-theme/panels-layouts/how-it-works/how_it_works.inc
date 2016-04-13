@@ -22,5 +22,6 @@ $plugin = array(
     'whos_using' => t('Usage stats'),
     'clients' => t('Clients / Trusted by'),
     'testimonial_split' => t('Testimonial Split'),
+    'distro_split' => t('Split Distribution'),
   ),
 );
