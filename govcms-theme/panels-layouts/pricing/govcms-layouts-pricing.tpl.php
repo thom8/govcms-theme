@@ -43,7 +43,7 @@
 <?php if ($content['additional_services']): ?>
   <section id="support-cats" class="icons-grid">
     <div class="container">
-      <div class="row text-center">
+      <div class="row">
         <?php print $content['additional_services']; ?>
       </div>
     </div>
