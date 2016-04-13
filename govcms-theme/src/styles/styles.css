@@ -648,19 +648,16 @@ body.front #about small {
 .split {
   background: linear-gradient(90deg, #fff 50%, #f5f7f9 50%);
 }
-.split .container .section-one,
-.split .container .section-two {
-  padding: 50px 0;
-}
 .split .container .section-one h2,
 .split .container .section-two h2 {
   color: #2C5D7E;
 }
+.split .container .section-one p > a,
+.split .container .section-two p > a {
+  text-decoration: underline;
+}
 .split .section-one .btn {
   margin: 1.75em 0 1em 0;
-}
-.split .section-one p > a {
-  text-decoration: underline;
 }
 .split .section-two label {
   margin-top: 0.5em;
@@ -1364,6 +1361,16 @@ html.js .region-content .faded {
   .logos .coa-stacked {
     background: radial-gradient(rgba(81, 191, 187, 0.6), rgba(0, 0, 0, 0) 50%);
   }
+
+  .split.distro .container {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 50%, rgba(245, 247, 249, 0.8) 50%), url(../img/distro-split.svg) 50% 50% no-repeat;
+  }
+  .split .section-one {
+    padding: 50px 80px 50px 0;
+  }
+  .split .section-two {
+    padding: 50px 0 50px 80px;
+  }
 }
 @media (max-width: 993px) {
   #top-and-first-wrapper #about h1,
@@ -1397,7 +1404,6 @@ html.js .region-content .faded {
     text-align: left;
     padding-top: 0;
   }
-
   .split.testimonial .container {
     margin: 0;
     width: 100%;
@@ -1419,6 +1425,9 @@ html.js .region-content .faded {
     transform: none !important;
     margin: 0 10%;
     max-height: 250px;
+  }
+  .split.distro .container {
+    background: linear-gradient(90deg, #fff 50%, #fff 50%), url(../img/distro-split.svg) 50% 55% no-repeat;
   }
 
   #clients img {
