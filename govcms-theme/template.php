@@ -142,11 +142,11 @@ function govcmstheme_bootstrap_form_alter(&$form, &$form_state, $form_id) {
     }
   }
 
-
-  /**
-   * EASYBAKE STUFF
-   * Roman (acquia) Paul K (OSB)
-   */
+  //URLS:
+  // Email Confirmed (): /easybake-email-confirmed
+  // Baker Url (ezbake_baker_url): https://baker.govcms.gov.au
+  // Verification Required (ezbake_confirm_url): /easybake-verification-required
+  // Verification Error (ezbake_error_url): /easybake-verification-error
   // Check if we are dealing with Easy Bake webform
   $is_node = array_key_exists('#node', $form);
   $is_webform = $is_node && $form['#node']->type == "webform";
