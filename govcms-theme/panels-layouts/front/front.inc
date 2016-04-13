@@ -22,5 +22,6 @@ $plugin = array(
     'testimonial_split' => t('Testimonial Split'),
     'why_use' => t('Why use govCMS?'),
     'more_information_split' => t('More Information / Calculate Costs'),
+    'distro_split' => t('Split Distribution'),
   ),
 );

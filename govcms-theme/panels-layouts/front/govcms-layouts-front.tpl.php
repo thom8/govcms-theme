@@ -76,3 +76,22 @@
     </div>
   </section>
 <?php endif; ?>
+
+<?php if ($content['more_information_split']): ?>
+  <section class="split distro">
+    <div class="container">
+      <div class="row">
+        <?php print $content['more_information_split']; ?>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
+<?php if ($content['distro_split']): ?>
+<section class="split distro">
+  <div class="container">
+    <div class="row">
+      <?php print $content['distro_split']; ?>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
