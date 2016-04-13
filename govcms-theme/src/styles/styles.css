@@ -1043,6 +1043,9 @@ a.coa-link {
 #clients .btn {
   margin-bottom: 20px;
 }
+#clients.bg-primary img {
+  opacity: 1;
+}
 
 body.support.front .about .navbar-form,
 body.search-results .about .navbar-form {

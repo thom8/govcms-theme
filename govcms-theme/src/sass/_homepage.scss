@@ -50,4 +50,9 @@
   .btn {
     margin-bottom: 20px;
   }
+  &.bg-primary {
+    img {
+      opacity: 1;
+    }
+  }
 }
