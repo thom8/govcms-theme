@@ -140,18 +140,18 @@
                             rules: 'required'
                         }],
                     function(errors, event) {
-                        if (errors.length > 0) {
+                        /*if (errors.length > 0) {
                             // Show the errors
                             displayValidationErrors(errors);
                         }
-                        else {
+                        else {*/
                             var messageWrapper = document.getElementsByClassName("messages validate");
                             if (messageWrapper.length > 0) {
                                 messageWrapper[0].parentNode.removeChild(messageWrapper[0]);
                             }
                             var target = event.target || event.srcElement;
-                            submitForm(target, event);
-                        }
+                            submitForm($(target), event);
+                       // }
                     }
                 );
 
