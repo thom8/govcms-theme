@@ -149,7 +149,8 @@
                             if (messageWrapper.length > 0) {
                                 messageWrapper[0].parentNode.removeChild(messageWrapper[0]);
                             }
-                            submitForm($(event.srcElement), event);
+                            var target = event.target || event.srcElement;
+                            submitForm(target, event);
                         }
                     }
                 );
