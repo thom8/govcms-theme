@@ -166,7 +166,7 @@ function govcmstheme_bootstrap_form_alter(&$form, &$form_state, $form_id) {
         $error_msg .= "<br>Details: " . $query_params['details_message'];
       }
       // fill in the form fields
-      $fields = array('name', 'email', 'phone_number', 'site_name', 'agency_name', 'website_purpose');
+      $fields = array('contact_name', 'contact_email', 'phone_number', 'site_name', 'agency_name', 'website_purpose');
       foreach ($fields as $field) {
         $query_field_name = "details_form_values_" . $field;
         if (!empty($query_params[$query_field_name])) {
