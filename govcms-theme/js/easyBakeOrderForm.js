@@ -76,10 +76,12 @@
                         postData.website_purpose = websitePurpose;
                     }
                     var apiCallURL = bakerURL + '/order/submit';
+                    alert(postData);
                     $.ajax({
                         url: apiCallURL,
                         type: 'POST',
                         data: postData,
+                        async: false,
                         success: function(data) {
                             if (confirmPageURL) {
                                 window.location.replace(confirmPageURL);
