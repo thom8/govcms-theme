@@ -499,7 +499,7 @@ body.front {
   &.light {
     background: #fff;
     color: $textGrey;
-    h3, h4, p, span {
+    h3, h4, p, span, i {
       color: $secondary !important;
     }
   }

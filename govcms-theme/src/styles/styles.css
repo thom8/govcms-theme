@@ -633,7 +633,7 @@ body.front #about small {
   background: #fff;
   color: #555;
 }
-.icons-grid.light h3, .icons-grid.light h4, .icons-grid.light p, .icons-grid.light span {
+.icons-grid.light h3, .icons-grid.light h4, .icons-grid.light p, .icons-grid.light span, .icons-grid.light i {
   color: #2C5D7E !important;
 }
 
