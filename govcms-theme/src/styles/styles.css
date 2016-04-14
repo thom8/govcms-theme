@@ -1270,6 +1270,9 @@ small a {
   top: -10px;
   position: relative;
 }
+.alternating.text-content.icon-huge {
+  margin: 0;
+}
 .alternating.text-content .icon-hugest {
   color: #fff !important;
   background: #71C39E;

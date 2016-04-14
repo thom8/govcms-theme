@@ -219,6 +219,9 @@ small {
       position: relative;
     }
   }
+  &.text-content.icon-huge {
+    margin: 0;
+  }
   &.text-content .icon-hugest {
     color: #fff !important;
     background: $highlight;
