@@ -9,7 +9,10 @@ var Drupal = Drupal || {};
     jQuery(document).ready(function($) {
         if(typeof CKEDITOR != 'undefined') {
             CKEDITOR.dtd.a.h2 = 1;
+            CKEDITOR.dtd.a.h3 = 1;
+            CKEDITOR.dtd.a.i = 1;
             CKEDITOR.dtd.a.div = 1;
+            CKEDITOR.dtd.a.p = 1;
             CKEDITOR.dtd.$removeEmpty.i = 0;
         }
 
