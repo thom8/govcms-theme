@@ -506,7 +506,7 @@ header .btn.btn-light.active:focus, header .btn.btn-light.active:active, header 
 #about {
   background: #f5f7f9;
   padding: 25px 0;
-  margin: 25px 0;
+  margin: 25px 0 0 0;
 }
 #about h1,
 #about h2 {
@@ -530,7 +530,7 @@ body.front #about small {
 
 .icons-grid,
 .alternating {
-  padding: 25px 0;
+  padding: 30px 0;
 }
 .icons-grid.bg-primary,
 .alternating.bg-primary {
@@ -635,14 +635,6 @@ body.front #about small {
 }
 .icons-grid.light h3, .icons-grid.light h4, .icons-grid.light p, .icons-grid.light span, .icons-grid.light i {
   color: #2C5D7E !important;
-}
-
-.alternating .icon-int.icon-huge {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 11em;
-  width: 1.2em;
-  height: 1.2em;
-  line-height: 1.05em;
 }
 
 .split {
@@ -1027,7 +1019,8 @@ a.coa-link {
 }
 
 #clients {
-  margin: 3em 0 0 0;
+  margin: 25px 0 0 0;
+  padding: 50px 0;
 }
 #clients img {
   margin-bottom: 30px;
@@ -1255,7 +1248,7 @@ small a {
 .alternating .row:not(.vertical-center) {
   margin: 5.7em 0;
 }
-.alternating.bg-primary .icon-huge {
+.alternating .icon-huge {
   color: #54A283 !important;
   background: #fff;
   border-radius: 50%;
@@ -1266,12 +1259,20 @@ small a {
   height: 1.5em;
   line-height: 1.3em;
 }
-.alternating.bg-primary .icon-huge.icon-stats-up:before {
+.alternating .icon-huge.icon-stats-up:before {
   top: -10px;
   position: relative;
 }
-.alternating.text-content.icon-huge {
+.alternating .icon-huge.icon-int {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12em;
+  width: 1.3em;
+  height: 1.3em;
+  line-height: 1.05em;
+}
+.alternating.text-content {
   margin: 0;
+  padding: 0;
 }
 .alternating.text-content .icon-hugest {
   color: #fff !important;
@@ -1370,6 +1371,10 @@ html.js .region-content .faded {
 
   .split.distro .container {
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 50%, rgba(245, 247, 249, 0.8) 50%), url(../img/distro-split.svg) 50% 50% no-repeat;
+  }
+  .split h2 {
+    margin-top: 0;
+    margin-bottom: 0.7em;
   }
   .split .section-one {
     padding: 50px 80px 50px 0;

@@ -204,7 +204,7 @@ small {
   .row:not(.vertical-center) {
     margin: 5.7em 0;
   }
-  &.bg-primary .icon-huge {
+  .icon-huge {
     color: $highlightDark !important;
     background: #fff;
     border-radius: 50%;
@@ -218,9 +218,17 @@ small {
       top: -10px;
       position: relative;
     }
+    &.icon-int {
+      @include body-font();
+      font-size: 12em;
+      width: 1.3em;
+      height: 1.3em;
+      line-height: 1.05em;
+    }
   }
-  &.text-content.icon-huge {
+  &.text-content {
     margin: 0;
+    padding: 0;
   }
   &.text-content .icon-hugest {
     color: #fff !important;
