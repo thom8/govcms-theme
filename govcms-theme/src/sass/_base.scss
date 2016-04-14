@@ -499,12 +499,12 @@ body.front {
   &.light {
     background: #fff;
     color: $textGrey;
-    h3, h4, p, span {
+    h3, h4, p, span, i {
       color: $secondary !important;
     }
   }
 }
-.icon-int.icon-huge {
+.alternating .icon-int.icon-huge {
   @include body-font();
   font-size: 11em;
   width: 1.2em;

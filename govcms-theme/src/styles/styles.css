@@ -633,11 +633,11 @@ body.front #about small {
   background: #fff;
   color: #555;
 }
-.icons-grid.light h3, .icons-grid.light h4, .icons-grid.light p, .icons-grid.light span {
+.icons-grid.light h3, .icons-grid.light h4, .icons-grid.light p, .icons-grid.light span, .icons-grid.light i {
   color: #2C5D7E !important;
 }
 
-.icon-int.icon-huge {
+.alternating .icon-int.icon-huge {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11em;
   width: 1.2em;
@@ -1043,6 +1043,9 @@ a.coa-link {
 #clients .btn {
   margin-bottom: 20px;
 }
+#clients.bg-primary img {
+  opacity: 1;
+}
 
 body.support.front .about .navbar-form,
 body.search-results .about .navbar-form {
@@ -1266,6 +1269,9 @@ small a {
 .alternating.bg-primary .icon-huge.icon-stats-up:before {
   top: -10px;
   position: relative;
+}
+.alternating.text-content.icon-huge {
+  margin: 0;
 }
 .alternating.text-content .icon-hugest {
   color: #fff !important;
