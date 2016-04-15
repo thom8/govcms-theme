@@ -43,7 +43,7 @@
             <?php endif; ?>
             <!-- EOF: #messages-console -->
             <!-- #tabs -->
-            <?php if ($tabs): ?>
+            <?php if ($tabs = render($tabs)): ?>
               <div class="tabs">
                 <?php print render($tabs); ?>
               </div>

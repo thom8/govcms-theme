@@ -26,12 +26,13 @@
       <!-- EOF: #messages-console -->
 
         <!-- #tabs -->
-        <?php if ($tabs): ?>
+        <?php if ($tabs = render($tabs)): ?>
           <div class="tabs">
             <?php print render($tabs); ?>
           </div>
         <?php endif; ?>
-        <!-- EOF: #tabs -->
+
+<!-- EOF: #tabs -->
 
         <!-- #action links -->
         <?php if ($action_links): ?>
