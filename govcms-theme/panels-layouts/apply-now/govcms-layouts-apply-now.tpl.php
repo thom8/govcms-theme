@@ -14,11 +14,9 @@
 ?>
 
 <?php if ($content['intro']): ?>
-  <section class="about move-to-top" id="about">
-    <div class="container">
-      <?php print $content['intro']; ?>
-    </div>
-  </section>
+  <div class="col-md-10 col-md-offset-1 move-into-top text-center">
+    <?php print $content['intro']; ?>
+  </div>
 <?php endif; ?>
 
 
