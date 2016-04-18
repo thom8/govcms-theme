@@ -13,6 +13,12 @@ body {
   @include body-font();
 }
 
+.vertical-center {
+  padding: 30px 0;
+  img.features-logo {
+    height: 27em;
+  }
+}
 .text-vertical-center {
   display: table-cell;
   text-align: center;
@@ -430,6 +436,12 @@ body.front {
     a {
       color: #fff;
     }
+    [class*=" icon-"],
+    [class^=icon-] {
+      :before {
+        @include color-gradient($secondary, $highlightDark);
+      }
+    }
   }
 }
 
@@ -472,6 +484,20 @@ body.front {
   .grid-item {
     margin-bottom: 3em;
     display: block;
+    p {
+      color: $textGrey;
+      padding-top: 0.4em;
+    }
+  }
+  a.grid-item {
+    &:hover,
+    &:active,
+    &:focus {
+      p {
+        text-decoration: none;
+        color: $highlightDark;
+      }
+    }
   }
   a {
     transition: all .2s;

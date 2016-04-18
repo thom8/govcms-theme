@@ -213,6 +213,13 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.vertical-center {
+  padding: 30px 0;
+}
+.vertical-center img.features-logo {
+  height: 27em;
+}
+
 .text-vertical-center {
   display: table-cell;
   text-align: center;
@@ -565,6 +572,16 @@ body.front #about small {
 .alternating.bg-primary a {
   color: #fff;
 }
+.icons-grid.bg-primary [class*=" icon-"] :before,
+.icons-grid.bg-primary [class^=icon-] :before,
+.alternating.bg-primary [class*=" icon-"] :before,
+.alternating.bg-primary [class^=icon-] :before {
+  background: -webkit-linear-gradient(25deg, #2C5D7E, #54A283) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  color: #2C5D7E;
+  padding: 5px;
+}
 
 .icons-grid {
   padding: 25px 0;
@@ -605,6 +622,14 @@ body.front #about small {
 .icons-grid .grid-item {
   margin-bottom: 3em;
   display: block;
+}
+.icons-grid .grid-item p {
+  color: #555;
+  padding-top: 0.4em;
+}
+.icons-grid a.grid-item:hover p, .icons-grid a.grid-item:active p, .icons-grid a.grid-item:focus p {
+  text-decoration: none;
+  color: #54A283;
 }
 .icons-grid a {
   transition: all .2s;
@@ -1075,7 +1100,7 @@ body.search-results .about .navbar-form button:focus i {
 }
 
 .pricingTable {
-  margin-bottom: 25px;
+  margin: 50px 0 25px 0;
   color: #37424A;
 }
 .pricingTable h2 {
@@ -1185,6 +1210,9 @@ small a {
   text-decoration: underline;
 }
 
+.post-preview {
+  margin-top: 50px;
+}
 .post-preview a:hover, .post-preview a:active, .post-preview a:focus {
   text-decoration: none;
 }
@@ -1240,7 +1268,7 @@ small a {
 }
 
 .alternating h3 {
-  margin-top: 0.5em;
+  margin-top: 0;
 }
 .alternating p {
   font-size: 125%;
@@ -1249,7 +1277,6 @@ small a {
   margin: 5.7em 0;
 }
 .alternating .icon-huge {
-  color: #54A283 !important;
   background: #fff;
   border-radius: 50%;
   padding: 0.12em;
@@ -1259,6 +1286,13 @@ small a {
   height: 1.5em;
   line-height: 1.3em;
 }
+.alternating .icon-huge:before {
+  background: -webkit-linear-gradient(25deg, #2C5D7E, #54A283) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  color: #2C5D7E;
+  padding: 5px;
+}
 .alternating .icon-huge.icon-stats-up:before {
   top: -10px;
   position: relative;
@@ -1266,9 +1300,19 @@ small a {
 .alternating .icon-huge.icon-int {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12em;
-  width: 1.3em;
-  height: 1.3em;
-  line-height: 1.05em;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.1em;
+}
+.alternating:not(.bg-primary) .icon-huge {
+  color: #fff !important;
+  background-color: #54A283;
+  background: linear-gradient(11deg, #54A283, #54A283, #407a63);
+  background-size: 400% 400%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 .alternating.text-content {
   margin: 0;

@@ -1,7 +1,7 @@
 // Pricing table
 
 .pricingTable {
-  margin-bottom: 25px;
+  margin: 50px 0 25px 0;
   color: $secondaryDark;
   h2 {
     margin-bottom: 30px;
@@ -125,6 +125,7 @@ small {
 
 // News page (Blog listing)
 .post-preview {
+  margin-top: 50px;
   a {
     &:hover,
     &:active,
@@ -196,7 +197,7 @@ small {
 
 .alternating {
   h3 {
-    margin-top: 0.5em;
+    margin-top: 0;
   }
   p {
     font-size: 125%;
@@ -205,7 +206,6 @@ small {
     margin: 5.7em 0;
   }
   .icon-huge {
-    color: $highlightDark !important;
     background: #fff;
     border-radius: 50%;
     padding: 0.12em;
@@ -214,6 +214,9 @@ small {
     width: 1.5em;
     height: 1.5em;
     line-height: 1.3em;
+    &:before {
+      @include color-gradient($secondary, $highlightDark);
+    }
     &.icon-stats-up:before {
       top: -10px;
       position: relative;
@@ -221,10 +224,14 @@ small {
     &.icon-int {
       @include body-font();
       font-size: 12em;
-      width: 1.3em;
-      height: 1.3em;
-      line-height: 1.05em;
+      width: 1.4em;
+      height: 1.4em;
+      line-height: 1.1em;
     }
+  }
+  &:not(.bg-primary) .icon-huge {
+    color: #fff !important;
+    @include background-gradient( $highlightDark, $highlightDark, $highlightDarker); // this passes AA for large text everywhere on homepage
   }
   &.text-content {
     margin: 0;
