@@ -12,9 +12,8 @@
 $plugin = array(
   'title' => t('govCMS Apply Now Page'),
   'category' => t('Columns: 1'),
-  'icon' => 'front.png',
-  'theme' => 'govcms-layouts-front',
-  'admin css' => 'front.admin.css',
+  'icon' => 'apply_now.png',
+  'theme' => 'govcms-layouts-apply-now',
   'regions' => array(
     'intro' => t('Introduction'),
     'split' => t('Split'),
