@@ -1,7 +1,7 @@
 // Pricing table
 
 .pricingTable {
-  margin-bottom: 25px;
+  margin: 50px 0 25px 0;
   color: $secondaryDark;
   h2 {
     margin-bottom: 30px;
@@ -125,6 +125,7 @@ small {
 
 // News page (Blog listing)
 .post-preview {
+  margin-top: 50px;
   a {
     &:hover,
     &:active,
@@ -213,7 +214,6 @@ small {
     width: 1.5em;
     height: 1.5em;
     line-height: 1.3em;
-    //color: $highlightDark !important;
     &:before {
       @include color-gradient($secondary, $highlightDark);
     }

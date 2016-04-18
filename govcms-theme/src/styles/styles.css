@@ -217,7 +217,7 @@ body {
   padding: 30px 0;
 }
 .vertical-center img.features-logo {
-  height: 350px;
+  height: 27em;
 }
 
 .text-vertical-center {
@@ -622,6 +622,14 @@ body.front #about small {
 .icons-grid .grid-item {
   margin-bottom: 3em;
   display: block;
+}
+.icons-grid .grid-item p {
+  color: #555;
+  padding-top: 0.4em;
+}
+.icons-grid a.grid-item:hover p, .icons-grid a.grid-item:active p, .icons-grid a.grid-item:focus p {
+  text-decoration: none;
+  color: #54A283;
 }
 .icons-grid a {
   transition: all .2s;
@@ -1092,7 +1100,7 @@ body.search-results .about .navbar-form button:focus i {
 }
 
 .pricingTable {
-  margin-bottom: 25px;
+  margin: 50px 0 25px 0;
   color: #37424A;
 }
 .pricingTable h2 {
@@ -1202,6 +1210,9 @@ small a {
   text-decoration: underline;
 }
 
+.post-preview {
+  margin-top: 50px;
+}
 .post-preview a:hover, .post-preview a:active, .post-preview a:focus {
   text-decoration: none;
 }
