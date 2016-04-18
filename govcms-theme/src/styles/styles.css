@@ -213,6 +213,13 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.vertical-center {
+  padding: 30px 0;
+}
+.vertical-center img.features-logo {
+  height: 350px;
+}
+
 .text-vertical-center {
   display: table-cell;
   text-align: center;
@@ -564,6 +571,16 @@ body.front #about small {
 .icons-grid.bg-primary a,
 .alternating.bg-primary a {
   color: #fff;
+}
+.icons-grid.bg-primary [class*=" icon-"] :before,
+.icons-grid.bg-primary [class^=icon-] :before,
+.alternating.bg-primary [class*=" icon-"] :before,
+.alternating.bg-primary [class^=icon-] :before {
+  background: -webkit-linear-gradient(25deg, #2C5D7E, #54A283) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  color: #2C5D7E;
+  padding: 5px;
 }
 
 .icons-grid {
@@ -1249,7 +1266,6 @@ small a {
   margin: 5.7em 0;
 }
 .alternating .icon-huge {
-  color: #54A283 !important;
   background: #fff;
   border-radius: 50%;
   padding: 0.12em;
@@ -1259,6 +1275,13 @@ small a {
   height: 1.5em;
   line-height: 1.3em;
 }
+.alternating .icon-huge:before {
+  background: -webkit-linear-gradient(25deg, #2C5D7E, #54A283) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  color: #2C5D7E;
+  padding: 5px;
+}
 .alternating .icon-huge.icon-stats-up:before {
   top: -10px;
   position: relative;
@@ -1266,9 +1289,19 @@ small a {
 .alternating .icon-huge.icon-int {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12em;
-  width: 1.3em;
-  height: 1.3em;
-  line-height: 1.05em;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.1em;
+}
+.alternating:not(.bg-primary) .icon-huge {
+  color: #fff !important;
+  background-color: #54A283;
+  background: linear-gradient(11deg, #54A283, #54A283, #407a63);
+  background-size: 400% 400%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 .alternating.text-content {
   margin: 0;

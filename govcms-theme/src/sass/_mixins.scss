@@ -22,3 +22,16 @@
   -webkit-backdrop-filter: blur($blurAmount);
   backdrop-filter: blur($blurAmount);
 }
+
+
+// Colour text (or font icons!) with a gradient
+// WebKit Only 😕
+// + watch out for MS Edge's stupidity thinking its webkit, but only partly.. 😒
+@mixin color-gradient($colour1, $colour2) {
+  background: -webkit-linear-gradient( 25deg, $colour1, $colour2 ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  color: $colour1;
+  padding: 5px; // this is for the icons cropping too much
+}
+// USAGE: @include color-gradient($colour1, $colour2);

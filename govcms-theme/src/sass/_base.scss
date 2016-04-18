@@ -13,6 +13,12 @@ body {
   @include body-font();
 }
 
+.vertical-center {
+  padding: 30px 0;
+  img.features-logo {
+    height: 350px;
+  }
+}
 .text-vertical-center {
   display: table-cell;
   text-align: center;
@@ -429,6 +435,12 @@ body.front {
     }
     a {
       color: #fff;
+    }
+    [class*=" icon-"],
+    [class^=icon-] {
+      :before {
+        @include color-gradient($secondary, $highlightDark);
+      }
     }
   }
 }
