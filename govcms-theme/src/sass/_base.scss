@@ -490,33 +490,27 @@ body.front {
     }
   }
   a.grid-item {
-    &:hover,
-    &:active,
-    &:focus {
-      p {
-        text-decoration: none;
-        color: $highlightDark;
-      }
-    }
-  }
-  a {
     transition: all .2s;
+    color: $highlightDark;
     &:hover,
     &:active,
     &:focus {
       text-decoration: none;
-      color: $highlightDark;
-      h4 {
-        text-decoration: underline;
-      }
+      color: $secondary;
       [class^="icon-"],
-      [class*=" icon-"] {
-        color: $highlightDark;
+      [class*=" icon-"],
+      p {
+        color: $secondary;
       }
     }
     [class^="icon-"],
     [class*=" icon-"] {
-      color: $secondary;
+      color: $highlightDark;
+    }
+    h2,
+    h3,
+    h4 {
+      text-decoration: underline;
     }
   }
   .btn {

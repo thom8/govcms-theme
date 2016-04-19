@@ -627,29 +627,31 @@ body.front #about small {
   color: #555;
   padding-top: 0.4em;
 }
-.icons-grid a.grid-item:hover p, .icons-grid a.grid-item:active p, .icons-grid a.grid-item:focus p {
-  text-decoration: none;
-  color: #54A283;
-}
-.icons-grid a {
+.icons-grid a.grid-item {
   transition: all .2s;
+  color: #54A283;
 }
-.icons-grid a:hover, .icons-grid a:active, .icons-grid a:focus {
+.icons-grid a.grid-item:hover, .icons-grid a.grid-item:active, .icons-grid a.grid-item:focus {
   text-decoration: none;
-  color: #54A283;
-}
-.icons-grid a:hover h4, .icons-grid a:active h4, .icons-grid a:focus h4 {
-  text-decoration: underline;
-}
-.icons-grid a:hover [class^="icon-"],
-.icons-grid a:hover [class*=" icon-"], .icons-grid a:active [class^="icon-"],
-.icons-grid a:active [class*=" icon-"], .icons-grid a:focus [class^="icon-"],
-.icons-grid a:focus [class*=" icon-"] {
-  color: #54A283;
-}
-.icons-grid a [class^="icon-"],
-.icons-grid a [class*=" icon-"] {
   color: #2C5D7E;
+}
+.icons-grid a.grid-item:hover [class^="icon-"],
+.icons-grid a.grid-item:hover [class*=" icon-"],
+.icons-grid a.grid-item:hover p, .icons-grid a.grid-item:active [class^="icon-"],
+.icons-grid a.grid-item:active [class*=" icon-"],
+.icons-grid a.grid-item:active p, .icons-grid a.grid-item:focus [class^="icon-"],
+.icons-grid a.grid-item:focus [class*=" icon-"],
+.icons-grid a.grid-item:focus p {
+  color: #2C5D7E;
+}
+.icons-grid a.grid-item [class^="icon-"],
+.icons-grid a.grid-item [class*=" icon-"] {
+  color: #54A283;
+}
+.icons-grid a.grid-item h2,
+.icons-grid a.grid-item h3,
+.icons-grid a.grid-item h4 {
+  text-decoration: underline;
 }
 .icons-grid .btn {
   margin: 0.3em 0 1em 0;
