@@ -653,6 +653,22 @@ body.front #about small {
 .icons-grid a.grid-item h4 {
   text-decoration: underline;
 }
+.icons-grid.bg-primary a.grid-item [class^="icon-"],
+.icons-grid.bg-primary a.grid-item [class*=" icon-"] {
+  color: #fff;
+}
+.icons-grid.bg-primary a.grid-item:hover, .icons-grid.bg-primary a.grid-item:active, .icons-grid.bg-primary a.grid-item:focus {
+  opacity: 0.85;
+}
+.icons-grid.bg-primary a.grid-item:hover h2,
+.icons-grid.bg-primary a.grid-item:hover h3,
+.icons-grid.bg-primary a.grid-item:hover h4, .icons-grid.bg-primary a.grid-item:active h2,
+.icons-grid.bg-primary a.grid-item:active h3,
+.icons-grid.bg-primary a.grid-item:active h4, .icons-grid.bg-primary a.grid-item:focus h2,
+.icons-grid.bg-primary a.grid-item:focus h3,
+.icons-grid.bg-primary a.grid-item:focus h4 {
+  text-decoration: none;
+}
 .icons-grid .btn {
   margin: 0.3em 0 1em 0;
 }
