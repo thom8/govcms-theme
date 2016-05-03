@@ -1267,7 +1267,10 @@ small a {
   margin: 25px 0;
 }
 .text-content h2 {
-  margin: 0.5em 0 1em 0;
+  margin: 1.25em 0 0.75em;
+}
+.text-content h2:first-of-type {
+  margin-top: 0.5em;
 }
 .text-content h3 {
   margin: 1.5em 0 1em 0;
@@ -1402,10 +1405,7 @@ small a {
 }
 .social-btns h2 {
   font-size: 24px;
-  margin: 1.25em 0 0.75em;
-}
-.social-btns h2:first-of-type {
-  margin-top: 0.5em;
+  margin: 0.5em 0 1em 0;
 }
 
 html.js .region-content .do-fade:before {
