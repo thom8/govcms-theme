@@ -1396,7 +1396,10 @@ small a {
 }
 .social-btns h2 {
   font-size: 24px;
-  margin: 1.5em 0 1em;
+  margin: 1.25em 0 0.75em;
+}
+.social-btns h2:first-of-type {
+  margin-top: 0.5em;
 }
 
 html.js .region-content .do-fade:before {
