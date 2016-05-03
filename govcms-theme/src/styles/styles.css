@@ -493,6 +493,12 @@ header .btn.btn-light.active:focus, header .btn.btn-light.active:active, header 
   color: #37424A;
   margin-top: -5px;
 }
+#top-and-first-wrapper #about .lead a {
+  text-decoration: underline;
+}
+#top-and-first-wrapper #about .lead a:hover, #top-and-first-wrapper #about .lead a:active, #top-and-first-wrapper #about .lead a:focus {
+  text-decoration: none;
+}
 #top-and-first-wrapper #about small {
   color: #37424A;
   font-size: 90%;
