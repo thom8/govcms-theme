@@ -1451,6 +1451,9 @@ html.js .region-content .faded {
   .split.distro .container {
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 50%, rgba(245, 247, 249, 0.8) 50%), url(../img/distro-split.svg) 50% 50% no-repeat;
   }
+  .split.community-support .container {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 50%, rgba(245, 247, 249, 0.8) 50%), url(../img/community-support-split.svg) 50% 50% no-repeat;
+  }
   .split h2 {
     margin-top: 0;
     margin-bottom: 0.7em;
@@ -1518,6 +1521,9 @@ html.js .region-content .faded {
   }
   .split.distro .container {
     background: linear-gradient(90deg, #fff 50%, #fff 50%), url(../img/distro-split.svg) 50% 55% no-repeat;
+  }
+  .split.community-support .container {
+    background: linear-gradient(90deg, #fff 50%, #fff 50%), url(../img/community-support-split.svg) 50% 55% no-repeat;
   }
 
   #clients img {
