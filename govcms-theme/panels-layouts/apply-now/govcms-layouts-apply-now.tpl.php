@@ -29,3 +29,13 @@
   </div>
 </section>
 <?php endif; ?>
+
+<?php if ($content['general_content']): ?>
+  <section class="text-content">
+    <div class="container">
+      <div class="row">
+        <?php print $content['general_content']; ?>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>

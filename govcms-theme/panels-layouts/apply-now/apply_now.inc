@@ -17,5 +17,6 @@ $plugin = array(
   'regions' => array(
     'intro' => t('Introduction'),
     'split' => t('Split'),
+    'general_content' => t('General Content'),
   ),
 );
