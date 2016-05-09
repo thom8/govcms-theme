@@ -22,7 +22,7 @@
       <div>
         <p class="lead">
           After something larger <br>
-          or <abbr title="Platform as as Service">PaaS</abbr> pricing?
+          or <a href="/how-it-works/compare-saas-and-paas"><abbr title="Platform as as Service">PaaS</abbr></a> pricing?
         </p>
         <p>
           Contact us to get a customised quote.
