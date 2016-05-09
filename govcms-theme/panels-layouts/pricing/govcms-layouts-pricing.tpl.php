@@ -25,6 +25,11 @@
       <div class="row text-center">
         <?php print $content['pricing_table']; ?>
       </div>
+      <div class="text-center">
+        <a class="pricing-more-btn btn btn-light btn-lg btn-default" href="/how-it-works/compare-saas-and-paas">
+          Compare SaaS and PaaS features
+        </a>
+      </div>
     </div>
   </section>
 <?php endif; ?>

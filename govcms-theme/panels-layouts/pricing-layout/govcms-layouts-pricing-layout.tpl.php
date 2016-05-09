@@ -21,12 +21,8 @@
     <div class="panel-body text-center vertical-center">
       <div>
         <p class="lead">
-          After something larger<br>
-          that's not listed here?
-        </p>
-        <p>
-          Need pricing information<br>
-          for <a href="/how-it-works/compare-saas-and-paas">PaaS</a>?
+          After something larger <br>
+          or <abbr title="Platform as as Service">PaaS</abbr> pricing?
         </p>
         <p>
           Contact us to get a customised quote.
