@@ -21,8 +21,12 @@
     <div class="panel-body text-center vertical-center">
       <div>
         <p class="lead">
-          After something larger,<br>
+          After something larger<br>
           that's not listed here?
+        </p>
+        <p>
+          Need pricing information<br>
+          for <a href="/how-it-works/compare-saas-and-paas">PaaS</a>?
         </p>
         <p>
           Contact us to get a customised quote.
