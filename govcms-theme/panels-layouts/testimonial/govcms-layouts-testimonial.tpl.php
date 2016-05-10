@@ -27,5 +27,5 @@
   <?php $style = "style='background: transparent url(".$content['background'].") repeat scroll 0% 0% / cover;'"; ?>
 <?php endif; ?>
 <div class="col-md-6 col-sm-12 section-two text-center" <?php echo $style ?>>
-  <img src="<?php print $content['logo']; ?>" alt="<?php print $content['title']; ?>" height="200">
+  <img src="<?php print $content['logo']; ?>" alt="<?php print trim($content['title']); ?>" height="200">
 </div>
