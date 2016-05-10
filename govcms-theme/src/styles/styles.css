@@ -1071,10 +1071,6 @@ a.coa-link {
   opacity: 0.8;
 }
 
-.homepage .split.testimonial {
-  border-top: 1px solid #D2D2D4;
-}
-
 #clients {
   margin: 25px 0 0 0;
   padding: 50px 0;
@@ -1344,7 +1340,6 @@ small a {
   line-height: 1.1em;
 }
 .alternating:not(.bg-primary) .icon-huge {
-  color: #fff !important;
   background-color: #54A283;
   background: linear-gradient(11deg, #54A283, #54A283, #407a63);
   background-size: 400% 400%;
@@ -1352,6 +1347,10 @@ small a {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+}
+.alternating:not(.bg-primary) .icon-huge:before {
+  color: #fff !important;
+  -webkit-text-fill-color: initial;
 }
 .alternating.text-content {
   margin: 0;
