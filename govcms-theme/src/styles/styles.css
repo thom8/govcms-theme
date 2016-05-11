@@ -1242,11 +1242,12 @@ small a {
   text-decoration: underline;
 }
 
+.node-type-govcms-news h1#page-title {
+  margin-bottom: 0.5em;
+}
+
 .news-item-header {
   padding-bottom: 25px;
-}
-.news-item-header h1#page-title {
-  margin-bottom: 0.5em;
 }
 .news-item-header .lead em.placeholder {
   font-style: normal;

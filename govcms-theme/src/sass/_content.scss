@@ -127,11 +127,13 @@ small {
 
 
 // News page (Blog listing)
-.news-item-header {
-  padding-bottom: 25px;
+.node-type-govcms-news {
   h1#page-title {
     margin-bottom: 0.5em;
   }
+}
+.news-item-header {
+  padding-bottom: 25px;
   .lead {
     em.placeholder {
       font-style: normal;
