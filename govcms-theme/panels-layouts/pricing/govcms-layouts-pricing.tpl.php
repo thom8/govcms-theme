@@ -55,6 +55,14 @@
   </section>
 <?php endif; ?>
 
+<?php if ($content['text_content_alternate']): ?>
+  <section class="text-content alternating">
+    <div class="container">
+      <?php print $content['text_content_alternate']; ?>
+    </div>
+  </section>
+<?php endif; ?>
+
 
 <?php if ($content['split']): ?>
   <section class="split">

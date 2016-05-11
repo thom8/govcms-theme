@@ -57,6 +57,10 @@ jQuery(document).ready(function() {
         }
     });
 
+    jQuery('a').filter(function () {
+        return this.hostname && this.hostname !== location.hostname;
+    }).append('<span class="sr-only"> external resource</span>');
+
     jQuery(window).scroll(function () {
         jQuery('.fancyCounter').each(function () {
             var isInView = isElementVisible(jQuery(this));
