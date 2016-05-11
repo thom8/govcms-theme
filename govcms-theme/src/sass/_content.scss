@@ -250,6 +250,7 @@ small {
   }
   &:not(.bg-primary) .icon-huge {
     @include background-gradient( $highlightDark, $highlightDark, $highlightDarker); // this passes AA for large text everywhere on homepage
+    color: #fff;
     &:before {
       color: #fff !important;
       -webkit-text-fill-color: initial;

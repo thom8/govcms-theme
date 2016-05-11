@@ -210,6 +210,18 @@
   content: '\e040';
 }
 
+.icon-chat-speech-bubbles:before {
+  content: '\e03f';
+}
+
+.icon-briefcase:before {
+  content: '\e040';
+}
+
+.icon-open-sign:before {
+  content: '\e041';
+}
+
 html {
   width: 100%;
   height: 100%;
@@ -1358,6 +1370,7 @@ small a {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  color: #fff;
 }
 .alternating:not(.bg-primary) .icon-huge:before {
   color: #fff !important;
