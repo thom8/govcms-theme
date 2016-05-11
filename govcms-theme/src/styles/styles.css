@@ -1242,6 +1242,16 @@ small a {
   text-decoration: underline;
 }
 
+.news-item-header {
+  padding-bottom: 25px;
+}
+.news-item-header h1 {
+  margin-bottom: 0.5em;
+}
+.news-item-header .lead em.placeholder {
+  font-style: normal;
+}
+
 .post-preview {
   margin-top: 50px;
 }
@@ -1294,7 +1304,7 @@ small a {
 .news-item.text-content {
   margin: 50px 0;
 }
-.news-item.text-content .news-content:first-letter {
+.news-item.text-content .news-content p:first-of-type:first-letter {
   font-size: 5em;
   font-weight: 300;
   padding-right: 3px;
