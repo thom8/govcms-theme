@@ -19,6 +19,7 @@ $plugin = array(
     'pricing_table' => t('Pricing Table'),
     'whats_included' => t('What\'s Included'),
     'additional_services' => t('Additional Services'),
+    'text_content_alternate' => t('Image and Text Split White'),
     'split' => t('Split'),
   ),
 );
