@@ -127,6 +127,19 @@ small {
 
 
 // News page (Blog listing)
+.node-type-govcms-news {
+  h1#page-title {
+    margin-bottom: 0.5em;
+  }
+}
+.news-item-header {
+  padding-bottom: 25px;
+  .lead {
+    em.placeholder {
+      font-style: normal;
+    }
+  }
+}
 .post-preview {
   margin-top: 50px;
   a {
@@ -191,7 +204,7 @@ small {
 .news-item.text-content {
   margin: 50px 0;
   .news-content {
-    &:first-letter {
+    p:first-of-type:first-letter {
       font-size: 5em;
       font-weight: 300;
       padding-right: 3px;
@@ -236,8 +249,11 @@ small {
     }
   }
   &:not(.bg-primary) .icon-huge {
-    color: #fff !important;
     @include background-gradient( $highlightDark, $highlightDark, $highlightDarker); // this passes AA for large text everywhere on homepage
+    &:before {
+      color: #fff !important;
+      -webkit-text-fill-color: initial;
+    }
   }
   &.text-content {
     margin: 0;
