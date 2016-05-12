@@ -151,6 +151,7 @@ small {
     &:active,
     &:focus {
       //text-decoration: none;  becasue only the header is a link in the Drupal implimention, this isnt needed
+      text-decoration: underline;
       .post-title {
         text-decoration: underline;
         color: $highlightDark;

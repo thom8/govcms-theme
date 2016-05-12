@@ -1273,6 +1273,9 @@ small a {
 .post-preview {
   margin-top: 50px;
 }
+.post-preview a:hover, .post-preview a:active, .post-preview a:focus {
+  text-decoration: underline;
+}
 .post-preview a:hover .post-title, .post-preview a:active .post-title, .post-preview a:focus .post-title {
   text-decoration: underline;
   color: #54A283;
