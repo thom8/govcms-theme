@@ -45,6 +45,17 @@
 <?php endif; ?>
 
 
+<?php if ($content['additional_services_1']): ?>
+  <section id="support-cats" class="icons-grid">
+    <div class="container">
+      <div class="row">
+        <?php print $content['additional_services_1']; ?>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
+
+
 <?php if ($content['additional_services']): ?>
   <section id="additional-services-1">
     <div class="container">
