@@ -1255,6 +1255,10 @@ small a {
   text-decoration: underline;
 }
 
+#additional-services-1 {
+  padding-top: 25px;
+}
+
 .node-type-govcms-news h1#page-title {
   margin-bottom: 0.5em;
 }
@@ -1333,7 +1337,8 @@ small a {
   font-size: 125%;
 }
 .alternating .row:not(.vertical-center) {
-  margin: 5.7em 0;
+  margin-top: 5.7em;
+  margin-bottom: 5.7em;
 }
 .alternating .icon-huge {
   background: #fff;
