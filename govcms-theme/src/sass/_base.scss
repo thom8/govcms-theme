@@ -547,7 +547,8 @@ body.front {
     background: #fff;
     color: $textGrey;
     h3, h4, p, span, i {
-      color: $secondary !important;
+      //color: $secondary !important;   makes it look like a link, but its not.
+      color: $secondaryDark !important;
     }
   }
 }
