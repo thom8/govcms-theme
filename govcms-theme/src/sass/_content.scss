@@ -126,6 +126,12 @@ small {
 
 #additional-services-1 {
   padding-top: 25px;
+  .alternating {
+    li,
+    p {
+      font-size: 125%;
+    }
+  }
 }
 
 
@@ -356,7 +362,35 @@ html.js {
 }
 
 #site-map {
-  .btn, .btn-default, .btn-light {
-    color: #2c5d7e;    border:none;    border-radius:0;    line-height:1;    padding:0;
+  margin: 50px auto 35px;
+  .site-map-box-front.site-map-box .content {
+    a:first-of-type {
+      display: none;
+    }
+  }
+  ul {
+    li {
+      list-style-type: disc;
+      list-style-image: none;
+      line-height: 1.9em;
+      li {
+        list-style-type: circle;
+      }
+    }
+  }
+  .btn,
+  .btn-default,
+  .btn-light {
+    color: #2c5d7e;
+    border:none;
+    border-radius:0;
+    line-height:1;
+    padding:0;
+  }
+  .site-map-box-menu-menu-footer-sub-menu {
+    &,
+    .site-map-menu {
+      margin-bottom: 0;
+    }
   }
 }

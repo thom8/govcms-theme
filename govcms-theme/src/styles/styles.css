@@ -569,8 +569,8 @@ body.front #about small {
 .icons-grid.bg-primary,
 .alternating.bg-primary {
   color: #fff;
-  background-color: #63ae97;
-  background: linear-gradient(11deg, #63ae97, #397184, #2C5D7E);
+  background-color: #63af98;
+  background: linear-gradient(11deg, #63af98, #3a7184, #2C5D7E);
   background-size: 400% 400%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -1258,6 +1258,10 @@ small a {
 #additional-services-1 {
   padding-top: 25px;
 }
+#additional-services-1 .alternating li,
+#additional-services-1 .alternating p {
+  font-size: 125%;
+}
 
 .node-type-govcms-news h1#page-title {
   margin-bottom: 0.5em;
@@ -1467,12 +1471,32 @@ html.js .region-content .faded {
   opacity: 1;
 }
 
-#site-map .btn, #site-map .btn-default, #site-map .btn-light {
+#site-map {
+  margin: 50px auto 35px;
+}
+#site-map .site-map-box-front.site-map-box .content a:first-of-type {
+  display: none;
+}
+#site-map ul li {
+  list-style-type: disc;
+  list-style-image: none;
+  line-height: 1.9em;
+}
+#site-map ul li li {
+  list-style-type: circle;
+}
+#site-map .btn,
+#site-map .btn-default,
+#site-map .btn-light {
   color: #2c5d7e;
   border: none;
   border-radius: 0;
   line-height: 1;
   padding: 0;
+}
+#site-map .site-map-box-menu-menu-footer-sub-menu,
+#site-map .site-map-box-menu-menu-footer-sub-menu .site-map-menu {
+  margin-bottom: 0;
 }
 
 @media (min-width: 994px) {
