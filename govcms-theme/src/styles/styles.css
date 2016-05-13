@@ -206,14 +206,6 @@
   content: '\e03f';
 }
 
-.icon-code:before {
-  content: '\e040';
-}
-
-.icon-chat-speech-bubbles:before {
-  content: '\e03f';
-}
-
 .icon-briefcase:before {
   content: '\e040';
 }
@@ -1503,6 +1495,10 @@ html.js .region-content .faded {
 #site-map .site-map-box-menu-menu-footer-sub-menu,
 #site-map .site-map-box-menu-menu-footer-sub-menu .site-map-menu {
   margin-bottom: 0;
+}
+
+#h2-text-center h2 {
+  text-align: center;
 }
 
 @media (min-width: 994px) {
