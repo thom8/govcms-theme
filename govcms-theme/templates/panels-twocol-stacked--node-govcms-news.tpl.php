@@ -51,25 +51,25 @@
               <h2>Share this</h2>
               <ul class="list-inline">
                 <li>
-                  <a href="http://www.facebook.com/sharer.php?u=<?php print $_SERVER['REQUEST_URI'] ?>" class="btn-sm btn-facebook">
+                  <a href="http://www.facebook.com/sharer.php?u=<?php print $GLOBALS['base_url'];  ?><?php print $_SERVER['REQUEST_URI'] ?>" class="btn-sm btn-facebook">
                     <i class="icon-facebook"></i>
                     <span class="sr-only">Facebook</span>
                   </a>
                 </li>
                 <li>
-                  <a href="http://twitter.com/share?url=<?php print $_SERVER['REQUEST_URI'] ?>" class="btn-sm btn-twitter">
+                  <a href="http://twitter.com/share?url=<?php print $GLOBALS['base_url'];  ?><?php print $_SERVER['REQUEST_URI'] ?>" class="btn-sm btn-twitter">
                     <i class="icon-twitter"></i>
                     <span class="sr-only">Twitter</span>
                   </a>
                 </li>
                 <li>
-                  <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php print $_SERVER['REQUEST_URI'] ?>" class="btn-sm btn-linkedin">
+                  <a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php print $GLOBALS['base_url'];  ?><?php print $_SERVER['REQUEST_URI'] ?>" class="btn-sm btn-linkedin">
                     <i class="icon-linkedin"></i>
                     <span class="sr-only">LinkedIn</span>
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:?subject=govCMS News&body=<?php print $_SERVER['REQUEST_URI'] ?>" class="btn-sm btn-email">
+                  <a href="mailto:?subject=govCMS News&body=<?php print $GLOBALS['base_url'];  ?><?php print $_SERVER['REQUEST_URI'] ?>" class="btn-sm btn-email">
                     <i class="icon-mail"></i>
                     <span class="sr-only">Email</span>
                   </a>
