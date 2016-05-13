@@ -1258,8 +1258,8 @@ small a {
 #additional-services-1 {
   padding-top: 25px;
 }
-#additional-services-1 .alternating li,
-#additional-services-1 .alternating p {
+#additional-services-1 li,
+#additional-services-1 p {
   font-size: 125%;
 }
 
