@@ -128,7 +128,7 @@ small {
   padding-top: 25px;
   li,
   p {
-    font-size: 125%;
+    font-size: 125%;  // make the same size as the alternating section below it..
   }
 }
 
@@ -364,6 +364,12 @@ html.js {
   .site-map-box-front.site-map-box .content {
     a:first-of-type {
       display: none;
+    }
+    a.feed-link:after {
+      content: "RSS Feed";
+      margin-left: 8px;
+      top: 1px;
+      position: relative;
     }
   }
   ul {

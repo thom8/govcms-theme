@@ -1477,6 +1477,12 @@ html.js .region-content .faded {
 #site-map .site-map-box-front.site-map-box .content a:first-of-type {
   display: none;
 }
+#site-map .site-map-box-front.site-map-box .content a.feed-link:after {
+  content: "RSS Feed";
+  margin-left: 8px;
+  top: 1px;
+  position: relative;
+}
 #site-map ul li {
   list-style-type: disc;
   list-style-image: none;
