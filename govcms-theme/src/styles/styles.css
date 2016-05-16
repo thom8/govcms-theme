@@ -1304,6 +1304,9 @@ small a {
 .text-content h2:first-of-type {
   margin-top: 0.5em;
 }
+.text-content p + h2:first-of-type {
+  margin-top: 1.25em;
+}
 .text-content h3 {
   margin: 1.5em 0 1em 0;
   font-size: 28px;

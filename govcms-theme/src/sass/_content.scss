@@ -195,8 +195,11 @@ small {
   h2 {
     margin: 1.25em 0 0.75em;
     &:first-of-type {
-      margin-top: 0.5em;
+      margin-top: 0.5em;  // get rid of excess padding if the content starts with a heading, but (see next rule)
     }
+  }
+  p + h2:first-of-type {
+    margin-top: 1.25em;   // if there is a paragraph before the first heading, resume regular programming :) 
   }
   h3 {
     margin: 1.5em 0 1em 0;
