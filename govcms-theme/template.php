@@ -30,8 +30,6 @@ function govcmstheme_bootstrap_preprocess_node(&$variables) {
       _govcmstheme_bootstrap_ga_api();
 
       variable_set('govcms_dashboard_last_updated', $date);
-
-      //die(var_dump(variable_get('govcms_dashboard_ga_page_loads'),variable_get('govcms_dashboard_ga_page_visits'),variable_get('govcms_dashboard_drupal_downloads'),variable_get('govcms_dashboard_site247_availability'),variable_get('govcms_dashboard_github_releases')));
     }
 
     // Put variables in node for template
@@ -204,21 +202,11 @@ function govcmstheme_bootstrap_form_alter(&$form, &$form_state, $form_id) {
 
   }
 
-  //URLS:
-  // Email Confirmed (): /easybake-email-confirmed
-  // Baker Url (ezbake_baker_url): https://baker.govcms.gov.au
-  // Verification Required (ezbake_confirm_url): /easybake-verification-required
-  // Verification Error (ezbake_error_url): /easybake-verification-error
-  // Check if we are dealing with Easy Bake webform
   $is_node = array_key_exists('#node', $form);
   $is_webform = $is_node && $form['#node']->type == "webform";
   $is_easybake_form = $is_webform && $form['#node']->machine_name == "EasyBake";
   if ($is_easybake_form) {
-    // In case of AJAX call we need to add values Drupal.settings
     _push_ezbake_settings_to_js($form);
-    // displays a drupal error if there is a GET param for error
-    // and fill in form with values
-    // @see https://govcms.atlassian.net/wiki/display/EZB/Baker+API for response types
     $query_params = drupal_get_query_parameters();
     if (!empty($query_params['error'])) {
       $error_msg = "Error: " . $query_params['error'];
