@@ -1,5 +1,61 @@
 <?php
 
+
+define('GOVCMS_MIN_DOWNLOADS', 11000);
+define('GOVCMS_MIN_PAGE_VIEWS', 200000);
+define('GOVCMS_MIN_RELEASES', 18);
+define('GOVCMS_MIN_AVAILABILITY', 98);
+define('GOVCMS_MIN_PAGE_VISITS', 200000);
+define('GOVCMS_MAX_PAGE_LOAD', 5.0);
+define('GOVCMS_THEME', 'govCMS Theme');
+
+/**
+ * Hook theme_preprocess_page
+ */
+function govcmstheme_bootstrap_preprocess_node(&$variables) {
+
+  // API Functionlity
+  $current_path = drupal_get_path_alias();
+  if (0 === strpos($current_path, 'dashboard')) {
+    // We are on the dashboard page
+    // Get variable to check when it was last updated. if more than 24 hours, update the nodes.
+    $date = date('Y-m-d');
+    $yesterday = date ( 'Y-m-j' , strtotime('-1 day', strtotime($date)));
+    $dashboard_updated = variable_get('govcms_dashboard_last_updated', $yesterday);
+    if($dashboard_updated < $date) {
+      // Update the variables API GETs
+      _govcmstheme_bootstrap_drupal_api();
+      _govcmstheme_bootstrap_github_api();
+      _govcmstheme_bootstrap_site247_api();
+      _govcmstheme_bootstrap_ga_api();
+
+      variable_set('govcms_dashboard_last_updated', $date);
+
+      //die(var_dump(variable_get('govcms_dashboard_ga_page_loads'),variable_get('govcms_dashboard_ga_page_visits'),variable_get('govcms_dashboard_drupal_downloads'),variable_get('govcms_dashboard_site247_availability'),variable_get('govcms_dashboard_github_releases')));
+    }
+
+    // Put variables in node for template
+    $variables['govcms_dashboard_ga_page_loads'] = variable_get('govcms_dashboard_ga_page_loads');
+    $variables['govcms_dashboard_ga_page_visits'] = variable_get('govcms_dashboard_ga_page_visits');
+    $variables['govcms_dashboard_drupal_downloads'] = variable_get('govcms_dashboard_drupal_downloads');
+    $variables['govcms_dashboard_site247_availability'] = variable_get('govcms_dashboard_site247_availability');
+    $variables['govcms_dashboard_github_releases'] = variable_get('govcms_dashboard_github_releases');
+
+    $variables['govcms_dashboard_smes'] = $variables['field_sme_savings'][0]['value'];
+    $variables['govcms_dashboard_smes_unit'] = $variables['field_sme_suffix_unit'][0]['value'];
+    $variables['govcms_dashboard_finance'] = $variables['field_finance_savings'][0]['value'];
+    $variables['govcms_dashboard_finance_unit'] = $variables['field_finance_suffix_unit'][0]['value'];
+    $variables['govcms_dashboard_acquia'] = $variables['field_acquia_spending'][0]['value'];
+    $variables['govcms_dashboard_acquia_unit'] = $variables['field_acquia_suffix_unit'][0]['value'];
+    $variables['govcms_dashboard_savings'] = $variables['field_agency_savings'][0]['value'];
+    $variables['govcms_dashboard_savings_unit'] = $variables['field_agency_suffix_unit'][0]['value'];
+    $variables['govcms_dashboard_support'] = $variables['field_support_requests_response'][0]['value'];
+    $variables['govcms_dashboard_support_unit'] = $variables['field_support_suffix_unit'][0]['value'];
+
+    $variables['govcms_dashboard_last_updated'] = variable_get('govcms_dashboard_last_updated');
+  }
+}
+
 /**
  * Page alter.
  */
@@ -31,6 +87,7 @@ function govcmstheme_bootstrap_page_alter($page) {
   drupal_add_html_head($mobileoptimized, 'MobileOptimized');
   drupal_add_html_head($handheldfriendly, 'HandheldFriendly');
   drupal_add_html_head($viewport, 'viewport');
+
 }
 
 /**
@@ -356,3 +413,105 @@ function _push_ezbake_settings_to_js(&$form) {
     drupal_add_js(array('ezBake' => $ezbake_settings), 'setting');
   }
 }
+
+function _govcmstheme_bootstrap_github_api() {
+  $options = array(
+    'headers' =>  array('User-Agent' => 'Awesome-Octocat-App', 'Content-Type' => 'text/json; charset=UTF-8'),
+  );
+  $result = drupal_http_request('https://api.github.com/repos/govCMS/govCMS/tags', $options);
+  $result_array = json_decode($result->data);
+  $github_releases = sizeof($result_array);
+  if($github_releases >= GOVCMS_MIN_RELEASES) {
+    variable_set('govcms_dashboard_github_releases', $github_releases);
+  } else {
+    watchdog(GOVCMS_THEME, 'GitHub failed: '. $github_releases, NULL, WATCHDOG_INFO, NULL);
+  }
+}
+
+function _govcmstheme_bootstrap_site247_api() {
+  $auth_token = variable_get('govcms_dashboard_site247_auth_token', '');
+  $options = array(
+    'headers' => array('Authorization' => 'Zoho-authtoken '.$auth_token, 'Accept' => 'application/json;version=2.0'),
+  );
+  $monitor_id = variable_get('govcms_dashboard_site247_monitor_id');
+  $result = drupal_http_request('https://www.site24x7.com/api/reports/availability_summary/'.$monitor_id.'?period=5&unit_of_time=3', $options);
+  $result_array = json_decode($result->data);
+  $availability = $result_array->data->summary_details->availability_percentage;
+  if($availability > GOVCMS_MIN_AVAILABILITY) {
+    variable_set('govcms_dashboard_site247_availability', $availability);
+  } else {
+    watchdog(GOVCMS_THEME, 'Site 24x7 failed: '. $availability, NULL, WATCHDOG_INFO, NULL);
+  }
+}
+
+function _govcmstheme_bootstrap_drupal_api() {
+  $options = array(
+    'headers' => array('User-Agent' => 'Awesome-Octocat-App', 'Content-Type' => 'text/json; charset=UTF-8'),
+  );
+  $result = drupal_http_request('https://www.drupal.org/api-d7/node.json?field_project_machine_name=govcms', $options);
+  $result_array = json_decode($result->data);
+  $downloads = $result_array->list[0]->field_download_count;
+  if($downloads >= GOVCMS_MIN_DOWNLOADS) {
+    $downloads = thousandsCurrencyFormat($downloads);
+    variable_set('govcms_dashboard_drupal_downloads', (int)$downloads);
+  } else {
+    watchdog(GOVCMS_THEME, 'Drupal Downloads failed: '. $downloads, NULL, WATCHDOG_INFO, NULL);
+  }
+}
+
+function _govcmstheme_bootstrap_ga_api() {
+  require_once('classes/GoogleAnalyticsAPI.class.php');
+
+  $ga = new GoogleAnalyticsAPI('service');
+  $ga->auth->setClientId(variable_get('govcms_dashboard_ga_client_id'));
+  $ga->auth->setEmail(variable_get('govcms_dashboard_ga_client_email'));
+  $ga->auth->setPrivateKey(base64_decode(variable_get('govcms_dashboard_ga_private_info')));
+
+  $auth = $ga->auth->getAccessToken();
+  if ($auth['http_code'] == 200) {
+    $accessToken = $auth['access_token'];
+
+    $ga->setAccessToken($accessToken);
+    $ga->setAccountId('ga:91394131');
+
+    $defaults = array(
+      'start-date' => '30daysAgo',
+      'end-date' => 'yesterday',
+    );
+    $ga->setDefaultQueryParams($defaults);
+
+    $params = array(
+      'metrics' => 'ga:pageviews',
+    );
+    $page_visit = $ga->query($params);
+    $page_visits = $page_visit['rows'][0][0];
+    if($page_visits && $page_visits > GOVCMS_MIN_PAGE_VISITS) {
+      $page_visits = thousandsCurrencyFormat($page_visits);
+      variable_set('govcms_dashboard_ga_page_visits', (float) $page_visits);
+    }
+    $params = array(
+      'metrics' => 'ga:avgPageLoadTime',
+    );
+
+    $page_load = $ga->query($params);
+    $page_loads = $page_load['rows'][0][0];
+    if($page_loads && $page_loads < GOVCMS_MAX_PAGE_LOAD) {
+      variable_set('govcms_dashboard_ga_page_loads', round((float) $page_loads, 2));
+    }
+  } else {
+    watchdog(GOVCMS_THEME, 'Google Analytics request failed', NULL, WATCHDOG_INFO, NULL);
+  }
+}
+
+function thousandsCurrencyFormat($num) {
+  $x = round($num);
+  $x_number_format = number_format($x);
+  $x_array = explode(',', $x_number_format);
+  $x_parts = array('k', 'm', 'b', 't');
+  $x_count_parts = count($x_array) - 1;
+  $x_display = $x;
+  $x_display = $x_array[0] . ((int) $x_array[1][0] !== 0 ? '.' . $x_array[1][0] : '');
+  $x_display .= $x_parts[$x_count_parts - 1];
+  return $x_display;
+}
+
