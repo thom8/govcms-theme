@@ -10,10 +10,6 @@
   font-style: normal;
 }
 
-.icon-check:before {
-  content: '\e001';
-}
-
 .icon-close:before {
   content: '\e003';
 }
@@ -102,10 +98,6 @@
   content: '\e022';
 }
 
-.icon-stats-up:before {
-  content: '\e024';
-}
-
 .icon-headset:before {
   content: '\e025';
 }
@@ -158,10 +150,6 @@
   content: '\e033';
 }
 
-.icon-stats-up:before {
-  content: '\e034';
-}
-
 .icon-users:before {
   content: '\e035';
 }
@@ -180,10 +168,6 @@
 
 .icon-github-orig:before {
   content: '\e039';
-}
-
-.icon-timer:before {
-  content: '\e03a';
 }
 
 .icon-timer:before {
@@ -210,8 +194,32 @@
   content: '\e040';
 }
 
-.icon-open-sign:before {
-  content: '\e041';
+.icon-coas:before {
+  content: '\e042';
+}
+
+.icon-acquia-outline:before {
+  content: '\e044';
+}
+
+.icon-eye:before {
+  content: '\e047';
+}
+
+.icon-check:before {
+  content: '\e048';
+}
+
+.icon-stats-up:before {
+  content: '\e04b';
+}
+
+.icon-shop:before {
+  content: '\e04c';
+}
+
+.icon-download:before {
+  content: '\e04d';
 }
 
 html {
@@ -1502,6 +1510,70 @@ html.js .region-content .faded {
 
 .h2-text-center h2 {
   text-align: center;
+}
+
+body.page-dashboard #about {
+  margin-bottom: 0;
+}
+
+.dashboard {
+  padding: 0;
+  margin-bottom: 1.5em;
+}
+.dashboard.bg-primary {
+  background-color: #63af98;
+  background: linear-gradient(11deg, #63af98, #3a7184, #2C5D7E);
+  background-size: 400% 400%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.dashboard.bg-primary .grid-item .int strong {
+  color: #fff;
+}
+.dashboard.light .grid-item .int {
+  background: -webkit-linear-gradient(25deg, #2C5D7E, #54A283) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  color: #407a63;
+  display: block;
+}
+.dashboard.light .grid-item [class*=" icon-"],
+.dashboard.light .grid-item [class^=icon-] {
+  font-size: 100px;
+}
+.dashboard.light .grid-item [class*=" icon-"]:before,
+.dashboard.light .grid-item [class^=icon-]:before {
+  padding: 5px;
+  background: -webkit-linear-gradient(25deg, #2C5D7E, #54A283) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  color: #407a63;
+}
+.dashboard .grid-item {
+  margin: 3em 0 3.5em;
+}
+.dashboard .grid-item [class*=" icon-"],
+.dashboard .grid-item [class^=icon-] {
+  font-size: 100px;
+}
+.dashboard .grid-item h2,
+.dashboard .grid-item h3 {
+  font-weight: 200;
+  margin: 0;
+}
+.dashboard .grid-item .int {
+  font-size: 150%;
+}
+.dashboard .grid-item .int strong {
+  color: #54A283;
+  font-size: 330%;
+  font-weight: 400;
+}
+.dashboard .grid-item small {
+  font-size: 1em;
+  display: block;
 }
 
 @media (min-width: 994px) {
