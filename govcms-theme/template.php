@@ -20,9 +20,9 @@ function govcmstheme_bootstrap_preprocess_node(&$variables) {
     // We are on the dashboard page
     // Get variable to check when it was last updated. if more than 24 hours, update the nodes.
     $date = date('Y-m-d H:i');
-    $yesterday = date ( 'Y-m-j' , strtotime('-1 day', strtotime($date)));
+    $yesterday = date('Y-m-d H:i', strtotime('-1 day', strtotime($date)));
     $dashboard_updated = variable_get('govcms_dashboard_last_updated', $yesterday);
-    if($dashboard_updated < $date) {
+    if($dashboard_updated < $yesterday) {
       // Update the variables API GETs
       _govcmstheme_bootstrap_drupal_api();
       _govcmstheme_bootstrap_github_api();
@@ -50,8 +50,18 @@ function govcmstheme_bootstrap_preprocess_node(&$variables) {
     $variables['govcms_dashboard_support'] = $variables['field_support_requests_response'][0]['value'];
     $variables['govcms_dashboard_support_unit'] = $variables['field_support_suffix_unit'][0]['value'];
 
-    $last_updated_date = variable_get('govcms_dashboard_last_updated');
+    $node_changed = $variables['changed'];
+    $node_date = date('Y-m-d H:i', $node_changed);
+
+    $last_updated_date = $dashboard_updated;
+
+    $node_dt = new DateTime($node_date);
+    $api_dt = new DateTime($last_updated_date);
     $last_updated = date('d/m/Y g:ia', strtotime($last_updated_date));
+    if($node_dt > $api_dt) {
+      $last_updated = date('d/m/Y g:ia', strtotime($node_date));
+    }
+
     $variables['govcms_dashboard_last_updated'] = $last_updated;
   }
 }
