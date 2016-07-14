@@ -1391,7 +1391,7 @@ small a {
   -webkit-text-fill-color: initial;
 }
 .alternating.text-content {
-  margin: 0;
+  margin: 25px 0 0 0;
   padding: 0;
 }
 .alternating.text-content .icon-hugest {
@@ -1452,9 +1452,9 @@ small a {
 .social-btns .btn-twitter {
   background-color: #55acee;
 }
-.social-btns h2 {
+.social-btns h2:first-of-type {
   font-size: 24px;
-  margin: 0.5em 0 1em 0;
+  margin: 2em 0 1em 0;
 }
 
 html.js .region-content .do-fade:before {

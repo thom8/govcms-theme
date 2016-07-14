@@ -285,7 +285,7 @@ small {
     }
   }
   &.text-content {
-    margin: 0;
+    margin: 25px 0 0 0;
     padding: 0;
   }
   &.text-content .icon-hugest {
@@ -347,9 +347,9 @@ small {
   .btn-twitter {
     background-color: #55acee;
   }
-  h2 {
+  h2:first-of-type {  // first-of-type is just for specificity
     font-size: 24px; // made to look like a h3 visually
-    margin: 0.5em 0 1em 0;
+    margin: 2em 0 1em 0;
   }
 }
 
