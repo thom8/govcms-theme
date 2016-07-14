@@ -199,7 +199,7 @@ small {
     }
   }
   p + h2:first-of-type {
-    margin-top: 1.25em;   // if there is a paragraph before the first heading, resume regular programming :) 
+    margin-top: 1.25em;   // if there is a paragraph before the first heading, resume regular programming :)
   }
   h3 {
     margin: 1.5em 0 1em 0;
@@ -233,6 +233,14 @@ small {
   p {
     font-size: 125%;
   }
+  .vertical-center {
+    h2 {
+      margin-top: 0;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
   .row:not(.vertical-center) {
     margin-top: 5.7em;
     margin-bottom: 5.7em;
@@ -255,12 +263,19 @@ small {
     }
     &.icon-int {
       @include body-font();
-      font-size: 12em;
-      width: 1.4em;
-      height: 1.4em;
-      line-height: 1.1em;
+      //font-size: 12em;
+      //width: 1.4em;
+      //height: 1.4em;
+      //line-height: 1.1em;
+      //margin-top: 5px;
+
+      // for outlined style, just for int class for now
+      border: 3px solid $highlightDark;
+      @include color-gradient($highlightDarker, $highlightBright);
+      font-weight: 200;
     }
   }
+  // disabled so using the above outline style instead of filled in style
   &:not(.bg-primary) .icon-huge {
     @include background-gradient( $highlightDark, $highlightDark, $highlightDarker); // this passes AA for large text everywhere on homepage
     color: #fff;

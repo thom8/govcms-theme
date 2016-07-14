@@ -1335,6 +1335,12 @@ small a {
 .alternating p {
   font-size: 125%;
 }
+.alternating .vertical-center h2 {
+  margin-top: 0;
+}
+.alternating .vertical-center p {
+  margin-bottom: 0;
+}
 .alternating .row:not(.vertical-center) {
   margin-top: 5.7em;
   margin-bottom: 5.7em;
@@ -1362,10 +1368,13 @@ small a {
 }
 .alternating .icon-huge.icon-int {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12em;
-  width: 1.4em;
-  height: 1.4em;
-  line-height: 1.1em;
+  border: 3px solid #54A283;
+  background: -webkit-linear-gradient(25deg, #407a63, #6ad5ac) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  color: #407a63;
+  padding: 5px;
+  font-weight: 200;
 }
 .alternating:not(.bg-primary) .icon-huge {
   background-color: #54A283;
