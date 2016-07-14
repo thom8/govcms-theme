@@ -54,6 +54,7 @@
   <link rel="preload" href="<?php print '/' . path_to_theme(); ?>/css/styles.css" as="style">
   <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
+  <title><?php print $head_title; ?></title>
   <?php print $head; ?>
   <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,400italic">
   <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
