@@ -286,6 +286,9 @@ header {
   .nav-pills {
     margin-top: 35px;
     font-size: 115%;
+    li a {
+      border-bottom: 1px solid transparent;
+    }
   }
   .btn.btn-light {
     background: transparent;
@@ -329,8 +332,10 @@ header {
     }
   }
   .nav {
-    a:not(.btn-light) {
-      color: #fff;
+    a {
+      &:not(.btn-light) {
+        color: #fff;
+      }
     }
   }
   .pager {

@@ -442,6 +442,9 @@ header .nav-pills {
   margin-top: 35px;
   font-size: 115%;
 }
+header .nav-pills li a {
+  border-bottom: 1px solid transparent;
+}
 header .btn.btn-light {
   background: transparent;
   border-color: #fff;
