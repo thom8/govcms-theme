@@ -29,7 +29,7 @@
 ?>
 
 <?php if ($content['url']) { ?>
-<a href="<?php print $content['url']; ?>" class="card">
+<a href="<?php print trim($content['url']); ?>" class="card">
   <?php } else { ?>
   <a href="#" class="card">
     <?php } ?>
