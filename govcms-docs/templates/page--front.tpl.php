@@ -12,7 +12,7 @@
     </section>
   <?php endif; ?>
 </div>
-
+  <div class="container">
       <!-- #messages-console -->
       <?php if ($messages): ?>
         <div id="messages-console" class="clearfix">
@@ -43,9 +43,7 @@
         <!-- EOF: #action links -->
 
         <?php if ($page['content']): ?>
-          <div class="container">
             <?php print render($page['content']); ?>
-          </div>
         <?php endif; ?>
-
+      </div>
 <?php include "includes/footer.tpl.php"; ?>
