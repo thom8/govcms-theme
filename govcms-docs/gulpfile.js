@@ -71,7 +71,7 @@ gulp.task('compass', function() {
 // CSS concat, auto-prefix, optimise and minify
 gulp.task('styles', function() {
   gulp.src(['./src/styles/*.css'])
-    .pipe(concat('./styles.css'))
+    .pipe(concat('./docs.css'))
     .pipe(autoprefix('last 2 versions'))
     .pipe(minifyCSS())
     .pipe(gulp.dest('./css/'));
