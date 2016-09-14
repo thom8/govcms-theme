@@ -1,13 +1,12 @@
 # GovCMS Website Theme
 
 By Tim Hurley - 2016
-Based off HTML mockup version:
-https://github.com/fribibb/new-govcms
-Viewable here:
+
+Based off [HTML mockup version](https://github.com/fribibb/new-govcms), viewable at:  
 https://fribibb.github.io/new-govcms/
 
 
-* Using Bootstrap 3 for frontend
+* Using Bootstrap 3 for front-end
 * All images should be vectors - no bitmaps here pls! #iliveinhope
 * Using Sass (SCSS + Compass) for CSS creation
 * Using Gulp for task automation such as:
