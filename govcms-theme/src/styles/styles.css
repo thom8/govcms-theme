@@ -1691,6 +1691,7 @@ html.js .region-content .faded {
     transform: translateY(-50%);
     margin: 0;
     padding: 40px 0 0 50px;
+    top: 150px;
   }
 }
 @supports (-ms-accelerator: true) {
