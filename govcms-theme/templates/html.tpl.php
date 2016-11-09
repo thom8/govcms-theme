@@ -60,7 +60,7 @@
   <meta property="og:title" content="<?php print $head_title; ?>"/>
   <?php print $head; ?>
   <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,400italic">
-  <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
@@ -71,6 +71,6 @@
   <div id="is_tablet"></div>
   <div id="is_mobile"></div>
 </div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js">
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js">
 </body>
 </html>

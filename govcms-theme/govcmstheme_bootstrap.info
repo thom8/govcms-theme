@@ -8,7 +8,7 @@ core = 7.x
 settings[breadcrumb_display]= 1
 settings[scrolltop_display]= 1
 settings[responsive_respond]= 1
-settings[bootstrap_css_cdn]= 3.3.5
+settings[bootstrap_css_cdn]= 3.3.7  ; FYI this isn't used - edit 'templates/html.tpl.php'
 ; number of columns in each megamenu drop down
 settings[sub_menu_columns] = 4;
 ; number of items in homepage carousel

@@ -19,16 +19,23 @@
     }
   }
   .panel-heading {
-    background-color: $secondaryDark;
-    border-color: rgba($secondaryDark, .3);
+    //background-color: $secondaryDark;
+    //border-color: rgba($secondaryDark, .3);
     font-weight: 300;
     font-size: 80%;
-    color: rgba(#fff, 0.8);
+    //color: rgba(#fff, 0.8);
+    font-weight: 300;
     strong {
-      color: #fff;
+      //color: #fff;
       font-weight: 300;
       font-size: 250%;
+      color: $highlightDarker;
     }
+  }
+  .panel-body.panel-footer {  // "medium" / "large" etc. label section
+    background-color: $secondaryDark;
+    color: #fff;
+    border-radius: 0;
   }
   .lead {
     p {
@@ -36,7 +43,7 @@
     }
     strong {
       font-size: 250%;
-      font-weight: 300;
+      font-weight: 400;
     }
     &.cost {
       color: $highlightDark;
@@ -55,9 +62,9 @@
   .panel-heading {
     border-style: none;
     background: #f5f5f5;
-    h3 strong {
-      color: $highlightDarker;
-    }
+    //h3 strong {
+    //  color: $highlightDarker;
+    //}
     .lead {
       strong {
         opacity: 0.85;

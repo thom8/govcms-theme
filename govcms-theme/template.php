@@ -56,6 +56,22 @@ function govcmstheme_bootstrap_preprocess_html(&$vars) {
 
 
 /**
+ * Implements hook_preprocess_page().
+ */
+function govcmstheme_bootstrap_preprocess_page(&$vars) {
+  // For stripe.com style sub menu
+  // Load node entity.
+//   $sub_menu_node = node_load(7); // @joseph, this kills things ..badly -  TIM TODO
+//
+  if (isset($sub_menu_node)) {
+    $variables['sub_menu'] = $sub_menu_node->body['und'][0]['value'];
+  } else {
+    $variables['sub_menu'] = null;
+  }
+}
+
+
+/**
  * Preprocess variables for block.tpl.php
  */
 function govcmstheme_bootstrap_preprocess_block(&$variables) {
@@ -98,7 +114,7 @@ function govcmstheme_bootstrap_js_alter(&$javascript) {
   }
   // Swap out jQuery to use an updated version of the library.
   if ($replace_jquery) {
-    $javascript['misc/jquery.js']['data'] = '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js';
+    $javascript['misc/jquery.js']['data'] = '//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js';
   }
 }
 
@@ -125,6 +141,10 @@ function govcmstheme_bootstrap_menu_link__main_menu($variables) {
   }
 
   $element = $variables['element'];
+// die(); TIM TODO
+  // $element['#attributes']['data-content'][] = machine_name($element['#title']); // add data-content to <li> for dropdown menu
+  // $element['#attributes']['data-content'][] = pathauto_cleanstring($element['#title']); // add data-content to <li> for dropdown menu - requires module to be enabled - add check or it will error out
+  $element['#attributes']['class'][] = "tim-class"; // add class to <li> for dropdown menu
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . "</li>\n";
 }

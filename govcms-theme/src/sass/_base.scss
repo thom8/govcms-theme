@@ -11,6 +11,9 @@ body {
   width: 100%;
   height: 100%;
   @include body-font();
+  font-size: 125%;    // make base text larger
+  font-weight: 300;
+  line-height: 1.4;
 }
 
 .vertical-center {
@@ -364,20 +367,20 @@ header {
     .lead {
       color: $secondaryDark;
       margin-top: -5px;
-      a {
-        text-decoration: underline;
-        &:hover,
-        &:active,
-        &:focus {
-          text-decoration: none;
-        }
-      }
     }
     small {
       color: $secondaryDark;
       font-size: 90%;
       margin-top: -2px;
       margin-bottom: 1.1em;
+    }
+    a {
+      text-decoration: underline;
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: none;
+      }
     }
     &.news-item-header {
       h1,
