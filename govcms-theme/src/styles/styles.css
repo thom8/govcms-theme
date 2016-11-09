@@ -773,14 +773,14 @@ form .form-required {
   float: right;
 }
 
-.content p,
-.content li,
-.content .text-content p,
-.content .text-content li,
-.content .clients p,
-.content .clients li,
-.split p,
-.split li {
+.region-content .content p,
+.region-content .content li,
+.region-content .content .text-content p,
+.region-content .content .text-content li,
+.region-content .content .clients p,
+.region-content .content .clients li,
+.region-content .split p,
+.region-content .split li {
   font-size: 17.5px;
   font-weight: 300;
   line-height: 1.4;

@@ -214,16 +214,18 @@ form {
 
 
 // make basic content text larger
-.content,
-.content .text-content,
-.content .clients,
-.split {
-  p,
-  li {
-    //font-size: 125%;
-    font-size: 17.5px;
-    font-weight: 300;
-    line-height: 1.4;
+.region-content {
+  .content,
+  .content .text-content,
+  .content .clients,
+  .split {
+    p,
+    li {
+      //font-size: 125%;
+      font-size: 17.5px;
+      font-weight: 300;
+      line-height: 1.4;
+    }
   }
 }
 
