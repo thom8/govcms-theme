@@ -11,7 +11,6 @@ body {
   width: 100%;
   height: 100%;
   @include body-font();
-  font-size: 125%;    // make base text larger
   font-weight: 300;
   line-height: 1.4;
 }
@@ -215,7 +214,12 @@ form {
   float: right;
 }
 
-
+.content {
+  p,
+  li {
+    font-size: 125%; // make base text larger
+  }
+}
 
 
 // Custom Horizontal Rule

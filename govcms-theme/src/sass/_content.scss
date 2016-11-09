@@ -19,17 +19,17 @@
     }
   }
   .panel-heading {
-    //background-color: $secondaryDark;
-    //border-color: rgba($secondaryDark, .3);
-    font-weight: 300;
-    font-size: 80%;
-    //color: rgba(#fff, 0.8);
-    font-weight: 300;
-    strong {
-      //color: #fff;
+    background-color: $greyLight;
+    border: none;
+    h3 {
       font-weight: 300;
-      font-size: 250%;
-      color: $highlightDarker;
+      font-size: 80%;
+      color: $textGrey;
+      strong {
+        font-weight: 300;
+        font-size: 250%;
+        color: $highlightDarker;
+      }
     }
   }
   .panel-body.panel-footer {  // "medium" / "large" etc. label section
