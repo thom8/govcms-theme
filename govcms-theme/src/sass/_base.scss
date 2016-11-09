@@ -263,7 +263,7 @@ hr.small {
   padding: 50px 0;
   .btn {
     margin: 10px;
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
   h2 {
     font-size: 24px; // like a h3 visually
@@ -300,7 +300,7 @@ hr.small {
 header {
   .nav-pills {
     margin-top: 35px;
-    font-size: 115%;
+    //font-size: 115%;
     li a {
       border-bottom: 1px solid transparent;
     }
@@ -364,7 +364,7 @@ header {
     background: transparent;
     h1,
     h2 {
-      font-size: 390%;
+      font-size: 340%;
       font-weight: 300;
       padding: 0 5%;
       color: $secondaryDark;
@@ -393,6 +393,9 @@ header {
       &:focus {
         text-decoration: none;
       }
+    }
+    .previous a {
+      text-decoration: none;
     }
     &.news-item-header {
       h1,
@@ -435,8 +438,8 @@ body.front {
     }
   }
 }
-
-.about, .services {
+.about,
+.services {
   padding: 50px 0;
 }
 

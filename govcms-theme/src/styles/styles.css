@@ -812,7 +812,7 @@ hr.small {
 }
 .call-to-action .btn {
   margin: 10px;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 .call-to-action h2 {
   font-size: 24px;
@@ -835,7 +835,6 @@ hr.small {
 
 header .nav-pills {
   margin-top: 35px;
-  font-size: 115%;
 }
 header .nav-pills li a {
   border-bottom: 1px solid transparent;
@@ -892,7 +891,7 @@ header .btn.btn-light.active:focus, header .btn.btn-light.active:active, header 
 }
 #top-and-first-wrapper #about h1,
 #top-and-first-wrapper #about h2 {
-  font-size: 390%;
+  font-size: 340%;
   font-weight: 300;
   padding: 0 5%;
   color: #37424A;
@@ -914,6 +913,9 @@ header .btn.btn-light.active:focus, header .btn.btn-light.active:active, header 
   text-decoration: underline;
 }
 #top-and-first-wrapper #about a:hover, #top-and-first-wrapper #about a:active, #top-and-first-wrapper #about a:focus {
+  text-decoration: none;
+}
+#top-and-first-wrapper #about .previous a {
   text-decoration: none;
 }
 #top-and-first-wrapper #about.news-item-header h1,
@@ -948,7 +950,8 @@ body.front #about small {
   margin-left: 25px;
 }
 
-.about, .services {
+.about,
+.services {
   padding: 50px 0;
 }
 
@@ -1555,7 +1558,6 @@ body.search-results .about .navbar-form button:focus i {
 }
 .pricingTable .panel-heading h3 {
   font-weight: 300;
-  font-size: 80%;
   color: #555;
 }
 .pricingTable .panel-heading h3 strong {
