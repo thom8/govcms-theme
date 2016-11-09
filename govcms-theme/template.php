@@ -47,8 +47,8 @@ function govcmstheme_bootstrap_preprocess_html(&$vars) {
   $path = drupal_get_path_alias();
   $aliases = explode('/', $path);
 
-  foreach($aliases as $alias) {
-    if($alias == 'search') {
+  foreach ($aliases as $alias) {
+    if ($alias == 'search') {
       $vars['classes_array'][] = 'search-results';
     }
   }
@@ -58,15 +58,16 @@ function govcmstheme_bootstrap_preprocess_html(&$vars) {
 /**
  * Implements hook_preprocess_page().
  */
-function govcmstheme_bootstrap_preprocess_page(&$vars) {
+function govcmstheme_bootstrap_preprocess_page(&$variables) {
   // For stripe.com style sub menu
   // Load node entity.
-//   $sub_menu_node = node_load(7); // @joseph, this kills things ..badly -  TIM TODO
-//
+  // @todo: Update this node id.
+  $sub_menu_node = node_load(816); // @joseph, this kills things ..badly -  TIM TODO
   if (isset($sub_menu_node)) {
     $variables['sub_menu'] = $sub_menu_node->body['und'][0]['value'];
-  } else {
-    $variables['sub_menu'] = null;
+  }
+  else {
+    $variables['sub_menu'] = NULL;
   }
 }
 
@@ -123,6 +124,7 @@ function govcmstheme_bootstrap_html_tag($vars) {
     unset($vars['element']['#value_prefix']);
     unset($vars['element']['#value_suffix']);
   }
+
   return theme_html_tag($vars);
 }
 
@@ -146,6 +148,7 @@ function govcmstheme_bootstrap_menu_link__main_menu($variables) {
   // $element['#attributes']['data-content'][] = pathauto_cleanstring($element['#title']); // add data-content to <li> for dropdown menu - requires module to be enabled - add check or it will error out
   $element['#attributes']['class'][] = "tim-class"; // add class to <li> for dropdown menu
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . "</li>\n";
 }
 
@@ -156,12 +159,17 @@ function govcmstheme_bootstrap_menu_tree__menu_footer_sub_menu($variables) {
 
 function govcmstheme_bootstrap_form_alter(&$form, &$form_state, $form_id) {
   if (!empty($form['actions']) && $form['actions']['submit']) {
-    $form['actions']['submit']['#attributes'] = array('class' => array('btn', 'btn-primary'));
-    if(isset($form_id) && ($form_id == 'webform_client_form_126' || $form_id == 'webform_client_form_131')) {
+    $form['actions']['submit']['#attributes'] = array(
+      'class' => array(
+        'btn',
+        'btn-primary'
+      )
+    );
+    if (isset($form_id) && ($form_id == 'webform_client_form_126' || $form_id == 'webform_client_form_131')) {
       $form['actions']['submit']['#suffix'] = '<br /><small>Please do not include any unnecessary personal, financial, or sensitive information.  Information will only be used for purposes for which you provide it. Please see our <a href="/privacy">Privacy Policy</a> for further information.</small>';
     }
 
-    if(isset($form_id) && $form_id == 'webform_client_form_466') {
+    if (isset($form_id) && $form_id == 'webform_client_form_466') {
       $form['actions']['submit']['#value'] = 'Start my site';
     }
 
@@ -191,7 +199,14 @@ function govcmstheme_bootstrap_form_alter(&$form, &$form_state, $form_id) {
         $error_msg .= "<br>Details: " . $query_params['details_message'];
       }
       // fill in the form fields
-      $fields = array('contact_name', 'contact_email', 'phone_number', 'site_name', 'agency_name', 'website_purpose');
+      $fields = array(
+        'contact_name',
+        'contact_email',
+        'phone_number',
+        'site_name',
+        'agency_name',
+        'website_purpose'
+      );
       foreach ($fields as $field) {
         $query_field_name = "details_form_values_" . $field;
         if (!empty($query_params[$query_field_name])) {
@@ -206,7 +221,7 @@ function govcmstheme_bootstrap_form_alter(&$form, &$form_state, $form_id) {
       }
     }
     $form['#attributes']['name'] = 'easybake-order-form';
-    $form['submitted']['#tree'] = False;
+    $form['submitted']['#tree'] = FALSE;
     $form['#action'] = variable_get('ezbake_baker_url') . '/order/submit?redirect=true';
   }
 }
@@ -215,7 +230,7 @@ function govcmstheme_bootstrap_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
   if (!empty($breadcrumb)) {
     $crumbs = '';
-    foreach($breadcrumb as $value) {
+    foreach ($breadcrumb as $value) {
       $temp = substr($value, 0, strpos($value, '>') + 1);
       $temp .= "← Back to ";
       $temp .= get_between('>', '</', $value);
@@ -223,18 +238,19 @@ function govcmstheme_bootstrap_breadcrumb($variables) {
       $crumbs .= $temp;
     }
   }
+
   return $crumbs;
 }
 
-function get_between($var1="",$var2="",$pool){
-  $temp1 = strpos($pool,$var1)+strlen($var1);
-  $result = substr($pool,$temp1,strlen($pool));
-  $dd=strpos($result,$var2);
-  if($dd == 0){
+function get_between($var1 = "", $var2 = "", $pool) {
+  $temp1 = strpos($pool, $var1) + strlen($var1);
+  $result = substr($pool, $temp1, strlen($pool));
+  $dd = strpos($result, $var2);
+  if ($dd == 0) {
     $dd = strlen($result);
   }
 
-  return substr($result,0,$dd);
+  return substr($result, 0, $dd);
 }
 
 /**
@@ -261,6 +277,7 @@ function govcmstheme_bootstrap_display_interval($variables) {
 
   if ($return = theme('date_time_ago', $time_ago_vars)) {
     $return = get_between(">", "</", $return);
+
     return '<p class="post-meta"' . drupal_attributes($attributes) . ">$return</p>";
   }
   else {
@@ -274,7 +291,14 @@ function govcmstheme_bootstrap_display_interval($variables) {
 function govcmstheme_bootstrap_form_search_api_page_search_form_alter(&$form, &$form_state, $form_id) {
   //Add CSS to form tag
   if (!isset($form['#attributes']['class'])) {
-    $form['#attributes'] = array('class' => array('form-inline', 'navbar-form', 'search-form', 'move-into-top'));
+    $form['#attributes'] = array(
+      'class' => array(
+        'form-inline',
+        'navbar-form',
+        'search-form',
+        'move-into-top'
+      )
+    );
   }
   else {
     $form['#attributes']['class'][] = 'form-inline';
@@ -316,7 +340,7 @@ function govcmstheme_bootstrap_preprocess_image(&$variables) {
 
 // Stop Drupal's meddling CSS loading
 function govcmstheme_bootstrap_css_alter(&$css) {
-  unset($css[drupal_get_path('module','system').'/system.theme.css']);
+  unset($css[drupal_get_path('module', 'system') . '/system.theme.css']);
 }
 
 /*
