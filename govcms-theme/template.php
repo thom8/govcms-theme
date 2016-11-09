@@ -147,7 +147,7 @@ function govcmstheme_bootstrap_menu_link__main_menu($variables) {
 // die(); TIM TODO
   // $element['#attributes']['data-content'][] = machine_name($element['#title']); // add data-content to <li> for dropdown menu
   // $element['#attributes']['data-content'][] = pathauto_cleanstring($element['#title']); // add data-content to <li> for dropdown menu - requires module to be enabled - add check or it will error out
-  $element['#attributes']['class'][] = "tim-class"; // add class to <li> for dropdown menu
+  // $element['#attributes']['class'][] = "tim-class"; // add class to <li> for dropdown menu
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
 
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . "</li>\n";

@@ -214,10 +214,16 @@ form {
   float: right;
 }
 
-.content {
+
+// make basic content text larger
+.content,
+.content .text-content,
+.content .clients,
+.split {
   p,
   li {
-    font-size: 125%; // make base text larger
+    //font-size: 125%;
+    font-size: 17.5px;
   }
 }
 

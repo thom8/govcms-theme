@@ -776,8 +776,14 @@ form .form-required {
 }
 
 .content p,
-.content li {
-  font-size: 125%;
+.content li,
+.content .text-content p,
+.content .text-content li,
+.content .clients p,
+.content .clients li,
+.split p,
+.split li {
+  font-size: 17.5px;
 }
 
 hr.small {

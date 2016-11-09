@@ -72,5 +72,3 @@
   <div id="is_mobile"></div>
 </div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js">
-</body>
-</html>
