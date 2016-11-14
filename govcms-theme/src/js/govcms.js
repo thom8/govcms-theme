@@ -88,7 +88,7 @@ jQuery(document).ready(function () {
         this.mainNavigationItems = this.mainNavigation.find('.has-dropdown');
         this.dropdownList = this.element.find('.dropdown-list');
         this.dropdownWrappers = this.dropdownList.find('.dropdown');
-        this.dropdownItems = this.dropdownList.find('.content');
+        this.dropdownItems = this.dropdownList.find('.dd-content');
         this.dropdownBg = this.dropdownList.find('.bg-layer');
         this.mq = this.checkMq();
         this.bindEvents();
@@ -124,7 +124,7 @@ jQuery(document).ready(function () {
         // click on an item in the main navigation -> open a dropdown on a touch device
         this.mainNavigationItems.on('touchstart', function (event) {
             var selectedDropdown = self.dropdownList.find('#' + jQuery(this).data('content'));
-            if (!self.element.hasClass('is-dropdown-visible') || !selectedDropdown.hasClass('active')) {
+            if (!self.element.hasClass('is-dropdown-visible') || !selectedDropdown.hasClass('dd-active')) {
                 event.preventDefault();
                 self.showDropdown(jQuery(this));
             }
@@ -143,15 +143,17 @@ jQuery(document).ready(function () {
             var self = this;
             var selectedDropdown = this.dropdownList.find('#' + item.data('content')),
                 selectedDropdownHeight = selectedDropdown.innerHeight(),
-                selectedDropdownWidth = selectedDropdown.children('.content').innerWidth(),
-                selectedDropdownLeft = item.offset().left - item.parent().offset().left + item.innerWidth() / 2 - selectedDropdownWidth / 2;
-
+                selectedDropdownWidth = selectedDropdown.children('.dd-content').innerWidth(),
+                selectedDropdownLeft = item.offset().left - item.parent().offset().left - 115 + item.innerWidth() / 2; //- selectedDropdownWidth / 2; // changed
+// console.log( item.offset().left + " - " + item.parent().offset().left + " + " + item.innerWidth() + " / 2 - " + selectedDropdownWidth + " /2");
+// console.log(item);
+// console.log(item.parent());
             // update dropdown position and size
             this.updateDropdown(selectedDropdown, parseInt(selectedDropdownHeight), selectedDropdownWidth, parseInt(selectedDropdownLeft));
             // add active class to the proper dropdown item
-            this.element.find('.active').removeClass('active');
-            selectedDropdown.addClass('active').removeClass('move-left move-right').prevAll().addClass('move-left').end().nextAll().addClass('move-right');
-            item.addClass('active');
+            this.element.find('.dd-active').removeClass('dd-active');
+            selectedDropdown.addClass('dd-active').removeClass('move-left move-right').prevAll().addClass('move-left').end().nextAll().addClass('move-right');
+            item.addClass('dd-active');
             // show the dropdown wrapper if not visible yet
             if (!this.element.hasClass('is-dropdown-visible')) {
                 setTimeout(function () {
@@ -184,7 +186,7 @@ jQuery(document).ready(function () {
     morphDropdown.prototype.hideDropdown = function () {
         this.mq = this.checkMq();
         if (this.mq == 'desktop') {
-            this.element.removeClass('is-dropdown-visible').find('.active').removeClass('active').end().find('.move-left').removeClass('move-left').end().find('.move-right').removeClass('move-right');
+            this.element.removeClass('is-dropdown-visible').find('.dd-active').removeClass('dd-active').end().find('.move-left').removeClass('move-left').end().find('.move-right').removeClass('move-right');
         }
     };
 
@@ -221,6 +223,13 @@ jQuery(document).ready(function () {
             resizing = false;
         };
     }
+
+
+
+    // add active class to main nav, seems not using superfish any more
+    $(function() {
+      $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').parent().addClass('active');
+    });
 
 
 }); // end document ready

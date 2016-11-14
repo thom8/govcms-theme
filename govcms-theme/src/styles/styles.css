@@ -225,31 +225,11 @@ Primary style
   box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-size: 1.6rem;
-  font-family: "Lato", sans-serif;
-  color: #1A1A1A;
-  background-color: #FFFFFF;
-}
-
-a {
-  color: #DB6356;
-  text-decoration: none;
-}
-
-/* --------------------------------
-
- Header
-
--------------------------------- */
 .cd-morph-dropdown {
   position: relative;
   height: 60px;
-  background-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.95);
+  margin-top: 2em;
 }
 .cd-morph-dropdown::before {
   /* never visible - used in JS to check mq */
@@ -258,16 +238,18 @@ a {
 }
 .cd-morph-dropdown .nav-trigger {
   /* menu icon - visible on small screens only */
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 60px;
-  width: 60px;
-  /* replace text with icon */
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-  color: transparent;
+  width: 100%;
+  display: block;
+  min-height: 60px;
+}
+.cd-morph-dropdown .nav-trigger:hover, .cd-morph-dropdown .nav-trigger:dd-active, .cd-morph-dropdown .nav-trigger:focus {
+  text-decoration: underline;
+}
+.cd-morph-dropdown .nav-trigger .menu-text {
+  top: 3.7em;
+  position: relative;
+  text-align: center;
+  font-size: 74%;
 }
 .cd-morph-dropdown .nav-trigger span, .cd-morph-dropdown .nav-trigger span::after, .cd-morph-dropdown .nav-trigger span::before {
   /* these are the 3 lines of the menu icon */
@@ -278,7 +260,7 @@ a {
 }
 .cd-morph-dropdown .nav-trigger span {
   left: 50%;
-  top: 50%;
+  top: 40%;
   bottom: auto;
   right: auto;
   transform: translateX(-50%) translateY(-50%);
@@ -294,6 +276,9 @@ a {
 }
 .cd-morph-dropdown .nav-trigger span::after {
   transform: translateY(9px);
+}
+.cd-morph-dropdown.nav-open {
+  background-color: rgba(255, 255, 255, 0.85);
 }
 .cd-morph-dropdown.nav-open .nav-trigger span {
   background-color: transparent;
@@ -315,81 +300,61 @@ a {
   width: 100%;
   padding: 1.2em 5%;
   box-shadow: inset 0 1px 0 #e6e6e6;
-  background-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 1;
+}
+@supports (-webkit-backdrop-filter: blur(10px)) {
+  .cd-morph-dropdown .morph-dropdown-wrapper {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
 }
 .cd-morph-dropdown.nav-open .morph-dropdown-wrapper {
   display: block;
-  z-index: 1;
+  border: 1px solid #6ad5ac;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+.cd-morph-dropdown .dropdown-list ul {
+  list-style: none;
+}
+.cd-morph-dropdown .dropdown-list ul a {
+  text-align: left;
+  padding-left: 0;
+  font-size: 17.5px;
+}
+.cd-morph-dropdown .dropdown-list ul h2 {
+  margin-left: 0;
+}
+.cd-morph-dropdown .dropdown-list > ul {
+  padding-left: 0;
 }
 .cd-morph-dropdown .dropdown-list > ul > li {
   margin-bottom: 3.3em;
 }
+.cd-morph-dropdown .dropdown-list > ul > li ul {
+  padding-left: 0;
+}
 .cd-morph-dropdown .label {
   display: block;
-  font-size: 2.2rem;
-  color: #1A1A1A;
   margin-bottom: .8em;
 }
-.cd-morph-dropdown .content li::after {
+.cd-morph-dropdown .dd-content li::after {
   clear: both;
   content: "";
   display: block;
 }
-.cd-morph-dropdown .gallery .content li {
-  margin-bottom: 1.4em;
-}
-.cd-morph-dropdown .gallery .content a {
-  display: block;
-}
-.cd-morph-dropdown .gallery .content a::before {
-  /* icon on the left */
-  content: '';
-  display: inline-block;
-  float: left;
-  height: 54px;
-  width: 54px;
-  margin-right: .6em;
-  background: red;
-  border-radius: 50%;
-  transition: background .2s;
-}
-.cd-morph-dropdown .gallery .content a span,
-.cd-morph-dropdown .gallery .content a em {
-  display: block;
-  line-height: 1.2;
-}
-.cd-morph-dropdown .gallery .content a em {
-  font-size: 1.8rem;
-  padding: .4em 0 .2em;
-  color: #1A1A1A;
-}
-.cd-morph-dropdown .gallery .content a span {
-  font-size: 1.4rem;
-  color: #a6a6a6;
-}
-.cd-morph-dropdown .gallery .content a:hover::before {
-  background-color: #1A1A1A;
-}
-.cd-morph-dropdown .links .content > ul > li {
+.cd-morph-dropdown .links .dd-content > ul > li {
   margin-top: 1em;
 }
 .cd-morph-dropdown .links-list a,
 .cd-morph-dropdown .btn {
   display: block;
-  margin-left: 14px;
-  font-size: 2.2rem;
-  line-height: 1.6;
 }
-.cd-morph-dropdown .links-list a:hover,
-.cd-morph-dropdown .btn:hover {
-  color: #1A1A1A;
-}
-.cd-morph-dropdown .content h2 {
-  color: #a6a6a6;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.3rem;
+.cd-morph-dropdown .dd-content h2 {
+  color: #777;
   margin: 20px 0 10px 14px;
+  font-size: 16px;
 }
 @media only screen and (min-width: 1000px) {
   .cd-morph-dropdown {
@@ -410,6 +375,7 @@ a {
   }
   .cd-morph-dropdown .main-nav {
     display: inline-block;
+    float: right;
   }
   .cd-morph-dropdown .main-nav > ul > li {
     display: inline-block;
@@ -417,11 +383,6 @@ a {
   }
   .cd-morph-dropdown .main-nav > ul > li > a {
     display: block;
-    padding: 0 1.8em;
-    height: 70px;
-    line-height: 70px;
-    color: #FFFFFF;
-    font-size: 1.8rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: opacity .2s;
@@ -430,13 +391,13 @@ a {
     /* main navigation hover effect - on hover, reduce opacity of elements not hovered over */
     opacity: .6;
   }
-  .cd-morph-dropdown.is-dropdown-visible .main-nav > ul > li.active > a {
+  .cd-morph-dropdown.is-dropdown-visible .main-nav > ul > li.dd-active > a {
     opacity: 1;
   }
   .cd-morph-dropdown .morph-dropdown-wrapper {
     /* dropdown wrapper - used to create the slide up/slide down effect when dropdown is revealed/hidden */
     display: block;
-    top: 8em;
+    top: 6em;
     /* overwrite mobile style */
     width: auto;
     padding: 0;
@@ -502,71 +463,60 @@ a {
     width: 100%;
     transition: opacity .3s, visibility .3s;
   }
-  .cd-morph-dropdown .dropdown.active {
+  .cd-morph-dropdown .dropdown.dd-active {
     opacity: 1;
     visibility: visible;
   }
-  .cd-morph-dropdown .dropdown.move-left .content {
+  .cd-morph-dropdown .dropdown.move-left .dd-content {
     transform: translateX(-100px);
   }
-  .cd-morph-dropdown .dropdown.move-right .content {
+  .cd-morph-dropdown .dropdown.move-right .dd-content {
     transform: translateX(100px);
   }
   .cd-morph-dropdown .label {
     /* hide the label on bigger devices */
     display: none;
   }
-  .cd-morph-dropdown .content {
+  .cd-morph-dropdown .dd-content {
     padding: 2.2em 1.8em;
     transition: transform .3s;
     text-align: left;
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
   }
-  .cd-morph-dropdown .content > ul::after {
+  .cd-morph-dropdown .dd-content > ul::after {
     clear: both;
     content: "";
     display: block;
   }
-  .cd-morph-dropdown .content > ul > li {
+  .cd-morph-dropdown .dd-content > ul > li {
     width: 48%;
     float: left;
     margin-right: 4%;
     margin-top: 0;
   }
-  .cd-morph-dropdown .content > ul > li:nth-of-type(2n) {
+  .cd-morph-dropdown .dd-content > ul > li:nth-of-type(2n) {
     margin-right: 0;
   }
-  .cd-morph-dropdown .links .content > ul > li {
+  .cd-morph-dropdown .links .dd-content > ul > li {
     margin-top: 0;
   }
-  .cd-morph-dropdown .links .content,
-  .cd-morph-dropdown .button .content {
+  .cd-morph-dropdown .links .dd-content,
+  .cd-morph-dropdown .button .dd-content {
     width: 390px;
   }
   .cd-morph-dropdown .links-list a {
-    font-size: 1.6rem;
     margin-left: 0;
   }
   .cd-morph-dropdown .btn {
     display: block;
     width: 100%;
-    height: 60px;
     margin: 1.5em 0 0;
-    font-size: 1.8rem;
-    text-align: center;
-    color: #FFFFFF;
-    line-height: 60px;
-    background: #DB6356;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  .cd-morph-dropdown .btn:hover {
-    background: #1A1A1A;
-    color: #FFFFFF;
-  }
-  .cd-morph-dropdown .content h2 {
-    font-size: 1.8rem;
-    text-transform: none;
-    font-weight: normal;
+  .cd-morph-dropdown .dd-content h2 {
     color: #1A1A1A;
     margin: 0 0 .6em;
   }
@@ -591,11 +541,6 @@ a {
   }
 }
 
-/* --------------------------------
-
-Main site content
-
--------------------------------- */
 html {
   width: 100%;
   height: 100%;
@@ -627,7 +572,7 @@ body {
 }
 
 a {
-  color: #2C5D7E;
+  color: #3b7498;
   transition: 0.3s;
 }
 
@@ -704,7 +649,7 @@ a {
 
 .light-bg .btn-light:hover, .light-bg .btn-light:focus, .light-bg .btn-light:active {
   color: #407a63;
-  background-color: rgba(44, 93, 126, 0.1);
+  background-color: rgba(59, 116, 152, 0.1);
 }
 
 .bg-primary .btn-light {
@@ -744,7 +689,7 @@ form fieldset legend .mandatory {
 }
 form label {
   margin-top: 1em;
-  color: #2C5D7E;
+  color: #3b7498;
   font-weight: 400;
   width: 100%;
 }
@@ -801,8 +746,8 @@ hr.small {
 }
 
 .call-to-action {
-  background-color: #1f4158;
-  background: linear-gradient(11deg, #1f4158, #2C5D7E, #3979a4);
+  background-color: #2d5873;
+  background: linear-gradient(11deg, #2d5873, #3b7498, #4c8fba);
   background-size: 400% 400%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -818,23 +763,30 @@ hr.small {
   font-size: 24px;
 }
 
+.nav-pills > li {
+  padding: 0;
+}
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:active, .nav-pills > li.active > a:focus {
   background-color: transparent;
-  color: #2C5D7E;
-  font-weight: bold;
+  color: #3b7498;
   border-bottom: 1px solid #6ad5ac;
 }
 .nav-pills > li > a {
   border-radius: 0;
+  font-size: 17.5px;
 }
 .nav-pills > li > a:focus, .nav-pills > li > a:active, .nav-pills > li > a:hover {
   text-decoration: none;
   background-color: transparent;
   border-bottom: 1px solid #fff;
 }
+.nav-pills > li > a.active {
+  font-weight: bold !important;
+}
 
 header .nav-pills {
-  margin-top: 35px;
+  margin-top: 10px;
+  font-size: 16px;
 }
 header .nav-pills li a {
   border-bottom: 1px solid transparent;
@@ -865,7 +817,7 @@ header .btn.btn-light.active:focus, header .btn.btn-light.active:active, header 
 
 #top-and-first-wrapper {
   background-color: #6ad5ac;
-  background: linear-gradient(11deg, #6ad5ac, #51bfbb, #2b5a7a);
+  background: linear-gradient(11deg, #6ad5ac, #51bfbb, #3b7498);
   background-size: 400% 400%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -891,7 +843,7 @@ header .btn.btn-light.active:focus, header .btn.btn-light.active:active, header 
 }
 #top-and-first-wrapper #about h1,
 #top-and-first-wrapper #about h2 {
-  font-size: 340%;
+  font-size: 380%;
   font-weight: 300;
   padding: 0 5%;
   color: #37424A;
@@ -936,7 +888,7 @@ header .btn.btn-light.active:focus, header .btn.btn-light.active:active, header 
 }
 #about h1,
 #about h2 {
-  color: #2C5D7E;
+  color: #3b7498;
   margin-bottom: 1.1em;
 }
 #about .btn-lg {
@@ -962,8 +914,8 @@ body.front #about small {
 .icons-grid.bg-primary,
 .alternating.bg-primary {
   color: #fff;
-  background-color: #63af98;
-  background: linear-gradient(11deg, #63af98, #3a7184, #2C5D7E);
+  background-color: #54A283;
+  background: linear-gradient(11deg, #54A283, #469aaa, #3b7498);
   background-size: 400% 400%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -996,10 +948,10 @@ body.front #about small {
 .icons-grid.bg-primary [class^=icon-] :before,
 .alternating.bg-primary [class*=" icon-"] :before,
 .alternating.bg-primary [class^=icon-] :before {
-  background: -webkit-linear-gradient(25deg, #2C5D7E, #54A283) !important;
+  background: -webkit-linear-gradient(25deg, #3b7498, #54A283) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent;
-  color: #2C5D7E;
+  color: #3b7498;
   padding: 5px;
 }
 
@@ -1053,7 +1005,7 @@ body.front #about small {
 }
 .icons-grid a.grid-item:hover, .icons-grid a.grid-item:active, .icons-grid a.grid-item:focus {
   text-decoration: none;
-  color: #2C5D7E;
+  color: #3b7498;
 }
 .icons-grid a.grid-item:hover [class^="icon-"],
 .icons-grid a.grid-item:hover [class*=" icon-"],
@@ -1062,7 +1014,7 @@ body.front #about small {
 .icons-grid a.grid-item:active p, .icons-grid a.grid-item:focus [class^="icon-"],
 .icons-grid a.grid-item:focus [class*=" icon-"],
 .icons-grid a.grid-item:focus p {
-  color: #2C5D7E;
+  color: #3b7498;
 }
 .icons-grid a.grid-item [class^="icon-"],
 .icons-grid a.grid-item [class*=" icon-"] {
@@ -1105,7 +1057,7 @@ body.front #about small {
 }
 .split .container .section-one h2,
 .split .container .section-two h2 {
-  color: #2C5D7E;
+  color: #3b7498;
 }
 .split .container .section-one p > a,
 .split .container .section-two p > a {
@@ -1194,7 +1146,7 @@ footer ul.social {
   margin-bottom: 0;
 }
 footer ul.social a {
-  color: #2C5D7E;
+  color: #3b7498;
   opacity: 0.9;
 }
 footer ul.social a:hover, footer ul.social a:active, footer ul.social a:focus {
@@ -1301,7 +1253,7 @@ footer .small-links li:last-of-type {
   position: absolute;
   right: 7px;
   bottom: 0;
-  color: #2C5D7E;
+  color: #3b7498;
   opacity: 0.1;
   font-size: 1.2em;
 }
@@ -1316,7 +1268,7 @@ footer .small-links li:last-of-type {
 .sortableList a.card:hover h3, .sortableList a.card:active h2,
 .sortableList a.card:active h3, .sortableList a.card:focus h2,
 .sortableList a.card:focus h3 {
-  color: #2C5D7E;
+  color: #3b7498;
 }
 .sortableList a.card:hover i, .sortableList a.card:active i, .sortableList a.card:focus i {
   opacity: 0.6;
@@ -1525,7 +1477,7 @@ body.search-results .about .navbar-form button:hover i {
 body.support.front .about .navbar-form button:active, body.support.front .about .navbar-form button:focus,
 body.search-results .about .navbar-form button:active,
 body.search-results .about .navbar-form button:focus {
-  background-color: #2C5D7E;
+  background-color: #3b7498;
 }
 body.support.front .about .navbar-form button:active i, body.support.front .about .navbar-form button:focus i,
 body.search-results .about .navbar-form button:active i,
@@ -1760,10 +1712,10 @@ small a {
   line-height: 1.3em;
 }
 .alternating .icon-huge:before {
-  background: -webkit-linear-gradient(25deg, #2C5D7E, #54A283) !important;
+  background: -webkit-linear-gradient(25deg, #3b7498, #54A283) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent;
-  color: #2C5D7E;
+  color: #3b7498;
   padding: 5px;
 }
 .alternating .icon-huge.icon-stats-up:before {
@@ -1801,8 +1753,8 @@ small a {
 .alternating.text-content .icon-hugest {
   color: #fff !important;
   background: #71C39E;
-  background-color: #409bb7;
-  background: linear-gradient(11deg, #409bb7, #2C5D7E, #71C39E);
+  background-color: #5fabc1;
+  background: linear-gradient(11deg, #5fabc1, #3b7498, #71C39E);
   background-size: 400% 400%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -1839,7 +1791,7 @@ small a {
   position: relative;
 }
 .social-btns .btn-email {
-  background-color: #2C5D7E;
+  background-color: #3b7498;
 }
 .social-btns .btn-github {
   background-color: #444444;
@@ -2033,6 +1985,10 @@ html.js .region-content .faded {
   }
 }
 @media (max-width: 767px) {
+  #about {
+    padding-top: 0;
+  }
+
   body.support.front #top-and-first-wrapper .navbar-form .input-lg,
   body.search-results #top-and-first-wrapper .navbar-form .input-lg {
     width: 100%;

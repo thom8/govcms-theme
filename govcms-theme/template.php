@@ -56,18 +56,16 @@ function govcmstheme_bootstrap_preprocess_html(&$vars) {
 
 
 /**
- * Implements hook_preprocess_page().
+ * For stripe.com style sub menu
  */
 function govcmstheme_bootstrap_preprocess_page(&$variables) {
-  // For stripe.com style sub menu
   // Load node entity.
   // @todo: Update this node id.
-  $sub_menu_node = node_load(816); // @joseph, this kills things ..badly -  TIM TODO
-  if (isset($sub_menu_node)) {
-    $variables['sub_menu'] = $sub_menu_node->body['und'][0]['value'];
-  }
-  else {
-    $variables['sub_menu'] = NULL;
+  $main_menu_node = node_load(1386); // Main Menu content type item
+  if ($main_menu_node) {
+    $variables['main_menu'] = $main_menu_node->body['und'][0]['value'];
+  } else {
+    $variables['main_menu'] = NULL;
   }
 }
 
