@@ -424,8 +424,8 @@ function govcmstheme_bootstrap_preprocess_node(&$variables) {
         // Get variable to check when it was last updated. if more than 24 hours, update the nodes.
         $date = date('Y-m-d H:i');
         $yesterday = date('Y-m-d H:i', strtotime('-1 day', strtotime($date)));
-        $dashboard_updated = variable_get('govcms_dashboard_last_updated', $yesterday);
-        if($dashboard_updated < $yesterday) {
+        $dashboard_updated = variable_get('govcms_dashboard_last_updated');
+        if(!isset($dashboard_updated) || empty($dashboard_updated) || $dashboard_updated < $yesterday) {
             // Update the variables API GETs
             _govcmstheme_bootstrap_drupal_api();
             _govcmstheme_bootstrap_github_api();
