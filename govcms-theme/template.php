@@ -470,8 +470,47 @@ function govcmstheme_bootstrap_preprocess_node(&$variables) {
             ->fieldCondition('field_saas_paas', 'value', 'paas', '=');
 
         $paas_count = $query->count()->execute();
-        
+
         $variables['govcms_dashboard_paas_count'] = $paas_count;
+
+
+
+
+
+
+        $query->entityCondition('entity_type', 'node')
+            ->entityCondition('bundle', 'govcms_site')
+            ->propertyCondition('status', 1)
+            ->fieldCondition('field_status', 'value', 0, '=');
+
+        $dev_count = $query->count()->execute();
+
+        $variables['govcms_dashboard_in_dev_count'] = $dev_count;
+
+        $query->entityCondition('entity_type', 'node')
+            ->entityCondition('bundle', 'govcms_site')
+            ->propertyCondition('status', 1)
+            ->fieldCondition('field_status', 'value', 1, '=');
+
+        $live_count = $query->count()->execute();
+
+        $variables['govcms_dashboard_live_count'] = $live_count;
+
+        $query->entityCondition('entity_type', 'node')
+            ->entityCondition('bundle', 'govcms_site')
+            ->propertyCondition('status', 1)
+            ->fieldCondition('field_agency', 'tid', 'paas', '=');
+
+        $agency_count = $query->count()->execute();
+
+        $variables['govcms_dashboard_agencies_count'] = $agency_count;
+
+
+
+
+
+
+
 
         $node_changed = $variables['changed'];
         $node_date = date('Y-m-d H:i', $node_changed);

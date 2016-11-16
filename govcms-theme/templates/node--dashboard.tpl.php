@@ -19,21 +19,51 @@
                         <div class="grid-item">
                             <i class="icon-check"></i>
                             <h2>Live sites</h2>
-                            <span class="int"><strong><?php print views_embed_view('dashboard_sites_stats', $display_id = 'block'); ?></strong></span>
+                            <span class="int">
+                                <strong>
+                                    <?php
+                                        $block = block_load('views', 'dashboard_sites_stats-block');
+                                        $output = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                        print $output;
+
+                                        //print views_embed_view('dashboard_sites_stats', $display_id = 'block');
+                                    ?>
+                                </strong>
+                            </span>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="grid-item">
                             <i class="icon-cog"></i>
-                            <h2>In developent</h2>
-                            <span class="int"><strong><?php print views_embed_view('dashboard_sites_stats', $display_id = 'block_1'); ?></strong></span>
+                            <h2>In development</h2>
+                            <span class="int">
+                                <strong>
+                                    <?php
+                                    $block = block_load('views', 'dashboard_sites_stats-block_1');
+                                    $output = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                    print $output;
+
+                                    //print views_embed_view('dashboard_sites_stats', $display_id = 'block_1');
+                                    ?>
+                                </strong>
+                            </span>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="grid-item">
                             <i class="icon-users"></i>
                             <h2>Agencies using</h2>
-                            <span class="int"><strong><?php print views_embed_view('dashboard_agencies_number', $display_id = 'block'); ?></strong></span>
+                            <span class="int">
+                                <strong>
+                                    <?php
+                                    $block = block_load('views', 'dashboard_agencies_number-block');
+                                    $output = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+                                    print $output;
+
+                                    //print views_embed_view('dashboard_agencies_number', $display_id = 'block');
+                                    ?>
+                                </strong>
+                            </span>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
@@ -41,7 +71,7 @@
 												<i class="icon-harddrive"></i>
 												<h2>Site types</h2>
 												<span class="int fraction">
-													<strong><?php print check_plain(govcms_dashboard_saas_count); ?>:<?php print check_plain(govcms_dashboard_paas_count); ?></strong>
+													<strong><?php print check_plain($govcms_dashboard_saas_count); ?>:<?php print check_plain($govcms_dashboard_paas_count); ?></strong>
 												</span>
 												<small>SaaS : PaaS</small>
 											</div>
