@@ -10,58 +10,12 @@
     ?>
 </div>
 
-<section id="spendi__ng" class="dashboard light">
+<section class="dashboard light">
     <div class="container">
         <div class="row text-center">
             <div class="col-md-10 col-md-offset-1">
                 Last updated: <?php print check_plain($govcms_dashboard_last_updated) ?><br />
                 <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="grid-item">
-                            <i class="icon-shop"></i>
-                            <h2><abbr title="Small and Medium-sized Enterprises">SMEs</abbr></h2>
-                            <span class="int">$<strong><?php print check_plain($govcms_dashboard_smes); ?></strong><?php print check_plain($govcms_dashboard_smes_unit); ?></span>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="grid-item">
-                            <i class="icon-coas"></i>
-                            <h2><abbr title="Department of Finance">Finance</abbr></h2>
-                            <span class="int">$<strong><?php print check_plain($govcms_dashboard_finance); ?></strong><?php print check_plain($govcms_dashboard_finance_unit); ?></span>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="grid-item">
-                            <i class="icon-acquia-outline"></i>
-                            <h2>Acquia</h2>
-                            <span class="int">$<strong><?php print check_plain($govcms_dashboard_acquia); ?></strong><?php print check_plain($govcms_dashboard_acquia_unit); ?></span>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="grid-item">
-                            <i class="icon-package"></i>
-                            <h2>Releases</h2>
-                            <span class="int"><strong><?php print check_plain($govcms_dashboard_github_releases); ?></strong></span>
-                            <small>versions</small>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="grid-item">
-                            <i class="icon-piggy"></i>
-                            <h2>Agency savings</h2>
-                            <span class="int">$<strong><?php print check_plain($govcms_dashboard_savings); ?></strong><?php print check_plain($govcms_dashboard_savings_unit); ?></span>
-                            <small>total to date</small>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="grid-item">
-                            <i class="icon-headset"></i>
-                            <h2>Support Response</h2>
-                            <span class="int"><strong><?php print check_plain($govcms_dashboard_support); ?></strong><?php print check_plain($govcms_dashboard_support_unit); ?></span>
-                            <small>on average</small>
-                        </div>
-                    </div>
-
                     <div class="col-md-4 col-sm-6">
                         <div class="grid-item">
                             <i class="icon-check"></i>
@@ -84,37 +38,57 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
-                        <div class="grid-item">
-                            <i class="icon-stats-up"></i>
-                            <h2>Uptime</h2>
-                            <span class="int"><strong><?php print check_plain($govcms_dashboard_site247_availability); ?></strong>%</span>
-                            <small>last 30 days</small>
-                        </div>
+											<div class="grid-item">
+												<i class="icon-harddrive"></i>
+												<h2>Site types</h2>
+												<span class="int fraction">
+													<strong>??:??</strong>   <!-- TODO: use array_count_values($array) on "field_saas_paas" -->
+												</span>
+												<small>SaaS : PaaS</small>
+											</div>
+										</div>
+                    <div class="col-md-4 col-sm-6">
+                      <div class="grid-item">
+                        <i class="icon-package"></i>
+                        <h2>Releases</h2>
+                        <span class="int"><strong><?php print check_plain($govcms_dashboard_github_releases); ?></strong></span>
+                        <small>versions</small>
+                      </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
-                        <div class="grid-item">
-                            <i class="icon-laptop-phone"></i>
-                            <h2>Page views</h2>
-                            <span class="int"><strong><?php print check_plain($govcms_dashboard_ga_page_visits); ?></strong>M</span>
-                            <small>last 30 days</small>
-                        </div>
+                      <div class="grid-item">
+                        <i class="icon-stats-up"></i>
+                        <h2>Uptime</h2>
+                        <span class="int"><strong><?php print check_plain($govcms_dashboard_site247_availability); ?></strong>%</span>
+                        <small>last 30 days</small>
+                      </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
-                        <div class="grid-item">
-                            <i class="icon-timer"></i>
-                            <h2>Page load</h2>
-                            <span class="int"><strong><?php print check_plain($govcms_dashboard_ga_page_loads); ?></strong>s</span>
-                            <small>on average</small>
-                        </div>
+                      <div class="grid-item">
+                        <i class="icon-timer"></i>
+                        <h2>Page load</h2>
+                        <span class="int"><strong><?php print check_plain($govcms_dashboard_ga_page_loads); ?></strong>s</span>
+                        <small>on average</small>
+                      </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
-                        <div class="grid-item">
-                            <i class="icon-download"></i>
-                            <h2>Downloads</h2>
-                            <span class="int"><strong><?php print check_plain($govcms_dashboard_drupal_downloads); ?></strong>k</span>
-                            <small>from Drupal.org</small>
-                        </div>
+                      <div class="grid-item">
+                        <i class="icon-download"></i>
+                        <h2>Downloads</h2>
+                        <span class="int"><strong><?php print check_plain($govcms_dashboard_drupal_downloads); ?></strong>k</span>
+                        <small>from Drupal.org</small>
+                      </div>
                     </div>
+                    <div class="col-md-4 col-sm-6">
+                      <div class="grid-item">
+                        <i class="icon-laptop-phone"></i>
+                        <h2>Page views</h2>
+                        <span class="int"><strong><?php print check_plain($govcms_dashboard_ga_page_visits); ?></strong>M</span>
+                        <small>last 30 days</small>
+                      </div>
+                    </div>
+                    <?php  /*
+                    // example item:
                     <div class="col-md-4 col-sm-6">
                         <div class="grid-item">
                             <i class="icon-question"></i>
@@ -123,14 +97,38 @@
                             <small>on average</small>
                         </div>
                     </div>
+
+                    // others not currently used:
                     <div class="col-md-4 col-sm-6">
                         <div class="grid-item">
-                            <i class="icon-question"></i>
-                            <h2>Something</h2>
-                            <span class="int">$<strong>??</strong>m</span>
-                            <small>on average</small>
+                            <i class="icon-piggy"></i>
+                            <h2>Agency savings</h2>
+                            <span class="int">$<strong><?php //print check_plain($govcms_dashboard_savings); ?></strong><?php //print check_plain($govcms_dashboard_savings_unit); ?></span>
+                            <small>total to date</small>
                         </div>
                     </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="grid-item">
+                            <i class="icon-shop"></i>
+                            <h2><abbr title="Small and Medium-sized Enterprises">SMEs</abbr></h2>
+                            <span class="int">$<strong><?php //print check_plain($govcms_dashboard_smes); ?></strong><?php //print check_plain($govcms_dashboard_smes_unit); ?></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="grid-item">
+                            <i class="icon-coas"></i>
+                            <h2><abbr title="Department of Finance">Finance</abbr></h2>
+                            <span class="int">$<strong><?php //print check_plain($govcms_dashboard_finance); ?></strong><?php //print check_plain($govcms_dashboard_finance_unit); ?></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="grid-item">
+                            <i class="icon-acquia-outline"></i>
+                            <h2>Acquia</h2>
+                            <span class="int">$<strong><?php //print check_plain($govcms_dashboard_acquia); ?></strong><?php //print check_plain($govcms_dashboard_acquia_unit); ?></span>
+                        </div>
+                    </div>
+                    */ ?>
                 </div>
             </div>
         </div>

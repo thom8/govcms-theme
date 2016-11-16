@@ -232,7 +232,70 @@ jQuery(document).ready(function () {
     });
 
 
-}); // end document ready
+
+      // For animating things via JS
+        $.fn.extend({
+          animateCss: function (animationName) {
+            var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+            this.addClass('animated ' + animationName).one(animationEnd, function() {
+                $(this).removeClass('animated ' + animationName);
+            });
+          }
+        });
+
+
+      // 'search'/filter only on the knowledge-base page (for now at least)
+        if( $(location).attr('pathname').indexOf("knowledge-base") != -1 ) {
+          // The submit has no purpose here, its client side and realtime
+          // ....it's basically there for looks
+          $('.navbar-form').submit (function() {
+            return false;
+          });
+          // ..but if a user doesn't realise it's realtime and insist on clicking it, point out that it's working
+          $('.navbar-form button').click (function() {
+            $('.search-for').animateCss('pulse');
+          });
+
+          // 'index' the content
+          $('.media').each(function(){
+            $(this).attr('data-search-term', $(this).text().toLowerCase());
+          });
+
+          // Whenever typing in searchbox
+          $('#s').on('keyup', function(){
+            var searchTermOrig = $(this).val();
+            var searchTerm = searchTermOrig.toLowerCase();
+            // Show / hide the results
+            $('.media').each(function(){
+              if ($(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 || searchTerm.length < 1) {
+                $(this).show();
+                // $('.search-for').animateCss('fadeItDown');
+              } else {
+                // $('.search-for').animateCss('fadeOutDown');
+                $(this).hide();
+              }
+            });
+            var resultsVisble = $('.col-md-4 .media:visible').length;
+
+            // Let the user know it's working
+            if ( $('#about .search-for').html() == "&nbsp;" ) {
+              $('#about .search-for').html( 'Showing matches for &quot;<span class="search-for-string">' + searchTermOrig + '</span>&quot;' );
+            } else if ( searchTermOrig.length == 0 ) {
+              $('#about .search-for').html('&nbsp;');
+            } else {
+              $('#about .search-for-string').text(searchTermOrig);
+            }
+
+            // If no results, display message to user
+            if ( resultsVisble == 0 ) {
+              $('.no-results').text('No matches found.');
+            } else {
+              $('.no-results').text('');
+            }
+          });
+        } // End knowledge-base only JS
+
+}); // end $(document).ready
 
 
 function startCounter(theObject) {

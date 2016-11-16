@@ -23,9 +23,13 @@
 @import "homepage";
 @import "support";
 @import "content";
+@import "dashboard";
 
 // Media Queries
 @import "responsive";
+
+// CSS animations
+@import "animate";
 
 // Print
 @import "print";
