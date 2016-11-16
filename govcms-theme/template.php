@@ -480,6 +480,7 @@ function govcmstheme_bootstrap_preprocess_node(&$variables) {
 
         $node_dt = new DateTime($node_date);
         $api_dt = new DateTime($last_updated_date);
+        // time_elapsed_string() for relative timestamps
         $last_updated = date('d/m/Y g:ia', strtotime($last_updated_date));
         if($node_dt > $api_dt) {
             $last_updated = date('d/m/Y g:ia', strtotime($node_date));
