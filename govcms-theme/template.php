@@ -473,7 +473,7 @@ function govcmstheme_bootstrap_preprocess_node(&$variables) {
 
         $variables['govcms_dashboard_paas_count'] = $paas_count;
 
-
+die(var_dump($saas_count, $paas_count));
 
 
 /*
