@@ -453,7 +453,7 @@ function govcmstheme_bootstrap_preprocess_node(&$variables) {
         $variables['govcms_dashboard_support'] = $variables['field_support_requests_response'][0]['value'];
         $variables['govcms_dashboard_support_unit'] = $variables['field_support_suffix_unit'][0]['value'];
 
-        $query = new EntityFieldQuery();
+    /*    $query = new EntityFieldQuery();
         $query->entityCondition('entity_type', 'node')
             ->entityCondition('bundle', 'govcms_site')
             ->propertyCondition('status', 1)
@@ -474,7 +474,7 @@ function govcmstheme_bootstrap_preprocess_node(&$variables) {
         $variables['govcms_dashboard_paas_count'] = $paas_count;
 
 die(var_dump($saas_count, $paas_count));
-
+*/
 
 /*
 
