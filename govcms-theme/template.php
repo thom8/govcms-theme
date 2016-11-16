@@ -433,6 +433,7 @@ function govcmstheme_bootstrap_preprocess_node(&$variables) {
             _govcmstheme_bootstrap_ga_api();
 
             variable_set('govcms_dashboard_last_updated', $date);
+            $dashboard_updated = $date;
         }
 
         // Put variables in node for template
@@ -473,58 +474,8 @@ function govcmstheme_bootstrap_preprocess_node(&$variables) {
         $paas_count = $query2->count()->execute();
 
         $variables['govcms_dashboard_paas_count'] = $paas_count;
-
-
-/*
-
-        $query->entityCondition('entity_type', 'node')
-            ->entityCondition('bundle', 'govcms_site')
-            ->propertyCondition('status', 1)
-            ->fieldCondition('field_status', 'value', 0, '=');
-
-        $dev_count = $query->count()->execute();
-
-        $variables['govcms_dashboard_in_dev_count'] = $dev_count;
-
-        $query->entityCondition('entity_type', 'node')
-            ->entityCondition('bundle', 'govcms_site')
-            ->propertyCondition('status', 1)
-            ->fieldCondition('field_status', 'value', 1, '=');
-
-        $live_count = $query->count()->execute();
-
-        $variables['govcms_dashboard_live_count'] = $live_count;
-
-        $query->entityCondition('entity_type', 'node')
-            ->entityCondition('bundle', 'govcms_site')
-            ->propertyCondition('status', 1)
-            ->fieldCondition('field_agency', 'tid', 'paas', '=');
-
-        $agency_count = $query->count()->execute();
-
-        $variables['govcms_dashboard_agencies_count'] = $agency_count;
-
-*/
-
-
-
-
-
-
-        $node_changed = $variables['changed'];
-        $node_date = date('Y-m-d H:i', $node_changed);
-
-        $last_updated_date = $dashboard_updated;
-
-        $node_dt = new DateTime($node_date);
-        $api_dt = new DateTime($last_updated_date);
-        // time_elapsed_string() for relative timestamps
-        $last_updated = date('d/m/Y g:ia', strtotime($last_updated_date));
-        if($node_dt > $api_dt) {
-            $last_updated = date('d/m/Y g:ia', strtotime($node_date));
-        }
-
-        $variables['govcms_dashboard_last_updated'] = $last_updated;
+        
+        $variables['govcms_dashboard_last_updated'] = time_elapsed_string(strtotime($dashboard_updated));
     }
 }
 
