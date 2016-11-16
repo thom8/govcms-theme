@@ -5,9 +5,11 @@
         'type' => 'default',
     );
     $the_view = field_view_field('node', $node, 'field_summary', $default_view_modes);
-    echo '<p class="lead">'.render($the_view).'</p>';  // "An overview of spending and performance of the govCMS platform."
+    echo '<div class="lead">'.render($the_view).'</div>';  // "An overview of spending and performance of the govCMS platform."
   ?>
-  <p>Last updated: <?php print time_elapsed_string( check_plain($govcms_dashboard_last_updated) ) ?></p>
+  <!-- <p>Last updated:
+    <?php print check_plain($govcms_dashboard_last_updated) ?>
+  </p> -->
 </div>
 
 <section class="dashboard light">

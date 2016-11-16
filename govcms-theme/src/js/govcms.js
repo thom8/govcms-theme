@@ -227,75 +227,75 @@ jQuery(document).ready(function () {
 
 
     // add active class to main nav, seems not using superfish any more
-    $(function() {
-      $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').parent().addClass('active');
+    jQuery(function() {
+      jQuery('nav a[href^="/' + location.pathname.split("/")[1] + '"]').parent().addClass('active');
     });
 
 
 
       // For animating things via JS
-        $.fn.extend({
+        jQuery.fn.extend({
           animateCss: function (animationName) {
             var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
             this.addClass('animated ' + animationName).one(animationEnd, function() {
-                $(this).removeClass('animated ' + animationName);
+                jQuery(this).removeClass('animated ' + animationName);
             });
           }
         });
 
 
       // 'search'/filter only on the knowledge-base page (for now at least)
-        if( $(location).attr('pathname').indexOf("knowledge-base") != -1 ) {
+        if( jQuery(location).attr('pathname').indexOf("knowledge-base") != -1 ) {
           // The submit has no purpose here, its client side and realtime
           // ....it's basically there for looks
-          $('.navbar-form').submit (function() {
+          jQuery('.navbar-form').submit (function() {
             return false;
           });
           // ..but if a user doesn't realise it's realtime and insist on clicking it, point out that it's working
-          $('.navbar-form button').click (function() {
-            $('.search-for').animateCss('pulse');
+          jQuery('.navbar-form button').click (function() {
+            jQuery('.search-for').animateCss('pulse');
           });
 
           // 'index' the content
-          $('.media').each(function(){
-            $(this).attr('data-search-term', $(this).text().toLowerCase());
+          jQuery('.media').each(function(){
+            jQuery(this).attr('data-search-term', jQuery(this).text().toLowerCase());
           });
 
           // Whenever typing in searchbox
-          $('#s').on('keyup', function(){
-            var searchTermOrig = $(this).val();
+          jQuery('#s').on('keyup', function(){
+            var searchTermOrig = jQuery(this).val();
             var searchTerm = searchTermOrig.toLowerCase();
             // Show / hide the results
-            $('.media').each(function(){
-              if ($(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 || searchTerm.length < 1) {
-                $(this).show();
-                // $('.search-for').animateCss('fadeItDown');
+            jQuery('.media').each(function(){
+              if (jQuery(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 || searchTerm.length < 1) {
+                jQuery(this).show();
+                // jQuery('.search-for').animateCss('fadeItDown');
               } else {
-                // $('.search-for').animateCss('fadeOutDown');
-                $(this).hide();
+                // jQuery('.search-for').animateCss('fadeOutDown');
+                jQuery(this).hide();
               }
             });
-            var resultsVisble = $('.col-md-4 .media:visible').length;
+            var resultsVisble = jQuery('.col-md-4 .media:visible').length;
 
             // Let the user know it's working
-            if ( $('#about .search-for').html() == "&nbsp;" ) {
-              $('#about .search-for').html( 'Showing matches for &quot;<span class="search-for-string">' + searchTermOrig + '</span>&quot;' );
+            if ( jQuery('#about .search-for').html() == "&nbsp;" ) {
+              jQuery('#about .search-for').html( 'Showing matches for &quot;<span class="search-for-string">' + searchTermOrig + '</span>&quot;' );
             } else if ( searchTermOrig.length == 0 ) {
-              $('#about .search-for').html('&nbsp;');
+              jQuery('#about .search-for').html('&nbsp;');
             } else {
-              $('#about .search-for-string').text(searchTermOrig);
+              jQuery('#about .search-for-string').text(searchTermOrig);
             }
 
             // If no results, display message to user
             if ( resultsVisble == 0 ) {
-              $('.no-results').text('No matches found.');
+              jQuery('.no-results').text('No matches found.');
             } else {
-              $('.no-results').text('');
+              jQuery('.no-results').text('');
             }
           });
         } // End knowledge-base only JS
 
-}); // end $(document).ready
+}); // end jQuery(document).ready
 
 
 function startCounter(theObject) {
