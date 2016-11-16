@@ -1,20 +1,19 @@
 <div class="move-into-top col-md-10 col-md-offset-1 text-center">
-    <?php
+  <?php
     $default_view_modes = array(
         'label'=>'hidden',
         'type' => 'default',
     );
     $the_view = field_view_field('node', $node, 'field_summary', $default_view_modes);
-    print render($the_view);
-
-    ?>
+    echo '<p class="lead">'.render($the_view).'</p>';  // "An overview of spending and performance of the govCMS platform."
+  ?>
+  <p>Last updated: <?php print time_elapsed_string( check_plain($govcms_dashboard_last_updated) ) ?></p>
 </div>
 
 <section class="dashboard light">
     <div class="container">
         <div class="row text-center">
             <div class="col-md-10 col-md-offset-1">
-                Last updated: <?php print check_plain($govcms_dashboard_last_updated) ?><br />
                 <div class="row">
                     <div class="col-md-4 col-sm-6">
                         <div class="grid-item">
