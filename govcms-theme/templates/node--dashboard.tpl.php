@@ -24,11 +24,7 @@
                             <span class="int">
                                 <strong>
                                     <?php
-                                        $block = block_load('views', 'dashboard_sites_stats-block');
-                                        $output = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-                                        print $output;
-
-                                        //print views_embed_view('dashboard_sites_stats', $display_id = 'block');
+                                        print views_embed_view('dashboard_sites_stats', $display_id = 'block');
                                     ?>
                                 </strong>
                             </span>
@@ -41,11 +37,7 @@
                             <span class="int">
                                 <strong>
                                     <?php
-                                    $block = block_load('views', 'dashboard_sites_stats-block_1');
-                                    $output = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-                                    print $output;
-
-                                    //print views_embed_view('dashboard_sites_stats', $display_id = 'block_1');
+                                        print views_embed_view('dashboard_sites_stats', $display_id = 'block_1');
                                     ?>
                                 </strong>
                             </span>
@@ -58,11 +50,7 @@
                             <span class="int">
                                 <strong>
                                     <?php
-                                    $block = block_load('views', 'dashboard_agencies_number-block');
-                                    $output = drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
-                                    print $output;
-
-                                    //print views_embed_view('dashboard_agencies_number', $display_id = 'block');
+                                        print views_embed_view('dashboard_agencies_number', $display_id = 'block');
                                     ?>
                                 </strong>
                             </span>

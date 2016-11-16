@@ -464,12 +464,13 @@ function govcmstheme_bootstrap_preprocess_node(&$variables) {
 
         $variables['govcms_dashboard_saas_count'] = $saas_count;
 
-        $query->entityCondition('entity_type', 'node')
+        $query2 = new EntityFieldQuery();
+        $query2->entityCondition('entity_type', 'node')
             ->entityCondition('bundle', 'govcms_site')
             ->propertyCondition('status', 1)
             ->fieldCondition('field_saas_paas', 'value', 'paas', '=');
 
-        $paas_count = $query->count()->execute();
+        $paas_count = $query2->count()->execute();
 
         $variables['govcms_dashboard_paas_count'] = $paas_count;
 
