@@ -453,6 +453,26 @@ function govcmstheme_bootstrap_preprocess_node(&$variables) {
         $variables['govcms_dashboard_support'] = $variables['field_support_requests_response'][0]['value'];
         $variables['govcms_dashboard_support_unit'] = $variables['field_support_suffix_unit'][0]['value'];
 
+        $query = new EntityFieldQuery();
+        $query->entityCondition('entity_type', 'node')
+            ->entityCondition('bundle', 'govcms_site')
+            ->propertyCondition('status', 1)
+            ->fieldCondition('field_saas_paas', 'value', 'saas', '=');
+
+        $saas_count = $query->count()->execute();
+
+
+        $variables['govcms_dashboard_saas_count'] = $saas_count;
+
+        $query->entityCondition('entity_type', 'node')
+            ->entityCondition('bundle', 'govcms_site')
+            ->propertyCondition('status', 1)
+            ->fieldCondition('field_saas_paas', 'value', 'paas', '=');
+
+        $paas_count = $query->count()->execute();
+        
+        $variables['govcms_dashboard_paas_count'] = $paas_count;
+
         $node_changed = $variables['changed'];
         $node_date = date('Y-m-d H:i', $node_changed);
 

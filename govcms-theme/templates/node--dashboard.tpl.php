@@ -41,7 +41,7 @@
 												<i class="icon-harddrive"></i>
 												<h2>Site types</h2>
 												<span class="int fraction">
-													<strong>??:??</strong>   <!-- TODO: use array_count_values($array) on "field_saas_paas" -->
+													<strong><?php print check_plain(govcms_dashboard_saas_count); ?>:<?php print check_plain(govcms_dashboard_paas_count); ?></strong>
 												</span>
 												<small>SaaS : PaaS</small>
 											</div>
