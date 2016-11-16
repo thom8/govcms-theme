@@ -474,7 +474,7 @@ function govcmstheme_bootstrap_preprocess_node(&$variables) {
         $paas_count = $query2->count()->execute();
 
         $variables['govcms_dashboard_paas_count'] = $paas_count;
-        
+
         $variables['govcms_dashboard_last_updated'] = time_elapsed_string(strtotime($dashboard_updated));
     }
 }
