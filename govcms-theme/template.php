@@ -476,7 +476,7 @@ function govcmstheme_bootstrap_preprocess_node(&$variables) {
 
 
 
-
+/*
 
         $query->entityCondition('entity_type', 'node')
             ->entityCondition('bundle', 'govcms_site')
@@ -505,7 +505,7 @@ function govcmstheme_bootstrap_preprocess_node(&$variables) {
 
         $variables['govcms_dashboard_agencies_count'] = $agency_count;
 
-
+*/
 
 
 
