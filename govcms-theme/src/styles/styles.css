@@ -1976,7 +1976,6 @@ body.node-type-dashboard #about {
   vertical-align: sub;
 }
 .dashboard .grid-item .int.fraction .slash {
-  font-size: 330%;
   font-weight: 200;
   font-style: normal;
   background: rgba(255, 255, 255, 0.6) !important;
