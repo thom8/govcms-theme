@@ -41,9 +41,9 @@
       <?php print $content['title']; ?>
     <?php endif; ?>
 
-    <?php // if ($content['description']): ?>
-      <?php // print $content['description']; ?>
-    <?php // endif; ?>
+    <?php if ($content['description']): ?>
+      <?php print $content['description']; ?>
+    <?php endif; ?>
 
     <?php if ($content['url']): ?>
       <i class="icon-external-link"></i>
