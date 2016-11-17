@@ -476,7 +476,7 @@ function govcmstheme_bootstrap_preprocess_node(&$variables) {
         $variables['govcms_dashboard_paas_count'] = $paas_count;
 
         $variables['govcms_dashboard_last_updated'] = time_elapsed_string($dashboard_updated);
-        $variables['govcms_dashboard_last_updated_debug'] = strtotime($dashboard_updated);
+        $variables['govcms_dashboard_last_updated_debug'] = $dashboard_updated;
     }
 }
 
@@ -584,22 +584,35 @@ function thousandsCurrencyFormat($num) {
 // Pretty relative timestamps
 // https://gist.github.com/zachstronaut/1184831
 // http://www.zachstronaut.com/posts/2009/01/20/php-relative-date-time-string.html
-function time_elapsed_string($secs) {
-    $bit = array(
-        ' year'        => $secs / 31556926 % 12,
-        ' week'        => $secs / 604800 % 52,
-        ' day'        => $secs / 86400 % 7,
-        ' hour'        => $secs / 3600 % 24,
-        ' minute'    => $secs / 60 % 60,
-        ' second'    => $secs % 60
+function time_elapsed_string($ptime) {
+    $etime = time() - $ptime;
+
+    if ($etime < 1) {
+        return '0 seconds';
+    }
+
+    $a = array( 365 * 24 * 60 * 60  =>  'year',
+        30 * 24 * 60 * 60  =>  'month',
+        24 * 60 * 60  =>  'day',
+        60 * 60  =>  'hour',
+        60  =>  'minute',
+        1  =>  'second'
+    );
+    $a_plural = array( 'year'   => 'years',
+        'month'  => 'months',
+        'day'    => 'days',
+        'hour'   => 'hours',
+        'minute' => 'minutes',
+        'second' => 'seconds'
     );
 
-    foreach($bit as $k => $v){
-        if($v > 1)$ret[] = $v . $k . 's';
-        if($v == 1)$ret[] = $v . $k;
+    foreach ($a as $secs => $str) {
+        $d = $etime / $secs;
+        if ($d >= 1) {
+            $r = round($d);
+            return $r . ' ' . ($r > 1 ? $a_plural[$str] : $str) . ' ago';
+        }
     }
-    array_splice($ret, count($ret)-1, 0, 'and');
-    $ret[] = 'ago.';
-
-    return join(' ', $ret);
 }
+
+
