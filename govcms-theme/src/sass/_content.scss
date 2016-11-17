@@ -436,3 +436,66 @@ html.js {
 div.video-filter {
   max-width: 100%;
 }
+
+
+// Knowledge base page
+#knowledge-base {
+  .container {
+    margin-bottom: 50px;
+  }
+  .label.status {
+    background-color: $highlightBright;
+    color: $textGrey;
+    font-weight: 600;
+    // color: $secondary;
+    // background-color: $bubbleGum;
+  }
+  a.media {
+    display: block;
+    padding-bottom: 10px;
+    border-radius: $radius;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      background-color: $greyLight;
+      .title {
+        text-decoration: underline;
+      }
+      i {
+        color: $secondary;
+      }
+    }
+    .title {
+      margin-top: 15px;
+    }
+    .summary {
+      display: block;
+      margin-top: 5px;
+      color: $textGrey;
+    }
+  }
+  .no-results:not(:empty){
+    margin-top: 3em;
+  }
+}
+#services .row .row,
+.text-primary {
+  color: $textGreyLight;
+}
+#services h2 {
+  color: #2C5D7E;
+}
+.navbar-form {
+  .input-group-addon {
+    padding-bottom: 2.9em;
+  }
+  .icon-search {
+    position: relative;
+    top: -0.2em;
+  }
+}
+.search-for {
+  margin-top: 3em !important;
+  font-weight: 400;
+}

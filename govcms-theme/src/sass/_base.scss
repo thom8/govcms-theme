@@ -749,3 +749,56 @@ footer {
     }
   }
 }
+
+
+
+
+
+// Required overrides for new colour scheme, but should be done properly
+//#top-and-first-wrapper,
+//.alternating.bg-primary,
+//.icons-grid.bg-primary {
+//  // One of these:
+//  // background: linear-gradient(11deg,#5FD7C9, #5EBBC7, #337bab);  // nice version of the existing colours (roughly)
+//  background: linear-gradient(11deg, $bubbleGum, #4a6f9d);          // different colour scheme, but nice assuming we update the logo to drop the green
+//}
+//#clients .highlight,
+//#clients h2 {
+//  color: #fff;
+//}
+//.call-to-action {
+//  background: linear-gradient(11deg,$brighterBlue,$brighterBlueFaded);
+//}
+//.bg-primary .btn-light,
+//header .btn.btn-light {
+//  color: #fff;
+//  border-color: #fff;
+//  &:hover,
+//  &:active,
+//  &:focus {
+//    color: $bubbleGum;
+//    border-color: $bubbleGum;
+//    background-color: $secondary;
+//  }
+//}
+//.btn-primary {
+//  color: $secondary;
+//  border-color: $secondary;
+//  background-color: $bubbleGum;
+//  &:active,
+//  &:focus,
+//  &:hover {
+//    color: $bubbleGum;
+//    border-color: $bubbleGum;
+//    background-color: $secondary;
+//  }
+//}
+//.btn-default {
+//  color: $secondary;
+//  border-color: $secondary;
+//}
+//footer ul.social a {
+//  &:active, &:focus, &:hover {
+//    color: $bubbleGum;
+//  }
+//}

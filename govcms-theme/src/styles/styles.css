@@ -1442,6 +1442,10 @@ a.coa-link {
   color: #fff !important;
 }
 
+.homepage #services {
+  padding: 0;
+}
+
 .portfolio {
   padding: 50px 0;
 }
@@ -1907,6 +1911,63 @@ html.js .region-content .faded {
 
 div.video-filter {
   max-width: 100%;
+}
+
+#knowledge-base .container {
+  margin-bottom: 50px;
+}
+#knowledge-base .label.status {
+  background-color: #6ad5ac;
+  color: #555;
+  font-weight: 600;
+}
+#knowledge-base a.media {
+  display: block;
+  padding-bottom: 10px;
+  border-radius: 4px;
+}
+#knowledge-base a.media:hover, #knowledge-base a.media:active, #knowledge-base a.media:focus {
+  text-decoration: none;
+  background-color: #F5F5F5;
+}
+#knowledge-base a.media:hover .title, #knowledge-base a.media:active .title, #knowledge-base a.media:focus .title {
+  text-decoration: underline;
+}
+#knowledge-base a.media:hover i, #knowledge-base a.media:active i, #knowledge-base a.media:focus i {
+  color: #3b7498;
+}
+#knowledge-base a.media .title {
+  margin-top: 15px;
+}
+#knowledge-base a.media .summary {
+  display: block;
+  margin-top: 5px;
+  color: #555;
+}
+#knowledge-base .no-results:not(:empty) {
+  margin-top: 3em;
+}
+
+#services .row .row,
+.text-primary {
+  color: #777;
+}
+
+#services h2 {
+  color: #2C5D7E;
+}
+
+.navbar-form .input-group-addon {
+  padding-bottom: 2.9em;
+}
+.navbar-form .icon-search {
+  position: relative;
+  top: -0.2em;
+}
+
+.search-for {
+  margin-top: 3em !important;
+  font-weight: 400;
 }
 
 body.node-type-dashboard #about {
