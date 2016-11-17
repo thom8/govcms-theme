@@ -7,7 +7,7 @@
     $the_view = field_view_field('node', $node, 'field_summary', $default_view_modes);
     echo '<div class="lead">'.render($the_view).'</div>';  // "An overview of spending and performance of the govCMS platform."
   ?>
-  <p>Last updated <?php print check_plain($govcms_dashboard_last_updated) ?> ago</p>
+  <p>Last updated <?php print check_plain($govcms_dashboard_last_updated) ?></p>
     <!-- <?php print check_plain($govcms_dashboard_last_updated_debug); ?> -->
 </div>
 
