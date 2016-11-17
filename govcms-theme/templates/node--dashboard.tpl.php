@@ -60,9 +60,9 @@
 												<i class="icon-harddrive"></i>
 												<h2>Site types</h2>
 												<span class="int fraction">
-													<strong><?php print check_plain($govcms_dashboard_saas_count); ?>:<?php print check_plain($govcms_dashboard_paas_count); ?></strong>
+													<strong><sup><?php print check_plain($govcms_dashboard_saas_count); ?></sup><span class="slash">/</span><sub><?php print check_plain($govcms_dashboard_paas_count); ?></sub></strong>
 												</span>
-												<small>SaaS : PaaS</small>
+												<small>SaaS / PaaS</small>
 											</div>
 										</div>
                     <div class="col-md-4 col-sm-6">
