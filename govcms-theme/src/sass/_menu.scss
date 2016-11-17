@@ -20,7 +20,7 @@ Primary style
 	height: 60px;
 	background-color: rgba(#fff,0.95);
 	margin-top: 2em;
-	&::before {
+	&:before {
 		/* never visible - used in JS to check mq */
 		content: 'mobile';
 		display: none;
@@ -41,7 +41,7 @@ Primary style
 		display: block;
 		min-height: 60px;
 		&:hover,
-		&:dd-active,
+		&:active,
 		&:focus {
 			text-decoration: underline;
 		}
@@ -83,10 +83,10 @@ Primary style
 		background-color: rgba(#fff,0.85);
 		.nav-trigger span {
 			background-color: transparent;
-			&::before {
+			&:before {
 				transform: rotate(45deg);
 			}
-			&::after {
+			&:after {
 				transform: rotate(-45deg);
 			}
 		}
@@ -226,7 +226,7 @@ Primary style
 		padding: 0;
 		text-align: center;
 		background-color: transparent;
-		&::before {
+		&:before {
 			content: 'desktop';
 		}
 		.nav-trigger {
@@ -376,9 +376,14 @@ Primary style
 		.button .dd-content {
 			width: 390px;
 		}
-		.links-list a {
-			//font-size: 1.6rem;
-			margin-left: 0;
+		.links-list {
+			li {
+				margin-bottom: 1em;
+			}
+			a {
+				//font-size: 1.6rem;
+				margin-left: 0;
+			}
 		}
 		.btn {
 			display: block;

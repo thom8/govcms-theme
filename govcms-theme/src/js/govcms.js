@@ -227,7 +227,11 @@ jQuery(document).ready(function () {
 
     // add active class to main nav, seems not using superfish any more
     jQuery(function () {
+      if ( location.pathname.length > 1 ) {
         jQuery('nav a[href^="/' + location.pathname.split("/")[1] + '"]').parent().addClass('active');
+      } else {
+        jQuery('nav a[href="/"]').parent().addClass('active');
+      }
     });
 
 

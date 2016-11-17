@@ -259,7 +259,7 @@ Primary style
   background-color: rgba(255, 255, 255, 0.95);
   margin-top: 2em;
 }
-.cd-morph-dropdown::before {
+.cd-morph-dropdown:before {
   /* never visible - used in JS to check mq */
   content: 'mobile';
   display: none;
@@ -270,7 +270,7 @@ Primary style
   display: block;
   min-height: 60px;
 }
-.cd-morph-dropdown .nav-trigger:hover, .cd-morph-dropdown .nav-trigger:dd-active, .cd-morph-dropdown .nav-trigger:focus {
+.cd-morph-dropdown .nav-trigger:hover, .cd-morph-dropdown .nav-trigger:active, .cd-morph-dropdown .nav-trigger:focus {
   text-decoration: underline;
 }
 .cd-morph-dropdown .nav-trigger .menu-text {
@@ -311,10 +311,10 @@ Primary style
 .cd-morph-dropdown.nav-open .nav-trigger span {
   background-color: transparent;
 }
-.cd-morph-dropdown.nav-open .nav-trigger span::before {
+.cd-morph-dropdown.nav-open .nav-trigger span:before {
   transform: rotate(45deg);
 }
-.cd-morph-dropdown.nav-open .nav-trigger span::after {
+.cd-morph-dropdown.nav-open .nav-trigger span:after {
   transform: rotate(-45deg);
 }
 .cd-morph-dropdown .main-nav {
@@ -395,7 +395,7 @@ Primary style
     text-align: center;
     background-color: transparent;
   }
-  .cd-morph-dropdown::before {
+  .cd-morph-dropdown:before {
     content: 'desktop';
   }
   .cd-morph-dropdown .nav-trigger {
@@ -533,6 +533,9 @@ Primary style
   .cd-morph-dropdown .links .dd-content,
   .cd-morph-dropdown .button .dd-content {
     width: 390px;
+  }
+  .cd-morph-dropdown .links-list li {
+    margin-bottom: 1em;
   }
   .cd-morph-dropdown .links-list a {
     margin-left: 0;
@@ -834,12 +837,12 @@ header .btn.btn-light:focus, header .btn.btn-light:active, header .btn.btn-light
   border-color: #6ad5ac;
   color: #407a63 !important;
 }
-header .btn.btn-light.active {
+header .active .btn.btn-light {
   border-color: #6ad5ac;
   box-shadow: none;
   color: #fff;
 }
-header .btn.btn-light.active:focus, header .btn.btn-light.active:active, header .btn.btn-light.active:hover {
+header .active .btn.btn-light:focus, header .active .btn.btn-light:active, header .active .btn.btn-light:hover {
   color: #6ad5ac !important;
 }
 

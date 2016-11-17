@@ -326,7 +326,9 @@ header {
       border-color: $highlightBright;
       color: $highlightDarker !important;
     }
-    &.active {
+  }
+  .active {
+    .btn.btn-light {
       border-color: $highlightBright;
       box-shadow: none;
       color: #fff;
