@@ -225,75 +225,73 @@ jQuery(document).ready(function () {
     }
 
 
-
     // add active class to main nav, seems not using superfish any more
-    jQuery(function() {
-      jQuery('nav a[href^="/' + location.pathname.split("/")[1] + '"]').parent().addClass('active');
+    jQuery(function () {
+        jQuery('nav a[href^="/' + location.pathname.split("/")[1] + '"]').parent().addClass('active');
     });
 
 
-
-      // For animating things via JS
-        jQuery.fn.extend({
-          animateCss: function (animationName) {
+    // For animating things via JS
+    jQuery.fn.extend({
+        animateCss: function (animationName) {
             var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-            this.addClass('animated ' + animationName).one(animationEnd, function() {
+            this.addClass('animated ' + animationName).one(animationEnd, function () {
                 jQuery(this).removeClass('animated ' + animationName);
             });
-          }
+        }
+    });
+
+
+    // 'search'/filter only on the knowledge-base page (for now at least)
+    if (jQuery(location).attr('pathname').indexOf("knowledge-base") != -1) {
+        // The submit has no purpose here, its client side and realtime
+        // ....it's basically there for looks
+        jQuery('.navbar-form').submit(function () {
+            return false;
+        });
+        // ..but if a user doesn't realise it's realtime and insist on clicking it, point out that it's working
+        jQuery('.navbar-form button').click(function () {
+            jQuery('.search-for').animateCss('pulse');
         });
 
-
-      // 'search'/filter only on the knowledge-base page (for now at least)
-        if( jQuery(location).attr('pathname').indexOf("knowledge-base") != -1 ) {
-          // The submit has no purpose here, its client side and realtime
-          // ....it's basically there for looks
-          jQuery('.navbar-form').submit (function() {
-            return false;
-          });
-          // ..but if a user doesn't realise it's realtime and insist on clicking it, point out that it's working
-          jQuery('.navbar-form button').click (function() {
-            jQuery('.search-for').animateCss('pulse');
-          });
-
-          // 'index' the content
-          jQuery('.media').each(function(){
+        // 'index' the content
+        jQuery('.media').each(function () {
             jQuery(this).attr('data-search-term', jQuery(this).text().toLowerCase());
-          });
+        });
 
-          // Whenever typing in searchbox
-          jQuery('#s').on('keyup', function(){
+        // Whenever typing in searchbox
+        jQuery('#s').on('keyup', function () {
             var searchTermOrig = jQuery(this).val();
             var searchTerm = searchTermOrig.toLowerCase();
             // Show / hide the results
-            jQuery('.media').each(function(){
-              if (jQuery(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 || searchTerm.length < 1) {
-                jQuery(this).show();
-                // jQuery('.search-for').animateCss('fadeItDown');
-              } else {
-                // jQuery('.search-for').animateCss('fadeOutDown');
-                jQuery(this).hide();
-              }
+            jQuery('.media').each(function () {
+                if (jQuery(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 || searchTerm.length < 1) {
+                    jQuery(this).show();
+                    // jQuery('.search-for').animateCss('fadeItDown');
+                } else {
+                    // jQuery('.search-for').animateCss('fadeOutDown');
+                    jQuery(this).hide();
+                }
             });
             var resultsVisble = jQuery('.col-md-4 .media:visible').length;
 
             // Let the user know it's working
-            if ( jQuery('#about .search-for').html() == "&nbsp;" ) {
-              jQuery('#about .search-for').html( 'Showing matches for &quot;<span class="search-for-string">' + searchTermOrig + '</span>&quot;' );
-            } else if ( searchTermOrig.length == 0 ) {
-              jQuery('#about .search-for').html('&nbsp;');
+            if (jQuery('#about .search-for').html() == "&nbsp;") {
+                jQuery('#about .search-for').html('Showing matches for &quot;<span class="search-for-string">' + searchTermOrig + '</span>&quot;');
+            } else if (searchTermOrig.length == 0) {
+                jQuery('#about .search-for').html('&nbsp;');
             } else {
-              jQuery('#about .search-for-string').text(searchTermOrig);
+                jQuery('#about .search-for-string').text(searchTermOrig);
             }
 
             // If no results, display message to user
-            if ( resultsVisble == 0 ) {
-              jQuery('.no-results').text('No matches found.');
+            if (resultsVisble == 0) {
+                jQuery('.no-results').text('No matches found.');
             } else {
-              jQuery('.no-results').text('');
+                jQuery('.no-results').text('');
             }
-          });
-        } // End knowledge-base only JS
+        });
+    } // End knowledge-base only JS
 
 }); // end jQuery(document).ready
 
@@ -324,6 +322,19 @@ function isElementVisible(theElement) {
     return (((BotElement <= BotView) && (TopElement >= TopView)) || (!(BotElement <= TopView) && !(TopElement >= BotView)));
 }
 
+// Responsive video.
+(function ($, Drupal) {
+
+    'use strict';
+
+    Drupal.behaviors.responsiveVideos = {
+        attach: function () {
+            $('[data-js*="responsive-video"]').fitVids();
+        }
+    };
+
+
+})(jQuery, Drupal);
 
 // Not used atm
 // function priceCalc() {

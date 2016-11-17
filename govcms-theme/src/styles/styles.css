@@ -1881,7 +1881,11 @@ html.js .region-content .faded {
   text-align: center;
 }
 
-body.page-dashboard #about {
+div.video-filter {
+  max-width: 640px;
+}
+
+body.node-type-dashboard #about {
   margin-bottom: 0;
 }
 
