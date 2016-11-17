@@ -109,6 +109,9 @@ body.page-support-training {
           border: 1px solid $highlight;
         }
       }
+      p {
+        padding-bottom: 0;
+      }
     }
   }
 }
