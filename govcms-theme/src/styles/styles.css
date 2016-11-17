@@ -244,6 +244,11 @@
 
 /* --------------------------------
 
+Responsive grid and media queries
+
+-------------------------------- */
+/* --------------------------------
+
 Primary style
 
 -------------------------------- */
@@ -260,12 +265,10 @@ Primary style
   margin-top: 2em;
 }
 .cd-morph-dropdown:before {
-  /* never visible - used in JS to check mq */
   content: 'mobile';
   display: none;
 }
 .cd-morph-dropdown .nav-trigger {
-  /* menu icon - visible on small screens only */
   width: 100%;
   display: block;
   min-height: 60px;
@@ -280,7 +283,6 @@ Primary style
   font-size: 74%;
 }
 .cd-morph-dropdown .nav-trigger span, .cd-morph-dropdown .nav-trigger span::after, .cd-morph-dropdown .nav-trigger span::before {
-  /* these are the 3 lines of the menu icon */
   position: absolute;
   background-color: #1A1A1A;
   height: 3px;
@@ -327,7 +329,6 @@ Primary style
   left: 0;
   width: 100%;
   padding: 1.2em 5%;
-  box-shadow: inset 0 1px 0 #e6e6e6;
   background-color: rgba(255, 255, 255, 0.95);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -416,22 +417,18 @@ Primary style
     transition: opacity .2s;
   }
   .cd-morph-dropdown.is-dropdown-visible .main-nav > ul > li > a {
-    /* main navigation hover effect - on hover, reduce opacity of elements not hovered over */
     opacity: .6;
   }
   .cd-morph-dropdown.is-dropdown-visible .main-nav > ul > li.dd-active > a {
     opacity: 1;
   }
   .cd-morph-dropdown .morph-dropdown-wrapper {
-    /* dropdown wrapper - used to create the slide up/slide down effect when dropdown is revealed/hidden */
     display: block;
     top: 6em;
-    /* overwrite mobile style */
     width: auto;
     padding: 0;
     box-shadow: none;
     background-color: transparent;
-    /* Force Hardware acceleration */
     transform: translateZ(0);
     will-change: transform;
     transform: translateY(20px);
@@ -454,7 +451,6 @@ Primary style
     display: none;
   }
   .cd-morph-dropdown .dropdown-list::before {
-    /* dropdown top triangle */
     content: '';
     position: absolute;
     bottom: 100%;
@@ -464,7 +460,7 @@ Primary style
     height: 0;
     width: 0;
     border: 8px solid transparent;
-    border-bottom-color: #FFFFFF;
+    border-bottom-color: #fff;
     opacity: 0;
     transition: opacity .3s;
   }
@@ -502,7 +498,6 @@ Primary style
     transform: translateX(100px);
   }
   .cd-morph-dropdown .label {
-    /* hide the label on bigger devices */
     display: none;
   }
   .cd-morph-dropdown .dd-content {
@@ -537,6 +532,9 @@ Primary style
   .cd-morph-dropdown .links-list li {
     margin-bottom: 1em;
   }
+  .cd-morph-dropdown .links-list li:last-of-type {
+    margin-bottom: 0;
+  }
   .cd-morph-dropdown .links-list a {
     margin-left: 0;
   }
@@ -552,13 +550,12 @@ Primary style
     margin: 0 0 .6em;
   }
   .cd-morph-dropdown .bg-layer {
-    /* morph dropdown background */
     position: absolute;
     top: 0;
     left: 0;
     height: 1px;
     width: 1px;
-    background: #FFFFFF;
+    background: #fff;
     opacity: 0;
     transition: opacity .3s;
     transform-origin: top left;
@@ -1309,10 +1306,10 @@ footer .small-links li:last-of-type {
   box-shadow: 0 0 0 2px #71C39E;
 }
 
-#portfolio .sortableList .card {
+body.page-support-training .sortableList .card {
   flex: 0 0 31%;
 }
-#portfolio .sortableList .card:hover .soon {
+body.page-support-training .sortableList .card:hover .soon {
   border: 1px solid #71C39E;
 }
 
