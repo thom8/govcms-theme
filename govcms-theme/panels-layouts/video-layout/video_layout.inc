@@ -12,7 +12,7 @@
 $plugin = array(
   'title' => t('govCMS Video Layout'),
   'category' => t('Columns: 1'),
-  'icon' => 'sites.png',
+  'icon' => 'video.png',
   'theme' => 'govcms-layouts-video-layout',
   'regions' => array(
     'image' => t('Image'),
