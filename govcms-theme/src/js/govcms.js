@@ -110,7 +110,7 @@ jQuery(document).ready(function () {
             setTimeout(function () {
                 // if not hovering over a nav item or a dropdown -> hide dropdown
                 if (self.mainNavigation.find('.has-dropdown:hover').length == 0 && self.element.find('.dropdown-list:hover').length == 0) self.hideDropdown();
-            }, 50);
+            }, 1000);
         });
 
         // hover over the dropdown
@@ -144,7 +144,7 @@ jQuery(document).ready(function () {
             var selectedDropdown = this.dropdownList.find('#' + item.data('content')),
                 selectedDropdownHeight = selectedDropdown.innerHeight(),
                 selectedDropdownWidth = selectedDropdown.children('.dd-content').innerWidth(),
-                selectedDropdownLeft = item.offset().left - item.parent().offset().left - 115 + item.innerWidth() / 2; //- selectedDropdownWidth / 2; // changed
+                selectedDropdownLeft = item.offset().left - item.parent().offset().left - 40 + item.innerWidth() / 2; //- selectedDropdownWidth / 2; // changed
 // console.log( item.offset().left + " - " + item.parent().offset().left + " + " + item.innerWidth() + " / 2 - " + selectedDropdownWidth + " /2");
 // console.log(item);
 // console.log(item.parent());
