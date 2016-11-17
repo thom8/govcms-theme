@@ -1313,7 +1313,7 @@ body.page-support-training .sortableList .card:hover .soon {
   border: 1px solid #71C39E;
 }
 body.page-support-training .sortableList .card p {
-  padding-bottom: 0;
+  padding-bottom: 0.35em;
 }
 
 .coa-stacked {
