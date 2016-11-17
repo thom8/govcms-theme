@@ -1882,7 +1882,7 @@ html.js .region-content .faded {
 }
 
 div.video-filter {
-  max-width: 640px;
+  max-width: 100%;
 }
 
 body.node-type-dashboard #about {
