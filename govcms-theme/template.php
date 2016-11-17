@@ -476,6 +476,7 @@ function govcmstheme_bootstrap_preprocess_node(&$variables) {
         $variables['govcms_dashboard_paas_count'] = $paas_count;
 
         $variables['govcms_dashboard_last_updated'] = time_elapsed_string(strtotime($dashboard_updated));
+        $variables['govcms_dashboard_last_updated_debug'] = $dashboard_updated;
     }
 }
 
