@@ -84,7 +84,6 @@ a {
   background-color: darken($highlightDarker, 2%);
   border-color: darken($highlightDark, 10%);
 }
-
 .btn-default {
   color: $highlightDarker;
   border-color: $highlightDarker;
@@ -106,7 +105,6 @@ a {
     background-color: rgba(0, 0, 0, 0.7);
   }
 }
-
 .btn-light {
   &:hover,
   &:focus,
@@ -308,6 +306,9 @@ header {
     font-size: 16px;
     li a {
       border-bottom: 1px solid transparent;
+    }
+    li.last {
+      margin-left: 5px;
     }
   }
   .btn.btn-light {

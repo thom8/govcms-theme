@@ -819,6 +819,9 @@ header .nav-pills {
 header .nav-pills li a {
   border-bottom: 1px solid transparent;
 }
+header .nav-pills li.last {
+  margin-left: 5px;
+}
 header .btn.btn-light {
   background: transparent;
   border-color: #fff;
@@ -1732,7 +1735,8 @@ small a {
   margin-top: 5.7em;
   margin-bottom: 5.7em;
 }
-.alternating .icon-huge {
+.alternating .icon-huge,
+.alternating .icon-medium {
   background: #fff;
   border-radius: 50%;
   padding: 0.12em;
@@ -1742,18 +1746,21 @@ small a {
   height: 1.5em;
   line-height: 1.3em;
 }
-.alternating .icon-huge:before {
+.alternating .icon-huge:before,
+.alternating .icon-medium:before {
   background: -webkit-linear-gradient(25deg, #3b7498, #54A283) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent;
   color: #3b7498;
   padding: 5px;
 }
-.alternating .icon-huge.icon-stats-up:before {
+.alternating .icon-huge.icon-stats-up:before,
+.alternating .icon-medium.icon-stats-up:before {
   top: -10px;
   position: relative;
 }
-.alternating .icon-huge.icon-int {
+.alternating .icon-huge.icon-int,
+.alternating .icon-medium.icon-int {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   border: 3px solid #54A283;
   background: -webkit-linear-gradient(25deg, #407a63, #6ad5ac) !important;
@@ -1762,6 +1769,10 @@ small a {
   color: #407a63;
   padding: 5px;
   font-weight: 200;
+}
+.alternating .icon-medium {
+  font-size: 7em;
+  margin-top: 0.2em;
 }
 .alternating:not(.bg-primary) .icon-huge {
   background-color: #54A283;

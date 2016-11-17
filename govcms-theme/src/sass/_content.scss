@@ -253,7 +253,8 @@ small {
     margin-top: 5.7em;
     margin-bottom: 5.7em;
   }
-  .icon-huge {
+  .icon-huge,
+  .icon-medium {
     background: #fff;
     border-radius: 50%;
     padding: 0.12em;
@@ -282,6 +283,10 @@ small {
       @include color-gradient($highlightDarker, $highlightBright);
       font-weight: 200;
     }
+  }
+  .icon-medium {
+    font-size: 7em;
+    margin-top: 0.2em;
   }
   // disabled so using the above outline style instead of filled in style
   &:not(.bg-primary) .icon-huge {
