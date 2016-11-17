@@ -27,6 +27,7 @@
  * @ingroup views_templates
  */
 ?>
+<div class="sortableList">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
     <?php print $title; ?>
@@ -84,3 +85,4 @@
     </div>
   <?php endif; ?>
 <?php /* class view */ ?>
+</div>
