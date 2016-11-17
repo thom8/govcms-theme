@@ -26,8 +26,7 @@
   <!-- #page -->
   <div id="page" class="clearfix">
     <!-- #main-content -->
-    <div id="main-content">
-
+    <div id="main-content" data-js="responsive-video">
       <?php if ($messages || $tabs || $action_links): ?>
         <div class="container">
           <div class="col-md-12">

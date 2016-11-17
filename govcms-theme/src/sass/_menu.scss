@@ -242,12 +242,12 @@ Primary style
 		}
 		.main-nav > ul > li > a {
 			display: block;
-			//padding: 0 1.8em;	//FFS
+			//padding: 0 1.8em;
 			//height: 70px;
 			//min-width: 70px; //dodge fix
 			//line-height: 70px;
 			//color: $color-3;
-			//font-size: 1.8rem;	//FFS
+			//font-size: 1.8rem;
 			@include font-smoothing;
 			transition: opacity .2s;
 		}
