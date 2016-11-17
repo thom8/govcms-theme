@@ -110,7 +110,7 @@ jQuery(document).ready(function () {
             setTimeout(function () {
                 // if not hovering over a nav item or a dropdown -> hide dropdown
                 if (self.mainNavigation.find('.has-dropdown:hover').length == 0 && self.element.find('.dropdown-list:hover').length == 0) self.hideDropdown();
-            }, 50);
+            }, 1000);
         });
 
         // hover over the dropdown
