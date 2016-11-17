@@ -1306,10 +1306,10 @@ footer .small-links li:last-of-type {
   box-shadow: 0 0 0 2px #71C39E;
 }
 
-#portfolio .sortableList .card {
+body.page-support-training .sortableList .card {
   flex: 0 0 31%;
 }
-#portfolio .sortableList .card:hover .soon {
+body.page-support-training .sortableList .card:hover .soon {
   border: 1px solid #71C39E;
 }
 
