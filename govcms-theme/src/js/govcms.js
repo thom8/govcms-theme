@@ -144,7 +144,7 @@ jQuery(document).ready(function () {
             var selectedDropdown = this.dropdownList.find('#' + item.data('content')),
                 selectedDropdownHeight = selectedDropdown.innerHeight(),
                 selectedDropdownWidth = selectedDropdown.children('.dd-content').innerWidth(),
-                selectedDropdownLeft = item.offset().left - item.parent().offset().left - 115 + item.innerWidth() / 2; //- selectedDropdownWidth / 2; // changed
+                selectedDropdownLeft = item.offset().left - item.parent().offset().left - 35 + item.innerWidth() / 2; //- selectedDropdownWidth / 2; // changed
 // console.log( item.offset().left + " - " + item.parent().offset().left + " + " + item.innerWidth() + " / 2 - " + selectedDropdownWidth + " /2");
 // console.log(item);
 // console.log(item.parent());
