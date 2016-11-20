@@ -273,13 +273,13 @@ hr.small {
 .nav-pills > li {
   padding: 0;
   &.active > a {
+    font-weight: bold !important;
     &,
     &:hover,
     &:active,
     &:focus {
       background-color: transparent;
       color: $secondary;
-      //font-weight: bold;
       border-bottom: 1px solid $highlightBright;
     }
   }
@@ -292,9 +292,6 @@ hr.small {
       text-decoration: none;
       background-color: transparent;
       border-bottom: 1px solid #fff;
-    }
-    &.active {
-      font-weight: bold !important;
     }
   }
 }
