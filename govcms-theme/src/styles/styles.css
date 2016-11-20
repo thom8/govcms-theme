@@ -1305,12 +1305,22 @@ footer .small-links li:last-of-type {
 
 body.page-support-training .sortableList .card {
   flex: 0 0 31%;
+  min-width: 300px;
 }
 body.page-support-training .sortableList .card:hover .soon {
   border: 1px solid #71C39E;
 }
+body.page-support-training .sortableList .card h2 {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
 body.page-support-training .sortableList .card p {
   padding-bottom: 0.35em;
+}
+body.page-support-training .fluid-width-video-wrapper iframe,
+body.page-support-training .fluid-width-video-wrapper object,
+body.page-support-training .fluid-width-video-wrapper embed {
+  height: 113%;
 }
 
 .coa-stacked {

@@ -104,14 +104,25 @@ body.page-support-training {
   .sortableList {
     .card {
       flex: 0 0 31%;
+      min-width: 300px;
       &:hover {
         .soon {
           border: 1px solid $highlight;
         }
       }
+      h2 {
+        margin-top: 1em;
+        margin-bottom: 0;
+      }
       p {
         padding-bottom: 0.35em;
       }
     }
+  }
+  // Dodgy but effective fix to remove the black bars from sides of YT vid embeds while playing / stop cropping of YT embed preview image
+  .fluid-width-video-wrapper iframe,
+  .fluid-width-video-wrapper object,
+  .fluid-width-video-wrapper embed {
+    height: 113%;
   }
 }
