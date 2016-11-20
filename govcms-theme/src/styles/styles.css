@@ -1311,8 +1311,8 @@ body.page-support-training .sortableList .card:hover .soon {
   border: 1px solid #71C39E;
 }
 body.page-support-training .sortableList .card h2 {
-  margin-top: 1em;
-  margin-bottom: 0;
+  margin-top: 1.1em;
+  margin-bottom: 0.5em;
 }
 body.page-support-training .sortableList .card p {
   padding-bottom: 0.35em;
@@ -2099,6 +2099,13 @@ body.node-type-dashboard #about {
   .split .section-two {
     padding: 50px 0 50px 80px;
   }
+
+  body.page-support-training .sortableList .card {
+    flex: 0 0 48%;
+  }
+  body.page-support-training .sortableList .card h2 {
+    margin-top: 1.5em;
+  }
 }
 @media (max-width: 993px) {
   #top-and-first-wrapper #about h1,
@@ -2228,6 +2235,13 @@ body.node-type-dashboard #about {
 
   footer .small-links li {
     margin-bottom: 20px;
+  }
+
+  body.page-support-training .sortableList .card {
+    flex: 0 0 100%;
+  }
+  body.page-support-training .sortableList .card h2 {
+    margin-top: 2.5em;
   }
 }
 @media (max-width: 285px) {
