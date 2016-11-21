@@ -6,7 +6,7 @@ dl.node-type-list > dt > a[href~="govcms"], dl.node-type-list > dt > a[href*="go
     display: block!important;
 }
 
-dl.node-type-list > dt > a[href$="page"] {
+dl.node-type-list > dt > a[href*="page"] {
     display: block!important;
 }
 
