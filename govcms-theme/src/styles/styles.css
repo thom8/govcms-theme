@@ -2099,13 +2099,6 @@ body.node-type-dashboard #about {
   .split .section-two {
     padding: 50px 0 50px 80px;
   }
-
-  body.page-support-training .sortableList .card {
-    flex: 0 0 48%;
-  }
-  body.page-support-training .sortableList .card h2 {
-    margin-top: 1.5em;
-  }
 }
 @media (max-width: 993px) {
   #top-and-first-wrapper #about h1,
@@ -2190,6 +2183,13 @@ body.node-type-dashboard #about {
     height: auto !important;
     margin-bottom: 20px;
   }
+
+  body.page-support-training .sortableList .card {
+    flex: 0 0 48%;
+  }
+  body.page-support-training .sortableList .card h2 {
+    margin-top: 1.5em;
+  }
 }
 @media (max-width: 767px) {
   #about {
@@ -2238,7 +2238,7 @@ body.node-type-dashboard #about {
   }
 
   body.page-support-training .sortableList .card {
-    flex: 0 0 100%;
+    flex: 0 0 95%;
   }
   body.page-support-training .sortableList .card h2 {
     margin-top: 2.5em;
