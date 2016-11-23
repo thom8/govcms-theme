@@ -43,12 +43,6 @@
       padding: 50px 0 50px 80px;
     }
   }
-  body.page-support-training .sortableList .card {
-    flex: 0 0 48%;
-    h2 {
-      margin-top: 1.5em;
-    }
-  }
 }
 
 @media (max-width: 993px) {
@@ -145,6 +139,12 @@
       margin-bottom: 20px;
     }
   }
+  body.page-support-training .sortableList .card {
+    flex: 0 0 48%;
+    h2 {
+      margin-top: 1.5em;
+    }
+  }
 }
 
 
@@ -195,7 +195,7 @@
     margin-bottom: 20px;
   }
   body.page-support-training .sortableList .card {
-    flex: 0 0 100%;
+    flex: 0 0 95%;
     h2 {
       margin-top: 2.5em;
     }
