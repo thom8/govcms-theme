@@ -1493,35 +1493,35 @@ a.coa-link {
   opacity: 1;
 }
 
-body.support.front .about .navbar-form,
+body.page-support .about .navbar-form,
 body.search-results .about .navbar-form {
   margin-bottom: 25px;
 }
-body.support.front .about .navbar-form .input-group,
+body.page-support .about .navbar-form .input-group,
 body.search-results .about .navbar-form .input-group {
   width: 100%;
 }
-body.support.front .about .navbar-form .form-control,
+body.page-support .about .navbar-form .form-control,
 body.search-results .about .navbar-form .form-control {
   font-size: 200%;
   padding: 1.11em 0.5em;
   width: 80%;
   width: calc( 100% - 3em);
 }
-body.support.front .about .navbar-form button,
+body.page-support .about .navbar-form button,
 body.search-results .about .navbar-form button {
   transition: color 0.2s, background-colour 0.2s, border-colour 0.2s;
 }
-body.support.front .about .navbar-form button:hover i,
+body.page-support .about .navbar-form button:hover i,
 body.search-results .about .navbar-form button:hover i {
   color: #54A283;
 }
-body.support.front .about .navbar-form button:active, body.support.front .about .navbar-form button:focus,
+body.page-support .about .navbar-form button:active, body.page-support .about .navbar-form button:focus,
 body.search-results .about .navbar-form button:active,
 body.search-results .about .navbar-form button:focus {
   background-color: #3b7498;
 }
-body.support.front .about .navbar-form button:active i, body.support.front .about .navbar-form button:focus i,
+body.page-support .about .navbar-form button:active i, body.page-support .about .navbar-form button:focus i,
 body.search-results .about .navbar-form button:active i,
 body.search-results .about .navbar-form button:focus i {
   color: #fff;
@@ -2196,7 +2196,7 @@ body.node-type-dashboard #about {
     padding-top: 0;
   }
 
-  body.support.front #top-and-first-wrapper .navbar-form .input-lg,
+  body.page-support #top-and-first-wrapper .navbar-form .input-lg,
   body.search-results #top-and-first-wrapper .navbar-form .input-lg {
     width: 100%;
     font-size: 128%;
@@ -2204,13 +2204,13 @@ body.node-type-dashboard #about {
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
   }
-  body.support.front #top-and-first-wrapper .navbar-form .btn-lg,
+  body.page-support #top-and-first-wrapper .navbar-form .btn-lg,
   body.search-results #top-and-first-wrapper .navbar-form .btn-lg {
     width: 100%;
     border-top-right-radius: 0;
     border-bottom-left-radius: 4px;
   }
-  body.support.front #top-and-first-wrapper .navbar-form .btn-lg i,
+  body.page-support #top-and-first-wrapper .navbar-form .btn-lg i,
   body.search-results #top-and-first-wrapper .navbar-form .btn-lg i {
     font-size: 250%;
   }
