@@ -18,7 +18,7 @@
       font-weight: 300;
     }
   }
-  .panel-heading {
+  .panel-heading {  // "medium" / "large" etc. label section
     background-color: $greyLight;
     border: none;
     h3 {
@@ -32,10 +32,14 @@
       }
     }
   }
-  .panel-body.panel-footer { // "medium" / "large" etc. label section
+  .panel-body.panel-footer { // "5k" etc. label section
     background-color: $secondaryDark;
     color: #fff;
     border-radius: 0;
+    padding-bottom: 20px;
+    strong {
+      font-size: 200%;
+    }
   }
   .lead {
     p {

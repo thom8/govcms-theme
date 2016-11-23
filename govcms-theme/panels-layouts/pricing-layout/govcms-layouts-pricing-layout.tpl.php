@@ -16,7 +16,10 @@
 <?php if(trim($content['page_views_per_month']) == '0'): ?>
   <div class="panel panel-dashed">
     <div class="panel-heading">
-      <h3 class="text-center"><strong>Custom</strong><br>&nbsp;</h3>
+      <h3 class="text-center">
+        <strong>Custom</strong>
+        <br>&nbsp;
+      </h3>
     </div>
     <div class="panel-body text-center vertical-center">
       <div>
@@ -36,10 +39,13 @@
 <?php else: ?>
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h3 class="text-center"><strong><?php print $content['page_views_per_month']; ?></strong> <br>page views / month</h3>
+      <h3 class="text-center">
+        <strong><?php print $content['plan_title']; ?></strong>
+      </h3>
     </div>
     <div class="panel-body text-center panel-footer lead">
-      <?php print $content['plan_title']; ?>
+      <strong><?php print $content['page_views_per_month']; ?></strong>
+      <br>page views / month
     </div>
     <div class="panel-body text-center">
       <p class="lead">

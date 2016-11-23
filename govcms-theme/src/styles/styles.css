@@ -1566,6 +1566,10 @@ body.search-results .about .navbar-form button:focus i {
   background-color: #37424A;
   color: #fff;
   border-radius: 0;
+  padding-bottom: 20px;
+}
+.pricingTable .panel-body.panel-footer strong {
+  font-size: 200%;
 }
 .pricingTable .lead p {
   margin-bottom: 0;
