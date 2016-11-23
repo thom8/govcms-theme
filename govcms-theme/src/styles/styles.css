@@ -1956,6 +1956,7 @@ div.video-filter {
 }
 #knowledge-base .no-results:not(:empty) {
   margin-top: 3em;
+  font-size: 21px;
 }
 
 #services .row .row,
