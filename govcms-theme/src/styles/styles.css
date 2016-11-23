@@ -178,10 +178,6 @@
   content: '\e03e';
 }
 
-.icon-chat-speech-bubbles:before {
-  content: '\e03f';
-}
-
 .icon-briefcase:before {
   content: '\e040';
 }
@@ -240,6 +236,10 @@
 
 .icon-edit:before {
   content: '\e056';
+}
+
+.icon-chat-speech-bubbles:before {
+  content: '\e057';
 }
 
 /* --------------------------------
@@ -1923,8 +1923,8 @@ div.video-filter {
   max-width: 100%;
 }
 
-#knowledge-base .container {
-  margin-bottom: 50px;
+#knowledge-base {
+  padding: 25px 0;
 }
 #knowledge-base .label.status {
   background-color: #6ad5ac;
@@ -1943,8 +1943,11 @@ div.video-filter {
 #knowledge-base a.media:hover .title, #knowledge-base a.media:active .title, #knowledge-base a.media:focus .title {
   text-decoration: underline;
 }
-#knowledge-base a.media:hover i, #knowledge-base a.media:active i, #knowledge-base a.media:focus i {
-  color: #3b7498;
+#knowledge-base a.media:hover .title,
+#knowledge-base a.media:hover i, #knowledge-base a.media:active .title,
+#knowledge-base a.media:active i, #knowledge-base a.media:focus .title,
+#knowledge-base a.media:focus i {
+  background-color: #407a63;
 }
 #knowledge-base a.media .title {
   margin-top: 15px;
@@ -1953,6 +1956,10 @@ div.video-filter {
   display: block;
   margin-top: 5px;
   color: #555;
+}
+#knowledge-base a.media i {
+  font-size: 54px;
+  color: #3b7498;
 }
 #knowledge-base .no-results:not(:empty) {
   margin-top: 3em;
