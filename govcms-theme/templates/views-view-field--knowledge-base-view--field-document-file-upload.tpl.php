@@ -34,6 +34,5 @@
       $icon = 'icon-document-doc';
     }
   ?>
-  
   <i class="<?php print $icon; ?> text-primary"></i>
 </div>
