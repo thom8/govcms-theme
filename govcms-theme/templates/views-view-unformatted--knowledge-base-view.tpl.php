@@ -8,7 +8,7 @@
  */
 ?>
 <?php foreach ($rows as $id => $row): ?>
-  <a href="<?php $row[1]?>" class="media">
+  <a href="#" class="media">
     <?php print $row; ?>
   </a>
 <?php endforeach; ?>
