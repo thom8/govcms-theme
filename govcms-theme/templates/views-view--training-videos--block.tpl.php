@@ -28,7 +28,7 @@
  */
 ?>
 <div class="row">
-  <div class="col-md-10 col-md-offset-2">
+  <div class="col-md-10 col-md-offset-1">
     <div class="sortableList">
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
