@@ -24,17 +24,16 @@
 ?>
 <div class="media-left media-top">
   <?php
-    $icon = 'icon-document-doc';
+    $icon = 'icon-document-link';
     
     if (pathinfo($output, PATHINFO_EXTENSION) == 'pdf') {
       $icon = 'icon-document-pdf';
     } else if(pathinfo($output, PATHINFO_EXTENSION) == 'ppt') {
       $icon = 'icon-document-ppt';
-    } else if(pathinfo($output, PATHINFO_EXTENSION) == 'html') {
-      $icon = 'icon-document-link';
+    } else if(pathinfo($output, PATHINFO_EXTENSION) == 'doc') {
+      $icon = 'icon-document-doc';
     }
   ?>
   
   <i class="<?php print $icon; ?> text-primary"></i>
 </div>
-<?php //print $output; ?>
