@@ -102,9 +102,10 @@
 }
 body.page-support-training {
   .sortableList {
+    margin-top: 50px;
     .card {
       flex: 0 0 31%;
-      min-width: 300px;
+      min-width: 250px;
       &:hover {
         .soon {
           border: 1px solid $highlight;
