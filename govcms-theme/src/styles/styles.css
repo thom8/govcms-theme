@@ -1954,7 +1954,10 @@ div.video-filter {
 #knowledge-base a.media:hover i, #knowledge-base a.media:active .title,
 #knowledge-base a.media:active i, #knowledge-base a.media:focus .title,
 #knowledge-base a.media:focus i {
-  background-color: #407a63;
+  color: #407a63;
+}
+#knowledge-base a.media:hover .status, #knowledge-base a.media:active .status, #knowledge-base a.media:focus .status {
+  opacity: .95;
 }
 #knowledge-base a.media .title {
   margin-top: 15px;
@@ -2091,7 +2094,7 @@ body.node-type-dashboard #about {
   }
 
   .panel-dashed .panel-body {
-    min-height: 32.1em;
+    min-height: 41.5em;
   }
 
   .logos .coa-stacked {

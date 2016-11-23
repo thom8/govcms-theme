@@ -466,7 +466,10 @@ div.video-filter {
       }
       .title ,
       i {
-        background-color: $highlightDarker;
+        color: $highlightDarker;
+      }
+      .status {
+        opacity: .95;
       }
     }
     .title {

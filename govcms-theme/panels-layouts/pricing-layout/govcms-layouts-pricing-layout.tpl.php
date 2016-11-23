@@ -18,7 +18,6 @@
     <div class="panel-heading">
       <h3 class="text-center">
         <strong>Custom</strong>
-        <br>&nbsp;
       </h3>
     </div>
     <div class="panel-body text-center vertical-center">
