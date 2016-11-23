@@ -53,6 +53,9 @@
                         <div class="col-md-4 col-sm-12">
                           <?php print $content['distribution']; ?>
                         </div>
+                        <div class="col-md-12 text-center">
+													<p class="lead no-results" aria-live="polite"></p>
+												</div>
                     </div>
                 </div>
             </div>
