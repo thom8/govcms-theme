@@ -463,7 +463,6 @@ div.video-filter {
       background-color: $greyLight;
       .title {
         text-decoration: underline;
-        font-size: 18px;
       }
       .title ,
       i {
@@ -475,6 +474,7 @@ div.video-filter {
     }
     .title {
       margin-top: 15px;
+      font-size: 18px;
     }
     .summary {
       display: block;

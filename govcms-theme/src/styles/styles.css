@@ -1961,7 +1961,6 @@ div.video-filter {
 }
 #knowledge-base a.media:hover .title, #knowledge-base a.media:active .title, #knowledge-base a.media:focus .title {
   text-decoration: underline;
-  font-size: 18px;
 }
 #knowledge-base a.media:hover .title,
 #knowledge-base a.media:hover i, #knowledge-base a.media:active .title,
@@ -1974,6 +1973,7 @@ div.video-filter {
 }
 #knowledge-base a.media .title {
   margin-top: 15px;
+  font-size: 18px;
 }
 #knowledge-base a.media .summary {
   display: block;
