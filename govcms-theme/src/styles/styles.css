@@ -2013,6 +2013,10 @@ div.video-filter {
   margin-bottom: 0.5em;
 }
 
+.node-type-govcms-page .text-content {
+  margin: 50px 0;
+}
+
 body.node-type-dashboard #about {
   margin-bottom: 0;
 }
