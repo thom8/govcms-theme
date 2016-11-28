@@ -518,11 +518,14 @@ div.video-filter {
     h3 {
       margin-top: 2em;
       margin-bottom: 0.5em;
+      &:first-of-type {
+        margin-top: 0;
+      }
     }
   }
 }
 
-// for plain contet pages such as privacy page - may effect others though :/ 
+// for plain contet pages such as privacy page - may effect others though :/
 .node-type-govcms-page {
   .text-content {
     margin: 50px 0;

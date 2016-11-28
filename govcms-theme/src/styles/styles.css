@@ -2012,6 +2012,9 @@ div.video-filter {
   margin-top: 2em;
   margin-bottom: 0.5em;
 }
+.page-pricing .text-content.bg-primary.alternating h3:first-of-type {
+  margin-top: 0;
+}
 
 .node-type-govcms-page .text-content {
   margin: 50px 0;
