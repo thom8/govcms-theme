@@ -2020,6 +2020,14 @@ div.video-filter {
   margin: 50px 0;
 }
 
+address {
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #F5F5F5;
+  border-radius: 4px;
+  display: inline-block;
+}
+
 body.node-type-dashboard #about {
   margin-bottom: 0;
 }
