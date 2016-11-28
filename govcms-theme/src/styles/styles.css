@@ -854,7 +854,7 @@ header .active .btn.btn-light:focus, header .active .btn.btn-light:active, heade
 
 #top-and-first-wrapper {
   background-color: #6ad5ac;
-  background: linear-gradient(11deg, #6ad5ac, #51bfbb, #3b7498);
+  background: linear-gradient(11deg, #6ad5ac, #3db0ac, #3b7498);
   background-size: 400% 400%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -883,13 +883,15 @@ header .active .btn.btn-light:focus, header .active .btn.btn-light:active, heade
   font-size: 380%;
   font-weight: 300;
   padding: 0 5%;
-  color: #37424A;
+  color: #fff;
+  text-shadow: 1px 1px 55px #303a41;
+  background: radial-gradient(rgba(55, 66, 74, 0.1), rgba(0, 0, 0, 0) 65%);
 }
 #top-and-first-wrapper #about .btn {
   float: right;
 }
 #top-and-first-wrapper #about .lead {
-  color: #37424A;
+  color: #fff;
   margin-top: -5px;
 }
 #top-and-first-wrapper #about small {
@@ -952,7 +954,7 @@ body.front #about small {
 .alternating.bg-primary {
   color: #fff;
   background-color: #54A283;
-  background: linear-gradient(11deg, #54A283, #469aaa, #3b7498);
+  background: linear-gradient(11deg, #54A283, #3c92a2, #3b7498);
   background-size: 400% 400%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -2117,7 +2119,7 @@ body.node-type-dashboard #about {
   }
 
   .logos .coa-stacked {
-    background: radial-gradient(rgba(81, 191, 187, 0.6), rgba(0, 0, 0, 0) 50%);
+    background: radial-gradient(rgba(61, 176, 172, 0.6), rgba(0, 0, 0, 0) 50%);
   }
 
   .split.distro .container {
