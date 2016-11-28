@@ -495,12 +495,13 @@ div.video-filter {
 .text-primary {
   color: $textGreyLight;
 }
-#services h2 {
-  color: #2C5D7E;
-}
+//#services h2 {
+//  color: #2C5D7E;
+//}
 .navbar-form {
   .input-group-addon {
     padding-bottom: 2.9em;
+    min-width: 4.6em;
   }
   .icon-search {
     position: relative;

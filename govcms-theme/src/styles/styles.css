@@ -854,7 +854,7 @@ header .active .btn.btn-light:focus, header .active .btn.btn-light:active, heade
 
 #top-and-first-wrapper {
   background-color: #6ad5ac;
-  background: linear-gradient(11deg, #6ad5ac, #3db0ac, #3b7498);
+  background: linear-gradient(11deg, #6ad5ac, #3db0ac, #468ab5);
   background-size: 400% 400%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -951,8 +951,8 @@ body.front #about small {
 .icons-grid.bg-primary,
 .alternating.bg-primary {
   color: #fff;
-  background-color: #54A283;
-  background: linear-gradient(11deg, #54A283, #3c92a2, #3b7498);
+  background-color: #63b391;
+  background: linear-gradient(11deg, #63b391, #429db1, #468ab5);
   background-size: 400% 400%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -1991,12 +1991,9 @@ div.video-filter {
   color: #777;
 }
 
-#services h2 {
-  color: #2C5D7E;
-}
-
 .navbar-form .input-group-addon {
   padding-bottom: 2.9em;
+  min-width: 4.6em;
 }
 .navbar-form .icon-search {
   position: relative;

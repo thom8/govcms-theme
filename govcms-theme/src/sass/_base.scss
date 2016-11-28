@@ -344,7 +344,7 @@ header {
 // Header section on all pages
 #top-and-first-wrapper {
   //@include background-gradient( $highlightBright, $aqua, darken($secondary,1%)); // this passes AA for large text everywhere on homepage
-  @include background-gradient( $highlightBright, $aqua, $secondary ); // this looks a bit brighter :)  - based off linear-gradient(11deg,#69d4ac 0,#50bdba 40%,#3b7498 80%)
+  @include background-gradient( $highlightBright, $aqua, lighten($secondary,8%) ); // this looks a bit brighter :)  - based off linear-gradient(11deg,#69d4ac 0,#50bdba 40%,#3b7498 80%)
   p,
   a:not(.btn) {
     color: $secondaryDark;
@@ -460,7 +460,7 @@ body.front {
     color: #fff;
     //@include background-gradient(mix($highlight,$secondary,80%), mix($highlight,$secondary,20%), $secondary);
     //@include background-gradient( $highlightBright, $aqua, $secondary);
-    @include background-gradient( $highlightDark, mix($aqua,$secondary,50%), $secondary);
+    @include background-gradient( mix($highlightDark,$highlight,50%), mix($aqua,lighten($secondary,8%),50%), lighten($secondary,8%) );
     a:not(.btn) {
       &:hover,
       &:active,
