@@ -884,8 +884,6 @@ header .active .btn.btn-light:focus, header .active .btn.btn-light:active, heade
   font-weight: 300;
   padding: 0 5%;
   color: #fff;
-  text-shadow: 1px 1px 55px #303a41;
-  background: radial-gradient(rgba(55, 66, 74, 0.1), rgba(0, 0, 0, 0) 65%);
 }
 #top-and-first-wrapper #about .btn {
   float: right;
