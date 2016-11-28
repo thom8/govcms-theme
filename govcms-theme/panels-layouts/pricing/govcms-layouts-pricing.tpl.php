@@ -57,7 +57,7 @@
 
 
 <?php if ($content['additional_services']): ?>
-  <section id="additional-services-1">
+  <section id="additional-services-1" class="text-content bg-primary alternating">
     <div class="container">
       <div class="row">
         <?php print $content['additional_services']; ?>

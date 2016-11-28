@@ -1664,9 +1664,6 @@ small a {
   text-decoration: underline;
 }
 
-#additional-services-1 {
-  padding-top: 25px;
-}
 #additional-services-1 li,
 #additional-services-1 p {
   font-size: 125%;
@@ -2009,6 +2006,11 @@ div.video-filter {
 .search-for {
   margin-top: 3em !important;
   font-weight: 400;
+}
+
+.page-pricing .text-content.bg-primary.alternating h3 {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
 }
 
 body.node-type-dashboard #about {

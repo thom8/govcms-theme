@@ -139,7 +139,7 @@ small {
 }
 
 #additional-services-1 {
-  padding-top: 25px;
+  //padding: 25px 0 50px 0;
   li,
   p {
     font-size: 125%; // make the same size as the alternating section below it..
@@ -510,4 +510,14 @@ div.video-filter {
 .search-for {
   margin-top: 3em !important;
   font-weight: 400;
+}
+
+
+.page-pricing {
+  .text-content.bg-primary.alternating {
+    h3 {
+      margin-top: 2em;
+      margin-bottom: 0.5em;
+    }
+  }
 }
