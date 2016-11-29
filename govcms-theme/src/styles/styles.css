@@ -2268,7 +2268,7 @@ body.node-type-dashboard #about {
     margin-top: 1.5em;
   }
 }
-@media (max-width: 850px) and (max-width: 993px) {
+@media (min-width: 850px) and (max-width: 993px) {
   .dropdown-list > ul > a, .dropdown-list > ul > li {
     display: inline-block !important;
     width: 10%;

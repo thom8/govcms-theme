@@ -159,7 +159,7 @@
 
 
 
-@media (max-width: 850px) and (max-width: 993px) {
+@media (min-width: 850px) and (max-width: 993px) {
   // make the drop down hamburger menu display across, for a wider screen
   .dropdown-list > ul {
     & > a,
