@@ -47,6 +47,11 @@
 
 @media (max-width: 993px) {
   #top-and-first-wrapper {
+    #top {
+      .col-md-8 { // main nav in mobile view
+        width: 100%;
+      }
+    }
     #about {
       h1,
       h2 {
@@ -103,13 +108,17 @@
         }
       }
     }
-    &.distro .container {
-      background: linear-gradient(90deg, #fff 50%, #fff 50%),
-                  url(../img/distro-split.svg) 50% 55% no-repeat;
+    &.distro {
+      background: #fff;
+      .container {
+        background: none;
+      }
     }
-    &.community-support .container {
-      background: linear-gradient(90deg, #fff 50%, #fff 50%),
-                  url(../img/community-support-split.svg) 50% 55% no-repeat;
+    &.community-support {
+      background: #fff;
+      .container {
+        background: none;
+      }
     }
   }
   #clients {
@@ -147,6 +156,21 @@
   }
 }
 
+
+
+
+@media (max-width: 850px) and (max-width: 993px) {
+  // make the drop down hamburger menu display across, for a wider screen
+  .dropdown-list > ul {
+    & > a,
+    & > li {
+      display: inline-block !important;
+      width: 10%;
+      vertical-align: top;
+      margin-right: 2em;
+    }
+  }
+}
 
 
 

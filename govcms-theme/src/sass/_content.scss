@@ -541,3 +541,15 @@ address {
   border-radius: $radius;
   display: inline-block;
 }
+
+
+#site-map li {
+  line-height: 1em;
+  padding: 5px 0 15px 0;
+  background: url(../img/dashes.gif) repeat-y;
+  padding-left: 20px;
+  list-style-type: none;
+  &.last {
+    background: url(../img/dashes-last.gif) no-repeat;
+  }
+}

@@ -254,6 +254,18 @@
   content: '\e05d';
 }
 
+.icon-community-bubble:before {
+  content: '\e05e';
+}
+
+.icon-calendar:before {
+  content: '\e05f';
+}
+
+.icon-check-circle:before {
+  content: '\e060';
+}
+
 /* --------------------------------
 
 Responsive grid and media queries
@@ -2025,6 +2037,17 @@ address {
   display: inline-block;
 }
 
+#site-map li {
+  line-height: 1em;
+  padding: 5px 0 15px 0;
+  background: url(../img/dashes.gif) repeat-y;
+  padding-left: 20px;
+  list-style-type: none;
+}
+#site-map li.last {
+  background: url(../img/dashes-last.gif) no-repeat;
+}
+
 body.node-type-dashboard #about {
   margin-bottom: 0;
 }
@@ -2146,6 +2169,9 @@ body.node-type-dashboard #about {
   }
 }
 @media (max-width: 993px) {
+  #top-and-first-wrapper #top .col-md-8 {
+    width: 100%;
+  }
   #top-and-first-wrapper #about h1,
   #top-and-first-wrapper #about h2 {
     font-size: 300%;
@@ -2199,11 +2225,17 @@ body.node-type-dashboard #about {
     margin: 0 10%;
     max-height: 250px;
   }
+  .split.distro {
+    background: #fff;
+  }
   .split.distro .container {
-    background: linear-gradient(90deg, #fff 50%, #fff 50%), url(../img/distro-split.svg) 50% 55% no-repeat;
+    background: none;
+  }
+  .split.community-support {
+    background: #fff;
   }
   .split.community-support .container {
-    background: linear-gradient(90deg, #fff 50%, #fff 50%), url(../img/community-support-split.svg) 50% 55% no-repeat;
+    background: none;
   }
 
   #clients img {
@@ -2234,6 +2266,14 @@ body.node-type-dashboard #about {
   }
   body.page-support-training .sortableList .card h2 {
     margin-top: 1.5em;
+  }
+}
+@media (max-width: 850px) and (max-width: 993px) {
+  .dropdown-list > ul > a, .dropdown-list > ul > li {
+    display: inline-block !important;
+    width: 10%;
+    vertical-align: top;
+    margin-right: 2em;
   }
 }
 @media (max-width: 767px) {
