@@ -165,9 +165,14 @@
     & > a,
     & > li {
       display: inline-block !important;
-      width: 10%;
+      width: 30.4%;
       vertical-align: top;
-      margin-right: 2em;
+      margin-right: 1em;
+      .links-list {
+        li {
+          margin-bottom: 1em;
+        }
+      }
     }
   }
 }

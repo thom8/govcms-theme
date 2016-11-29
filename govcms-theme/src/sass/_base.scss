@@ -711,7 +711,11 @@ footer {
         text-decoration: none;
         color: $highlightDark;
       }
-    }
+      i.icon-community-bubble {   // Dodgy quick fix  -  TODO: re-do svg with more padding (make it smaller) and then add it into icon font
+        font-size: 43px;
+        top: -2px;
+        position: relative;
+      }
   }
   .region-footer-menu,
   .small-links {
