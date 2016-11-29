@@ -393,36 +393,47 @@ html.js {
 
 #site-map {
   margin: 50px auto 35px;
-  .site-map-box-front.site-map-box .content {
-    a:first-of-type {
-      display: none;
-    }
-    a.feed-link:after {
-      content: "RSS Feed";
-      margin-left: 8px;
-      top: 1px;
-      position: relative;
-    }
+  // if you want the RSS feed link shown uncomment this:
+  //.site-map-box-front.site-map-box .content {
+  //  a:first-of-type {
+  //    display: none;
+  //  }
+  //  a.feed-link:after {
+  //    content: "RSS Feed";
+  //    margin-left: 8px;
+  //    top: 1px;
+  //    position: relative;
+  //  }
+  //}
+
+  // hide the RSS link:
+  .site-map-front-page {
+    display: none;
   }
   ul {
     li {
-      list-style-type: disc;
+      line-height: 1em;
+      padding: 5px 0 15px 0;
+      background: url(../img/dashes.gif) repeat-y;
+      padding-left: 20px;
+      list-style-type: none;
       list-style-image: none;
       line-height: 1.9em;
-      li {
-        list-style-type: circle;
+      &.last {
+        background: url(../img/dashes-last.gif) no-repeat;
       }
     }
   }
-  .btn,
-  .btn-default,
-  .btn-light {
-    color: #2c5d7e;
-    border: none;
-    border-radius: 0;
-    line-height: 1;
-    padding: 0;
-  }
+  // just remove the btn classes with JS rather than stuff around trying to reset them.
+  //.btn,
+  //.btn-default,
+  //.btn-light {
+  //  color: #2c5d7e;
+  //  border: none;
+  //  border-radius: 0;
+  //  line-height: 1;
+  //  padding: 0;
+  //}
   .site-map-box-menu-menu-footer-sub-menu {
     &,
     .site-map-menu {
@@ -540,16 +551,4 @@ address {
   background-color: $greyLight;
   border-radius: $radius;
   display: inline-block;
-}
-
-
-#site-map li {
-  line-height: 1em;
-  padding: 5px 0 15px 0;
-  background: url(../img/dashes.gif) repeat-y;
-  padding-left: 20px;
-  list-style-type: none;
-  &.last {
-    background: url(../img/dashes-last.gif) no-repeat;
-  }
 }
