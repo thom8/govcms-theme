@@ -419,13 +419,14 @@ html.js {
       padding-left: 20px;
       list-style-type: none;
       list-style-image: none;
-      line-height: 0.9em;
+      line-height: 0.95em;
       padding-bottom: 24px;
       &.last {
         background: url(../img/dashes-last.gif) no-repeat;
+        padding-bottom: 0;
       }
       ul {
-        padding-top: 2em;
+        padding-top: 1em;
       }
     }
   }
@@ -440,7 +441,7 @@ html.js {
   //  line-height: 1;
   //  padding: 0;
   //}
-  
+
   .site-map-box-menu-menu-footer-sub-menu {
     &,
     .site-map-menu {
@@ -450,6 +451,7 @@ html.js {
       li {
         &.last {
           background: url(../img/dashes.gif) no-repeat;
+          padding-bottom: 24px;
         }
       }
     }
