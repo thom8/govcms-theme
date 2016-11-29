@@ -410,6 +410,7 @@ html.js {
   .site-map-front-page {
     display: none;
   }
+
   ul {
     li {
       line-height: 1em;
@@ -418,7 +419,8 @@ html.js {
       padding-left: 20px;
       list-style-type: none;
       list-style-image: none;
-      line-height: 1.9em;
+      line-height: 0.9em;
+      padding-bottom: 24px;
       &.last {
         background: url(../img/dashes-last.gif) no-repeat;
       }
@@ -427,6 +429,7 @@ html.js {
       }
     }
   }
+
   // just remove the btn classes with JS rather than stuff around trying to reset them.
   //.btn,
   //.btn-default,
@@ -437,6 +440,7 @@ html.js {
   //  line-height: 1;
   //  padding: 0;
   //}
+  
   .site-map-box-menu-menu-footer-sub-menu {
     &,
     .site-map-menu {
