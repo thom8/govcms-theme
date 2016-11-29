@@ -295,7 +295,7 @@ jQuery(document).ready(function () {
     } // End knowledge-base only JS
 
     // Only run this on the site-map page
-    if (jQuery(location).attr('pathname').indexOf("site-map") != -1) {
+    if (jQuery(location).attr('pathname').indexOf("sitemap") != -1) {
       jQuery('.site-map-menu li a.btn.btn-default.btn-light').removeClass('btn btn-default btn-light');
     }
 

@@ -1932,9 +1932,15 @@ html.js .region-content .faded {
 #site-map ul li.last {
   background: url(../img/dashes-last.gif) no-repeat;
 }
+#site-map ul li ul {
+  padding-top: 2em;
+}
 #site-map .site-map-box-menu-menu-footer-sub-menu,
 #site-map .site-map-box-menu-menu-footer-sub-menu .site-map-menu {
   margin-bottom: 0;
+}
+#site-map .site-map-box-menu-menu-footer-sub-menu ul li.last {
+  background: url(../img/dashes.gif) no-repeat;
 }
 
 .h2-text-center h2 {

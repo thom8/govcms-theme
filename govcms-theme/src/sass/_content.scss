@@ -422,6 +422,9 @@ html.js {
       &.last {
         background: url(../img/dashes-last.gif) no-repeat;
       }
+      ul {
+        padding-top: 2em;
+      }
     }
   }
   // just remove the btn classes with JS rather than stuff around trying to reset them.
@@ -438,6 +441,13 @@ html.js {
     &,
     .site-map-menu {
       margin-bottom: 0;
+    }
+    ul {
+      li {
+        &.last {
+          background: url(../img/dashes.gif) no-repeat;
+        }
+      }
     }
   }
 }
