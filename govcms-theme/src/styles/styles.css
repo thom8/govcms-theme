@@ -912,6 +912,7 @@ header .active .btn.btn-light:focus, header .active .btn.btn-light:active, heade
 }
 #top-and-first-wrapper #about a {
   text-decoration: underline;
+  color: #fff;
 }
 #top-and-first-wrapper #about a:hover, #top-and-first-wrapper #about a:active, #top-and-first-wrapper #about a:focus {
   text-decoration: none;
@@ -1103,10 +1104,6 @@ body.front #about small {
 
 .split {
   background: linear-gradient(90deg, #fff 50%, #f5f7f9 50%);
-}
-.split .container .section-one h2,
-.split .container .section-two h2 {
-  color: #3b7498;
 }
 .split .container .section-one p > a,
 .split .container .section-two p > a {

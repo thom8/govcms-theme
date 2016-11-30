@@ -393,6 +393,7 @@ header {
     }
     a {
       text-decoration: underline;
+      color: #fff;
       &:hover,
       &:active,
       &:focus {
@@ -595,9 +596,9 @@ body.front {
   .container {
     .section-one,
     .section-two {
-      h2 {
-        color: $secondary;
-      }
+      //h2 {
+      //  color: $secondary;
+      //}
       p > a {
         text-decoration: underline;
       }
