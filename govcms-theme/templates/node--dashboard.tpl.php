@@ -76,7 +76,7 @@
                     <div class="col-md-4 col-sm-6">
                       <div class="grid-item">
                         <i class="icon-stats-up"></i>
-                        <h2><abbr title="Software as a Service">SaaS</abbr>Uptime</h2>
+                        <h2><abbr title="Software as a Service">SaaS</abbr> uptime</h2>
                         <span class="int"><strong><?php print check_plain($govcms_dashboard_site247_availability); ?></strong>%</span>
                         <small>last 30 days</small>
                       </div>
@@ -100,7 +100,7 @@
                     <div class="col-md-4 col-sm-6">
                       <div class="grid-item">
                         <i class="icon-laptop-phone"></i>
-                        <h2><abbr title="Software as a Service">SaaS</abbr>Page views</h2>
+                        <h2><abbr title="Software as a Service">SaaS</abbr> page views</h2>
                         <span class="int"><strong><?php print check_plain($govcms_dashboard_ga_page_visits); ?></strong>M</span>
                         <small>last 30 days</small>
                       </div>
