@@ -50,7 +50,7 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-md-10 col-md-offset-1">
-          <h2>Usage stats</h2>
+          <h2>Usage statistics</h2>
           <div class="row">
             <?php print $content['whos_using']; ?>
           </div>

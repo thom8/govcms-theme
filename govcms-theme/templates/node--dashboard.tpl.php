@@ -62,21 +62,21 @@
 												<span class="int fraction">
 													<strong><sup><?php print check_plain($govcms_dashboard_saas_count); ?></sup><span class="slash">/</span><sub><?php print check_plain($govcms_dashboard_paas_count); ?></sub></strong>
 												</span>
-												<small>SaaS / PaaS</small>
+												<small><abbr title="Software as a Service">SaaS</abbr> / <abbr title="Platform as a Service">PaaS</abbr></small>
 											</div>
 										</div>
                     <div class="col-md-4 col-sm-6">
                       <div class="grid-item">
                         <i class="icon-package"></i>
-                        <h2>Releases</h2>
+                        <h2>Distribution</h2>
                         <span class="int"><strong><?php print check_plain($govcms_dashboard_github_releases); ?></strong></span>
-                        <small>versions</small>
+                        <small>releases</small>
                       </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
                       <div class="grid-item">
                         <i class="icon-stats-up"></i>
-                        <h2>Uptime</h2>
+                        <h2><abbr title="Software as a Service">SaaS</abbr> uptime</h2>
                         <span class="int"><strong><?php print check_plain($govcms_dashboard_site247_availability); ?></strong>%</span>
                         <small>last 30 days</small>
                       </div>
@@ -92,15 +92,15 @@
                     <div class="col-md-4 col-sm-6">
                       <div class="grid-item">
                         <i class="icon-download"></i>
-                        <h2>Downloads</h2>
+                        <h2>Distribution</h2>
                         <span class="int"><strong><?php print check_plain($govcms_dashboard_drupal_downloads); ?></strong>k</span>
-                        <small>from Drupal.org</small>
+                        <small>downloads from drupal.org</small>
                       </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
                       <div class="grid-item">
                         <i class="icon-laptop-phone"></i>
-                        <h2>Page views</h2>
+                        <h2><abbr title="Software as a Service">SaaS</abbr> page views</h2>
                         <span class="int"><strong><?php print check_plain($govcms_dashboard_ga_page_visits); ?></strong>M</span>
                         <small>last 30 days</small>
                       </div>

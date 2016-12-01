@@ -139,7 +139,7 @@ small {
 }
 
 #additional-services-1 {
-  padding-top: 25px;
+  //padding: 25px 0 50px 0;
   li,
   p {
     font-size: 125%; // make the same size as the alternating section below it..
@@ -393,40 +393,67 @@ html.js {
 
 #site-map {
   margin: 50px auto 35px;
-  .site-map-box-front.site-map-box .content {
-    a:first-of-type {
-      display: none;
-    }
-    a.feed-link:after {
-      content: "RSS Feed";
-      margin-left: 8px;
-      top: 1px;
-      position: relative;
-    }
+  // if you want the RSS feed link shown uncomment this:
+  //.site-map-box-front.site-map-box .content {
+  //  a:first-of-type {
+  //    display: none;
+  //  }
+  //  a.feed-link:after {
+  //    content: "RSS Feed";
+  //    margin-left: 8px;
+  //    top: 1px;
+  //    position: relative;
+  //  }
+  //}
+
+  // hide the RSS link:
+  .site-map-front-page {
+    display: none;
   }
+
   ul {
     li {
-      list-style-type: disc;
+      line-height: 1em;
+      padding: 5px 0 15px 0;
+      background: url(../img/dashes.gif) repeat-y;
+      padding-left: 20px;
+      list-style-type: none;
       list-style-image: none;
-      line-height: 1.9em;
-      li {
-        list-style-type: circle;
+      line-height: 0.95em;
+      padding-bottom: 24px;
+      &.last {
+        background: url(../img/dashes-last.gif) no-repeat;
+        padding-bottom: 0;
+      }
+      ul {
+        padding-top: 1em;
       }
     }
   }
-  .btn,
-  .btn-default,
-  .btn-light {
-    color: #2c5d7e;
-    border: none;
-    border-radius: 0;
-    line-height: 1;
-    padding: 0;
-  }
+
+  // just remove the btn classes with JS rather than stuff around trying to reset them.
+  //.btn,
+  //.btn-default,
+  //.btn-light {
+  //  color: #2c5d7e;
+  //  border: none;
+  //  border-radius: 0;
+  //  line-height: 1;
+  //  padding: 0;
+  //}
+
   .site-map-box-menu-menu-footer-sub-menu {
     &,
     .site-map-menu {
       margin-bottom: 0;
+    }
+    ul {
+      li {
+        &.last {
+          background: url(../img/dashes.gif) no-repeat;
+          padding-bottom: 24px;
+        }
+      }
     }
   }
 }
@@ -495,12 +522,13 @@ div.video-filter {
 .text-primary {
   color: $textGreyLight;
 }
-#services h2 {
-  color: #2C5D7E;
-}
+//#services h2 {
+//  color: #2C5D7E;
+//}
 .navbar-form {
   .input-group-addon {
     padding-bottom: 2.9em;
+    min-width: 4.6em;
   }
   .icon-search {
     position: relative;
@@ -510,4 +538,33 @@ div.video-filter {
 .search-for {
   margin-top: 3em !important;
   font-weight: 400;
+}
+
+
+.page-pricing {
+  .text-content.bg-primary.alternating {
+    h3 {
+      margin-top: 2em;
+      margin-bottom: 0.5em;
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+// for plain contet pages such as privacy page - may effect others though :/
+.node-type-govcms-page {
+  .text-content {
+    margin: 50px 0;
+  }
+}
+
+
+address {
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: $greyLight;
+  border-radius: $radius;
+  display: inline-block;
 }

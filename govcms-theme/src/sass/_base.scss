@@ -344,7 +344,7 @@ header {
 // Header section on all pages
 #top-and-first-wrapper {
   //@include background-gradient( $highlightBright, $aqua, darken($secondary,1%)); // this passes AA for large text everywhere on homepage
-  @include background-gradient( $highlightBright, $aqua, $secondary ); // this looks a bit brighter :)  - based off linear-gradient(11deg,#69d4ac 0,#50bdba 40%,#3b7498 80%)
+  @include background-gradient( $highlightBright, $aqua, lighten($secondary,8%) ); // this looks a bit brighter :)  - based off linear-gradient(11deg,#69d4ac 0,#50bdba 40%,#3b7498 80%)
   p,
   a:not(.btn) {
     color: $secondaryDark;
@@ -373,17 +373,16 @@ header {
       font-size: 380%;
       font-weight: 300;
       padding: 0 5%;
-      color: $secondaryDark;
+      //color: $secondaryDark;
       // these lines if going with a white header: (also, change $aqua, see _vars.scss)
-      //color: #fff;
-      //text-shadow: 1px 1px 55px darken($secondaryDark, 3%);
-      //background: radial-gradient(rgba($secondaryDark,.1),rgba(0,0,0,0) 65%);
+      color: #fff;
     }
     .btn {
       float: right;
     }
     .lead {
-      color: $secondaryDark;
+      //color: $secondaryDark;
+      color: #fff;
       margin-top: -5px;
     }
     small {
@@ -394,6 +393,7 @@ header {
     }
     a {
       text-decoration: underline;
+      color: #fff;
       &:hover,
       &:active,
       &:focus {
@@ -461,7 +461,7 @@ body.front {
     color: #fff;
     //@include background-gradient(mix($highlight,$secondary,80%), mix($highlight,$secondary,20%), $secondary);
     //@include background-gradient( $highlightBright, $aqua, $secondary);
-    @include background-gradient( $highlightDark, mix($aqua,$secondary,50%), $secondary);
+    @include background-gradient( mix($highlightDark,$highlight,50%), mix($aqua,lighten($secondary,8%),50%), lighten($secondary,8%) );
     a:not(.btn) {
       &:hover,
       &:active,
@@ -596,9 +596,9 @@ body.front {
   .container {
     .section-one,
     .section-two {
-      h2 {
-        color: $secondary;
-      }
+      //h2 {
+      //  color: $secondary;
+      //}
       p > a {
         text-decoration: underline;
       }
@@ -711,6 +711,11 @@ footer {
         opacity: 1;
         text-decoration: none;
         color: $highlightDark;
+      }
+      i.icon-community-bubble {   // Dodgy quick fix  -  TODO: re-do svg with more padding (make it smaller) and then add it into icon font
+        font-size: 43px;
+        top: -2px;
+        position: relative;
       }
     }
   }

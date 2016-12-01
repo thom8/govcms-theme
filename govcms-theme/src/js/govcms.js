@@ -145,9 +145,6 @@ jQuery(document).ready(function () {
                 selectedDropdownHeight = selectedDropdown.innerHeight(),
                 selectedDropdownWidth = selectedDropdown.children('.dd-content').innerWidth(),
                 selectedDropdownLeft = item.offset().left - item.parent().offset().left - 40 + item.innerWidth() / 2; //- selectedDropdownWidth / 2; // changed
-// console.log( item.offset().left + " - " + item.parent().offset().left + " + " + item.innerWidth() + " / 2 - " + selectedDropdownWidth + " /2");
-// console.log(item);
-// console.log(item.parent());
             // update dropdown position and size
             this.updateDropdown(selectedDropdown, parseInt(selectedDropdownHeight), selectedDropdownWidth, parseInt(selectedDropdownLeft));
             // add active class to the proper dropdown item
@@ -296,6 +293,11 @@ jQuery(document).ready(function () {
             }
         });
     } // End knowledge-base only JS
+
+    // Only run this on the site-map page
+    if (jQuery(location).attr('pathname').indexOf("sitemap") != -1) {
+      jQuery('.site-map-menu li a.btn.btn-default.btn-light').removeClass('btn btn-default btn-light');
+    }
 
 }); // end jQuery(document).ready
 
