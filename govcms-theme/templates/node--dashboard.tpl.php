@@ -59,7 +59,7 @@
 											<div class="grid-item">
 												<i class="icon-harddrive"></i>
 												<h2>Site types</h2>
-												<span class="int fraction">
+												<span class="int">
 													<strong><?php print check_plain($govcms_dashboard_saas_count); ?><span class="slash">/</span><?php print check_plain($govcms_dashboard_paas_count); ?></strong>
 												</span>
                         <small><abbr title="Software as a Service">SaaS</abbr> / <abbr title="Platform as a Service">PaaS</abbr></small>
