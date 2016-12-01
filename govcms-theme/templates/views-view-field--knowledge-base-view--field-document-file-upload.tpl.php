@@ -25,12 +25,13 @@
 <div class="media-left media-top">
   <?php
     $icon = 'icon-document-link';
+    $file_ext = trim(pathinfo($output, PATHINFO_EXTENSION));
     
-    if (pathinfo($output, PATHINFO_EXTENSION) == 'pdf') {
+    if ($file_ext == 'pdf') {
       $icon = 'icon-document-pdf';
-    } else if(pathinfo($output, PATHINFO_EXTENSION) == 'ppt') {
+    } elseif($file_ext == 'ppt') {
       $icon = 'icon-document-ppt';
-    } else if(pathinfo($output, PATHINFO_EXTENSION) == 'doc') {
+    } elseif(($file_ext == 'docx') || $file_ext == 'doc') {
       $icon = 'icon-document-doc';
     }
   ?>
