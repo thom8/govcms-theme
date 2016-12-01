@@ -18,41 +18,41 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-6">
                         <div class="grid-item">
-                            <i class="icon-check"></i>
-                            <h2>Live sites</h2>
-                            <span class="int">
-                                <strong>
-                                    <?php
-                                        print views_embed_view('dashboard_sites_stats', $display_id = 'block');
-                                    ?>
-                                </strong>
-                            </span>
+                          <i class="icon-check"></i>
+                          <h2>Live sites</h2>
+                          <span class="int">
+                            <strong>
+                              <?php
+                                print views_embed_view('dashboard_sites_stats', $display_id = 'block');
+                              ?>
+                            </strong>
+                          </span>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="grid-item">
-                            <i class="icon-cog"></i>
-                            <h2>In development</h2>
-                            <span class="int">
-                                <strong>
-                                    <?php
-                                        print views_embed_view('dashboard_sites_stats', $display_id = 'block_1');
-                                    ?>
-                                </strong>
-                            </span>
+                          <i class="icon-cog"></i>
+                          <h2>In development</h2>
+                          <span class="int">
+                            <strong>
+                              <?php
+                                print views_embed_view('dashboard_sites_stats', $display_id = 'block_1');
+                              ?>
+                            </strong>
+                          </span>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <div class="grid-item">
-                            <i class="icon-users"></i>
-                            <h2>Agencies using</h2>
-                            <span class="int">
-                                <strong>
-                                    <?php
-                                        print views_embed_view('dashboard_agencies_number', $display_id = 'block');
-                                    ?>
-                                </strong>
-                            </span>
+                          <i class="icon-users"></i>
+                          <h2>Agencies using</h2>
+                          <span class="int">
+                            <strong>
+                              <?php
+                                print views_embed_view('dashboard_agencies_number', $display_id = 'block');
+                              ?>
+                            </strong>
+                          </span>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">
@@ -60,9 +60,9 @@
 												<i class="icon-harddrive"></i>
 												<h2>Site types</h2>
 												<span class="int fraction">
-													<strong><sup><?php print check_plain($govcms_dashboard_saas_count); ?></sup><span class="slash">/</span><sub><?php print check_plain($govcms_dashboard_paas_count); ?></sub></strong>
+													<strong><?php print check_plain($govcms_dashboard_saas_count); ?><span class="slash">/</span><?php print check_plain($govcms_dashboard_paas_count); ?></strong>
 												</span>
-												<small><abbr title="Software as a Service">SaaS</abbr> / <abbr title="Platform as a Service">PaaS</abbr></small>
+                        <small><abbr title="Software as a Service">SaaS</abbr> / <abbr title="Platform as a Service">PaaS</abbr></small>
 											</div>
 										</div>
                     <div class="col-md-4 col-sm-6">
