@@ -885,7 +885,7 @@ header .active .btn.btn-light:focus, header .active .btn.btn-light:active, heade
   color: #fff;
 }
 #top-and-first-wrapper .pager a {
-  border-color: #37424A;
+  border-color: #fff;
 }
 #top-and-first-wrapper #about {
   background: transparent;
