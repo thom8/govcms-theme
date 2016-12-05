@@ -383,22 +383,22 @@ Primary style
   padding-left: 0;
 }
 .cd-morph-dropdown .dropdown-list > ul > li {
-  margin-bottom: 3.3em;
+  margin-bottom: 3em;
 }
 .cd-morph-dropdown .dropdown-list > ul > li ul {
   padding-left: 0;
 }
 .cd-morph-dropdown .label {
   display: block;
-  margin-bottom: .8em;
+  margin-bottom: .5em;
 }
 .cd-morph-dropdown .dd-content li::after {
   clear: both;
   content: "";
   display: block;
 }
-.cd-morph-dropdown .links .dd-content > ul > li {
-  margin-top: 1em;
+.cd-morph-dropdown .links .dd-content > ul > li > ul > li {
+  margin-top: 0.5em;
 }
 .cd-morph-dropdown .links-list a,
 .cd-morph-dropdown .btn {
@@ -1224,6 +1224,9 @@ footer .small-links li:last-of-type {
 .pager li a {
   text-decoration: none;
 }
+.pager li .pager-current.first {
+  margin-right: 0.4em;
+}
 .pager.back a {
   background-color: transparent;
 }
@@ -1535,7 +1538,7 @@ body.search-results .about .navbar-form .form-control {
   font-size: 200%;
   padding: 1.11em 0.5em;
   width: 80%;
-  width: calc( 100% - 3em);
+  width: calc( 100% - 2.97em);
 }
 body.page-support .about .navbar-form button,
 body.search-results .about .navbar-form button {

@@ -145,7 +145,7 @@ Primary style
 		> ul {
 			padding-left: 0;
 			> li {
-				margin-bottom: 3.3em;
+				margin-bottom: 3em;
 				ul {
 					padding-left: 0;
 				}
@@ -154,7 +154,7 @@ Primary style
 	}
 	.label {
 		display: block;
-		margin-bottom: .8em;
+		margin-bottom: .5em;
 	}
 	.dd-content li {
 		@include clearfix;
@@ -210,8 +210,8 @@ Primary style
 	//.gallery li:nth-of-type(4) a::before {
 	//	background: #8D4645 url(../img/cd-gallery-icons.svg) no-repeat -162px 0;
 	//}
-	.links .dd-content > ul > li {
-		margin-top: 1em;
+	.links .dd-content > ul > li > ul > li {
+		margin-top: 0.5em;
 	}
 	.links-list a,
 	.btn {

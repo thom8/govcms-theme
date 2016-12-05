@@ -742,6 +742,9 @@ footer {
     a {
       text-decoration: none;
     }
+    .pager-current.first {
+      margin-right: 0.4em;
+    }
   }
   &.back {
     a {
