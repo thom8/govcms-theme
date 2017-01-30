@@ -556,7 +556,7 @@ function _govcmstheme_bootstrap_ga_api() {
             variable_set('govcms_dashboard_ga_page_visits', (float) $page_visits);
         }
         $params = array(
-            'metrics' => 'ga:avgPageLoadTime',
+            'metrics' => 'ga:avgServerResponseTime',
         );
 
         $page_load = $ga->query($params);
