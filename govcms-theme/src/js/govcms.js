@@ -299,8 +299,33 @@ jQuery(document).ready(function () {
       jQuery('.site-map-menu li a.btn.btn-default.btn-light').removeClass('btn btn-default btn-light');
     }
 
+    changeRequiredFormField();
+
 }); // end jQuery(document).ready
 
+
+
+// Change the required field label "*" to "(required)"
+// or
+// only show "(optional)" as recommended by:
+//     http://uxmovement.com/forms/why-users-fill-out-less-if-you-mark-required-fields/
+//     https://www.formulate.com.au/blog/required-versus-optional-fields-new-standard
+function changeRequiredFormField() {
+  // if you want to do "(required)" instead:
+  // jQuery("form.webform-client-form label .form-required").each(function () {
+  //   jQuery(this).addClass('required');
+  //   jQuery(this).text('(required)');
+  // });
+
+  // form labels with no .form-required element inside it:
+  jQuery("form.webform-client-form label:not(:has(*))").each(function () {
+    jQuery(this).append( " <span class='optional'>(optional)</span>" );
+  });
+  // now remove the "*" (.form-required):
+  jQuery("form.webform-client-form label .form-required").each(function () {
+    jQuery(this).remove();
+  });
+}
 
 function startCounter(theObject) {
     jQuery(theObject).prop('Counter', 0).animate({

@@ -174,7 +174,7 @@ form {
     legend {
       margin-bottom: 15px;
       color: $secondaryDark;
-      .mandatory {
+      .required {
         font-size: 0.65em;
       }
     }
@@ -202,16 +202,20 @@ form {
     margin-top: 2em;
   }
   .form-required {
-    color: $manditoryColour;
+    color: $mandatoryColour;
+  }
+  .optional,
+  .required {
+    color: $textGreyLight;
+    float: right;
+  }
+  .btn {
+    margin-top: 20px;
   }
 }
-.mandatory {
-  color: $highlightDarker;
-  float: right;
-}
 
 
-// make basic content text larger
+// Make basic content text larger
 .region-content {
   .content,
   .content .text-content,

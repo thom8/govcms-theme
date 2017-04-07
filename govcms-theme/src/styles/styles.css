@@ -730,7 +730,7 @@ form fieldset legend {
   margin-bottom: 15px;
   color: #37424A;
 }
-form fieldset legend .mandatory {
+form fieldset legend .required {
   font-size: 0.65em;
 }
 form label {
@@ -758,10 +758,13 @@ form .form-actions {
 form .form-required {
   color: #c0392b;
 }
-
-.mandatory {
-  color: #407a63;
+form .optional,
+form .required {
+  color: #777;
   float: right;
+}
+form .btn {
+  margin-top: 20px;
 }
 
 .region-content .content p,
