@@ -643,6 +643,12 @@ a {
   color: #fff;
 }
 
+abbr[data-original-title],
+abbr[title],
+abbr {
+  text-decoration: none;
+}
+
 .btn-primary {
   transition: 0.3s;
   color: #37424A;
@@ -1253,6 +1259,8 @@ footer .small-links li:last-of-type {
   transition: color 0.2s, background-colour 0.2s, border-colour 0.2s;
   position: relative;
   vertical-align: top;
+  overflow-wrap: break-word;
+  min-width: 18em;
 }
 .sortableList .card img,
 .sortableList .card svg {

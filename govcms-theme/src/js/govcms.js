@@ -364,6 +364,21 @@ function isElementVisible(theElement) {
         }
     };
 
+    // Popovers
+    $(function () {
+      // If you don't want to have to add extra markup and just use title attr:
+      $('[title]').each(function() {
+        $(this).attr('data-toggle', 'tooltip');
+        $(this).attr('data-placement', 'top');
+      });
+
+      // Use Bootstrap tooltips/popovers
+      $('[data-toggle=popover]').popover()
+        .focus(function () { $(this).trigger('mouseover'); })
+        .blur(function () { $(this).trigger('mouseout'); });
+      $('[data-toggle=tooltip]').tooltip();
+    });
+
 
 })(jQuery, Drupal);
 
