@@ -51,12 +51,21 @@
   <meta charset="utf-8">
   <link rel="preload" href="<?php print '/' . path_to_theme(); ?>/img/crest.svg" as="image">
   <link rel="preload" href="<?php print '/' . path_to_theme(); ?>/img/govcms.svg" as="image">
-  <link rel="preload" href="<?php print '/' . path_to_theme(); ?>/css/styles.css" as="style">
   <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
   <title><?php print $head_title; ?></title>
+	<meta http-equiv="cleartype" content="on">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:title" content="<?php print $head_title; ?>">
+	<meta property="og:locale" content="en_AU">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="Content management and website hosting for government.">
+	<meta property="og:url" content="https://www.govcms.gov.au/">
+	<meta property="og:site_name" content="govCMS">
+	<meta property="og:image" content="<?php print '/' . path_to_theme(); ?>/img/og-image.png">
+	<meta property="og:image:secure_url" content="<?php print '/' . path_to_theme(); ?>/img/og-image.png">
   <?php print $head; ?>
-  <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,400italic">
+  <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,400i">
   <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
   <?php print $styles; ?>
   <?php print $scripts; ?>

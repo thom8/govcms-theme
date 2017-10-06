@@ -33,7 +33,7 @@ function govcmstheme_bootstrap_page_alter($page) {
     '#tag' => 'meta',
     '#attributes' => array(
       'name' => 'viewport',
-      'content' => 'width=device-width, initial-scale=1, maximum-scale=2, user-scalable=0'
+      'content' => 'width=device-width, initial-scale=1, viewport-fit=cover'
     )
   );
   drupal_add_html_head($mobileoptimized, 'MobileOptimized');
@@ -173,7 +173,7 @@ function govcmstheme_bootstrap_form_alter(&$form, &$form_state, $form_id) {
       )
     );
     if (isset($form_id) && ($form_id == 'webform_client_form_126' || $form_id == 'webform_client_form_131')) {
-      $form['actions']['submit']['#suffix'] = '<br /><small>Please do not include any unnecessary personal, financial, or sensitive information.  Information will only be used for purposes for which you provide it. Please see our <a href="/privacy">Privacy Policy</a> for further information.</small>';
+      $form['actions']['submit']['#suffix'] = '<br ><small>Please do not include any unnecessary personal, financial, or sensitive information.  Information will only be used for purposes for which you provide it. Please see our <a href="/privacy">Privacy Policy</a> for further information.</small>';
     }
 
     if (isset($form_id) && $form_id == 'webform_client_form_466') {
@@ -614,5 +614,3 @@ function time_elapsed_string($ptime) {
         }
     }
 }
-
-
