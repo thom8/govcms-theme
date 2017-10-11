@@ -10,9 +10,6 @@
 // Or for full site testing run 'gulp test'
 //
 // *************************
-//
-// Packages needed:
-// jshint uncss gulp gulp-jshint gulp-imagemin gulp-compass gulp-concat gulp-uglify gulp-webserver gulp-iconfont gulp-iconfont-css gulp-iconfont-template gulp-pa11y gulp-w3c-html-validation gulp-casperjs gulp-real-favicon fs gulp-plumber gulp-util gulp-postcss postcss-uncss cssnano postcss-import autoprefixer
 
 
 // Include gulp.
@@ -21,7 +18,7 @@ const gulp                    = require('gulp');
 // Include plug-ins.
 const jshint                  = require('gulp-jshint');
 const imagemin                = require('gulp-imagemin');
-const compass                 = require('gulp-compass');
+const compass                 = require('gulp-sass');
 const concat                  = require('gulp-concat');
 const uglify                  = require('gulp-uglify');
 const webserver               = require('gulp-webserver');
@@ -195,7 +192,7 @@ gulp.task('styles', function() {
 		// Output to the css folder.
     .pipe(gulp.dest('./css/'))
 		// BrowserSync
-		// .pipe(browserSync.stream());
+		// Note: you need to disable Drupal caching or this won't do any good.
 		.pipe(browserSync.stream({match: '**/*.css'}));
 });
 
