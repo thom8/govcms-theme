@@ -121,8 +121,8 @@ function govcmstheme_bootstrap_js_alter(&$javascript) {
   }
   // Swap out jQuery to use an updated version of the library.
   if ($replace_jquery) {
-    // $javascript['misc/jquery.js']['data'] = '//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js';
-    $javascript['misc/jquery.js']['data'] = '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js';
+    $javascript['misc/jquery.js']['data'] = '//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js';
+    // $javascript['misc/jquery.js']['data'] = '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js';
   }
 }
 

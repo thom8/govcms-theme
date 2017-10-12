@@ -15,6 +15,7 @@ jQuery(document).ready(function () {
         // TODO: fade in rather than just appear/hide
     });
 
+
     // Add extra sites btn functionality
     jQuery('.site-info-add').click(function () {
         // duplicate .site-info form element
@@ -222,7 +223,7 @@ jQuery(document).ready(function () {
     }
 
 
-    // add active class to main nav, seems not using superfish any more
+    // Add active class to main nav, seems not using superfish any more
     jQuery(function () {
       if ( location.pathname.length > 1 ) {
         jQuery('nav a[href^="/' + location.pathname.split("/")[1] + '"]').parent().addClass('active');
@@ -232,14 +233,29 @@ jQuery(document).ready(function () {
     });
 
 
+		// Popovers and Tooltips
+		jQuery(function () {
+			// If you don't want to have to add extra markup and just use title attr:
+			jQuery('[title]').each(function() {
+				jQuery(this).attr('data-toggle', 'tooltip');
+				jQuery(this).attr('data-placement', 'top');
+			});
+			// Use Bootstrap tooltips/popovers
+			jQuery('[data-toggle=popover]').popover()
+				.focus(function () { jQuery(this).trigger('mouseover'); })
+				.blur(function () { jQuery(this).trigger('mouseout'); });
+			jQuery('[data-toggle=tooltip]').tooltip();
+		});
+
+
     // For animating things via JS
     jQuery.fn.extend({
-        animateCss: function (animationName) {
-            var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-            this.addClass('animated ' + animationName).one(animationEnd, function () {
-                jQuery(this).removeClass('animated ' + animationName);
-            });
-        }
+      animateCss: function (animationName) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        this.addClass('animated ' + animationName).one(animationEnd, function () {
+            jQuery(this).removeClass('animated ' + animationName);
+        });
+      }
     });
 
 
@@ -359,26 +375,10 @@ function isElementVisible(theElement) {
     'use strict';
 
     Drupal.behaviors.responsiveVideos = {
-        attach: function () {
-            $('[data-js*="responsive-video"]').fitVids();
-        }
+      attach: function () {
+        $('[data-js*="responsive-video"]').fitVids();
+      }
     };
-
-    // Popovers
-    $(function () {
-      // If you don't want to have to add extra markup and just use title attr:
-      $('[title]').each(function() {
-        $(this).attr('data-toggle', 'tooltip');
-        $(this).attr('data-placement', 'top');
-      });
-
-      // Use Bootstrap tooltips/popovers
-      $('[data-toggle=popover]').popover()
-        .focus(function () { $(this).trigger('mouseover'); })
-        .blur(function () { $(this).trigger('mouseout'); });
-      $('[data-toggle=tooltip]').tooltip();
-    });
-
 
 })(jQuery, Drupal);
 

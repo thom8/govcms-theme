@@ -192,31 +192,19 @@ gulp.task('styles', function() {
 		// Output to the css folder.
     .pipe(gulp.dest('./css/'))
 		// BrowserSync
-		// Note: you need to disable Drupal caching or this won't do any good.
+		// Note: you need to disable Drupal caching and concatenation or this won't do any good.
 		.pipe(browserSync.stream({match: '**/*.css'}));
 });
 
 
-// Local server (localhost:8000).
-// gulp.task('webserver', function() {
-//   gulp.src('./')
-//     .pipe(webserver({
-//       livereload: true,
-//       // directoryListing: true,	                     		// Overwrites index.html.
-//       open: true,
-// 			proxies: {
-// 				// target: 'http://localhost:8000/',
-// 				source: 'http://govcms.local/',
-// 				// source: 'http://govcms.local/',
-// 			}
-//     }));
-// });
-
+// Local server with live reloading.
+// http://localhost:3000/
+// Provides live reload on top of the domain specified below in 'proxy'
+// Make sure you disable Drupal caching.
 gulp.task('browser-sync', function() {
   browserSync.init({
-      proxy: "govcms.local"
+      proxy: "govcms.local"		// your local dev site
   });
-	// gulp.watch("src/scss/*.scss", ['styles']);
   gulp.watch("*.html").on('change', browserSync.reload);
 });
 
@@ -233,16 +221,11 @@ gulp.task('webserver-bg', function() {
 gulp.task('iconFont', function(){
 	var runTimestamp = Math.round(Date.now()/1000);
   return gulp.src(['./src/font-icons/*.svg'])
-		// .pipe(iconfontTemplate({
-		// 	fontName: fontName,
-		// 	// path: 'assets/templates/template.html',
-		// 	targetPath: fontName+'.html',		               		// Relative to the path used in gulp.dest()
-		// }))
 		.pipe(iconfontCss({
       fontName:       fontName,
       path:           'scss',
       targetPath:     '../src/sass/_'+fontName+'.scss',		// Relative to the path used in gulp.dest()
-      fontPath:       '../../fonts/'
+      fontPath:       '/fonts/'														// Relative to the site.
     }))
 		.pipe(iconfont({
       fontName:       fontName,                        		// Required.
