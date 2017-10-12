@@ -220,7 +220,7 @@ gulp.task('webserver-bg', function() {
 // SVG files to a font file.
 gulp.task('iconFont', function(){
 	var runTimestamp = Math.round(Date.now()/1000);
-  return gulp.src(['./src/font-icons/*.svg'])
+  return gulp.src(['./src/font-icons/**'])
 		.pipe(iconfontCss({
       fontName:       fontName,
       path:           'scss',
