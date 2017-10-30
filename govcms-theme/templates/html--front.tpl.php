@@ -64,6 +64,14 @@
 	<meta property="og:site_name" content="govCMS">
 	<meta property="og:image" content="<?php print '/' . path_to_theme(); ?>/img/og-image.png">
 	<meta property="og:image:secure_url" content="<?php print '/' . path_to_theme(); ?>/img/og-image.png">
+	<link rel="apple-touch-icon" href="<?php print '/' . path_to_theme(); ?>/favicons/apple-touch-icon.png">
+	<link rel="shortcut icon" href="<?php print '/' . path_to_theme(); ?>/favicons/favicon.ico">
+	<meta name="apple-mobile-web-app-title" content="govCMS">
+	<meta name="application-name" content="govCMS">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="<?php print '/' . path_to_theme(); ?>/favicons/mstile-270.png">
+	<meta name="theme-color" content="#4F82A2">
+	<link rel="mask-icon" href="<?php print '/' . path_to_theme(); ?>/favicons/outline.svg" color="#4F82A2">
   <?php print $head; ?>
   <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,400i">
   <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
