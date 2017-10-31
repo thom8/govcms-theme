@@ -79,10 +79,12 @@
   <?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
-<div id="main-body">
-  <?php print $page_top; ?>
-  <?php print $page; ?>
-  <div id="is_tablet"></div>
-  <div id="is_mobile"></div>
-</div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js">
+	<div id="main-body">
+	  <?php print $page_top; ?>
+	  <?php print $page; ?>
+	  <div id="is_tablet"></div>
+	  <div id="is_mobile"></div>
+	</div>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js">
+</body>
+</html>
