@@ -48,13 +48,11 @@
 <!--[if IE 9]>         <html class="no-js lt-ie10" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
   <link rel="preload" href="<?php print '/' . path_to_theme(); ?>/img/crest.svg" as="image">
   <link rel="preload" href="<?php print '/' . path_to_theme(); ?>/img/govcms.svg" as="image">
   <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
   <title><?php print $head_title; ?></title>
-	<meta http-equiv="cleartype" content="on">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta property="og:title" content="<?php print $head_title; ?>">
 	<meta property="og:locale" content="en_AU">
@@ -87,6 +85,6 @@
   <div id="is_tablet"></div>
   <div id="is_mobile"></div>
 </div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
