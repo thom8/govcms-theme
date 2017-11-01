@@ -84,7 +84,7 @@
                     <div class="col-md-4 col-sm-6">
                       <div class="grid-item">
                         <i class="icon-timer"></i>
-                        <h2>Server response time</h2>
+                        <h2>Server response</h2>
                         <span class="int"><strong><?php print check_plain($govcms_dashboard_ga_page_loads); ?></strong>s</span>
                         <small>on average</small>
                       </div>
