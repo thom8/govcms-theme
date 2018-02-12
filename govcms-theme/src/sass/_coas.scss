@@ -109,7 +109,7 @@
 }
 
 .coa-coa > span {
-  background-image: url('../img/crest-black.png');    // TODO: copy this img from govspace!
+  background-image: url('../img/crest-white.png');    // TODO: copy this img from govspace!
   width: 70px;
   height: 52px;
   display: inline-block;
@@ -133,7 +133,11 @@ a.coa-link {
 }
 
 .coa-coa .crest {
-  background-image: url('../img/crest.svg');
+  background-image: url('../img/crest-white.svg');
+  .coa-titles {
+    // Really Tim? !important;
+    color: #fff !important;
+  }
 }
 
 // white version
