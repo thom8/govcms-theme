@@ -12,30 +12,30 @@ define('GOVCMS_THEME', 'govCMS Theme');
  * Page alter.
  */
 function govcmstheme_bootstrap_page_alter($page) {
-  $mobileoptimized = array(
+  $mobileoptimized = [
     '#type' => 'html_tag',
     '#tag' => 'meta',
-    '#attributes' => array(
+    '#attributes' => [
       'name' => 'MobileOptimized',
       'content' => 'width'
-    )
-  );
-  $handheldfriendly = array(
+    ]
+  ];
+  $handheldfriendly = [
     '#type' => 'html_tag',
     '#tag' => 'meta',
-    '#attributes' => array(
+    '#attributes' => [
       'name' => 'HandheldFriendly',
       'content' => 'true'
-    )
-  );
-  $viewport = array(
+    ]
+  ];
+  $viewport = [
     '#type' => 'html_tag',
     '#tag' => 'meta',
-    '#attributes' => array(
+    '#attributes' => [
       'name' => 'viewport',
       'content' => 'width=device-width, initial-scale=1, viewport-fit=cover'
-    )
-  );
+    ]
+  ];
   drupal_add_html_head($mobileoptimized, 'MobileOptimized');
   drupal_add_html_head($handheldfriendly, 'HandheldFriendly');
   drupal_add_html_head($viewport, 'viewport');
