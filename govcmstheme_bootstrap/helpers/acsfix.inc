@@ -40,5 +40,5 @@ function _govcmstheme_bootstrap_acsfix_path($text)
  */
 function _govcmstheme_bootstrap_file_path()
 {
-    return '/' . variable_get('file_public_path', conf_path() . '/files/');
+    return '/' . variable_get('file_public_path', conf_path() . '/files') . '/';
 }
