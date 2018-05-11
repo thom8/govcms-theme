@@ -11,7 +11,7 @@
  *
  * @return mixed
  */
-function _govcmstheme_bootstrap_acsfix_path($text)
+function _govcmstheme_bootstrap_acsffix_path($text)
 {
     // Return the text as quick as possible.
     if (false === strpos($text, 'sites/g/files/net')) {
@@ -27,10 +27,10 @@ function _govcmstheme_bootstrap_acsfix_path($text)
     }
 
     // Get ACSF net paths.
-    $ascf_paths = $matches[0];
+    $acsf_paths = $matches[0];
 
     // Replace the paths to current site path.
-    $text = str_replace($ascf_paths, _govcmstheme_bootstrap_file_path(), $text);
+    $text = str_replace($acsf_paths, _govcmstheme_bootstrap_file_path(), $text);
 
     return $text;
 }
