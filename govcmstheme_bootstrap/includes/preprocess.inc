@@ -28,8 +28,8 @@ function govcmstheme_bootstrap_preprocess_field__body(&$vars) {
     $content = $vars['items'][0]['#markup'];
 
     // Fix the ACSF site path.
-    require_once './' . drupal_get_path('theme', 'govcmstheme_bootstrap') . '/helpers/acsfix.inc';
-    $content = _govcmstheme_bootstrap_acsfix_path($content);
+    require_once './' . drupal_get_path('theme', 'govcmstheme_bootstrap') . '/helpers/acsffix.inc';
+    $content = _govcmstheme_bootstrap_acsffix_path($content);
 
     // Apply tokens to body field.
     $vars['items'][0]['#markup'] = token_replace($content);
