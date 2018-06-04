@@ -23,7 +23,7 @@ function _govcmstheme_bootstrap_acsffix_path($text) {
   }
 
   // Find all ACSF links in $content.
-  preg_match_all('@/sites/g/files/(net[a-zA-Z0-9]+)/(f|themes)/@', $text, $matches);
+  preg_match_all('@/sites/g/files/(net[a-zA-Z0-9]+)/@', $text, $matches);
 
   // Return the text if no matches.
   if (empty($matches) || !isset($matches[0])) {

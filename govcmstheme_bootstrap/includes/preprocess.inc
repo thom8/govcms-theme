@@ -5,6 +5,9 @@
  * preprocess.inc
  */
 
+// Load the ACSF site path fix helper.
+require_once './' . drupal_get_path('theme', 'govcmstheme_bootstrap') . '/helpers/acsffix.inc';
+
 /**
  * Implement hook_preprocess_field().
  */
@@ -23,9 +26,6 @@ function govcmstheme_bootstrap_preprocess_field(&$variables) {
  * Preprocess the body field.
  */
 function govcmstheme_bootstrap_preprocess_field__body(&$variables) {
-  // Load the ACSF site path fix helper.
-  require_once './' . drupal_get_path('theme', 'govcmstheme_bootstrap') . '/helpers/acsffix.inc';
-
   // Get the field element.
   $element = $variables['element'];
   $items = $element['#items'];
