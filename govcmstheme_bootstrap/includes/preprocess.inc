@@ -6,32 +6,44 @@
  */
 
 /**
- * Preprocess the field.
- *
- * @param $vars
+ * Implement hook_preprocess_field().
  */
-function govcmstheme_bootstrap_preprocess_field(&$vars) {
-  $function = 'govcmstheme_bootstrap_preprocess_field__' . $vars['element']['#field_name'];
+function govcmstheme_bootstrap_preprocess_field(&$variables) {
+  // Get the field element.
+  $element = $variables['element'];
+
+  // Provides a hook function for each field name.
+  $function = 'govcmstheme_bootstrap_preprocess_field__' . $element['#field_name'];
   if (function_exists($function)) {
-    $function($vars);
+    $function($variables);
   }
 }
 
 /**
  * Preprocess the body field.
- *
- * @param $vars
  */
-function govcmstheme_bootstrap_preprocess_field__body(&$vars) {
-  // Process ACSF site path.
-  if (!empty($vars['items'][0]['#markup'])) {
-    $content = $vars['items'][0]['#markup'];
+function govcmstheme_bootstrap_preprocess_field__body(&$variables) {
+  // Load the ACSF site path fix helper.
+  require_once './' . drupal_get_path('theme', 'govcmstheme_bootstrap') . '/helpers/acsffix.inc';
 
-    // Fix the ACSF site path.
-    require_once './' . drupal_get_path('theme', 'govcmstheme_bootstrap') . '/helpers/acsffix.inc';
-    $content = _govcmstheme_bootstrap_acsffix_path($content);
+  // Get the field element.
+  $element = $variables['element'];
+  $items = $element['#items'];
 
-    // Apply tokens to body field.
-    $vars['items'][0]['#markup'] = token_replace($content);
+  // Looping on field items.
+  foreach ($items as $delta => $item) {
+    if (!empty($items[$delta]['#markup'])) {
+      // Process ACSF site path.
+      $content = _govcmstheme_bootstrap_acsffix_path($items[$delta]['#markup']);
+      // Apply token replace function to updated content.
+      $variables['items'][$delta]['#markup'] = token_replace($content);
+    }
+    elseif (!empty($items[$delta]['value'])) {
+      // Process ACSF site path.
+      $content = _govcmstheme_bootstrap_acsffix_path($items[$delta]['value']);
+      // Apply token replace function to updated content.
+      $variables['items'][$delta]['value'] = token_replace($content);
+      $variables['items'][$delta]['#markup'] = token_replace($content);
+    }
   }
 }
