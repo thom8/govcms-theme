@@ -2,6 +2,10 @@
 
 /**
  * Fix ACSF site paths issue.
+ *
+ * This arises when an ACSF site is cloned, and links to files already saved in the database retain
+ * their existing Acquia site ID. While this is an accurate clone, this prevents the previous site
+ * from being safely deleted, as doing so would cause all static links on the new site to break.
  */
 
 /**
