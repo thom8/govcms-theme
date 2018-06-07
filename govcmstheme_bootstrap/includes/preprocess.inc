@@ -32,17 +32,10 @@ function govcmstheme_bootstrap_preprocess_field__body(&$variables) {
 
   // Looping on field items.
   foreach ($items as $delta => $item) {
-    if (!empty($items[$delta]['#markup'])) {
+    if (!empty($variables['items'][$delta]['#markup'])) {
       // Process ACSF site path.
-      $content = _govcmstheme_bootstrap_acsffix_path($items[$delta]['#markup']);
+      $content = _govcmstheme_bootstrap_acsffix_path($variables['items'][$delta]['#markup']);
       // Apply token replace function to updated content.
-      $variables['items'][$delta]['#markup'] = token_replace($content);
-    }
-    elseif (!empty($items[$delta]['value'])) {
-      // Process ACSF site path.
-      $content = _govcmstheme_bootstrap_acsffix_path($items[$delta]['value']);
-      // Apply token replace function to updated content.
-      $variables['items'][$delta]['value'] = token_replace($content);
       $variables['items'][$delta]['#markup'] = token_replace($content);
     }
   }

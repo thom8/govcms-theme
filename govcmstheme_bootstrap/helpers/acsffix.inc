@@ -22,8 +22,10 @@ function _govcmstheme_bootstrap_acsffix_path($text) {
     return $text;
   }
 
+  $theme_repo_name = 'govcms-theme';
+
   // Find all ACSF links in $content.
-  preg_match_all('@/sites/g/files/(net[a-zA-Z0-9]+)/@', $text, $matches);
+  preg_match_all('@/sites/g/files/(net[a-zA-Z0-9]+)/(f|themes/site/' . $theme_repo_name . ')/@', $text, $matches);
 
   // Return the text if no matches.
   if (empty($matches) || !isset($matches[0])) {
@@ -34,7 +36,7 @@ function _govcmstheme_bootstrap_acsffix_path($text) {
   $acsf_paths = $matches[0];
 
   // Replace the paths to current site path.
-  $text = str_replace($acsf_paths, _govcmstheme_bootstrap_file_path(), $text);
+  $text = str_replace($acsf_paths, _govcmstheme_bootstrap_file_path($acsf_paths), $text);
 
   return $text;
 }
@@ -42,6 +44,16 @@ function _govcmstheme_bootstrap_acsffix_path($text) {
 /**
  * Return the current Drupal site file paths.
  */
-function _govcmstheme_bootstrap_file_path() {
-  return '/' . variable_get('file_public_path', conf_path() . '/files') . '/';
+function _govcmstheme_bootstrap_file_path($acsf_paths) {
+  $replaced_path = [];
+
+  foreach ($acsf_paths as $acsf_path) {
+    if (FALSE === strpos($acsf_path, '/themes/')) {
+      $replaced_path[] = '/' . variable_get('file_public_path', conf_path() . '/files') . '/';
+    }
+    else {
+      $replaced_path[] = '/' . drupal_get_path('theme', $GLOBALS['theme']) . '/';
+    }
+  }
+  return $replaced_path;
 }
