@@ -41,4 +41,4 @@ commands:
     usage: Start a shell in the container (like ssh without actual ssh).
 
   pull:
-    cmd: docker image ls --format \"{{.Repository}}:{{.Tag}}\" | grep -E \"govcms\" | grep -v none | xargs -n1 docker pull | cat
+    cmd: docker image ls --format \"{{.Repository}}:{{.Tag}}\" | grep govcms | grep -v none | xargs -n1 docker pull | cat
