@@ -12,7 +12,7 @@
 1. Checkout project repo and confirm the path is in docker's file sharing config - https://docs.docker.com/docker-for-mac/#file-sharing
 
 ```
-git clone [GIT=URL] govcms-lagoon && cd $_
+git clone https://gitlab.com/GovCMS/govcms-lagoon.git govcms-lagoon && cd $_
 ```
 
 2. Make sure you don't have anything running on port 80 on the host machine (like a web server).
@@ -45,4 +45,4 @@ Additional commands are listed in `.ahoy.yml`
 
 ## Support
 
-[Toby] Should we use a channel in Slack?
+#govcms channel in https://amazeeio.rocket.chat/
