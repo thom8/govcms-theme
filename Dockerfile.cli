@@ -1,0 +1,3 @@
+FROM govcms/govcms7
+
+COPY themes/ /app/sites/all/themes/custom
