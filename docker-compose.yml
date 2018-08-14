@@ -18,6 +18,7 @@ x-environment:
     LAGOON_ROUTE: http://govcms-lagoon.docker.amazee.io
     # Uncomment if you like to have the system behave like in production
     #LAGOON_ENVIRONMENT_TYPE: production
+    XDEBUG_ENABLE: "true"
 
 services:
 
@@ -87,6 +88,9 @@ services:
       lagoon.type: varnish
     environment:
       << : *default-environment
+    networks:
+      - amazeeio-network
+      - default
 
   redis:
     image: govcmsdev/redis
