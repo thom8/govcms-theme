@@ -73,7 +73,7 @@ services:
       << : *default-environment # loads the defined environment variables from the top
 
   mariadb:
-    image: alexdesignworks/mariadb-drupal
+    image: govcmsdev/mariadb-drupal
     labels:
       lagoon.type: mariadb
     ports:
@@ -82,14 +82,14 @@ services:
       << : *default-environment
 
   varnish:
-    image: alexdesignworks/varnish-drupal
+    image: govcmsdev/varnish-drupal
     labels:
       lagoon.type: varnish
     environment:
       << : *default-environment
 
   redis:
-    image: alexdesignworks/redis
+    image: govcmsdev/redis
     labels:
       lagoon.type: redis
     environment:
