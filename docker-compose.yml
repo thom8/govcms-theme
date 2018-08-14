@@ -73,11 +73,25 @@ services:
       << : *default-environment # loads the defined environment variables from the top
 
   mariadb:
-    image: govcms/mariadb-drupal
+    image: alexdesignworks/mariadb-drupal
     labels:
       lagoon.type: mariadb
     ports:
       - "3306" # exposes the port 3306 with a random local port, find it with `docker-compose port mariadb 3306`
+    environment:
+      << : *default-environment
+
+  varnish:
+    image: alexdesignworks/varnish-drupal
+    labels:
+      lagoon.type: varnish
+    environment:
+      << : *default-environment
+
+  redis:
+    image: alexdesignworks/redis
+    labels:
+      lagoon.type: redis
     environment:
       << : *default-environment
 
